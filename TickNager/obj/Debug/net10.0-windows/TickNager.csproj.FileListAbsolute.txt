@@ -15,8 +15,6 @@ C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\refint
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\TickNager.genruntimeconfig.cache
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
-C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\Principal.g.cs
-C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\Principal.baml
 C:\Users\cerna\source\repos\TickNager\TickNager\bin\Debug\net10.0-windows\CSharpMarkup.WinUI.dll
 C:\Users\cerna\source\repos\TickNager\TickNager\bin\Debug\net10.0-windows\CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView.dll
 C:\Users\cerna\source\repos\TickNager\TickNager\bin\Debug\net10.0-windows\HarfBuzzSharp.dll
@@ -101,3 +99,14 @@ C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\Incide
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\LoginWindow.g.cs
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\IncidenciasWindow.baml
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\LoginWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\AjustesWindow.g.cs
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\CategoriasWindow.g.cs
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\DashboardWindow.g.cs
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\EquiposWindow.g.cs
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\GestionUsuariosWindow.g.cs
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\AjustesWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\CategoriasWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\DashboardWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\EquiposWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\GestionUsuariosWindow.baml
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\TickNager.sourcelink.json

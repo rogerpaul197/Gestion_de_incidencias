@@ -17,7 +17,7 @@
     <Compile Update="IncidenciasWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Principal.xaml.cs">
+    <Compile Update="DashboardWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

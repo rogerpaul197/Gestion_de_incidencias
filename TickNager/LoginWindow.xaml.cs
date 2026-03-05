@@ -27,8 +27,8 @@ namespace TickNager
             if (nombre == "admin" && contrasena == "1234")
             {
                 MessageBox.Show("Se ha iniciado sesión correctamente");
-                Principal principal = new Principal();
-                principal.Show();
+                DashboardWindow ventanaDashboard = new DashboardWindow();
+                ventanaDashboard.Show();
                 this.Close();
             }
             else

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER;HAS_UNO;__UNO__;HAS_UNO_WINUI;__UNO_WINUI__;WINUI_WINDOWING;UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE;UNO_HAS_NO_IDEPENDENCYOBJECT
 C:\Users\cerna\source\repos\TickNager\TickNager\App.xaml
-7-1277126168
+7-582495284
 
-131289967959
+131217980467
 275-1917089110
-AjustesWindow.xaml;CategoriasWindow.xaml;EquiposWindow.xaml;GestionUsuariosWindow.xaml;IncidenciasWindow.xaml;LoginWindow.xaml;Principal.xaml;
+AjustesWindow.xaml;CategoriasWindow.xaml;DashboardWindow.xaml;EquiposWindow.xaml;GestionUsuariosWindow.xaml;IncidenciasWindow.xaml;LoginWindow.xaml;
 
-False
+True
 
