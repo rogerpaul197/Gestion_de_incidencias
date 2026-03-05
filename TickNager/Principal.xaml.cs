@@ -21,5 +21,12 @@ namespace TickNager
         {
             InitializeComponent();
         }
+
+        private void btnIncidencias_Click(object sender, RoutedEventArgs e)
+        {
+            IncidenciasWindow ventanaIncidencia = new IncidenciasWindow();
+            ventanaIncidencia.Show();
+            this.Close();
+        }
     }
 }

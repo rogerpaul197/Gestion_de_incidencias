@@ -7,8 +7,813 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "TickNager/1.0.0": {
+        "dependencies": {
+          "CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView": "3.1.2",
+          "LiveCharts.Wpf": "0.9.7",
+          "MahApps.Metro.IconPacks": "6.2.1"
+        },
         "runtime": {
           "TickNager.dll": {}
+        }
+      },
+      "CSharpMarkup.WinUI/3.1.2": {
+        "dependencies": {
+          "Uno.WinUI": "6.0.465"
+        },
+        "runtime": {
+          "lib/net9.0/CSharpMarkup.WinUI.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.1.2.0"
+          }
+        }
+      },
+      "CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView/3.1.2": {
+        "dependencies": {
+          "CSharpMarkup.WinUI": "3.1.2",
+          "LiveChartsCore.SkiaSharpView.Uno.WinUI": "2.0.0-rc5.3"
+        },
+        "runtime": {
+          "lib/net8.0/CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView.dll": {
+            "assemblyVersion": "3.1.2.0",
+            "fileVersion": "3.1.2.0"
+          }
+        }
+      },
+      "HarfBuzzSharp/7.3.0.3": {
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.3",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "7.3.0.3"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.3": {
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.3": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {
+            "assemblyVersion": "0.9.7.0",
+            "fileVersion": "0.9.7.0"
+          }
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "assemblyVersion": "0.9.7.0",
+            "fileVersion": "0.9.7.0"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc5.3": {
+        "runtime": {
+          "lib/net8.0-windows7.0/LiveChartsCore.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "LiveChartsCore.Behaviours/2.0.0-rc5.3": {
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc5.3"
+        },
+        "runtime": {
+          "lib/net8.0/LiveChartsCore.Behaviours.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc5.3": {
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc5.3",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/LiveChartsCore.SkiaSharpView.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Uno.WinUI/2.0.0-rc5.3": {
+        "dependencies": {
+          "LiveChartsCore.Behaviours": "2.0.0-rc5.3",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc5.3",
+          "SkiaSharp.Views.Uno.WinUI": "2.88.9",
+          "Uno.WinUI": "6.0.465"
+        },
+        "runtime": {
+          "lib/net8.0/LiveChartsCore.SkiaSharpView.Uno.WinUI.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.BootstrapIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.BoxIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.BoxIcons2": "6.2.1",
+          "MahApps.Metro.IconPacks.CircumIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Codicons": "6.2.1",
+          "MahApps.Metro.IconPacks.Coolicons": "6.2.1",
+          "MahApps.Metro.IconPacks.Core": "6.2.1",
+          "MahApps.Metro.IconPacks.Entypo": "6.2.1",
+          "MahApps.Metro.IconPacks.EvaIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.FeatherIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.FileIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.FontAwesome": "6.2.1",
+          "MahApps.Metro.IconPacks.FontAwesome5": "6.2.1",
+          "MahApps.Metro.IconPacks.FontAwesome6": "6.2.1",
+          "MahApps.Metro.IconPacks.Fontaudio": "6.2.1",
+          "MahApps.Metro.IconPacks.Fontisto": "6.2.1",
+          "MahApps.Metro.IconPacks.ForkAwesome": "6.2.1",
+          "MahApps.Metro.IconPacks.GameIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Ionicons": "6.2.1",
+          "MahApps.Metro.IconPacks.JamIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.KeyruneIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Lucide": "6.2.1",
+          "MahApps.Metro.IconPacks.Material": "6.2.1",
+          "MahApps.Metro.IconPacks.MaterialDesign": "6.2.1",
+          "MahApps.Metro.IconPacks.MaterialLight": "6.2.1",
+          "MahApps.Metro.IconPacks.MemoryIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Microns": "6.2.1",
+          "MahApps.Metro.IconPacks.MingCuteIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Modern": "6.2.1",
+          "MahApps.Metro.IconPacks.MynaUIIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Octicons": "6.2.1",
+          "MahApps.Metro.IconPacks.PhosphorIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.PicolIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.PixelartIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.RPGAwesome": "6.2.1",
+          "MahApps.Metro.IconPacks.RadixIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.RemixIcon": "6.2.1",
+          "MahApps.Metro.IconPacks.SimpleIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Typicons": "6.2.1",
+          "MahApps.Metro.IconPacks.Unicons": "6.2.1",
+          "MahApps.Metro.IconPacks.VaadinIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.WeatherIcons": "6.2.1",
+          "MahApps.Metro.IconPacks.Zondicons": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.BootstrapIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.BootstrapIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.BoxIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.BoxIcons2/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.BoxIcons2.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.CircumIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.CircumIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Codicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Codicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Coolicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Coolicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Core/6.2.1": {
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Entypo/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Entypo.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.EvaIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.EvaIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.FeatherIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.FeatherIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.FileIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.FileIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Fontaudio/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Fontaudio.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.FontAwesome/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.FontAwesome5/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome5.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.FontAwesome6/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.FontAwesome6.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Fontisto/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Fontisto.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.ForkAwesome/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.ForkAwesome.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.GameIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.GameIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Ionicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Ionicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.JamIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.JamIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.KeyruneIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.KeyruneIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Lucide/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Lucide.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Material/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.MaterialDesign/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.MaterialDesign.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.MaterialLight/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.MaterialLight.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.MemoryIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.MemoryIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Microns/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Microns.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.MingCuteIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.MingCuteIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Modern/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Modern.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.MynaUIIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.MynaUIIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Octicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Octicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.PhosphorIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.PhosphorIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.PicolIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.PicolIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.PixelartIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.PixelartIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.RadixIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.RadixIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.RemixIcon/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.RemixIcon.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.RPGAwesome/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.RPGAwesome.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.SimpleIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.SimpleIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Typicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Typicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Unicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Unicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.VaadinIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.VaadinIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.WeatherIcons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.WeatherIcons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Zondicons/6.2.1": {
+        "dependencies": {
+          "MahApps.Metro.IconPacks.Core": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Zondicons.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "SkiaSharp/2.88.9": {
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.9",
+          "SkiaSharp.NativeAssets.macOS": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/2.88.9": {
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.3",
+          "SkiaSharp": "2.88.9"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.9": {
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.9": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Uno.WinUI/2.88.9": {
+        "dependencies": {
+          "SkiaSharp": "2.88.9",
+          "Uno.WinUI": "6.0.465"
+        },
+        "runtime": {
+          "lib/net7.0/SkiaSharp.Views.Windows.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.9.0"
+          }
+        }
+      },
+      "Uno.Diagnostics.Eventing/2.0.1": {
+        "runtime": {
+          "lib/net5.0/Uno.Diagnostics.Eventing.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          }
+        }
+      },
+      "Uno.Fonts.Fluent/2.6.1": {
+        "runtime": {
+          "lib/netstandard1.0/Uno.Fonts.Fluent.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Uno.Foundation/6.0.465": {
+        "runtime": {
+          "lib/net9.0/Uno.Foundation.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          }
+        }
+      },
+      "Uno.Foundation.Logging/6.0.465": {
+        "runtime": {
+          "lib/net8.0/Uno.Foundation.Logging.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          }
+        }
+      },
+      "Uno.WinRT/6.0.465": {
+        "dependencies": {
+          "Uno.Foundation": "6.0.465"
+        },
+        "runtime": {
+          "lib/net9.0/Uno.UI.Dispatching.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          }
+        }
+      },
+      "Uno.WinUI/6.0.465": {
+        "dependencies": {
+          "Uno.Diagnostics.Eventing": "2.0.1",
+          "Uno.Fonts.Fluent": "2.6.1",
+          "Uno.Foundation.Logging": "6.0.465",
+          "Uno.WinRT": "6.0.465"
+        },
+        "runtime": {
+          "lib/net9.0/Uno.UI.Composition.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.UI.FluentTheme.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.UI.FluentTheme.v1.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.UI.FluentTheme.v2.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.UI.Toolkit.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.UI.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          },
+          "lib/net9.0/Uno.Xaml.dll": {
+            "assemblyVersion": "255.255.255.255",
+            "fileVersion": "255.255.255.255"
+          }
         }
       }
     }
@@ -18,6 +823,468 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CSharpMarkup.WinUI/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SDAp3a1O1BJJqzrp/bvLoDhIBYsaw+DCv2mW6OMfOJItMR9JK2YK0fUKwr6XCPqug1KGMcjFTW8t4FLWc2omxg==",
+      "path": "csharpmarkup.winui/3.1.2",
+      "hashPath": "csharpmarkup.winui.3.1.2.nupkg.sha512"
+    },
+    "CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HATSQmLzz8tu5CGCy5qeHr+g0pRkp5GeZ4EzVyf8buS+wAy5ByQrLUxQjjh7pKi82VmWvLcoROLLOTBF1WpLqg==",
+      "path": "csharpmarkup.winui.livechartscore.skiasharpview/3.1.2",
+      "hashPath": "csharpmarkup.winui.livechartscore.skiasharpview.3.1.2.nupkg.sha512"
+    },
+    "HarfBuzzSharp/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hq+5+gx10coOvuRgB13KBwiWxJq1QeYuhtVLbA01ZCWaugOnolUahF44KvrQTUUHDNk/C7HB6SMaebsZeOdhgg==",
+      "path": "harfbuzzsharp/7.3.0.3",
+      "hashPath": "harfbuzzsharp.7.3.0.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.macOS/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UAwIYnkbBTzBJv1Id8FijY/i8QiIepRemSXufU8fyzwWhYJdx4+ajG8yQUie5HW/uusbVLFSr26muSlJOFDgSw==",
+      "path": "harfbuzzsharp.nativeassets.macos/7.3.0.3",
+      "hashPath": "harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512"
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/7.3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RPxRXD16KtSs8Yxr2RK9Qs7AwyN9MlpqZIYs0AvfaJwl7RAtVhC0+u2f2SKwX0uMYYd3O98Z+OBA1sj6aWVKQA==",
+      "path": "harfbuzzsharp.nativeassets.win32/7.3.0.3",
+      "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512"
+    },
+    "LiveCharts/0.9.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
+      "path": "livecharts/0.9.7",
+      "hashPath": "livecharts.0.9.7.nupkg.sha512"
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "path": "livecharts.wpf/0.9.7",
+      "hashPath": "livecharts.wpf.0.9.7.nupkg.sha512"
+    },
+    "LiveChartsCore/2.0.0-rc5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HirzXpe1jP7iv1ueLZl6nRtxqdlvN9qRLNNuc3T9RlGGrXokaFWj2wSGYTDZINnDXdbb6QxhZFt1aAavBcKlVw==",
+      "path": "livechartscore/2.0.0-rc5.3",
+      "hashPath": "livechartscore.2.0.0-rc5.3.nupkg.sha512"
+    },
+    "LiveChartsCore.Behaviours/2.0.0-rc5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J5wnb8yyIB+UTHYoj1+cuoHmgatNtjW5sPgCUyHx4D3MRkZTjC8dHNGksXbn4ydJOTo9j+pceZKwv6THmjiZng==",
+      "path": "livechartscore.behaviours/2.0.0-rc5.3",
+      "hashPath": "livechartscore.behaviours.2.0.0-rc5.3.nupkg.sha512"
+    },
+    "LiveChartsCore.SkiaSharpView/2.0.0-rc5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZUNBShABAJQKIV2Rb7KhKcyYtTp0MjLf0fatRV1vmDDwiCOFWd9xO5jeVlOlnTJt938EGZzz4j1lKJjjtYAzw==",
+      "path": "livechartscore.skiasharpview/2.0.0-rc5.3",
+      "hashPath": "livechartscore.skiasharpview.2.0.0-rc5.3.nupkg.sha512"
+    },
+    "LiveChartsCore.SkiaSharpView.Uno.WinUI/2.0.0-rc5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ng1hwXbPzNYZA8nZ67BYAyJLu9ScdRT4G6rTMLnMAYxiD4jaTwgE6FvUuXGNTvb/oq97FVxlYyYO01DrcCR9g==",
+      "path": "livechartscore.skiasharpview.uno.winui/2.0.0-rc5.3",
+      "hashPath": "livechartscore.skiasharpview.uno.winui.2.0.0-rc5.3.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D4iq02tGW42jn0go7M+mBI8uMkfAmUrPwQl9gaV3WqiIssjABwP9vAtU05NTWUx9lB0xl+YlfcnVfFoKki0Ylw==",
+      "path": "mahapps.metro.iconpacks/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.BootstrapIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dTd5CaF63Ke2mWKlpagKEoU7sQmAtpoTyIMrZulPtI8N6OEkA6my3ekTPEt0OHu68zjiiXzZA5HLH2dlHUX+9w==",
+      "path": "mahapps.metro.iconpacks.bootstrapicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.bootstrapicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.BoxIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fvxelxwj1Fr+osvmJnvlSthN34ZpwWMDacCWSGpylw8Pz+bFWcPIA3DxDMbxshvUhZ5dYzigCOxHZKG/BHPEdw==",
+      "path": "mahapps.metro.iconpacks.boxicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.boxicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.BoxIcons2/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TkTvGg1L/w3kCGB7D7Hqd3EhYevijeknuh/VGVsaF47J4eOwf42Y2zXV7rpCXAY13zfrGWCq8RQQdacwFStQow==",
+      "path": "mahapps.metro.iconpacks.boxicons2/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.boxicons2.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.CircumIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6L+lBg3Cj8Tq1TK0FHIBvS4t9iDa9V966dGZrzNAryZD/jQ2ncvz4rIDsZpSnsrLIhxMqChLvNogg3sDEuchtA==",
+      "path": "mahapps.metro.iconpacks.circumicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.circumicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Codicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+pQeVS29X7pG7qrJ4y0ZPSRUQVaWidwwM/tdoIABo40MQpC0Izg8t1BXnXprP0C10Od9Zzsi2Qt/GWgfEW/aSw==",
+      "path": "mahapps.metro.iconpacks.codicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.codicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Coolicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YdAqLEsLON2ripNNXkzrVX3iHQgEVXvfcvChx/2UsFyefV63RMVRu1rXCtLrOGRm/NAl7okTu2d6IeUVj+bCFQ==",
+      "path": "mahapps.metro.iconpacks.coolicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.coolicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Core/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ySAyax37C045Ef1ufN33yQjn3qPM1MuQLgKdxZKYUAl2uZaIrn9wCeBNvfG46QPNRvBFLR6gVKTs6O3o81LNhQ==",
+      "path": "mahapps.metro.iconpacks.core/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.core.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Entypo/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H1xzNFcF1gPgkrMFT3RgVc+whTZ88+g1hFUzaRkZYjH7k4JGGxsb6dqVjHyMQCbSygCUiWNuzy0yzNrv1krQOg==",
+      "path": "mahapps.metro.iconpacks.entypo/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.entypo.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.EvaIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bUQfSeAb0uphQrhks3Mhj5kk+WsqL22dPF5b9DSVrRi7bHgWt2+ciMZZp85Q+zFKtHM3PkdGC2nUbl0bBu6AyQ==",
+      "path": "mahapps.metro.iconpacks.evaicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.evaicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.FeatherIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a5sxUHp39ejJu6p2wbbJT71tYY4zYuS+N4Vb9VxcnsQqaeMktuHtiy1ySR43h4dkdzhAohbyxvb9j80AkDXZLA==",
+      "path": "mahapps.metro.iconpacks.feathericons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.feathericons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.FileIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rir1rKL8LNhxhWNmVdWDbSRjoJg+y0t4kqDdD5zLH6T7uFm6yjPvIEK4pvA30NIFPgvl4bkN2TKQLv+7P4FNDw==",
+      "path": "mahapps.metro.iconpacks.fileicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fileicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Fontaudio/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AsYb9vBKtkYBPV/3OEGTijH+wrlxxPcMFRXVbbRZLz1E9JIoGxkRcwnFryWs2bhDIMiLVzj2DgYClqvJSovmEw==",
+      "path": "mahapps.metro.iconpacks.fontaudio/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fontaudio.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.FontAwesome/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Su6jzajwH8rP7H5OGhXvyC2SlsoyH0pNwNCkDFSP5zyVQlMtmUZGOY8X0Qcj1QFn+t4TmEnMjwGMB6RuzozgEg==",
+      "path": "mahapps.metro.iconpacks.fontawesome/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fontawesome.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.FontAwesome5/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PNTiFAT/+ro1SitUj8k+gGWDq7mC/eYD1cy8QfF84ZyCp+goLh5BApj0IGvv+eisLMw7hFIIzI8vIHQ1GbyExw==",
+      "path": "mahapps.metro.iconpacks.fontawesome5/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fontawesome5.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.FontAwesome6/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IB2AdqnGAdM2RK8Ekmf8U2VBw7cAnRQHQaVJ1Kv/0Ek+VavsmUqlyotmSg28iL4Sq9BBC2SQrRbvuIGfz9seWA==",
+      "path": "mahapps.metro.iconpacks.fontawesome6/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fontawesome6.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Fontisto/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+JDR5+YpYq/iBdj7DZiT5XA4U5+I2kxqxGK6usqOi077iemIEXKWxhrEiWyruHfRQt4VrD/WGy27PrJzU/h6cA==",
+      "path": "mahapps.metro.iconpacks.fontisto/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.fontisto.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.ForkAwesome/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-luVbeZF3hH7DQl+QCT6NV9vGJ8a1CtOJd0W2AShOms8YuAU4RnsHMm9jrrONpCBeVqQI8mpFRTzd0bYit8gilg==",
+      "path": "mahapps.metro.iconpacks.forkawesome/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.forkawesome.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.GameIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oOVAHye1k+cjfXaGfBP6nu5AtZND65WhsolAqmS8wMtM5wPN5q0k8jUq3lxm5/MRMh+rCT99oAcZKmyDaRlcVA==",
+      "path": "mahapps.metro.iconpacks.gameicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.gameicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Ionicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WBHtfiUfEGUPiLaJkQ2ZXipo01eRbW6PM6qI7S4LLPGs5FM9YIy6PiaeahN8FcYS/HnYx8E2HSJ99R+U+M2nBA==",
+      "path": "mahapps.metro.iconpacks.ionicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.ionicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.JamIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Jc2IzyBa0vASPCup7woKHTSwG31rtBvZsdpA+Jot++eWkZpvCpgWn8BKdcNcIh3Hjnve9qLzPWb11WobPO2CQ==",
+      "path": "mahapps.metro.iconpacks.jamicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.jamicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.KeyruneIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Cs7gIl1WCTsZHPgX0Ri32r8vTPi32Zxf/z/3CxLpfksY7qsTodCWWWlIgjEqxriWE/AGoUzdh1o73j5qtQ/RQ==",
+      "path": "mahapps.metro.iconpacks.keyruneicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.keyruneicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Lucide/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xehG2J/Ljfa6NxlKCqvDxnxUMrApR0xSLGaoaFSVN531jF+WNZNAaUvE9qkxOHKZ+jpH4gUnb2sC3qNcpAGVkA==",
+      "path": "mahapps.metro.iconpacks.lucide/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.lucide.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Material/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DcNQIsJLAmuzlpXdD2hQtMV8IzLRHsxFBn9+nHDLAsYs8duTBTycpNpQitkzuNYH0o+sgIbefCSp3jDUu9hIiQ==",
+      "path": "mahapps.metro.iconpacks.material/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.material.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.MaterialDesign/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qMQHCZzHoBZy3bcU9CBf9GusPMpbxy0DPxiJrfbhM7IHh/hK5xWREoP2TOevqAVTEOk3YszWbiJBkYo/oeEliw==",
+      "path": "mahapps.metro.iconpacks.materialdesign/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.materialdesign.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.MaterialLight/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8ypOe4HwSGnoQl/JIpC5hb6VnK+xFtSbvhlTmw+cnJVNluiwWdpJv+m9jpU3/9+SRkJRHVgHvEMwEXQx/XmS4A==",
+      "path": "mahapps.metro.iconpacks.materiallight/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.materiallight.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.MemoryIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TIU3n0ZXhKgpSaSlqg3EEjPBp+E89UyV6nOhK4DCP9yUbnZ/CuLmkwrrd2rtt9au+VD+TB1lWbA6+3NjpH7G9Q==",
+      "path": "mahapps.metro.iconpacks.memoryicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.memoryicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Microns/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-stnuTZXy+k7BmKGvI4oP0NlspElhernJ4yFXUlEkA3X/38qlqq+YltM5KPPKgQo1BLHj58lOOn+U03grfdPI5A==",
+      "path": "mahapps.metro.iconpacks.microns/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.microns.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.MingCuteIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AfMV+SbqWabsuQdS6wt7SpinS5cah+7Pkdj+bfhHBBizdMsL+nY8+tiwmKF1up+wfZm8lCvnrCQWTkJ2mMSjUA==",
+      "path": "mahapps.metro.iconpacks.mingcuteicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.mingcuteicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Modern/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xCDNREDX37HZE1YIAwQ9YOwwhQLHRby1ec1FwLKRU6MWX0OJuceqk3HY3532xG7KpGGaOIV/dpB5vFq3oo+wug==",
+      "path": "mahapps.metro.iconpacks.modern/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.modern.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.MynaUIIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-StYsKBuK2kKfUdkKq6ZDa5xtlWk4gyI59ip9mS30niYxn4K0yAZIMEyx1EX4efpGanlLF4oPGZ/YUvWGfl98NA==",
+      "path": "mahapps.metro.iconpacks.mynauiicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.mynauiicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Octicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1WGEPYjdcOMgXNspZHhYXooNJbylZyqLAkzXiCvlu1pW6HinBzaJI+vSkPtoZaF9QaMkSxwT2ZxG4mMkbhUowA==",
+      "path": "mahapps.metro.iconpacks.octicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.octicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.PhosphorIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PTfhQXTe3INWoELJy0dCfm92/faS6hF3F/C4kZyTiVe9Pgf21cd5v7kIBeT2m/eNHyEBFZX2ifmk8Q3xK1dr7g==",
+      "path": "mahapps.metro.iconpacks.phosphoricons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.phosphoricons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.PicolIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6lEuXdF77v9Ip4QoDEJm7+mrfVRz7EV3LJGxDzVfPsSPwA4VxIsqOU0xHKDQ/5Ekv+gPXW/PQtecfjlQ+UrWGw==",
+      "path": "mahapps.metro.iconpacks.picolicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.picolicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.PixelartIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KJwxtRvqpMHRkghru0H7AZcDgUDpgNq4bQTclivcQyUTChedfZh64REfJ1B5QCfKdCKmvVMR66JpJnGoM6ekdA==",
+      "path": "mahapps.metro.iconpacks.pixelarticons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.pixelarticons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.RadixIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1COtOqMAtgOydnx8cU/ukwNn4KRAzaFp5+SCucYgjyq0vdm1+1hi8inNDEZvIJqAhCSdCU13afFhsL/1KYLbBQ==",
+      "path": "mahapps.metro.iconpacks.radixicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.radixicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.RemixIcon/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ROcfFFN2S45IV7dqU6Alf8i5gMIG+4iArm8Mzb+KXjiyLOHpTZ/QHGIy9DtqIG4NuCO9pwf+fNTGCsDlXIG3TQ==",
+      "path": "mahapps.metro.iconpacks.remixicon/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.remixicon.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.RPGAwesome/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6zHlSIU5z5meUIjDpwX872Z9Zd1ZhBRuohWiy0a+AUevdOpPw9or7rGpiMAdAzEvmab4sy9Un787A4YC5LQr7w==",
+      "path": "mahapps.metro.iconpacks.rpgawesome/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.rpgawesome.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.SimpleIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EbK+/s00A72ATU+Qpk72ZxQsLvVGGRD8UA/jsGDqV0Hlym0I//dtQjYwWxzfwmTp2Ay3Sh6RmLu49qqv3Ey2/Q==",
+      "path": "mahapps.metro.iconpacks.simpleicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.simpleicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Typicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o6kNl3wKxsO1MkgRg8V/wY7un1ueNBbqy5Ut3Y46mC2vVzEwxcejss5+BtuO/oFud3GQtet2Ng53z+70dNjG4Q==",
+      "path": "mahapps.metro.iconpacks.typicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.typicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Unicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JdTZD7CtLjcf+Ne0jN6EsyvG/Dl+v4w08OQRSC9XTknuVW/zlJyHcxbJy+NvkBdcO+Jup/TwNslV5g9xVheavQ==",
+      "path": "mahapps.metro.iconpacks.unicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.unicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.VaadinIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6GOuzyvLNojG+NLZDULsWSfQ+RAh2v8W6n2iPWc+c1pDcmgbuKCPiazQXb0YpPuldGEOpK1ur6WJOXXsrTRR6A==",
+      "path": "mahapps.metro.iconpacks.vaadinicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.vaadinicons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.WeatherIcons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ChU6387+6rDPQZRS/L7wT4YFMmSvv0AdeCBAPVZTeW3SdeFt49tOWQvz2Xpb+N55Qn4tGjb+/lE2dg/NAYYU2w==",
+      "path": "mahapps.metro.iconpacks.weathericons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.weathericons.6.2.1.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Zondicons/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6+IMX7VptiD05ctXsjhEcvBHx0Gbj4DH1j13Ko5gk9yO7m6cCYaWqsKlt/GMH5CJEfa7Obz9+1pRstOzxZ03+A==",
+      "path": "mahapps.metro.iconpacks.zondicons/6.2.1",
+      "hashPath": "mahapps.metro.iconpacks.zondicons.6.2.1.nupkg.sha512"
+    },
+    "SkiaSharp/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3MD5VHjXXieSHCleRLuaTXmL2pD0mB7CcOB1x2kA1I4bhptf4e3R27iM93264ZYuAq6mkUyX5XbcxnZvMJYc1Q==",
+      "path": "skiasharp/2.88.9",
+      "hashPath": "skiasharp.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.HarfBuzz/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5lyjX04CSWTKFYMSNN6SMupV2qzYDr8W/u8S3ZEkr+Sg3kOi0YE06EOqG0tzn/YPBID89xam4L3rz3hUUKOGEQ==",
+      "path": "skiasharp.harfbuzz/2.88.9",
+      "hashPath": "skiasharp.harfbuzz.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nv5spmKc4505Ep7oUoJ5vp3KweFpeNqxpyGDWyeEPTX2uR6S6syXIm3gj75dM0YJz7NPvcix48mR5laqs8dPuA==",
+      "path": "skiasharp.nativeassets.macos/2.88.9",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wb2kYgU7iy84nQLYZwMeJXixvK++GoIuECjU4ECaUKNuflyRlJKyiRhN1MAHswvlvzuvkrjRWlK0Za6+kYQK7w==",
+      "path": "skiasharp.nativeassets.win32/2.88.9",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.9.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Uno.WinUI/2.88.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ScHWyv/kJuNWUmaXfYqz1ik/qRTazJg5+hNSWTV/2L33r5UVyC+aRCHr8tjhecAxL593+6ECe4FqQwqbxinKSg==",
+      "path": "skiasharp.views.uno.winui/2.88.9",
+      "hashPath": "skiasharp.views.uno.winui.2.88.9.nupkg.sha512"
+    },
+    "Uno.Diagnostics.Eventing/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hd03em+Bga+w+ljCtiyc+713PQDtCB0Qkw3sBggvXXdDB2URwEc3N4TnM3vFeXpmHHZGM7dN7D8qxfiGoEEHzw==",
+      "path": "uno.diagnostics.eventing/2.0.1",
+      "hashPath": "uno.diagnostics.eventing.2.0.1.nupkg.sha512"
+    },
+    "Uno.Fonts.Fluent/2.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mV1JWlpU9e6uWf/hamfTv+ysSRlRjjao1WtewGUtFz2/tB83C5h10gZReiWX4ZQXG2P0bgI/yx1ZxPYfiM3Hcg==",
+      "path": "uno.fonts.fluent/2.6.1",
+      "hashPath": "uno.fonts.fluent.2.6.1.nupkg.sha512"
+    },
+    "Uno.Foundation/6.0.465": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rzOaarM1Cw7uL8AfMmo5QCHVCjTA0nTigZO3tPcWNClmpBmLADTzrJVSFm9x6nT3FlkVj6kP3ObVABpN9Ugpmw==",
+      "path": "uno.foundation/6.0.465",
+      "hashPath": "uno.foundation.6.0.465.nupkg.sha512"
+    },
+    "Uno.Foundation.Logging/6.0.465": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k73NaJwxgmmMTJiBo+CJO4TbACc66stdXLDd9fIxqRo5qPvGWakWJvDgxftkBf3D/IY61UH7/K3mpJfSSRJmrw==",
+      "path": "uno.foundation.logging/6.0.465",
+      "hashPath": "uno.foundation.logging.6.0.465.nupkg.sha512"
+    },
+    "Uno.WinRT/6.0.465": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cVYCU2IBXwZEhBkwsZSE1LfGgMzJm2XvrGY9sXMZRLJC7+772g0/fuZPCYpMpBVUKoeeDkUCo1YbDUacxH0TIA==",
+      "path": "uno.winrt/6.0.465",
+      "hashPath": "uno.winrt.6.0.465.nupkg.sha512"
+    },
+    "Uno.WinUI/6.0.465": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WkQhdarcmbCgYvKfSrE+gkBZLFafzYOqr3vrmZTRyPlMsFeVgTdW/L4Ovpq2ErIk0hB7s0keWjbHHda70iBsNw==",
+      "path": "uno.winui/6.0.465",
+      "hashPath": "uno.winui.6.0.465.nupkg.sha512"
     }
   }
 }
