@@ -5,6 +5,9 @@
     <Compile Update="Ventanas\AjustesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ventanas\AvisoCampoVacioWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ventanas\CategoriasWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

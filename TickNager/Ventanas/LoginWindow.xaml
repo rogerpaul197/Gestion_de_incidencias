@@ -41,7 +41,7 @@ y la otra para el ícono del usuario e inicio de sesión-->
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Source="/Imagenes/Iconos/perfil.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100"/>
+                <Image Source="/Imagenes/Iconos/perfil_administrador.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100"/>
             </Grid>
             <Grid Grid.Row="1">
                 <TextBlock Text="Usuario:" Foreground="White" Width="340" VerticalAlignment="Center"/>

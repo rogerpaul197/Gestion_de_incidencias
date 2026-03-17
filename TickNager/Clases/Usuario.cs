@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TickNager.Ventanas;
 
 namespace TickNager.Clases
 {
@@ -25,6 +23,35 @@ namespace TickNager.Clases
             this.contrasenaUsuario = contrasenaUsuario;
         }
 
+        /// <summary>
+        /// Reporta una incidencia
+        /// </summary>
+        /// <returns>Devuelve una incidencia con descripción</returns>
+        public Incidencia reportarIncidencia()
+        {
+            bool salirBucle = false;
+            string descripcionIncidencia;
+
+            do
+            {
+                Console.WriteLine("Reporta la incidencia: ");
+                descripcionIncidencia = Console.ReadLine();
+
+                if (descripcionIncidencia == null)
+                {
+                    AvisoCampoVacioWindow ventanaAviso = new AvisoCampoVacioWindow();
+                    ventanaAviso.Show();
+                    return null;
+                } else
+                {
+                    salirBucle = true; //si la descripcion la rellenar el usuario, sale del bucle
+                }
+            }
+            while (!salirBucle);
+
+            Incidencia incidencia = new Incidencia(descripcionIncidencia);
+            return incidencia;
+        }
         
     }
 }

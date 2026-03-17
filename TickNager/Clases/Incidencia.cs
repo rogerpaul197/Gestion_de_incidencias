@@ -23,7 +23,12 @@ namespace TickNager.Clases
         public bool incidenciaEnProceso = false;
 
         public string tecnicoAsignado_equipoAsignado;
+
+        //Usuario que reporta la incidencia
         public string usuarioReporta;
+
+        //Aquí el usuario describe las incidencias
+        public string descripcionIncidencia;
         public DateTime fechaCreacion;
 
         public Incidencia()
@@ -31,7 +36,13 @@ namespace TickNager.Clases
 
         }
 
-        //Si la incidencia es sólo para un técnico
+        //Cuándo el usuario reporte la incidencia sólo asigna la descripción
+        public Incidencia(string descripcionIncidencia)
+        {
+            this.descripcionIncidencia = descripcionIncidencia;
+        }
+
+        //El administrador la usa al asignar a un técnico
         public Incidencia(string nombreIncidencia, string tecnicoAsignado_equipoAsignado, string usuarioReporta)
         {
             this.nombreIncidencia = nombreIncidencia;
@@ -39,6 +50,7 @@ namespace TickNager.Clases
             this.tecnicoAsignado_equipoAsignado = tecnicoAsignado_equipoAsignado;
             this.usuarioReporta = usuarioReporta;
             fechaCreacion = DateTime.Now;
+            descripcionIncidencia = null;
         }
 
         public void setIncidenciaTreminada()
@@ -49,6 +61,11 @@ namespace TickNager.Clases
         public void setIncidenciaEnProceso()
         {
             incidenciaEnProceso = true;
+        }
+
+        public void setDescripcionIncidencias()
+        {
+
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TickNager.Clases
         /// Crea una incidencia
         /// </summary>
         /// <returns>Devuelve una incidencia con datos y asignada --> True</returns>
-        public Incidencia crearIncidencia()
+        public Incidencia asignarIncidencia()
         {
             Console.WriteLine("Introduce la incidencia: ");
             string nombreIncidencia = Console.ReadLine();
