@@ -1,10 +1,12 @@
 ﻿
 
-FC:\Proye\Gestion_de_incidencias\TickNager\AjustesWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\CategoriasWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\DashboardWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\EquiposWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\GestionUsuariosWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\IncidenciasWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\LoginWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AjustesWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AvisoCampoVacioWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CategoriasWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CrearUsuarioWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\DashboardWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\EquiposWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\GestionUsuariosWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\IncidenciasWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Ventanas\LoginWindow.xaml;;
 

@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="Imagenes\Iconos\perfil.png" />
+    <None Remove="Imagenes\Iconos\perfil_administrador.png" />
+    <None Remove="Imagenes\Iconos\perfil_usuario.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Imagenes\Iconos\perfil.png" />
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagenes\Iconos\perfil_administrador.png" />
+    <Resource Include="Imagenes\Iconos\perfil_usuario.png" />
   </ItemGroup>
 
 </Project>

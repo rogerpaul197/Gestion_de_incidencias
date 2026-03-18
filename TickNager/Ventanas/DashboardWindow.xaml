@@ -7,7 +7,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="Principal" Height="450" Width="800">
+        Title="Dashboard" Height="450px" Width="800px">
     <Grid>
         <Grid.RowDefinitions>
             <!--Cabecera-->
@@ -25,7 +25,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <TextBlock Text="Buscador" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#171A45" Padding="2"/>
+                <TextBlock Text="Buscador" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#171A45" Padding="8px 0 0 0"/>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -49,7 +49,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <Image Source="C:\Users\cerna\source\repos\TickNager\TickNager\Imagenes\Iconos\perfil.png" Width="20" Margin="0,0,-45,0"/>
+                    <Image Source="/Imagenes/Iconos/perfil_administrador.png" Width="20" Margin="0,0,-45,0"/>
                 </Grid>
 
                 <Grid Grid.Column="2">
@@ -74,7 +74,7 @@
                 </Grid.RowDefinitions>
                 <!--Columna izquierda Logotipo-->
                 <Grid Grid.Row="0">
-                    <Image Source="C:\Users\cerna\source\repos\TickNager\TickNager\Imagenes\Logotipo\Logotipo_TickNager.png" Height="70" Margin="0,8,0,0"/>
+                    <Image Source="/Imagenes/Logotipo/Logotipo_TickNager.png" Height="70" Margin="0,8,0,0"/>
                 </Grid>
                 <!--Columna izquierda Menú-->
                 <Grid Grid.Row="1">

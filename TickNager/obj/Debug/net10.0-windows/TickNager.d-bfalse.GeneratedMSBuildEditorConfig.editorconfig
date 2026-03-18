@@ -82,60 +82,76 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Proye/Gestion_de_incidencias/TickNager/AjustesWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/AjustesWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\AjustesWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\AjustesWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AjustesWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AjustesWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/CategoriasWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/AvisoCampoVacioWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\CategoriasWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\CategoriasWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AvisoCampoVacioWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\AvisoCampoVacioWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/DashboardWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/CategoriasWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\DashboardWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\DashboardWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CategoriasWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CategoriasWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/EquiposWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/CrearUsuarioWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\EquiposWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\EquiposWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CrearUsuarioWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\CrearUsuarioWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/GestionUsuariosWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/DashboardWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\GestionUsuariosWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\GestionUsuariosWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\DashboardWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\DashboardWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/IncidenciasWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/EquiposWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\IncidenciasWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\IncidenciasWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\EquiposWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\EquiposWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/LoginWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/GestionUsuariosWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\LoginWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\LoginWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\GestionUsuariosWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\GestionUsuariosWindow.xaml
+build_metadata.AdditionalFiles.XamlRuntime = Wpf
+
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/IncidenciasWindow.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\IncidenciasWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\IncidenciasWindow.xaml
+build_metadata.AdditionalFiles.XamlRuntime = Wpf
+
+[C:/Proye/Gestion_de_incidencias/TickNager/Ventanas/LoginWindow.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\LoginWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Ventanas\LoginWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
 [C:/Proye/Gestion_de_incidencias/TickNager/App.xaml]

@@ -11,6 +11,9 @@
     <Compile Update="Ventanas\CategoriasWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Ventanas\CrearUsuarioWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ventanas\EquiposWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

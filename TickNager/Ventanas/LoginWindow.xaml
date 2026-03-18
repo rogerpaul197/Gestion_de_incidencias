@@ -47,13 +47,13 @@ y la otra para el ícono del usuario e inicio de sesión-->
                 <TextBlock Text="Usuario:" Foreground="White" Width="340" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="2">
-                <TextBox Name="txtUsuario" Width="340" Height="33" Margin="4"/>
+                <TextBox Name="txtUsuario" Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
             </Grid>
             <Grid Grid.Row="3">
                 <TextBlock Text="Contraseña:" Foreground="White" Width="340" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="4">
-                <PasswordBox  Name="txtContrasena" Width="340" Height="33" Margin="4"/>
+                <PasswordBox  Name="txtContrasena" Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
             </Grid>
             <Grid Grid.Row="5">
                 <Button Width="110" Height="20" Content="Iniciar sesión" Click="Button_Click"/>

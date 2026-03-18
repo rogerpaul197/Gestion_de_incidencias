@@ -2,6 +2,11 @@
 {
     public class Tecnico
     {
+
+        //Se utilizan para poder asignar una imagen masculino o femenino
+        public bool esHombre = true;
+        public bool esMujer = true;
+
         public Tecnico()
         {
 

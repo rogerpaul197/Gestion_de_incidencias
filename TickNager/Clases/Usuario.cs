@@ -6,6 +6,11 @@ namespace TickNager.Clases
     {
         public string nombreUsuario;
         public string apellidoUsuario;
+
+        //Se utilizan para poder asignar una imagen masculino o femenino
+        public bool esHombre = true;
+        public bool esMujer = true;
+
         public string? numeroUsuario;
         public string correoUsuario;
         public string contrasenaUsuario;

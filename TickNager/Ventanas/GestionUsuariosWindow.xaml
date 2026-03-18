@@ -49,7 +49,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <Image Source="C:\Users\cerna\source\repos\TickNager\TickNager\Imagenes\Iconos\perfil.png" Width="20" Margin="0,0,-45,0"/>
+                    <Image Source="/Imagenes/Iconos/perfil_administrador.png" Width="20" Margin="0,0,-45,0"/>
                 </Grid>
 
                 <Grid Grid.Column="2">
@@ -74,7 +74,7 @@
                 </Grid.RowDefinitions>
                 <!--Columna izquierda Logotipo-->
                 <Grid Grid.Row="0">
-                    <Image Source="C:\Users\cerna\source\repos\TickNager\TickNager\Imagenes\Logotipo\Logotipo_TickNager.png" Height="70" Margin="0,8,0,0"/>
+                    <Image Source="/Imagenes/Logotipo/Logotipo_TickNager.png" Height="70" Margin="0,8,0,0"/>
                 </Grid>
                 <!--Columna izquierda Menú-->
                 <Grid Grid.Row="1">
@@ -144,7 +144,25 @@
 
             <!--Columna derecha-->
             <Grid Grid.Column="1" Background="#0C0D21">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
 
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Border CornerRadius="10" Background="#171A45" Height="30px" Width="100px" Margin="80px 0 0 0">
+                                <Button Background="Transparent" Content="Añadir usuario" BorderThickness="0" Foreground="White" Click="btnAnadirUsuario_Click"/>
+                            </Border>
+                            <Border CornerRadius="10" Background="#171A45" Height="30px" Width="100px" Margin="80px 0 0 0">
+                                <Button Background="Transparent" Content="Eliminar usuario" BorderThickness="0" Foreground="White"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

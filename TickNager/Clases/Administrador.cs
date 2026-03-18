@@ -11,6 +11,11 @@ namespace TickNager.Clases
     {
         private string nombreAdministrador;
         private string apellidoAdministrador;
+
+        //Se utilizan para poder asignar una imagen masculino o femenino
+        public bool esHombre = true;
+        public bool esMujer = true;
+
         private string? numeroAdministrador;
         private string correoAdministrador;
         private string contrasenaAdministrador;
@@ -41,6 +46,32 @@ namespace TickNager.Clases
 
             Incidencia incidencia = new Incidencia(nombreIncidencia, tecnicoResponsable_EquipoResponsable, usuarioResporta);
             return incidencia;
+        }
+
+        /// <summary>
+        /// Se usa para poder crear un usuario, dependiendo del rol que le asigne, sérá técnico o un usuario estándar
+        /// </summary>
+        public void crearUsuario()
+        {
+            Console.WriteLine("Nombre de usuario: ");
+            string nombreUsuario = Console.ReadLine();
+            Console.WriteLine("Apellido de usuario: ");
+            string apellidoUsuario = Console.ReadLine();
+            Console.WriteLine("Rol del usuario (Técnico o usuario estándar): ");
+            string rolUsuario = Console.ReadLine();
+            Console.WriteLine("Correo del usuario: ");
+            string departamentoUsuario = Console.ReadLine();
+            Console.WriteLine("Departamento del usuario: ");
+            string correoUsuario = Console.ReadLine();
+            Console.WriteLine("Contraseña del usuario: ");
+            string contrasenaUsuario = Console.ReadLine(); //el administrador le podrá asignar una contraseña al usuario para que use la app, el usuario deberá modificar la contraseña.
+            Console.WriteLine("Confirma la contraseña del usuario: ");
+            string contrasenaConfirmacionUsuario = Console.ReadLine();
+        }
+
+        public void verMisDatos()
+        {
+
         }
     }
 }
