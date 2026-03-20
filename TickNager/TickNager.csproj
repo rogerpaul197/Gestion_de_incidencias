@@ -9,9 +9,58 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imagenes\Iconos\perfil.png" />
+    <None Remove="Imagenes\Iconos\perfil_administrador.png" />
+    <None Remove="Imagenes\Iconos\perfil_administradora.png" />
+    <None Remove="Imagenes\Iconos\perfil_tecnica.png" />
+    <None Remove="Imagenes\Iconos\perfil_tecnico.png" />
+    <None Remove="Imagenes\Iconos\perfil_usuaria.png" />
+    <None Remove="Imagenes\Iconos\perfil_usuario.png" />
+    <None Remove="Imagenes\Logotipo\Logotipo_TickNager.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagenes\Logotipo\Logotipo_TickNager.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CSharpMarkup.WinUI.LiveChartsCore.SkiaSharpView" Version="3.1.2" />
     <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="6.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagenes\Iconos\perfil_administrador.png" />
+    <Resource Include="Imagenes\Iconos\perfil_administradora.png" />
+    <Resource Include="Imagenes\Iconos\perfil_tecnica.png" />
+    <Resource Include="Imagenes\Iconos\perfil_tecnico.png" />
+    <Resource Include="Imagenes\Iconos\perfil_usuaria.png" />
+    <Resource Include="Imagenes\Iconos\perfil_usuario.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Ventanas\AjustesWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\DashboardWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\EquiposWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\GestionUsuariosWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\IncidenciasWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\RegistroWindow - Copia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

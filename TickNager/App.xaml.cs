@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace TickNager
+namespace TickNager.Ventanas
 {
     /// <summary>
     /// Interaction logic for App.xaml

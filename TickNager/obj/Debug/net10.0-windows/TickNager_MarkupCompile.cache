@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER;HAS_UNO;__UNO__;HAS_UNO_WINUI;__UNO_WINUI__;WINUI_WINDOWING;UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE;UNO_HAS_NO_IDEPENDENCYOBJECT
 C:\Users\cerna\source\repos\TickNager\TickNager\App.xaml
-7-582495284
+11491895066
 
-101764568356
+1811025881
 275-1917089110
-AjustesWindow.xaml;CategoriasWindow.xaml;DashboardWindow.xaml;EquiposWindow.xaml;GestionUsuariosWindow.xaml;IncidenciasWindow.xaml;LoginWindow.xaml;
+Ventanas\AjustesWindow.xaml;Ventanas\AvisoCampoVacioWindow.xaml;Ventanas\CategoriasWindow.xaml;Ventanas\CrearUsuarioWindow.xaml;Ventanas\DashboardWindow.xaml;Ventanas\EquiposWindow.xaml;Ventanas\GestionUsuariosWindow.xaml;Ventanas\IncidenciasWindow.xaml;Ventanas\LoginWindow.xaml;Ventanas\RegistroWindow.xaml;Vista\ControladoresUsuario\UsuarioCreado.xaml;
 
 False
 

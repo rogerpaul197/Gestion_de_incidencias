@@ -1,0 +1,151 @@
+﻿<Window x:Class="TickNager.EquiposWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TickNager"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="EquiposWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--Cabecera-->
+            <RowDefinition Height="30"/>
+            <!--Estructura debajo de la cabecera-->
+            <RowDefinition Height="404.04"/>
+        </Grid.RowDefinitions>
+
+        <!--Cabecera-->
+        <Grid Grid.Row="0" Background="#0C0D21" Margin="200,0,0,0">
+            <Grid.ColumnDefinitions>
+                <!--El buscador-->
+                <ColumnDefinition Width="330"/>
+                <!--Notificaciones, logo/nombre de usuario-->
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Text="Buscador" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#171A45" Padding="2"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <!--Notificaciones-->
+                    <ColumnDefinition/>
+                    <!--ícono del usuario-->
+                    <ColumnDefinition Width="95"/>
+                    <!--Nombre del administrador-->
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Background="Transparent" 
+                            BorderThickness="0"
+                            Width="100">
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconMaterial Kind="Bell" Foreground="White" Padding="0,0,5,0" HorizontalAlignment="Left"/>
+                            <TextBlock Text="Notificaciones" FontSize="10" Foreground="White"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Image Source="/Imagenes/Iconos/perfil_administrador.png" Width="20" Margin="0,0,-45,0"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <TextBlock Text="Administrador" Width="90" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="10"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!--Estructura debajo de la cabecera, se dividirá en 2 columnas, la izquierda el menú 
+        y la derecha lo que devuelve al hacer clic en una opción del menú-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Columna izquierda-->
+            <Grid Grid.Column="0" Background="#171A45" Margin="0,-30,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!--Columna izquierda Logotipo-->
+                <Grid Grid.Row="0">
+                    <Image Source="/Imagenes/Logotipo/Logotipo_TickNager.png" Height="70" Margin="0,8,0,0"/>
+                </Grid>
+                <!--Columna izquierda Menú-->
+                <Grid Grid.Row="1">
+                    <StackPanel Margin="15,10,0,0">
+                        <Button Name="btnDashboard" 
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="ViewDashboard" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Dashboard" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnIncidencias" 
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="AlertCircle" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Incidencias" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnGestionUsuarios" Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="AccountGroup" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Gestión de usuarios" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnEquipos" 
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="DesktopClassic" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Equipos" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnCategorias" 
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="Tag" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Categorías" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="btnAjustes" 
+                            Background="Transparent"
+                            BorderThickness="0"
+                            HorizontalAlignment="Left"
+                            Margin="0,10,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconMaterial Kind="Cog" Foreground="White" Margin="0,0,20,0"/>
+                                <TextBlock Text="Ajustes" Foreground="White"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <!--Columna derecha-->
+            <Grid Grid.Column="1" Background="#0C0D21">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

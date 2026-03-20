@@ -1,10 +1,14 @@
 ﻿
 
-FC:\Users\cerna\source\repos\TickNager\TickNager\IncidenciasWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\LoginWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\AjustesWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\CategoriasWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\DashboardWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\EquiposWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\GestionUsuariosWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\AjustesWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\AvisoCampoVacioWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\CategoriasWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\DashboardWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\EquiposWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\GestionUsuariosWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\IncidenciasWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\LoginWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\RegistroWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Ventanas\CrearUsuarioWindow.xaml;;
+FC:\Users\cerna\source\repos\TickNager\TickNager\Vista\ControladoresUsuario\UsuarioCreado.xaml;;
 

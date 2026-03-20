@@ -104,7 +104,7 @@ namespace TickNager {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TickNager;component/categoriaswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TickNager;V1.0.0.0;component/categoriaswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CategoriasWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
