@@ -34,6 +34,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using TickNager;
+using TickNager.Vista.ControladoresUsuario;
 
 
 namespace TickNager {
@@ -104,7 +105,7 @@ namespace TickNager {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TickNager;component/ventanas/incidenciaswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TickNager;V1.0.0.0;component/ventanas/incidenciaswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Ventanas\IncidenciasWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

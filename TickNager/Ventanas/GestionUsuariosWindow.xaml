@@ -147,10 +147,19 @@
             <Grid Grid.Column="1" Background="#0C0D21">
                 <Grid>
                     <Grid.RowDefinitions>
+<<<<<<< HEAD
                         <RowDefinition Height="60"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
+=======
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
                     <Grid Grid.Row="0">
                         <StackPanel Orientation="Horizontal">
                             <Border CornerRadius="10" Background="#171A45" Height="30px" Width="100px" Margin="80px 0 0 0">
@@ -161,10 +170,13 @@
                             </Border>
                         </StackPanel>
                     </Grid>
+<<<<<<< HEAD
                     <!--Aquí apareceran todos los usuarios cuándo se crean-->
                     <ScrollViewer Grid.Row="1">
                         <StackPanel x:Name="spUsuarios" Margin="20"/>
                     </ScrollViewer>
+=======
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
                 </Grid>
             </Grid>
         </Grid>

@@ -6,7 +6,10 @@ namespace TickNager.Clases
     {
         public string nombreUsuario;
         public string apellidoUsuario;
+<<<<<<< HEAD
         public string departamentoUsuario;
+=======
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
 
         //Se utilizan para poder asignar una imagen masculino o femenino
         public bool esHombre = true;
@@ -20,11 +23,18 @@ namespace TickNager.Clases
 
         }
 
+<<<<<<< HEAD
         public Usuario(string nombreUsuario, string apellidoUsuario, string departamentoUsuario, string? numeroUsuario, string correoUsuario, string contrasenaUsuario)
         {
             this.nombreUsuario = nombreUsuario;
             this.apellidoUsuario = apellidoUsuario;
             this.departamentoUsuario = departamentoUsuario;
+=======
+        public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, string correoUsuario, string contrasenaUsuario)
+        {
+            this.nombreUsuario = nombreUsuario;
+            this.apellidoUsuario = apellidoUsuario;
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
             this.numeroUsuario = numeroUsuario;
             this.correoUsuario = correoUsuario;
             this.contrasenaUsuario = contrasenaUsuario;
@@ -49,8 +59,12 @@ namespace TickNager.Clases
                     AvisoCampoVacioWindow ventanaAviso = new AvisoCampoVacioWindow();
                     ventanaAviso.Show();
                     return null;
+<<<<<<< HEAD
                 }
                 else
+=======
+                } else
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
                 {
                     salirBucle = true; //si la descripcion la rellenar el usuario, sale del bucle
                 }
@@ -60,6 +74,12 @@ namespace TickNager.Clases
             Incidencia incidencia = new Incidencia(descripcionIncidencia);
             return incidencia;
         }
+<<<<<<< HEAD
 
     }
 }
+=======
+        
+    }
+}
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22

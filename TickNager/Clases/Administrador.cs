@@ -74,4 +74,8 @@ namespace TickNager.Clases
 
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22

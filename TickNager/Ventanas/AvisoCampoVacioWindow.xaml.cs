@@ -22,7 +22,11 @@ namespace TickNager.Ventanas
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void btnAvisoCampoVacio_Click(object sender, RoutedEventArgs e)
+=======
+        private void btnAviso_Click(object sender, RoutedEventArgs e)
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
         {
             this.Close();
         }

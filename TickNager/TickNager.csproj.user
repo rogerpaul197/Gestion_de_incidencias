@@ -2,6 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="Ventanas\AvisoCampoVacioWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -9,6 +10,30 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vista\ControladoresUsuario\UsuarioCreado.xaml.cs">
+=======
+    <Compile Update="Ventanas\AjustesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\AvisoCampoVacioWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\CategoriasWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\CrearUsuarioWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\EquiposWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\GestionUsuariosWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\IncidenciasWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ventanas\DashboardWindow.xaml.cs">
+>>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
