@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\
+C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\
 TickNager
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER;HAS_UNO;__UNO__;HAS_UNO_WINUI;__UNO_WINUI__;WINUI_WINDOWING;UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE;UNO_HAS_NO_IDEPENDENCYOBJECT
-<<<<<<< HEAD
 C:\Users\cerna\source\repos\TickNager\TickNager\App.xaml
-11491895066
+12-1197488195
 
-1811025881
+20375760136
 275-1917089110
-Ventanas\AjustesWindow.xaml;Ventanas\AvisoCampoVacioWindow.xaml;Ventanas\CategoriasWindow.xaml;Ventanas\CrearUsuarioWindow.xaml;Ventanas\DashboardWindow.xaml;Ventanas\EquiposWindow.xaml;Ventanas\GestionUsuariosWindow.xaml;Ventanas\IncidenciasWindow.xaml;Ventanas\LoginWindow.xaml;Ventanas\RegistroWindow.xaml;Vista\ControladoresUsuario\UsuarioCreado.xaml;
-=======
-C:\Proye\Gestion_de_incidencias\TickNager\App.xaml
-9184053309
-
-171818379902
-275-1334061726
-Ventanas\AjustesWindow.xaml;Ventanas\AvisoCampoVacioWindow.xaml;Ventanas\CategoriasWindow.xaml;Ventanas\CrearUsuarioWindow.xaml;Ventanas\DashboardWindow.xaml;Ventanas\EquiposWindow.xaml;Ventanas\GestionUsuariosWindow.xaml;Ventanas\IncidenciasWindow.xaml;Ventanas\LoginWindow.xaml;
->>>>>>> fa9368ce1a14ebc4361b27f62a1a0a947ee3ab22
+Resources\styles.xaml;Views\AjustesWindow.xaml;Views\AvisoCampoVacioWindow.xaml;Views\CategoriasWindow.xaml;Views\ControladoresUsuario\UsuarioCreado.xaml;Views\CrearUsuarioWindow.xaml;Views\DashboardWindow.xaml;Views\EquiposWindow.xaml;Views\GestionUsuariosWindow.xaml;Views\IncidenciasWindow.xaml;Views\LoginWindow.xaml;Views\RegistroWindow.xaml;
 
 False
 

@@ -42,25 +42,4 @@
     <Resource Include="Imagenes\Iconos\perfil_usuario.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Ventanas\AjustesWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ventanas\DashboardWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ventanas\EquiposWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ventanas\GestionUsuariosWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ventanas\IncidenciasWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Ventanas\RegistroWindow - Copia.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
 </Project>

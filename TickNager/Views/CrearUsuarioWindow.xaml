@@ -1,0 +1,109 @@
+﻿<Window x:Class="TickNager.Views.CrearUsuarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TickNager.Ventanas"
+        mc:Ignorable="d"
+        Title="CrearUsuarioWindow" Height="500" Width="800">
+    <Grid Background="#0C0D21">
+        <!--2 columnas, 1 para la foto, y la otra para la entrada de datos-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Image Source="/Imagenes/Iconos/perfil_usuario.png" Height="300"/>
+        </Grid>
+        
+        <Grid Grid.Column="1">
+            <Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="10,20,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                            <TextBlock Text="Nombre de usuario:" Foreground="White" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtNombreUsuario" Background="#171A45" Height="30" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                            <TextBlock Text="Apellido de usuario:" Foreground="White" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtApellidoUsuario" Background="#171A45" Height="30" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Margin="10,10,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                            <TextBlock Text="Rol:" Foreground="White" Margin="0,0,0,5"/>
+                            <ComboBox x:Name="roles" Height="30" SelectedIndex="0">
+                                <ComboBoxItem Content="Selecciona un rol"/>
+                                <ComboBoxItem Content="Técnico"/>
+                                <ComboBoxItem Content="Usuario"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                            <TextBlock Text="Departamento:" Foreground="White" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtDepartamento" Background="#171A45" Height="30" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <TextBlock  Text="Número" Foreground="White" Margin="10 0 0 0"/>
+                        <TextBox x:Name="txtNumero" Background="#171A45" Height="20" Width="355" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <TextBlock  Text="Correo eletrónico" Foreground="White" Margin="10 0 0 0"/>
+                        <TextBox x:Name="txtCorreo" Background="#171A45" Height="20" Width="355" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    </Grid>
+
+                    <Grid Grid.Row="4">
+                        <TextBlock  Text="Contraseña:" Foreground="White" Margin="10 0 0 0"/>
+                        <PasswordBox x:Name="txtContrasena" Background="#171A45" Height="20" Width="355" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    </Grid>
+
+                    <Grid Grid.Row="5">
+                        <TextBlock  Text="Confirmar contraseña:" Foreground="White" Margin="10 0 0 0"/>
+                        <PasswordBox x:Name="txtContrasenaConfirmacion" Background="#171A45" Height="20" Width="355" HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Border Background="Beige" CornerRadius="10" Height="30" Width="70">
+                                <Button Background="Transparent" Content="Cancelar" BorderThickness="0" Click="btnCancelar_Click"/>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Border Background="Beige" CornerRadius="10" Height="30" Width="70">
+                                <Button Background="Transparent" Content="Crear" BorderThickness="0" Click="btnCrear_Click"/>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
