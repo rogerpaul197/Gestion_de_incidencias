@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace TickNager.Views
+namespace TickNager.Views.Windows
 {
     public partial class LoginWindow : Window
     {

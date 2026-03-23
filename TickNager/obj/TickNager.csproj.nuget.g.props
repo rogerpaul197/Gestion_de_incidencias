@@ -5,12 +5,12 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\cerna\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\rcernamuno\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">7.0.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\cerna\.nuget\packages\" />
+    <SourceRoot Include="C:\Users\rcernamuno\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
@@ -21,9 +21,9 @@
     <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.9\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.9\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgUno_Foundation Condition=" '$(PkgUno_Foundation)' == '' ">C:\Users\cerna\.nuget\packages\uno.foundation\6.0.465</PkgUno_Foundation>
-    <PkgUno_WinRT Condition=" '$(PkgUno_WinRT)' == '' ">C:\Users\cerna\.nuget\packages\uno.winrt\6.0.465</PkgUno_WinRT>
-    <PkgUno_WinUI Condition=" '$(PkgUno_WinUI)' == '' ">C:\Users\cerna\.nuget\packages\uno.winui\6.0.465</PkgUno_WinUI>
-    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\cerna\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
+    <PkgUno_Foundation Condition=" '$(PkgUno_Foundation)' == '' ">C:\Users\rcernamuno\.nuget\packages\uno.foundation\6.0.465</PkgUno_Foundation>
+    <PkgUno_WinRT Condition=" '$(PkgUno_WinRT)' == '' ">C:\Users\rcernamuno\.nuget\packages\uno.winrt\6.0.465</PkgUno_WinRT>
+    <PkgUno_WinUI Condition=" '$(PkgUno_WinUI)' == '' ">C:\Users\rcernamuno\.nuget\packages\uno.winui\6.0.465</PkgUno_WinUI>
+    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\rcernamuno\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
   </PropertyGroup>
 </Project>

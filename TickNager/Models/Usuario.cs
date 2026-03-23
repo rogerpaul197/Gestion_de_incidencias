@@ -2,8 +2,8 @@
 {
     public class Usuario
     {
-        public string nombreUsuario;
-        public string apellidoUsuario;
+        public string nombreUsuario { get; set; }
+        public string apellidoUsuario { get; set; }
         public string departamentoUsuario;
 
         //Se utilizan para poder asignar una imagen masculino o femenino

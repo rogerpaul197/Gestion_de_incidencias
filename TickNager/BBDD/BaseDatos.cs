@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TickNager.BBDD
 {
-    class BaseDatos
+    public class BaseDatos
     {
         private readonly string _conexion;
         public string Conexion => _conexion;

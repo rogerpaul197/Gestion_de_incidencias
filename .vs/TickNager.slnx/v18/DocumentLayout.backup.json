@@ -1,36 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\cerna\\source\\repos\\TickNager\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\ticknager\\ticknager\\views\\ajusteswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\ajusteswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AjustesWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\TickNager\\TickNager\\Views\\AjustesWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\AjustesWindow.xaml",
-              "ToolTip": "C:\\Users\\cerna\\source\\repos\\TickNager\\TickNager\\Views\\AjustesWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\AjustesWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-22T18:51:18.535Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

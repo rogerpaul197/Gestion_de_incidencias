@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace TickNager.Views
+namespace TickNager.Views.Windows
 {
     /// <summary>
     /// Lógica de interacción para CrearUsuarioWindow.xaml
