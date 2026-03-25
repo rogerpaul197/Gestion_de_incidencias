@@ -14,36 +14,41 @@ namespace TickNager.Views.Windows
 
         private void btnIncidencias_Click(object sender, RoutedEventArgs e)
         {
+            /*
             IncidenciasWindow ventanaIncidencias = new IncidenciasWindow();
-            ventanaIncidencias.Show();
+            ventanaIncidencias.Show();*/
             this.Close();
         }
 
         private void btnGestionUsuarios_Click(object sender, RoutedEventArgs e)
         {
+            /*
             GestionUsuariosWindow ventanaGestionUsuarios = new GestionUsuariosWindow();
-            ventanaGestionUsuarios.Show();
+            ventanaGestionUsuarios.Show();*/
             this.Close();
         }
 
         private void btnEquipos_Click(object sender, RoutedEventArgs e)
         {
+            /*
             EquiposWindow ventanaEquipos = new EquiposWindow();
-            ventanaEquipos.Show();
+            ventanaEquipos.Show();*/
             this.Close();
         }
 
         private void btnCategorias_Click(object sender, RoutedEventArgs e)
         {
+            /*
             CategoriasWindow ventanaCategorias = new CategoriasWindow();
-            ventanaCategorias.Show();
+            ventanaCategorias.Show();*/
             this.Close();
         }
 
         private void btnAjustes_Click(object sender, RoutedEventArgs e)
         {
+            /*
             AjustesWindow ventanaAjustes = new AjustesWindow();
-            ventanaAjustes.Show();
+            ventanaAjustes.Show();*/
             this.Close();
         }
     }

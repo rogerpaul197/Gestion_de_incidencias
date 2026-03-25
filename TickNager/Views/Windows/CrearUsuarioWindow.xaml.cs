@@ -7,6 +7,7 @@ namespace TickNager.Views.Windows
     /// </summary>
     public partial class CrearUsuarioWindow : Window
     {
+        /*
         private GestionUsuariosWindow ventanaPadre;
         string nombreUsuario;
         string apellidoUsuario;
@@ -15,13 +16,14 @@ namespace TickNager.Views.Windows
         string correoUsuario;
         string contrasenaUsuario;
         string contrasenaUsuarioConfirmacion;
-        string nombreCompleto;
+        string nombreCompleto;*/
 
+        /*
         public CrearUsuarioWindow(GestionUsuariosWindow ventana)
         {
             InitializeComponent();
             ventanaPadre = ventana;
-        }
+        }*/
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -29,13 +31,13 @@ namespace TickNager.Views.Windows
         }
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             nombreUsuario = txtNombreUsuario.Text;
             apellidoUsuario = txtApellidoUsuario.Text;
 
             nombreCompleto = nombreUsuario + " " + apellidoUsuario;
 
-            ventanaPadre.AgregarUsuarioCreado(nombreCompleto);
+            ventanaPadre.AgregarUsuarioCreado(nombreCompleto);*/
 
             this.Close();
         }

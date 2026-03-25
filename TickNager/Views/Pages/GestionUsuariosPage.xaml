@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
-
+    <!--
     <Grid Background="#0C0D21" Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -66,5 +66,5 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-    </Grid>
+    </Grid>-->
 </Page>

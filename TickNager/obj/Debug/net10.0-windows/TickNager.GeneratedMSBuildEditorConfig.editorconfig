@@ -130,12 +130,12 @@ build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNa
 build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\GestionUsuariosPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/IncidenciasPage.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/IncidenciaPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciasPage.xaml
-build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciasPage.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciaPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciaPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
 [C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/AvisoCampoVacioWindow.xaml]

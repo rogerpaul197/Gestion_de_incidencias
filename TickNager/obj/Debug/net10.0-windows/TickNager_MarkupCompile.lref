@@ -1,14 +1,13 @@
 ﻿
-FC:\Users\cerna\source\repos\TickNager\TickNager\App.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\AjustesWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\AvisoCampoVacioWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\CategoriasWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\CrearUsuarioWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\DashboardWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\EquiposWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\GestionUsuariosWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\IncidenciasWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\LoginWindow.xaml;;
-FC:\Users\cerna\source\repos\TickNager\TickNager\Views\RegistroWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\App.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\AjustesPage.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\CategoriasPage.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\EquiposPage.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciaPage.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\AvisoCampoVacioWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\CrearUsuarioWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\DashboardWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml;;
 

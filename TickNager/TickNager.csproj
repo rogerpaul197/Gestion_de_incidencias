@@ -42,4 +42,8 @@
     <Resource Include="Imagenes\Iconos\perfil_usuario.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SQL\" />
+  </ItemGroup>
+
 </Project>

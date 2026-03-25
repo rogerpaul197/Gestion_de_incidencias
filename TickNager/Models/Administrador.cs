@@ -1,8 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using TickNager.BBDD;
-using Windows.System;
-
-///<summary>
+﻿///<summary>
 ///Esta clase es la de el administrador, el que se encargará  de gestionar incidencias, usuarios...
 ///</summary>
 namespace TickNager.Models
@@ -29,6 +25,12 @@ namespace TickNager.Models
             this.numeroAdministrador = numeroAdministrador;
             this.correoAdministrador = correoAdministrador;
             this.contrasenaAdministrador = contrasenaAdministrador;
+        }
+
+        private Usuario crearUsuario()
+        {
+            Usuario usuario = new Usuario();
+            return usuario;
         }
 
         /*

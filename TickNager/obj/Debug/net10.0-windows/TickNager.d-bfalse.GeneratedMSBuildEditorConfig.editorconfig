@@ -3,7 +3,7 @@ build_property.XamlSourceGeneratorTracingFolder =
 build_property.TargetFramework = net10.0-windows
 build_property.TargetFramework = net10.0-windows
 build_property.ProjectTypeGuidsProperty = 
-build_property.MSBuildProjectFullPath = C:\Users\cerna\source\repos\TickNager\TickNager\TickNager.csproj
+build_property.MSBuildProjectFullPath = C:\Proye\Gestion_de_incidencias\TickNager\TickNager.csproj
 build_property.RootNamespace = TickNager
 build_property.RootNamespace = TickNager
 build_property.DefineConstantsProperty = TRACE,DEBUG,NET,NET10_0,NETCOREAPP,WINDOWS,WINDOWS7_0,NET5_0_OR_GREATER,NET6_0_OR_GREATER,NET7_0_OR_GREATER,NET8_0_OR_GREATER,NET9_0_OR_GREATER,NET10_0_OR_GREATER,NETCOREAPP3_0_OR_GREATER,NETCOREAPP3_1_OR_GREATER,WINDOWS7_0_OR_GREATER,HAS_UNO,__UNO__,HAS_UNO_WINUI,__UNO_WINUI__,WINUI_WINDOWING,UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE,UNO_HAS_NO_IDEPENDENCYOBJECT
@@ -33,16 +33,16 @@ build_property.UnoHotReloadMode =
 build_property.SolutionFileName = TickNager.slnx
 build_property.LangName = es-ES
 build_property.LangID = 3082
-build_property.SolutionDir = C:\Users\cerna\source\repos\TickNager\
+build_property.SolutionDir = C:\Proye\Gestion_de_incidencias\
 build_property.SolutionExt = .slnx
 build_property.UseHostCompilerIfAvailable = false
 build_property.DefineExplicitDefaults = true
 build_property.Platform = AnyCPU
-build_property.SolutionPath = C:\Users\cerna\source\repos\TickNager\TickNager.slnx
+build_property.SolutionPath = C:\Proye\Gestion_de_incidencias\TickNager.slnx
 build_property.SolutionName = TickNager
 build_property.VSIDEResolvedNonMSBuildProjectOutputs = <VSIDEResolvedNonMSBuildProjectOutputs />
 build_property.DevEnvDir = C:\Program Files\Microsoft Visual Studio\18\Insiders\Common7\IDE\
-build_property.MSBuildVersion = 18.3.0
+build_property.MSBuildVersion = 18.5.0
 build_property.UseWPF = true
 build_property.UnoRemoteControlPort = 
 build_property.UnoRemoteControlHost = 
@@ -75,113 +75,113 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.ProjectDir = C:\Users\cerna\source\repos\TickNager\TickNager\
+build_property.ProjectDir = C:\Proye\Gestion_de_incidencias\TickNager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Resources/styles.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Resources/styles.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Resources\styles.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Resources\styles.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Resources\styles.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Resources\styles.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/AjustesWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/ControladoresUsuario/UsuarioCreado.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\AjustesWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\AjustesWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/AvisoCampoVacioWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/AjustesPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\AvisoCampoVacioWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\AvisoCampoVacioWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\AjustesPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\AjustesPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/CategoriasWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/CategoriasPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\CategoriasWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\CategoriasWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\CategoriasPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\CategoriasPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/ControladoresUsuario/UsuarioCreado.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/EquiposPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\ControladoresUsuario\UsuarioCreado.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\EquiposPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\EquiposPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/CrearUsuarioWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/GestionUsuariosPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\CrearUsuarioWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\CrearUsuarioWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\GestionUsuariosPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\GestionUsuariosPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/DashboardWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Pages/IncidenciaPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\DashboardWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\DashboardWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciaPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Pages\IncidenciaPage.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/EquiposWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/AvisoCampoVacioWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\EquiposWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\EquiposWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\AvisoCampoVacioWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\AvisoCampoVacioWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/GestionUsuariosWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/CrearUsuarioWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\GestionUsuariosWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\GestionUsuariosWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\CrearUsuarioWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\CrearUsuarioWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/IncidenciasWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/DashboardWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\IncidenciasWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\IncidenciasWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\DashboardWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\DashboardWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/LoginWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/LoginWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\LoginWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\LoginWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/Views/RegistroWindow.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/Views/Windows/RegistroWindow.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\Views\RegistroWindow.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\Views\RegistroWindow.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
 
-[C:/Users/cerna/source/repos/TickNager/TickNager/App.xaml]
+[C:/Proye/Gestion_de_incidencias/TickNager/App.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = ApplicationDefinition
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.FullPath = C:\Users\cerna\source\repos\TickNager\TickNager\App.xaml
-build_metadata.AdditionalFiles.Identity = C:\Users\cerna\source\repos\TickNager\TickNager\App.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Proye\Gestion_de_incidencias\TickNager\App.xaml
+build_metadata.AdditionalFiles.Identity = C:\Proye\Gestion_de_incidencias\TickNager\App.xaml
 build_metadata.AdditionalFiles.XamlRuntime = Wpf
