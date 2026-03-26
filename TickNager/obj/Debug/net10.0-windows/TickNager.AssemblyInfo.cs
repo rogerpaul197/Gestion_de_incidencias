@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TickNager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07ac056e0a4e21f00b6bf3728063296a389fdf50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e908901a1ea2ef98bd6ec69377ae6ece21ae9e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TickNager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TickNager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

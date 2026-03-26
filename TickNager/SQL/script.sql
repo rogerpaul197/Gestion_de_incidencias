@@ -22,5 +22,14 @@ CREATE TABLE incidencias (
 	estado BOOLEAN NOT NULL,
 	responsable TEXT NOT NULL,
 	usuario_reportero TEXT NOT NULL,
-	fecha_creacion TEXT NOT NULL
+	fecha_creacion TEXT NOT NULL,
+	fecha_cierre TEXT NOT NULL
 ); 
+
+CREATE TABLE slas (
+	id INTEGER PRIMARY KEY,
+	nombre TEXT NOT NULL,
+	tiempo_primera_respuesta_horas INT NOT NULL,
+	tiempo_resolucion_horas INT NOT NULL,
+	descripcion TEXT NOT NULL
+);
