@@ -7,6 +7,19 @@ namespace TickNager.ViewModels
 {
     public class GestionUsuariosViewModel
     {
+        //Lista de usuarios
+        ObservableCollection<Usuario> usuarios { get; set; }
+        public ICommand anadirUsuarioCommand { get; set; }
         
+        public GestionUsuariosViewModel()
+        {
+
+        }
+
+        public Usuario crearUsuario()
+        {
+            Usuario usuarioNuevo = new Usuario();
+            return usuarioNuevo;
+        }
     }
 }

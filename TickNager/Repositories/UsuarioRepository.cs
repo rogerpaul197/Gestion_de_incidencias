@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿///<summary>
+///Aquí van las operaciones CRUD
+///</summary>
 namespace TickNager.Repositories
 {
-    internal class UsuarioRepository
+    public class UsuarioRepository
     {
     }
 }

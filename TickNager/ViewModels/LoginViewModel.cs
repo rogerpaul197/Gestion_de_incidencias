@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TickNager.ViewModels
 {
-    internal class LoginViewModels
+    internal class LoginViewModel
     {
     }
 }
