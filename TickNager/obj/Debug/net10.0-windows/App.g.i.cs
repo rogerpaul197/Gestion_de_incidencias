@@ -59,7 +59,7 @@ namespace TickNager {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/TickNager;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TickNager;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

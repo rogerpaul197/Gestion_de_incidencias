@@ -1,20 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "10M9hKa35ps=",
+  "dgSpecHash": "fEwDRLvDhhk=",
   "success": true,
   "projectFilePath": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\TickNager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\csharpmarkup.winui\\3.1.2\\csharpmarkup.winui.3.1.2.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\csharpmarkup.winui.livechartscore.skiasharpview\\3.1.2\\csharpmarkup.winui.livechartscore.skiasharpview.3.1.2.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\harfbuzzsharp\\7.3.0.3\\harfbuzzsharp.7.3.0.3.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.3\\harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0.3\\harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\livechartscore\\2.0.0-rc5.3\\livechartscore.2.0.0-rc5.3.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\livechartscore.behaviours\\2.0.0-rc5.3\\livechartscore.behaviours.2.0.0-rc5.3.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0-rc5.3\\livechartscore.skiasharpview.2.0.0-rc5.3.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\livechartscore.skiasharpview.uno.winui\\2.0.0-rc5.3\\livechartscore.skiasharpview.uno.winui.2.0.0-rc5.3.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks\\6.2.1\\mahapps.metro.iconpacks.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.bootstrapicons\\6.2.1\\mahapps.metro.iconpacks.bootstrapicons.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.boxicons\\6.2.1\\mahapps.metro.iconpacks.boxicons.6.2.1.nupkg.sha512",
@@ -58,19 +49,7 @@
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.unicons\\6.2.1\\mahapps.metro.iconpacks.unicons.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.vaadinicons\\6.2.1\\mahapps.metro.iconpacks.vaadinicons.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.weathericons\\6.2.1\\mahapps.metro.iconpacks.weathericons.6.2.1.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.zondicons\\6.2.1\\mahapps.metro.iconpacks.zondicons.6.2.1.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp\\2.88.9\\skiasharp.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.9\\skiasharp.harfbuzz.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.9\\skiasharp.nativeassets.macos.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\2.88.9\\skiasharp.nativeassets.webassembly.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.9\\skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\skiasharp.views.uno.winui\\2.88.9\\skiasharp.views.uno.winui.2.88.9.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.diagnostics.eventing\\2.0.1\\uno.diagnostics.eventing.2.0.1.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.fonts.fluent\\2.6.1\\uno.fonts.fluent.2.6.1.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.foundation\\6.0.465\\uno.foundation.6.0.465.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.foundation.logging\\6.0.465\\uno.foundation.logging.6.0.465.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.winrt\\6.0.465\\uno.winrt.6.0.465.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\uno.winui\\6.0.465\\uno.winui.6.0.465.nupkg.sha512"
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.zondicons\\6.2.1\\mahapps.metro.iconpacks.zondicons.6.2.1.nupkg.sha512"
   ],
   "logs": [
     {
