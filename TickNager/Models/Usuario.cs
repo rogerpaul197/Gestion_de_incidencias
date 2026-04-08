@@ -2,28 +2,42 @@
 {
     public class Usuario
     {
-        public string nombreUsuario { get; set; }
-        public string apellidoUsuario { get; set; }
-        public string departamentoUsuario;
+        private string nombreUsuario { get; set; }
+        private string apellidoUsuario { get; set; }
+        private string departamentoUsuario;
+        private string? numeroUsuario;
 
         //Se utilizan para poder asignar una imagen masculino o femenino
-        public bool esHombre = true;
-        public bool esMujer = true;
+        private bool esHombre = true;
+        private bool esMujer = true;
 
-        public string? numeroUsuario;
-        public string correoUsuario;
-        public string contrasenaUsuario;
+        private bool generoUsuario;
+
+        private string correoUsuario;
+        private string contrasenaUsuario;
+
         public Usuario()
         {
 
         }
 
-        public Usuario(string nombreUsuario, string apellidoUsuario, string departamentoUsuario, string? numeroUsuario, string correoUsuario, string contrasenaUsuario)
+        public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, bool generoUsuario, string correoUsuario, string contrasenaUsuario)
+        {
+            this.nombreUsuario = nombreUsuario;
+            this.apellidoUsuario = apellidoUsuario;
+            this.numeroUsuario = numeroUsuario;
+            this.generoUsuario = generoUsuario;
+            this.correoUsuario = correoUsuario;
+            this.contrasenaUsuario = contrasenaUsuario;
+        }
+
+        public Usuario(string nombreUsuario, string apellidoUsuario, string departamentoUsuario, string? numeroUsuario, bool generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
             this.nombreUsuario = nombreUsuario;
             this.apellidoUsuario = apellidoUsuario;
             this.departamentoUsuario = departamentoUsuario;
             this.numeroUsuario = numeroUsuario;
+            this.generoUsuario = generoUsuario;
             this.correoUsuario = correoUsuario;
             this.contrasenaUsuario = contrasenaUsuario;
         }

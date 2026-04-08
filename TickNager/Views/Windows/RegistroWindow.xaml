@@ -82,7 +82,7 @@
         </Grid>
         
         <Grid Grid.Row="6">
-            <Button Height="30" Width="80" Content="Registrarse" Click="btnRegistro_Click"/>
+            <Button Height="30" Width="80" Content="Registrarse" Click="btnRegistro_Click" Command="{Binding RegistroUsuario}"/>
         </Grid>
         
     </Grid>

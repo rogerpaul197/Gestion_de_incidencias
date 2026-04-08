@@ -3,9 +3,6 @@ using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
 {
-    /// <summary>
-    /// Lógica de interacción para RegistroWindow.xaml
-    /// </summary>
     public partial class RegistroWindow : Window
     {
         public RegistroWindow()

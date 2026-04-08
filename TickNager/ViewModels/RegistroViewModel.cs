@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 using TickNager.Commands;
 using TickNager.Models;
@@ -13,6 +14,7 @@ namespace TickNager.ViewModels
         private string _apellido;
         private string _departamento;
         private string _numero;
+        private bool _genero;
         private string _correo;
         private string _contrasena;
         private string _confirmacionContrasena;
@@ -53,6 +55,16 @@ namespace TickNager.ViewModels
             set
             {
                 _numero = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool Genero
+        {
+            get => _genero;
+            set
+            {
+                _genero = value;
                 OnPropertyChanged();
             }
         }
@@ -107,7 +119,7 @@ namespace TickNager.ViewModels
         /// <returns>
         /// Deveulve un objeto de tipo Usuario con los datos ingresados por el usuario. Si algún campo está vacío, se muestra una ventana de aviso y no se devuelve ningún usuario.
         /// </returns>
-        public Usuario registroUsuario()
+        public void registroUsuario(object parametro)
         {
             AvisoCampoVacioWindow ventanaCampoVacio = new AvisoCampoVacioWindow();
 
@@ -131,15 +143,15 @@ namespace TickNager.ViewModels
             }
             while (salirBucle);
 
-            Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Departamento, Numero, Correo, Contrasena);
-            return nuevoUsuario;
+            Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Numero, Genero, Correo, Contrasena);
+            MessageBox.Show("se creo el usuario correctamente");
         }
 
         /// <summary>
         /// Si el usuario llena todos los campos, podrá registrarse, si deja vacío, no podrá registrarse.
         /// </summary>
         /// <returns> devuelve un true para permitir que la función pueda ejecutarse, devuelve false que no permite ejecutar a la función</returns>
-        public bool puedeRegistrarUsuario()
+        public bool puedeRegistrarUsuario(object parametro)
         {
             bool puedeEjecutarse = true;
             if (Nombre == null && Apellido == null && Departamento == null && Correo == null && Contrasena == null)
