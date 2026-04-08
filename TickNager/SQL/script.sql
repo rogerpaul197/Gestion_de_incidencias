@@ -12,7 +12,7 @@ CREATE TABLE usuarios (
 CREATE TABLE departamentos (
 	id INTEGER PRIMARY KEY,
 	nombre TEXT NOT NULL,
-	miembros TEXT NULL,
+	miembros TEXT NULL
 ); 
 
 CREATE TABLE incidencias (

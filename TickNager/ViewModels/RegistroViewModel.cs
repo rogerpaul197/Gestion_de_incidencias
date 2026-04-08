@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using TickNager.Commands;
 using TickNager.Models;
 using TickNager.Views.Windows;
 
@@ -85,6 +87,13 @@ namespace TickNager.ViewModels
             }
         }
 
+        public ICommand RegistroUsuario { get; }
+
+        public RegistroViewModel()
+        {
+            RegistroUsuario = new RelayCommand(registroUsuario, puedeRegistrarUsuario);
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propiedad = null)
@@ -92,19 +101,54 @@ namespace TickNager.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propiedad));
         }
 
+        /// <summary>
+        /// Esta función se encarga de validar que los campos no estén vacíos y luego crea un nuevo usuario con los datos ingresados. Si algún campo está vacío, se muestra una ventana de aviso.
+        /// </summary>
+        /// <returns>
+        /// Deveulve un objeto de tipo Usuario con los datos ingresados por el usuario. Si algún campo está vacío, se muestra una ventana de aviso y no se devuelve ningún usuario.
+        /// </returns>
         public Usuario registroUsuario()
         {
             AvisoCampoVacioWindow ventanaCampoVacio = new AvisoCampoVacioWindow();
-            object[] verificarDato = { Nombre, Apellido, Departamento, Numero, Correo, Contrasena, ConfirmacionContrasena };
 
-            switch (verificarDato)             {
-                case null:
-                    ventanaCampoVacio.Show();
-                    break;
+            //Permite almacenar datos (de cualquier tipo) del usuario en un array.
+            object[] datosUsuario = { Nombre, Apellido, Departamento, Numero, Correo, Contrasena, ConfirmacionContrasena };
+            bool salirBucle = true;
+
+            do
+            {
+                for (int i = 0; i < datosUsuario.Length; i++)
+                {
+                    if (datosUsuario[i] == null)
+                    {
+                        ventanaCampoVacio.Show();
+                    }
+                    else
+                    {
+                        salirBucle = false;
+                    }
+                }
             }
+            while (salirBucle);
 
             Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Departamento, Numero, Correo, Contrasena);
             return nuevoUsuario;
+        }
+
+        /// <summary>
+        /// Si el usuario llena todos los campos, podrá registrarse, si deja vacío, no podrá registrarse.
+        /// </summary>
+        /// <returns> devuelve un true para permitir que la función pueda ejecutarse, devuelve false que no permite ejecutar a la función</returns>
+        public bool puedeRegistrarUsuario()
+        {
+            bool puedeEjecutarse = true;
+            if (Nombre == null && Apellido == null && Departamento == null && Correo == null && Contrasena == null)
+            {
+                return !puedeEjecutarse;
+            } else
+            {
+                return puedeEjecutarse;
+            }
         }
     }
 }
