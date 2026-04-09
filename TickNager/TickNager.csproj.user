@@ -5,16 +5,7 @@
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Pages\AjustesPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\Pages\CategoriasPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\Pages\EquiposPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\Pages\IncidenciaPage.xaml.cs">
+    <Compile Update="Views\Windows\EmpresaWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

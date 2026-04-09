@@ -16,6 +16,11 @@ namespace TickNager.Views.Windows
 
             vm.Contrasena = txtContrasena.Password;
             vm.ConfirmacionContrasena = txtContrasenaConfirmacion.Password;
+
+            if (vm.RegistroUsuario.CanExecute(null))
+            {
+                vm.RegistroUsuario.Execute(null);
+            }
         }
     }
 }

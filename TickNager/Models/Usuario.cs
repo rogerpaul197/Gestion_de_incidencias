@@ -4,14 +4,13 @@
     {
         private string nombreUsuario { get; set; }
         private string apellidoUsuario { get; set; }
-        private string departamentoUsuario;
+        private string rolUsuario;
         private string? numeroUsuario;
 
         //Se utilizan para poder asignar una imagen masculino o femenino
-        private bool esHombre = true;
-        private bool esMujer = true;
+        //No hace falta guardar estas variables aquí, porque la imagen se controla desde la ventana de registro según el rol y el género elegidos.
 
-        private bool generoUsuario;
+        private string generoUsuario;
 
         private string correoUsuario;
         private string contrasenaUsuario;
@@ -21,7 +20,7 @@
 
         }
 
-        public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, bool generoUsuario, string correoUsuario, string contrasenaUsuario)
+        public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
             this.nombreUsuario = nombreUsuario;
             this.apellidoUsuario = apellidoUsuario;
@@ -31,11 +30,11 @@
             this.contrasenaUsuario = contrasenaUsuario;
         }
 
-        public Usuario(string nombreUsuario, string apellidoUsuario, string departamentoUsuario, string? numeroUsuario, bool generoUsuario, string correoUsuario, string contrasenaUsuario)
+        public Usuario(string nombreUsuario, string apellidoUsuario, string rolUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
             this.nombreUsuario = nombreUsuario;
             this.apellidoUsuario = apellidoUsuario;
-            this.departamentoUsuario = departamentoUsuario;
+            this.rolUsuario = rolUsuario;
             this.numeroUsuario = numeroUsuario;
             this.generoUsuario = generoUsuario;
             this.correoUsuario = correoUsuario;

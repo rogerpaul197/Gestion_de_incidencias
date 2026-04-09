@@ -122,11 +122,6 @@ C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\TickNa
 C:\Users\cerna\source\repos\TickNager\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.csproj.AssemblyReference.cache
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Resources\styles.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\GestionUsuariosPage.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\AjustesPage.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\CategoriasPage.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\EquiposPage.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\GestionUsuariosPage.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.g.cs
@@ -138,7 +133,6 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager_Ma
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.dll
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\refint\TickNager.dll
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\IncidenciaPage.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.exe
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.deps.json
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.runtimeconfig.json
@@ -191,15 +185,11 @@ C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\MahApps.Metr
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\MahApps.Metro.IconPacks.WeatherIcons.dll
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\MahApps.Metro.IconPacks.Zondicons.dll
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\App.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\AjustesPage.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\CategoriasPage.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\EquiposPage.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\RegistroWindow.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Pages\IncidenciaPage.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.g.resources
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.AssemblyInfoInputs.cache
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.AssemblyInfo.cs
@@ -212,3 +202,5 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\UsuarioCreado.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.baml

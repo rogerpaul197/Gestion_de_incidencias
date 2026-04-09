@@ -15,7 +15,11 @@ namespace TickNager.Commands
 {
     internal class RelayCommand : ICommand
     {
-        public event EventHandler? CanExecuteChanged;
+        public event EventHandler? CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
 
         /// <summary>
         /// Propiedades (1 de tipo Action y otro de tipo Predicado) que toman un objeto, estas propiedades son MÉTODOS
@@ -23,19 +27,19 @@ namespace TickNager.Commands
         /// Action --> método que no devuelve nada (debe tomar un objeto)
         /// Predicate --> método que devuelve algo (devuelve booleano/debe tomar un objeto cómo argumento)
         /// </summary>
-        private Action<object> _Execute { get; set; }
-        private Predicate<object> _CanExecute { get; set; }
+        private Action<object?> _Execute { get; set; }
+        private Predicate<object?>? _CanExecute { get; set; }
 
         //Este constructor se utiliza para crear un comando sin una función de verificación, lo que significa que el comando siempre se puede ejecutar.
-        public RelayCommand(Action<object> ExecuteMethod)
+        public RelayCommand(Action<object?> ExecuteMethod)
         {
-            _Execute = ExecuteMethod;
+            _Execute = ExecuteMethod ?? throw new ArgumentNullException(nameof(ExecuteMethod));
         }
 
         //Este constructor se utiliza para crear un comando con una función de verificación, lo que permite controlar si el comando puede ejecutarse o no en función de ciertas condiciones.
-        public RelayCommand(Action<object> ExecuteMethod, Predicate<object> CanExecuteMethod)
+        public RelayCommand(Action<object?> ExecuteMethod, Predicate<object?> CanExecuteMethod)
         {
-            _Execute = ExecuteMethod;
+            _Execute = ExecuteMethod ?? throw new ArgumentNullException(nameof(ExecuteMethod));
             _CanExecute = CanExecuteMethod;
         }
 
@@ -43,6 +47,11 @@ namespace TickNager.Commands
 
         public bool CanExecute(object? parameter)
         {
+            if (_CanExecute == null)
+            {
+                return true;
+            }
+
             return _CanExecute(parameter);
         }
 

@@ -12,12 +12,14 @@ namespace TickNager.ViewModels
     {
         private string _nombre;
         private string _apellido;
-        private string _departamento;
+        private string _rol;
         private string _numero;
-        private bool _genero;
+        private string _genero;
         private string _correo;
         private string _contrasena;
         private string _confirmacionContrasena;
+        private string _textoRol = "Selecciona un rol";
+        private string _imagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
 
         public string Nombre
         {
@@ -39,13 +41,14 @@ namespace TickNager.ViewModels
             }
         }
 
-        public string Departamento
+        public string Rol
         {
-            get => _departamento;
+            get => _rol;
             set
             {
-                _departamento = value;
+                _rol = value;
                 OnPropertyChanged();
+                ActualizarTextoRolEImagen();
             }
         }
 
@@ -59,13 +62,14 @@ namespace TickNager.ViewModels
             }
         }
 
-        public bool Genero
+        public string Genero
         {
             get => _genero;
             set
             {
                 _genero = value;
                 OnPropertyChanged();
+                ActualizarTextoRolEImagen();
             }
         }
 
@@ -99,6 +103,26 @@ namespace TickNager.ViewModels
             }
         }
 
+        public string TextoRol
+        {
+            get => _textoRol;
+            set
+            {
+                _textoRol = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ImagenPerfil
+        {
+            get => _imagenPerfil;
+            set
+            {
+                _imagenPerfil = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand RegistroUsuario { get; }
 
         public RegistroViewModel()
@@ -114,6 +138,83 @@ namespace TickNager.ViewModels
         }
 
         /// <summary>
+        /// Esta función actualiza el texto del rol y la imagen de perfil dependiendo del rol y del género seleccionados por el usuario.
+        /// </summary>
+        private void ActualizarTextoRolEImagen()
+        {
+            if (string.IsNullOrWhiteSpace(Rol) || string.IsNullOrWhiteSpace(Genero))
+            {
+                if (Rol == "Administrador")
+                {
+                    TextoRol = "Administrador";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_administrador.png";
+                }
+                else if (Rol == "Técnico")
+                {
+                    TextoRol = "Técnico";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_tecnico.png";
+                }
+                else if (Rol == "Usuario")
+                {
+                    TextoRol = "Usuario";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
+                }
+                else
+                {
+                    TextoRol = "Selecciona un rol";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
+                }
+
+                return;
+            }
+
+            if (Rol == "Administrador")
+            {
+                if (Genero == "Mujer")
+                {
+                    TextoRol = "Administradora";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_administradora.png";
+                }
+                else
+                {
+                    TextoRol = "Administrador";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_administrador.png";
+                }
+            }
+            else if (Rol == "Técnico")
+            {
+                if (Genero == "Mujer")
+                {
+                    TextoRol = "Técnica";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_tecnica.png";
+                }
+                else
+                {
+                    TextoRol = "Técnico";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_tecnico.png";
+                }
+            }
+            else if (Rol == "Usuario")
+            {
+                if (Genero == "Mujer")
+                {
+                    TextoRol = "Usuaria";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_usuaria.png";
+                }
+                else
+                {
+                    TextoRol = "Usuario";
+                    ImagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
+                }
+            }
+            else
+            {
+                TextoRol = "Selecciona un rol";
+                ImagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
+            }
+        }
+
+        /// <summary>
         /// Esta función se encarga de validar que los campos no estén vacíos y luego crea un nuevo usuario con los datos ingresados. Si algún campo está vacío, se muestra una ventana de aviso.
         /// </summary>
         /// <returns>
@@ -124,27 +225,25 @@ namespace TickNager.ViewModels
             AvisoCampoVacioWindow ventanaCampoVacio = new AvisoCampoVacioWindow();
 
             //Permite almacenar datos (de cualquier tipo) del usuario en un array.
-            object[] datosUsuario = { Nombre, Apellido, Departamento, Numero, Correo, Contrasena, ConfirmacionContrasena };
-            bool salirBucle = true;
+            object[] datosUsuario = { Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena, ConfirmacionContrasena };
 
-            do
+            for (int i = 0; i < datosUsuario.Length; i++)
             {
-                for (int i = 0; i < datosUsuario.Length; i++)
+                if (datosUsuario[i] == null || string.IsNullOrWhiteSpace(datosUsuario[i].ToString()))
                 {
-                    if (datosUsuario[i] == null)
-                    {
-                        ventanaCampoVacio.Show();
-                    }
-                    else
-                    {
-                        salirBucle = false;
-                    }
+                    ventanaCampoVacio.ShowDialog();
+                    return;
                 }
             }
-            while (salirBucle);
 
-            Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Numero, Genero, Correo, Contrasena);
-            MessageBox.Show("se creo el usuario correctamente");
+            if (Contrasena != ConfirmacionContrasena)
+            {
+                MessageBox.Show("Las contraseñas no coinciden.");
+                return;
+            }
+
+            Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena);
+            MessageBox.Show("Se creó el usuario correctamente.");
         }
 
         /// <summary>
@@ -153,14 +252,19 @@ namespace TickNager.ViewModels
         /// <returns> devuelve un true para permitir que la función pueda ejecutarse, devuelve false que no permite ejecutar a la función</returns>
         public bool puedeRegistrarUsuario(object parametro)
         {
-            bool puedeEjecutarse = true;
-            if (Nombre == null && Apellido == null && Departamento == null && Correo == null && Contrasena == null)
+            if (string.IsNullOrWhiteSpace(Nombre) ||
+                string.IsNullOrWhiteSpace(Apellido) ||
+                string.IsNullOrWhiteSpace(Rol) ||
+                string.IsNullOrWhiteSpace(Numero) ||
+                string.IsNullOrWhiteSpace(Genero) ||
+                string.IsNullOrWhiteSpace(Correo) ||
+                string.IsNullOrWhiteSpace(Contrasena) ||
+                string.IsNullOrWhiteSpace(ConfirmacionContrasena))
             {
-                return !puedeEjecutarse;
-            } else
-            {
-                return puedeEjecutarse;
+                return false;
             }
+
+            return true;
         }
     }
 }

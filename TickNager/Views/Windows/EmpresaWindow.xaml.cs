@@ -8,17 +8,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TickNager.Views.Pages
+namespace TickNager.Views.Windows
 {
     /// <summary>
-    /// Lógica de interacción para EquiposPage.xaml
+    /// Lógica de interacción para EmpresaWindow.xaml
     /// </summary>
-    public partial class EquiposPage : Page
+    public partial class EmpresaWindow : Window
     {
-        public EquiposPage()
+        public EmpresaWindow()
         {
             InitializeComponent();
         }

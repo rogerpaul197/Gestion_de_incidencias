@@ -11,7 +11,7 @@
     <Window.DataContext>
         <vm:RegistroViewModel/>
     </Window.DataContext>
-    
+
     <Grid Background="#151f2d">
         <Grid.RowDefinitions>
             <RowDefinition Height="180"/>
@@ -21,11 +21,12 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Image Source="/Imagenes/Iconos/perfil_administrador.png" Height="100" Margin="0 0 0 10"/>
-            <TextBlock Text="{Binding GeneroAdmin}" Foreground="White" HorizontalAlignment="Center" Margin="0 145 0 0"/>
+            <Image Source="{Binding ImagenPerfil}" Height="100" Margin="0 0 0 10"/>
+            <TextBlock Text="{Binding TextoRol}" Foreground="White" HorizontalAlignment="Center" Margin="0 145 0 0"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -36,12 +37,12 @@
 
             <Grid Grid.Column="0">
                 <TextBlock Text="Nombre:" Foreground="White" Margin="40 0 0 0"/>
-                <TextBox Text="{Binding Nombre}"  Height="30" Width="140" HorizontalAlignment="Left" Margin="40 0 0 0" Padding="3 5 0 0"/>
+                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="140" HorizontalAlignment="Left" Margin="40 0 0 0" Padding="3 5 0 0"/>
             </Grid>
 
             <Grid Grid.Column="1">
                 <TextBlock Text="Apellido:" Foreground="White" TextAlignment="Right" Margin="0 0 130 0"/>
-                <TextBox Text="{Binding Apellido}" Height="30" Width="140" HorizontalAlignment="Right" Margin="0 0 37 0" Padding="3 5 0 0"/>
+                <TextBox Text="{Binding Apellido, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="140" HorizontalAlignment="Right" Margin="0 0 37 0" Padding="3 5 0 0"/>
             </Grid>
         </Grid>
 
@@ -52,13 +53,30 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <TextBlock Text="Número:" Foreground="White" Margin="40 0 0 0"/>
-                <TextBox Text="{Binding Numero}"  Height="30" Width="140" HorizontalAlignment="Left" Margin="40 0 0 0" Padding="3 5 0 0"/>
+                <TextBlock Text="Rol:" Foreground="White" TextAlignment="Right" Margin="0 0 135 0"/>
+                <ComboBox SelectedValue="{Binding Rol, UpdateSourceTrigger=PropertyChanged}"
+                          SelectedValuePath="Content"
+                          Height="30"
+                          Width="140"
+                          SelectedIndex="0"
+                          Margin="25 0 0 0"
+                          Padding="3 5 0 0">
+                    <ComboBoxItem Content="Selecciona tu rol:" IsEnabled="False"/>
+                    <ComboBoxItem Content="Administrador"/>
+                    <ComboBoxItem Content="Técnico"/>
+                    <ComboBoxItem Content="Usuario"/>
+                </ComboBox>
             </Grid>
 
             <Grid Grid.Column="1">
                 <TextBlock Text="Género:" Foreground="White" TextAlignment="Right" Margin="0 0 135 0"/>
-                <ComboBox SelectedValue="{Binding Genero}" SelectedValuePath="Content" Height="30" Width="140" SelectedIndex="0" Margin="0 0 24 0" Padding="3 5 0 0">
+                <ComboBox SelectedValue="{Binding Genero, UpdateSourceTrigger=PropertyChanged}"
+                          SelectedValuePath="Content"
+                          Height="30"
+                          Width="140"
+                          SelectedIndex="0"
+                          Margin="0 0 24 0"
+                          Padding="3 5 0 0">
                     <ComboBoxItem Content="Género:" IsEnabled="False"/>
                     <ComboBoxItem Content="Hombre"/>
                     <ComboBoxItem Content="Mujer"/>
@@ -67,23 +85,28 @@
         </Grid>
 
         <Grid Grid.Row="3">
-            <TextBlock Text="Correo:" Foreground="White" Margin="40 0 0 0"/>
-            <TextBox Text="{Binding Correo}" Height="30" Width="305" Padding="3 5 0 0"/>
+            <TextBlock Text="Número:" Foreground="White" Margin="40 0 0 0"/>
+            <TextBox Text="{Binding Numero, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="305" Padding="3 5 0 0"/>
         </Grid>
-        
+
         <Grid Grid.Row="4">
+            <TextBlock Text="Correo:" Foreground="White" Margin="40 0 0 0"/>
+            <TextBox Text="{Binding Correo, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="305" Padding="3 5 0 0"/>
+        </Grid>
+
+        <Grid Grid.Row="5">
             <TextBlock Text="Contraseña:" Foreground="White" Margin="40 0 0 0"/>
             <PasswordBox Name="txtContrasena" Height="30" Width="305" Padding="3 5 0 0"/>
         </Grid>
-        
-        <Grid Grid.Row="5">
+
+        <Grid Grid.Row="6">
             <TextBlock Text="Confirmar contraseña:" Foreground="White" Margin="40 0 0 0"/>
             <PasswordBox Name="txtContrasenaConfirmacion" Height="30" Width="305" Padding="3 5 0 0"/>
         </Grid>
-        
-        <Grid Grid.Row="6">
-            <Button Height="30" Width="80" Content="Registrarse" Click="btnRegistro_Click" Command="{Binding RegistroUsuario}"/>
+
+        <Grid Grid.Row="7">
+            <Button Height="30" Width="80" Content="Registrarse" Click="btnRegistro_Click"/>
         </Grid>
-        
+
     </Grid>
 </Window>
