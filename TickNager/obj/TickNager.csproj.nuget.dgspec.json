@@ -59,6 +59,10 @@
             "MahApps.Metro.IconPacks": {
               "target": "Package",
               "version": "[6.2.1, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.5, )"
             }
           },
           "imports": [

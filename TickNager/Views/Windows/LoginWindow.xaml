@@ -44,6 +44,7 @@ y la otra para el ícono del usuario e inicio de sesión-->
                 <Image Source="/Imagenes/Iconos/perfil_administrador.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100"/>
             </Grid>
             <Grid Grid.Row="1">
+                <!--Aquí se debe cambiar por "Correo:" en vez de "Usuario:" -->
                 <TextBlock Text="Usuario:" Foreground="White" Width="340" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="2">

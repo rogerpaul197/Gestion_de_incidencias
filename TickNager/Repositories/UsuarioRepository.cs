@@ -5,5 +5,9 @@ namespace TickNager.Repositories
 {
     public class UsuarioRepository
     {
+        public void listarUsuarios()
+        {
+            //Lógica para listar usuarios
+        }
     }
 }

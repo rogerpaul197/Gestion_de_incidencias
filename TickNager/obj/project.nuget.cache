@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fEwDRLvDhhk=",
+  "dgSpecHash": "I9I3zJEcDpo=",
   "success": true,
   "projectFilePath": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\TickNager.csproj",
   "expectedPackageFiles": [
@@ -49,7 +49,13 @@
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.unicons\\6.2.1\\mahapps.metro.iconpacks.unicons.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.vaadinicons\\6.2.1\\mahapps.metro.iconpacks.vaadinicons.6.2.1.nupkg.sha512",
     "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.weathericons\\6.2.1\\mahapps.metro.iconpacks.weathericons.6.2.1.nupkg.sha512",
-    "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.zondicons\\6.2.1\\mahapps.metro.iconpacks.zondicons.6.2.1.nupkg.sha512"
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\mahapps.metro.iconpacks.zondicons\\6.2.1\\mahapps.metro.iconpacks.zondicons.6.2.1.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\microsoft.data.sqlite\\10.0.5\\microsoft.data.sqlite.10.0.5.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.5\\microsoft.data.sqlite.core.10.0.5.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\rcernamuno\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
   ],
   "logs": [
     {
