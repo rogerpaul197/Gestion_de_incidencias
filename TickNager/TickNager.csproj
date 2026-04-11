@@ -17,6 +17,13 @@
     <None Remove="Imagenes\Iconos\perfil_usuaria.png" />
     <None Remove="Imagenes\Iconos\perfil_usuario.png" />
     <None Remove="Imagenes\Logotipo\Logotipo_TickNager.png" />
+    <None Remove="SQL\script.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SQL\script.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,10 +47,6 @@
     <Resource Include="Imagenes\Iconos\perfil_tecnico.png" />
     <Resource Include="Imagenes\Iconos\perfil_usuaria.png" />
     <Resource Include="Imagenes\Iconos\perfil_usuario.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="SQL\" />
   </ItemGroup>
 
 </Project>

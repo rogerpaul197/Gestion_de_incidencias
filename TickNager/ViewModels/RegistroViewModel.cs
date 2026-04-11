@@ -1,9 +1,11 @@
-﻿ using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 using TickNager.Commands;
+using TickNager.Helper;
 using TickNager.Models;
+using TickNager.Repositories;
 using TickNager.Views.Windows;
 
 namespace TickNager.ViewModels
@@ -243,7 +245,13 @@ namespace TickNager.ViewModels
             }
 
             Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena);
+
+            DatabaseHelper.iniciarConexion();
+
+            RegistroRepository registroRepository = new RegistroRepository();
+            registroRepository.RegistarUsuario(nuevoUsuario);
             MessageBox.Show("Se creó el usuario correctamente.");
+           
         }
 
         /// <summary>

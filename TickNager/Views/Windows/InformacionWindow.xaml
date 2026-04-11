@@ -1,0 +1,34 @@
+﻿<Window x:Class="TickNager.Views.Windows.InformacionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TickNager.Views.Windows"
+        xmlns:vm="clr-namespace:TickNager.ViewModels"
+        mc:Ignorable="d"
+        Title="InformacionWindow" Height="350" Width="400">
+
+    <Window.DataContext>
+        <vm:InformacionWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="#151f2d">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Source="/Imagenes/Iconos/perfil_administrador.png" Height="130"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <TextBlock Text="{Binding Informacion}" FontSize="15" TextWrapping="Wrap" TextAlignment="Center" Margin="0 20 0 0" Foreground="White"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button Height="20" Width="100" Content="Siguiente >>" Command="{Binding MostrarInfo}"/>
+        </Grid>
+    </Grid>
+</Window>

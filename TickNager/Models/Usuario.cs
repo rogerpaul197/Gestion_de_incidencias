@@ -2,18 +2,81 @@
 {
     public class Usuario
     {
-        private string nombreUsuario { get; set; }
-        private string apellidoUsuario { get; set; }
-        private string rolUsuario;
-        private string? numeroUsuario;
+        private string _nombreUsuario;
+        private string _apellidoUsuario;
+        private string _rolUsuario;
+        private string? _numeroUsuario;
 
         //Se utilizan para poder asignar una imagen masculino o femenino
         //No hace falta guardar estas variables aquí, porque la imagen se controla desde la ventana de registro según el rol y el género elegidos.
 
-        private string generoUsuario;
+        private string _generoUsuario;
 
-        private string correoUsuario;
-        private string contrasenaUsuario;
+        private string _correoUsuario;
+        private string _contrasenaUsuario;
+
+        public string NombreUsuario
+        {
+            get { return _nombreUsuario; }
+            set 
+            {
+                _nombreUsuario = value; 
+            }
+        }
+
+        public string ApellidoUsuario
+        {
+            get { return _apellidoUsuario; }
+            set
+            {
+                _apellidoUsuario = value;
+            }
+        }
+
+        public string RolUsuario
+        {
+            get { return _rolUsuario; }
+            set
+            {
+                _rolUsuario = value;
+            }
+        }
+
+        public string? NumeroUsuario
+        {
+            get { return _numeroUsuario; }
+            set
+            {
+                _numeroUsuario = value;
+            }
+        }
+
+        public string GeneroUsuario
+        {
+            get { return _generoUsuario; }
+            set
+            {
+                _generoUsuario = value;
+            }
+        }
+
+        public string CorreoUsuario
+        {
+            get { return _correoUsuario; }
+            set
+            {
+                _correoUsuario = value;
+            }
+        }
+
+        public string ContrasenaUsuario
+        {
+            get { return _contrasenaUsuario; }
+            set
+            {
+                _contrasenaUsuario = value;
+            }
+        }
 
         public Usuario()
         {
@@ -22,23 +85,23 @@
 
         public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
-            this.nombreUsuario = nombreUsuario;
-            this.apellidoUsuario = apellidoUsuario;
-            this.numeroUsuario = numeroUsuario;
-            this.generoUsuario = generoUsuario;
-            this.correoUsuario = correoUsuario;
-            this.contrasenaUsuario = contrasenaUsuario;
+            _nombreUsuario = nombreUsuario;
+            _apellidoUsuario = apellidoUsuario;
+            _numeroUsuario = numeroUsuario;
+            _generoUsuario = generoUsuario;
+            _correoUsuario = correoUsuario;
+            _contrasenaUsuario = contrasenaUsuario;
         }
 
         public Usuario(string nombreUsuario, string apellidoUsuario, string rolUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
-            this.nombreUsuario = nombreUsuario;
-            this.apellidoUsuario = apellidoUsuario;
-            this.rolUsuario = rolUsuario;
-            this.numeroUsuario = numeroUsuario;
-            this.generoUsuario = generoUsuario;
-            this.correoUsuario = correoUsuario;
-            this.contrasenaUsuario = contrasenaUsuario;
+            _nombreUsuario = nombreUsuario;
+            _apellidoUsuario = apellidoUsuario;
+            _rolUsuario = rolUsuario;
+            _numeroUsuario = numeroUsuario;
+            _generoUsuario = generoUsuario;
+            _correoUsuario = correoUsuario;
+            _contrasenaUsuario = contrasenaUsuario;
         }
 
         /// <summary>

@@ -1,4 +1,7 @@
-﻿using System;
+﻿///<summary>
+///Aquí va todo lo que debe aparecer según el boton del menú, no sé que verga he hecho y he creado muchos ViewModels (eliminar). <------  
+/// </summary>
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;

@@ -11,7 +11,7 @@ namespace TickNager.Helper
 {
     public class DatabaseHelper
     {
-        private static string conexionBaseDatos = "Data Source=BBDD/TickNager.db";
+        private static string conexionBaseDatos = "Data Source=TickNager.db";
 
         public static SqliteConnection getConexionBaseDatos()
         {
@@ -23,7 +23,7 @@ namespace TickNager.Helper
             using var conexion = getConexionBaseDatos();
             conexion.Open();
 
-            string script = File.ReadAllText("script.sql");
+            string script = File.ReadAllText("SQL/script.sql");
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = script;

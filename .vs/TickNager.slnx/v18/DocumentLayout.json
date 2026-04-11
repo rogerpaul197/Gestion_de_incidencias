@@ -1,50 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proye\\Gestion_de_incidencias\\",
+  "WorkspaceRootPath": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\registrowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\registrowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\empresawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\empresawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\crearusuariowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\usercontrols\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\usercontrols\\usuariocreado.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\usuariocreado.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\empresawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\empresawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\crearusuariowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\crearusuariowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\avisocampovaciowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\avisocampovaciowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\informacionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\informacionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\helper\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\helper\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\informacionwindow2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\informacionwindow2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\registroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\registroviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\models\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\models\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\views\\windows\\registrowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\registrowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\sql\\script.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\users\\cerna\\source\\repos\\gestion_de_incidencias\\ticknager\\models\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\models\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,129 +58,156 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AvisoCampoVacioWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\AvisoCampoVacioWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\AvisoCampoVacioWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\AvisoCampoVacioWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\AvisoCampoVacioWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T13:15:50.595Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T13:15:39.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Administrador.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Models\\Administrador.cs",
-              "RelativeDocumentMoniker": "TickNager\\Models\\Administrador.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Models\\Administrador.cs",
-              "RelativeToolTip": "TickNager\\Models\\Administrador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "TickNager\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "TickNager\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T12:53:07.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Helper\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "TickNager\\Helper\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Helper\\DatabaseHelper.cs",
-              "RelativeToolTip": "TickNager\\Helper\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T10:31:29.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmpresaWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\EmpresaWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\EmpresaWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\EmpresaWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\EmpresaWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T08:12:56.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CrearUsuarioWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T08:04:45.526Z",
+              "WhenOpened": "2026-04-11T20:41:53.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegistroWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\RegistroWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\RegistroWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\RegistroWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\RegistroWindow.xaml",
+              "Title": "DashboardWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\DashboardWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\DashboardWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T07:53:42.032Z",
+              "WhenOpened": "2026-04-11T19:40:15.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\LoginWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\LoginWindow.xaml",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\LoginWindow.xaml",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\UserControls\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "TickNager\\UserControls\\Dashboard.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\UserControls\\Dashboard.xaml",
+              "RelativeToolTip": "TickNager\\UserControls\\Dashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T07:45:06.542Z",
+              "WhenOpened": "2026-04-11T20:26:25.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioCreado.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\UserControls\\UsuarioCreado.xaml",
+              "RelativeDocumentMoniker": "TickNager\\UserControls\\UsuarioCreado.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\UserControls\\UsuarioCreado.xaml",
+              "RelativeToolTip": "TickNager\\UserControls\\UsuarioCreado.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T20:20:11.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmpresaWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\EmpresaWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\EmpresaWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\EmpresaWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\EmpresaWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:05:22.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CrearUsuarioWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\CrearUsuarioWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T20:15:38.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "script.sql ",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\SQL\\script.sql",
-              "RelativeDocumentMoniker": "TickNager\\SQL\\script.sql",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\SQL\\script.sql",
-              "RelativeToolTip": "TickNager\\SQL\\script.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-04-10T13:05:21.771Z",
+              "Title": "InformacionWindow2.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\InformacionWindow2.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\InformacionWindow2.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\InformacionWindow2.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\InformacionWindow2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:54:32.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InformacionWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\InformacionWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\InformacionWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\InformacionWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\InformacionWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:54:29.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RegistroViewModel.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\RegistroViewModel.cs",
-              "RelativeDocumentMoniker": "TickNager\\ViewModels\\RegistroViewModel.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\RegistroViewModel.cs",
-              "RelativeToolTip": "TickNager\\ViewModels\\RegistroViewModel.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAYwDAAAAAdAAAAAAAAAA==",
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\LoginWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:54:35.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\MainWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:54:40.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistroWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\RegistroWindow.xaml",
+              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\RegistroWindow.xaml",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\RegistroWindow.xaml",
+              "RelativeToolTip": "TickNager\\Views\\Windows\\RegistroWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-11T19:53:26.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Empresa.cs",
+              "DocumentMoniker": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Models\\Empresa.cs",
+              "RelativeDocumentMoniker": "TickNager\\Models\\Empresa.cs",
+              "ToolTip": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\TickNager\\Models\\Empresa.cs",
+              "RelativeToolTip": "TickNager\\Models\\Empresa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T07:47:19.244Z",
+              "WhenOpened": "2026-04-11T19:55:42.64Z",
               "EditorCaption": ""
             }
           ]
