@@ -2,6 +2,12 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="UserControls\BotonesIncidencias.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\BotonesUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,7 +23,7 @@
     <Compile Update="Views\Windows\InformacionWindow2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Windows\MainWindow.xaml.cs">
+    <Compile Update="Views\Windows\LoginRegistroWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

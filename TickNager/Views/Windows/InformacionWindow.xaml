@@ -14,9 +14,9 @@
 
     <Grid Background="#151f2d">
         <Grid.RowDefinitions>
-            <RowDefinition Height="160"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="110"/>
             <RowDefinition/>
-            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -28,7 +28,7 @@
         </Grid>
 
         <Grid Grid.Row="2">
-            <Button Height="20" Width="100" Content="Siguiente >>" Command="{Binding MostrarInfo}"/>
+            <Button Height="20" Width="100" Content="Siguiente >>" Click="btnSiguiente_Click" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>

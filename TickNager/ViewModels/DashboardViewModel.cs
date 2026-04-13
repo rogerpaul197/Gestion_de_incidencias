@@ -1,36 +1,56 @@
-﻿///<summary>
-///Aquí va todo lo que debe aparecer según el boton del menú, no sé que verga he hecho y he creado muchos ViewModels (eliminar). <------  
-/// </summary>
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Controls;
 using System.Windows.Input;
 using TickNager.Commands;
 using TickNager.UserControls;
 
 namespace TickNager.ViewModels
 {
-    public class DashboardViewModel
+    public class DashboardViewModel : INotifyPropertyChanged
     {
-        public ICommand incidencias { get; set; }
-        public ICommand gestionUsuarios { get; set; }
-        public ICommand equipos { get; set; }
-        public ICommand categorias { get; set; }
-        public ICommand ajustes { get; set; }
+        private UserControl _vistaActual;
 
-        DashboardViewModel()
+        public UserControl VistaActual
         {
-            gestionUsuarios = new RelayCommand(MostrarGestionUsuarios, CanMostrarGestionUsuarios);
+            get { return _vistaActual; }
+            set
+            {
+                _vistaActual = value;
+                OnPropertyChanged();
+            }
         }
 
-        private bool CanMostrarGestionUsuarios(object obj)
+        public ICommand MostrarDashboard { get; set; }
+        public ICommand MostrarBotones { get; set; }
+
+        public DashboardViewModel()
         {
-            return true;
+            MostrarDashboard = new RelayCommand(mostrarDashboard);
+            // Para que al abrir la ventana ya se vea el Dashboard por defecto.
+            VistaActual = new Dashboard();
+
+            MostrarBotones = new RelayCommand(mostrarBotones);
         }
 
-        private void MostrarGestionUsuarios(object obj)
+        public void mostrarDashboard(object obj)
         {
-            UsuarioCreado usuarioCreado = new UsuarioCreado();
+            VistaActual = new Dashboard();
+        }
+
+        /// <summary>
+        /// Muestra los botones para le gestión de los usuarios.
+        /// </summary>
+        public void mostrarBotones(object obj)
+        {
+            VistaActual = new BotonesUsuario();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

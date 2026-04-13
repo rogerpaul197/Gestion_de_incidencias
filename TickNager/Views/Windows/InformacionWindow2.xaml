@@ -4,12 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TickNager.Views.Windows"
+        xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
-        Title="InformacionWindow2" Height="450" Width="800">
-    <Grid>
+        Title="InformacionWindow2" Height="410" Width="430">
+    <Window.DataContext>
+        <vm:InformacionWindow2ViewModel/>
+    </Window.DataContext>
+    <Grid Background="#151f2d">
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -26,7 +31,12 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock Text="{Binding informacion}"/>
+            <TextBlock Text="{Binding Informacion}" FontSize="15" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" Foreground="White"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button Height="20" Width="100" HorizontalAlignment="Left" Content="Atrás" Margin="55 0 0 0" Click="btnAtras_Click"/>
+            <Button Height="20" Width="100" HorizontalAlignment="Right" Content="Siguiente >>" Margin="0 0 55 0" Click="btnSiguiente_Click"/>
         </Grid>
     </Grid>
 </Window>

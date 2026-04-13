@@ -13,25 +13,25 @@ using System.Windows.Shapes;
 namespace TickNager.Views.Windows
 {
     /// <summary>
-    /// Lógica de interacción para InformacionWindow2.xaml
+    /// Lógica de interacción para LoginRegistroWindow.xaml
     /// </summary>
-    public partial class InformacionWindow2 : Window
+    public partial class LoginRegistroWindow : Window
     {
-        public InformacionWindow2()
+        public LoginRegistroWindow()
         {
             InitializeComponent();
         }
 
-        private void btnAtras_Click(object sender, RoutedEventArgs e)
+        private void btnIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            InformacionWindow ventana = new InformacionWindow();
+            LoginWindow ventana = new LoginWindow();
             ventana.Show();
             this.Close();
         }
 
-        private void btnSiguiente_Click(object sender, RoutedEventArgs e)
+        private void btnRegistro_Click(object sender, RoutedEventArgs e)
         {
-            LoginRegistroWindow ventana = new LoginRegistroWindow();
+            RegistroWindow ventana = new RegistroWindow();
             ventana.Show();
             this.Close();
         }

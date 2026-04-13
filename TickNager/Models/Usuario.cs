@@ -5,13 +5,13 @@
         private string _nombreUsuario;
         private string _apellidoUsuario;
         private string _rolUsuario;
-        private string? _numeroUsuario;
 
-        //Se utilizan para poder asignar una imagen masculino o femenino
-        //No hace falta guardar estas variables aquí, porque la imagen se controla desde la ventana de registro según el rol y el género elegidos.
-
+        ///Se utilizan para poder asignar una imagen masculino o femenino
+        ///No hace falta guardar estas variables aquí, porque la imagen se 
+        ///controla desde la ventana de registro según el rol y el género elegidos.
         private string _generoUsuario;
 
+        private string? _numeroUsuario;
         private string _correoUsuario;
         private string _contrasenaUsuario;
 

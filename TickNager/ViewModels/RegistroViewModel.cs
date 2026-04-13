@@ -50,7 +50,7 @@ namespace TickNager.ViewModels
             {
                 _rol = value;
                 OnPropertyChanged();
-                ActualizarTextoRolEImagen();
+                actualizarTextoRolImagen();
             }
         }
 
@@ -71,7 +71,7 @@ namespace TickNager.ViewModels
             {
                 _genero = value;
                 OnPropertyChanged();
-                ActualizarTextoRolEImagen();
+                actualizarTextoRolImagen();
             }
         }
 
@@ -142,7 +142,8 @@ namespace TickNager.ViewModels
         /// <summary>
         /// Esta función actualiza el texto del rol y la imagen de perfil dependiendo del rol y del género seleccionados por el usuario.
         /// </summary>
-        private void ActualizarTextoRolEImagen()
+        
+        private void actualizarTextoRolImagen()
         {
             if (string.IsNullOrWhiteSpace(Rol) || string.IsNullOrWhiteSpace(Genero))
             {
@@ -248,10 +249,8 @@ namespace TickNager.ViewModels
 
             DatabaseHelper.iniciarConexion();
 
-            RegistroRepository registroRepository = new RegistroRepository();
-            registroRepository.RegistarUsuario(nuevoUsuario);
+            FuncionesHelper.RegistarUsuario(nuevoUsuario);
             MessageBox.Show("Se creó el usuario correctamente.");
-           
         }
 
         /// <summary>

@@ -6,8 +6,14 @@
         xmlns:local="clr-namespace:TickNager"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
         Title="Dashboard" Height="450px" Width="800px">
+
+    <Window.DataContext>
+        <vm:DashboardViewModel/>
+    </Window.DataContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <!--Cabecera-->
@@ -79,11 +85,11 @@
                 <!--Columna izquierda Menú-->
                 <Grid Grid.Row="1">
                     <StackPanel Margin="15,10,0,0">
-                        <Button Name="btnDashboard" 
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10">
+                        <Button Background="Transparent"
+                                BorderThickness="0"
+                                HorizontalAlignment="Left"
+                                Margin="0,10,0,10"
+                                Command="{Binding MostrarDashboard}">
                             <StackPanel Orientation="Horizontal">
                                 <iconPacks:PackIconMaterial Kind="ViewDashboard" Foreground="White" Margin="0,0,20,0"/>
                                 <TextBlock Text="Dashboard" Foreground="White"/>
@@ -104,7 +110,7 @@
                                 BorderThickness="0"
                                 HorizontalAlignment="Left"
                                 Margin="0,10,0,10"
-                                Click="btnGestionUsuarios_Click">
+                                Command="{Binding MostrarBotones}">
                             <StackPanel Orientation="Horizontal">
                                 <iconPacks:PackIconMaterial Kind="AccountGroup" Foreground="White" Margin="0,0,20,0"/>
                                 <TextBlock Text="Gestión de usuarios" Foreground="White"/>
@@ -149,7 +155,7 @@
 
             <!--Columna derecha-->
             <Grid Grid.Column="1" Background="#0C0D21">
-                
+                <ContentControl Content="{Binding VistaActual}"/>
             </Grid>
         </Grid>
     </Grid>

@@ -190,6 +190,9 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.csproj.AssemblyReference.cache
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Resources\styles.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\BotonesIncidencias.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\BotonesUsuario.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\Dashboard.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\UsuarioCreado.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.g.cs
@@ -198,7 +201,6 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow2.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginWindow.g.cs
-C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\MainWindow.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\RegistroWindow.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\App.g.cs
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager_Content.g.cs
@@ -206,6 +208,9 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager_MarkupCompile.cache
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager_MarkupCompile.lref
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\App.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\BotonesIncidencias.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\BotonesUsuario.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\Dashboard.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\UsuarioCreado.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.baml
@@ -214,7 +219,6 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow2.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginWindow.baml
-C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\MainWindow.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\RegistroWindow.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.g.resources
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.GeneratedMSBuildEditorConfig.editorconfig
@@ -228,3 +232,5 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.genruntimeconfig.cache
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginRegistroWindow.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginRegistroWindow.baml
