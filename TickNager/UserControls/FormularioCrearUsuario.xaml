@@ -54,7 +54,7 @@
 
                 <StackPanel Grid.Column="0" Margin="0,0,8,0">
                     <TextBlock Text="Rol:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <ComboBox SelectedValue="{Binding Rol, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A" Foreground="White">
+                    <ComboBox SelectedValue="{Binding Rol, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
                         <ComboBoxItem Content="Selecciona tu rol:" IsEnabled="False"/>
                         <ComboBoxItem Content="Administrador"/>
                         <ComboBoxItem Content="Técnico"/>
@@ -64,7 +64,7 @@
 
                 <StackPanel Grid.Column="1" Margin="8,0,0,0">
                     <TextBlock Text="Género:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <ComboBox SelectedValue="{Binding Genero, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A" Foreground="White">
+                    <ComboBox SelectedValue="{Binding Genero, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
                         <ComboBoxItem Content="Género:" IsEnabled="False"/>
                         <ComboBoxItem Content="Hombre"/>
                         <ComboBoxItem Content="Mujer"/>

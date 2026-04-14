@@ -14,4 +14,9 @@ FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\InformacionWindow2.xaml
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginRegistroWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\AjustesView.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\CategoriasView.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\EquiposView.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\GestionUsuariosView.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\IncidenciasView.xaml;;
 

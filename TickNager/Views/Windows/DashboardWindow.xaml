@@ -8,7 +8,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
+        Title="Dashboard" Height="550" Width="1000">
 
     <Window.DataContext>
         <vm:DashboardViewModel/>
@@ -19,7 +19,7 @@
             <!--Cabecera-->
             <RowDefinition Height="30"/>
             <!--Estructura debajo de la cabecera-->
-            <RowDefinition Height="404.04"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--Cabecera-->
@@ -155,7 +155,9 @@
 
             <!--Columna derecha-->
             <Grid Grid.Column="1" Background="#0C0D21">
-                <ContentControl Content="{Binding VistaActual}"/>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ContentControl Content="{Binding VistaActual}"/>
+                </ScrollViewer>
             </Grid>
         </Grid>
     </Grid>
