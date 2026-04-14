@@ -83,6 +83,13 @@
 
         }
 
+        //Se va usar a la hora de iniciar sesión.
+        public Usuario(string correoUsuario, string contrasenaUsuario)
+        {
+            _correoUsuario = correoUsuario;
+            _contrasenaUsuario = contrasenaUsuario;
+        }
+
         public Usuario(string nombreUsuario, string apellidoUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
         {
             _nombreUsuario = nombreUsuario;

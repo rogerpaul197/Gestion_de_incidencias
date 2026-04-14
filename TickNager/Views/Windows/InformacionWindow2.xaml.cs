@@ -22,17 +22,8 @@ namespace TickNager.Views.Windows
             InitializeComponent();
         }
 
-        private void btnAtras_Click(object sender, RoutedEventArgs e)
+        private void btnEntendido_Click(object sender, RoutedEventArgs e)
         {
-            InformacionWindow ventana = new InformacionWindow();
-            ventana.Show();
-            this.Close();
-        }
-
-        private void btnSiguiente_Click(object sender, RoutedEventArgs e)
-        {
-            LoginRegistroWindow ventana = new LoginRegistroWindow();
-            ventana.Show();
             this.Close();
         }
     }

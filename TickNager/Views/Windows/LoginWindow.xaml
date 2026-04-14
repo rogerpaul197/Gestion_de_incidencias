@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TickNager"
+        xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
-        Title="TickNager" Height="500" Width="400">
-    <Grid Background="#151f2d">
+        Title="TickNager" Height="570" Width="400">
+
+    <Window.DataContext>
+        <vm:LoginWindowViewModel/>
+    </Window.DataContext>
+    
+        <Grid Background="#151f2d">
         <!--Aquí se establece 2 filas, 1 para el título
 y la otra para el ícono del usuario e inicio de sesión-->
         <Grid.RowDefinitions>
@@ -36,32 +42,46 @@ y la otra para el ícono del usuario e inicio de sesión-->
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="23"/>
                 <RowDefinition Height="70"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
                 <Image Source="/Imagenes/Iconos/perfil_administrador.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100"/>
             </Grid>
+            
             <Grid Grid.Row="1">
                 <!--Aquí se debe cambiar por "Correo:" en vez de "Usuario:" -->
-                <TextBlock Text="Usuario:" Foreground="White" Width="340" VerticalAlignment="Center"/>
+                <TextBlock Text="Correo:" Foreground="White" Width="340" VerticalAlignment="Center"/>
             </Grid>
+            
             <Grid Grid.Row="2">
-                <TextBox Name="txtUsuario" Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
+                <TextBox Text="{Binding Correo}" Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
             </Grid>
+            
             <Grid Grid.Row="3">
                 <TextBlock Text="Contraseña:" Foreground="White" Width="340" VerticalAlignment="Center"/>
             </Grid>
+            
             <Grid Grid.Row="4">
-                <PasswordBox  Name="txtContrasena" Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
+                <TextBox Text="{Binding Contrasena}"  Width="340" Height="33" Margin="4" Padding="5 7 0 0"/>
             </Grid>
+            
             <Grid Grid.Row="5">
-                <Button Width="110" Height="20" Content="Iniciar sesión" Click="Button_Click"/>
+                <Border Background="#0D1E36" Height="40" Width="100" CornerRadius="10" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White">
+                    <Button Height="40" Width="100" Content="Iniciar sesión" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnIniciarSeision_Click"/>
+                </Border>
+            </Grid>
+            
+            <Grid Grid.Row="6">
+                <Border Background="#1CFF35" Height="40" Width="100" CornerRadius="10" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White">
+                    <Button Height="40" Width="100" Content="Ayuda" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnAyuda_Click"/>
+                </Border>
             </Grid>
 
             <!--Aparece el siguiente texto si el nombre de usuario o contraseña no son correctas-->
-            <Grid Grid.Row="6">
+            <Grid Grid.Row="7">
                 <TextBlock Name="txtError" Text="" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </Grid>

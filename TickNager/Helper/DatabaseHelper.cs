@@ -11,7 +11,7 @@ namespace TickNager.Helper
 {
     public class DatabaseHelper
     {
-        private static string conexionBaseDatos = "Data Source=TickNager.db";
+        private static string conexionBaseDatos = "Data Source=BBDD/TickNager.db";
 
         public static SqliteConnection getConexionBaseDatos()
         {
