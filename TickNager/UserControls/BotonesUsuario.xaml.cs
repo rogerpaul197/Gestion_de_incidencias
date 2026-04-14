@@ -19,9 +19,17 @@ namespace TickNager.UserControls
     /// </summary>
     public partial class BotonesUsuario : UserControl
     {
+        private DashboardViewModel _dashboardViewModel;
+
         public BotonesUsuario()
         {
             InitializeComponent();
+        }
+
+        public BotonesUsuario(DashboardViewModel dashboardViewModel) : this()
+        {
+            _dashboardViewModel = dashboardViewModel;
+            this.DataContext = new BotonesUsuarioViewModel(dashboardViewModel);
         }
 
         /// <summary>
@@ -31,8 +39,10 @@ namespace TickNager.UserControls
         /// <param name="e"></param>
         private void btnAnadirUsuario_Click(object sender, RoutedEventArgs e)
         {
-            BotonesUsuarioViewModel b = new BotonesUsuarioViewModel();
-            b.anadirUsuarioNuevo();
+            if (this.DataContext is BotonesUsuarioViewModel vm)
+            {
+                vm.anadirUsuarioNuevo();
+            }
         }
     }
 }

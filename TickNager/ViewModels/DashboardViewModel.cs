@@ -38,9 +38,23 @@ namespace TickNager.ViewModels
         /// </summary>
         public void mostrarBotones()
         {
-            VistaActual = new BotonesUsuario();
-            //al presionar el botón de añadir usuario, se muestra el formulario para añadir un nuevo usuario.
-            //VistaActual.anadirUsuarioNuevo();
+            VistaActual = new BotonesUsuario(this);
+        }
+
+        /// <summary>
+        /// Muestra el formulario para crear un nuevo usuario.
+        /// </summary>
+        public void mostrarFormularioCrearUsuario()
+        {
+            VistaActual = new FormularioCrearUsuario();
+        }
+
+        /// <summary>
+        /// Muestra el usuario creado.
+        /// </summary>
+        public void mostrarUsuarioCreado()
+        {
+            VistaActual = new UsuarioCreado();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

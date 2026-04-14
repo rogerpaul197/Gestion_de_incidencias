@@ -11,11 +11,16 @@ namespace TickNager.ViewModels
 {
     public class BotonesUsuarioViewModel
     {
-        UserControl vistaActual;
+        private DashboardViewModel _dashboardViewModel;
 
         public BotonesUsuarioViewModel()
         {
             //anadirUsuario = new RelayCommand(anadirUsuarioNuevo);
+        }
+
+        public BotonesUsuarioViewModel(DashboardViewModel dashboardViewModel)
+        {
+            _dashboardViewModel = dashboardViewModel;
         }
 
         /// <summary>
@@ -23,12 +28,15 @@ namespace TickNager.ViewModels
         /// </summary>
         public void anadirUsuarioNuevo()
         {
-            vistaActual = new FormularioCrearUsuario();
+            if (_dashboardViewModel != null)
+            {
+                _dashboardViewModel.mostrarFormularioCrearUsuario();
+            }
         }
 
         public void eliminarUsuario()
         {
-            
+
         }
     }
 }

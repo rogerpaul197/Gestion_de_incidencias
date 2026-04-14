@@ -8,7 +8,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450px" Width="800px">
+        Title="Dashboard" Height="450" Width="800">
 
     <Window.DataContext>
         <vm:DashboardViewModel/>
