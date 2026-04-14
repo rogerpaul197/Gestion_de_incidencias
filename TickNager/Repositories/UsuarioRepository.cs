@@ -34,7 +34,7 @@ namespace TickNager.Repositories
             comando.ExecuteNonQuery();
         }
 
-        //Select
+        //Select, esto lo usaré para el login, para verificar que el correo y la contraseña sean correctos.
         public static bool VerificarUsuario(string correo, string contrasena)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();

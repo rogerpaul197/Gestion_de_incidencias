@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
 {
@@ -10,6 +11,13 @@ namespace TickNager.Views.Windows
         public DashboardWindow()
         {
             InitializeComponent();
+        }
+
+        //Todos estas funciones son los botones del menú lateral
+        private void btnDashboard_Click(object sender, RoutedEventArgs e)
+        {
+            DashboardViewModel ventanaDashboard = new DashboardViewModel();
+            ventanaDashboard.mostrarDashboard();
         }
 
         private void btnIncidencias_Click(object sender, RoutedEventArgs e)
@@ -25,7 +33,9 @@ namespace TickNager.Views.Windows
             /*
             GestionUsuariosWindow ventanaGestionUsuarios = new GestionUsuariosWindow();
             ventanaGestionUsuarios.Show();*/
-            this.Close();
+            DashboardViewModel obj = new DashboardViewModel();
+            obj.mostrarBotones();
+            
         }
 
         private void btnEquipos_Click(object sender, RoutedEventArgs e)

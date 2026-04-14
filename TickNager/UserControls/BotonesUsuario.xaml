@@ -13,7 +13,7 @@
     
     <Grid>
         <Border Background="Purple" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Left" Margin="40 0 0 260">
-            <Button Command="{Binding anadirUsuario}" Height="50" Width="150" Content="Añadir usuario" Background="Transparent" BorderThickness="0"/>
+            <Button Height="50" Width="150" Content="Añadir usuario" Background="Transparent" BorderThickness="0" Click="btnAnadirUsuario_Click"/>
         </Border>
         <Border Background="Purple" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 40 260">
             <Button Height="50" Width="150" Content="Eliminar usuario" Background="Transparent" BorderThickness="0"/>

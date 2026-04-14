@@ -9,6 +9,7 @@ namespace TickNager.ViewModels
 {
     public class DashboardViewModel : INotifyPropertyChanged
     {
+        //Aquí se van a guardar las los UserControls que serán las vistas en la parte derecha (dependiendo de la función, cada función muestra una vista diferente).
         private UserControl _vistaActual;
 
         public UserControl VistaActual
@@ -21,19 +22,13 @@ namespace TickNager.ViewModels
             }
         }
 
-        public ICommand MostrarDashboard { get; set; }
-        public ICommand MostrarBotones { get; set; }
-
         public DashboardViewModel()
         {
-            MostrarDashboard = new RelayCommand(mostrarDashboard);
             // Para que al abrir la ventana ya se vea el Dashboard por defecto.
             VistaActual = new Dashboard();
-
-            MostrarBotones = new RelayCommand(mostrarBotones);
         }
 
-        public void mostrarDashboard(object obj)
+        public void mostrarDashboard()
         {
             VistaActual = new Dashboard();
         }
@@ -41,9 +36,11 @@ namespace TickNager.ViewModels
         /// <summary>
         /// Muestra los botones para le gestión de los usuarios.
         /// </summary>
-        public void mostrarBotones(object obj)
+        public void mostrarBotones()
         {
             VistaActual = new BotonesUsuario();
+            //al presionar el botón de añadir usuario, se muestra el formulario para añadir un nuevo usuario.
+            //VistaActual.anadirUsuarioNuevo();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

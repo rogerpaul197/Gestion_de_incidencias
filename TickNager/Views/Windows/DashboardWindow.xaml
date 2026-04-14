@@ -89,7 +89,7 @@
                                 BorderThickness="0"
                                 HorizontalAlignment="Left"
                                 Margin="0,10,0,10"
-                                Command="{Binding MostrarDashboard}">
+                                Click="btnDashboard_Click">
                             <StackPanel Orientation="Horizontal">
                                 <iconPacks:PackIconMaterial Kind="ViewDashboard" Foreground="White" Margin="0,0,20,0"/>
                                 <TextBlock Text="Dashboard" Foreground="White"/>
@@ -110,7 +110,7 @@
                                 BorderThickness="0"
                                 HorizontalAlignment="Left"
                                 Margin="0,10,0,10"
-                                Command="{Binding MostrarBotones}">
+                                Click="btnGestionUsuarios_Click">
                             <StackPanel Orientation="Horizontal">
                                 <iconPacks:PackIconMaterial Kind="AccountGroup" Foreground="White" Margin="0,0,20,0"/>
                                 <TextBlock Text="Gestión de usuarios" Foreground="White"/>

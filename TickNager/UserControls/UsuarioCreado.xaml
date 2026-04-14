@@ -21,10 +21,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <TextBlock x:Name="tbNombreUsuario" Text="" Foreground="White" FontSize="30"/>
+                <TextBlock x:Name="tbNombreUsuario" Text="{Binding NombreUsuario}" Foreground="White" FontSize="30"/>
             </Grid>
             <Grid Grid.Row="1">
-                <TextBlock x:Name="tbApellidoUsuario" Text="Textito" Foreground="White" FontSize="30"/>
+                <TextBlock x:Name="tbApellidoUsuario" Text="{Binding VerMasInfo}" Foreground="White" FontSize="30"/>
             </Grid>
         </Grid>
     </Grid>

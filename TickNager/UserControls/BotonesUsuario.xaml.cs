@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TickNager.ViewModels;
 
 namespace TickNager.UserControls
 {
@@ -21,6 +22,17 @@ namespace TickNager.UserControls
         public BotonesUsuario()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Usa la función del ViewModel para mostrar el formulario de añadir usuario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAnadirUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            BotonesUsuarioViewModel b = new BotonesUsuarioViewModel();
+            b.anadirUsuarioNuevo();
         }
     }
 }
