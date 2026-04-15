@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 	apellido TEXT NOT NULL,
 	rol TEXT NOT NULL CHECK (rol IN ('Administrador', 'Técnico', 'Usuario')),
 	genero TEXT NOT NULL CHECK (genero IN ('Hombre', 'Mujer')),
+	departamento TEXT,
 	numero TEXT NULL,
 	correo TEXT NOT NULL UNIQUE,
 	contrasena TEXT NOT NULL

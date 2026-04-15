@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TickNager.Repositories;
+using TickNager.ViewModels;
 
 namespace TickNager.UserControls
 {
@@ -21,6 +23,17 @@ namespace TickNager.UserControls
         public FormularioCrearUsuario()
         {
             InitializeComponent();
+        }
+
+        public FormularioCrearUsuario(DashboardViewModel dashboardViewModel)
+        {
+            InitializeComponent();
+        }
+
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+            FormularioCrearUsuarioViewModel obj = (FormularioCrearUsuarioViewModel)DataContext;
+            obj.CrearUsuario();
         }
     }
 }

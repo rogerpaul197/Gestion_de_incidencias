@@ -11,6 +11,7 @@
         ///controla desde la ventana de registro según el rol y el género elegidos.
         private string _generoUsuario;
 
+        private string _departamento;
         private string? _numeroUsuario;
         private string _correoUsuario;
         private string _contrasenaUsuario;
@@ -18,9 +19,9 @@
         public string NombreUsuario
         {
             get { return _nombreUsuario; }
-            set 
+            set
             {
-                _nombreUsuario = value; 
+                _nombreUsuario = value;
             }
         }
 
@@ -42,21 +43,30 @@
             }
         }
 
-        public string? NumeroUsuario
-        {
-            get { return _numeroUsuario; }
-            set
-            {
-                _numeroUsuario = value;
-            }
-        }
-
         public string GeneroUsuario
         {
             get { return _generoUsuario; }
             set
             {
                 _generoUsuario = value;
+            }
+        }
+
+        public string Departamento
+        {
+            get { return _departamento; }
+            set
+            {
+                _departamento = value;
+            }
+        }
+
+        public string? NumeroUsuario
+        {
+            get { return _numeroUsuario; }
+            set
+            {
+                _numeroUsuario = value;
             }
         }
 
@@ -100,13 +110,14 @@
             _contrasenaUsuario = contrasenaUsuario;
         }
 
-        public Usuario(string nombreUsuario, string apellidoUsuario, string rolUsuario, string? numeroUsuario, string generoUsuario, string correoUsuario, string contrasenaUsuario)
+        public Usuario(string nombreUsuario, string apellidoUsuario, string rolUsuario, string generoUsuario, string departamento, string? numeroUsuario, string correoUsuario, string contrasenaUsuario)
         {
             _nombreUsuario = nombreUsuario;
             _apellidoUsuario = apellidoUsuario;
             _rolUsuario = rolUsuario;
-            _numeroUsuario = numeroUsuario;
             _generoUsuario = generoUsuario;
+            _departamento = departamento;
+            _numeroUsuario = numeroUsuario;
             _correoUsuario = correoUsuario;
             _contrasenaUsuario = contrasenaUsuario;
         }

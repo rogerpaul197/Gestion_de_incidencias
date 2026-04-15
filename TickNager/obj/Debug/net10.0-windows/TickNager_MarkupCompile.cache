@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_O
 C:\Proye\Gestion_de_incidencias\TickNager\App.xaml
 20-1569881272
 2488818381
-44-1495172783
+45-1772847138
 256-157298352
 Resources\styles.xaml;UserControls\AjustesView.xaml;UserControls\BotonesIncidencias.xaml;UserControls\BotonesUsuario.xaml;UserControls\CategoriasView.xaml;UserControls\Dashboard.xaml;UserControls\EquiposView.xaml;UserControls\FormularioCrearUsuario.xaml;UserControls\GestionUsuariosView.xaml;UserControls\IncidenciasView.xaml;UserControls\UsuarioCreado.xaml;Views\Windows\AvisoCampoVacioWindow.xaml;Views\Windows\CrearUsuarioWindow.xaml;Views\Windows\DashboardWindow.xaml;Views\Windows\EmpresaWindow.xaml;Views\Windows\InformacionWindow.xaml;Views\Windows\InformacionWindow2.xaml;Views\Windows\LoginRegistroWindow.xaml;Views\Windows\LoginWindow.xaml;Views\Windows\RegistroWindow.xaml;
 

@@ -3,6 +3,8 @@ using TickNager.Models;
 
 ///<summary>
 ///Aquí van las operaciones CRUD
+///usaré funciones estáticas para llamarlas directamente con la clase.
+///Los usaré en los ViewModels.
 ///</summary>
 namespace TickNager.Repositories
 {
@@ -12,29 +14,59 @@ namespace TickNager.Repositories
         {
         }
 
-        //Insert
-        public static void RegistarUsuario(Usuario usuario)
+        /// <summary>
+        /// Este método registra un usuario a la base de datos.
+        /// </summary>
+        /// <param name="usuario"></param>
+        public static void RegistrarUsuario(Usuario usuario)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"INSERT INTO usuarios 
-                                    (nombre, apellido, rol, numero, genero, correo, contrasena)
+                                    (nombre, apellido, rol, genero, departamento, numero, correo, contrasena)
                                     VALUES 
-                                    (@nombre, @apellido, @rol, @numero, @genero, @correo, @contrasena)";
+                                    (@nombre, @apellido, @rol, @genero, @departamento, @numero, @correo, @contrasena)";
 
             comando.Parameters.AddWithValue("@nombre", usuario.NombreUsuario);
             comando.Parameters.AddWithValue("@apellido", usuario.ApellidoUsuario);
             comando.Parameters.AddWithValue("@rol", usuario.RolUsuario);
-            comando.Parameters.AddWithValue("@numero", usuario.NumeroUsuario);
             comando.Parameters.AddWithValue("@genero", usuario.GeneroUsuario);
+            comando.Parameters.AddWithValue("@departamento", usuario.Departamento);
+            comando.Parameters.AddWithValue("@numero", usuario.NumeroUsuario);
             comando.Parameters.AddWithValue("@correo", usuario.CorreoUsuario);
             comando.Parameters.AddWithValue("@contrasena", usuario.ContrasenaUsuario);
             comando.ExecuteNonQuery();
         }
 
-        //Select, esto lo usaré para el login, para verificar que el correo y la contraseña sean correctos.
+        /// <summary>
+        /// sirve para verificar si el correo ya existe en la base de datos, esto es para evitar que se registren dos usuarios con el mismo correo.
+        /// </summary>
+        /// <param name="correo">El correo electrónico a verificar.</param>
+        /// <returns>True si el correo ya existe, false en caso contrario.</returns>
+        private static void CorreoYaExiste(string correo)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT COUNT(*) 
+                                    FROM usuarios 
+                                    WHERE correo = @correo";
+
+            comando.Parameters.AddWithValue("@correo", correo);
+
+            long resultado = (long)comando.ExecuteScalar();
+
+        }
+
+        /// <summary>
+        /// Select, esto lo usaré para el login, para verificar que el correo y la contraseña sean correctos.
+        /// </summary>
+        /// <param name="correo">El correo electrónico del usuario.</param>
+        /// <param name="contrasena">La contraseña del usuario.</param>
+        /// <returns>True si el correo y la contraseña son correctos, false en caso contrario.</returns>
         public static bool VerificarUsuario(string correo, string contrasena)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();

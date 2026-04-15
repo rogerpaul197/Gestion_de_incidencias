@@ -245,11 +245,11 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena);
+            //Usuario nuevoUsuario = new Usuario(Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena);
 
             DatabaseHelper.iniciarConexion();
 
-            FuncionesHelper.RegistarUsuario(nuevoUsuario);
+            //FuncionesHelper.RegistarUsuario(nuevoUsuario);
             MessageBox.Show("Se creó el usuario correctamente.");
         }
 
