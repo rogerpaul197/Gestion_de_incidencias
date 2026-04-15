@@ -19,6 +19,7 @@ namespace TickNager.ViewModels
         private string _numero;
         private string _correo;
         private string _contrasena;
+        private string _confirmarContrasena;
         private string _imagenPerfil;
 
         public string Nombre
@@ -103,6 +104,16 @@ namespace TickNager.ViewModels
             }
         }
 
+        public string ConfirmarContrasena
+        {
+            get { return _confirmarContrasena; }
+            set
+            {
+                _confirmarContrasena = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string ImagenPerfil
         {
             get { return _imagenPerfil; }
@@ -122,9 +133,15 @@ namespace TickNager.ViewModels
 
         public void CrearUsuario()
         {
-            Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
-            UsuarioRepository.RegistrarUsuario(usuarioNuevo);
-            MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (ConfirmarContrasena != Contrasena)
+            {
+                MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            } else
+            {
+                Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
+                UsuarioRepository.RegistrarUsuario(usuarioNuevo);
+                MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void ActualizarImagen()

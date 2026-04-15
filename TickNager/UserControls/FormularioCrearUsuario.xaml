@@ -102,14 +102,14 @@
             <Grid Grid.Row="5" Margin="0,0,0,8">
                 <StackPanel>
                     <TextBlock Text="Contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <PasswordBox x:Name="txtContrasena" Height="26" Padding="6,4"/>
+                    <TextBox Text="{Binding Contrasena}"  Height="26" Padding="6,4"/>
                 </StackPanel>
             </Grid>
 
             <Grid Grid.Row="6" Margin="0,0,0,8">
                 <StackPanel>
                     <TextBlock Text="Confirmar contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <PasswordBox x:Name="txtContrasenaConfirmacion" Height="26" Padding="6,4"/>
+                    <TextBox Text="{Binding ConfirmarContrasena}" Height="26" Padding="6,4"/>
                 </StackPanel>
             </Grid>
 
