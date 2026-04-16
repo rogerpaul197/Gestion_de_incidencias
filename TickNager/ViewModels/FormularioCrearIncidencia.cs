@@ -47,7 +47,7 @@ namespace TickNager.ViewModels
             } else
             {
                 Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
-                //IncidenciaRepository.RegistrarIncidencia(incidencia);
+                IncidenciaRepository.RegistrarIncidencia(incidencia);
                 MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }

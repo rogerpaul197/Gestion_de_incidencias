@@ -33,6 +33,30 @@
         private string _descripcionIncidencia;
         private DateTime _fechaCreacion;
 
+        public string Titulo
+        { 
+            get { return _tituloIncidencia; } 
+            set { _tituloIncidencia = value; }
+        }
+
+        public string Descripcion
+        {
+            get { return _descripcionIncidencia; }
+            set { _descripcionIncidencia = value; }
+        }
+
+        public string Categoria
+        {
+            get { return _categoriaIncidencia; }
+            set { _categoriaIncidencia = value; }
+        }
+
+        public string Prioridad
+        {
+            get { return _prioridadIncidencia; }
+            set { _prioridadIncidencia = value; }
+        }
+
         public Incidencia()
         {
 
