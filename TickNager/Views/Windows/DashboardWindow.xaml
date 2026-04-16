@@ -156,7 +156,7 @@
             <!--Columna derecha-->
             <Grid Grid.Column="1" Background="#0C0D21">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <ContentControl Content="{Binding VistaActual}"/>
+                    <ContentControl Content="{Binding Contenido}"/>
                 </ScrollViewer>
             </Grid>
         </Grid>

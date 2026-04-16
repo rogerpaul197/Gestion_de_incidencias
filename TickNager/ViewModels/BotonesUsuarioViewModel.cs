@@ -30,7 +30,7 @@ namespace TickNager.ViewModels
         {
             if (_dashboardViewModel != null)
             {
-                _dashboardViewModel.mostrarFormularioCrearUsuario();
+                //_dashboardViewModel.mostrarFormularioCrearUsuario();
             }
         }
 

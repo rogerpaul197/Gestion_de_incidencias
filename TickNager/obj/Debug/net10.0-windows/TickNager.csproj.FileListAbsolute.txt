@@ -91,6 +91,7 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\GestionUsuariosView.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\IncidenciasView.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\UsuarioCreado.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidencias.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.g.cs
@@ -117,6 +118,7 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\GestionUsuariosView.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\IncidenciasView.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\UsuarioCreado.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidencias.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AvisoCampoVacioWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\CrearUsuarioWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.baml

@@ -10,14 +10,14 @@ namespace TickNager.ViewModels
     public class DashboardViewModel : INotifyPropertyChanged
     {
         //Aquí se van a guardar las los UserControls que serán las vistas en la parte derecha (dependiendo de la función, cada función muestra una vista diferente).
-        private UserControl _vistaActual;
+        private UserControl _contenido;
 
-        public UserControl VistaActual
+        public UserControl Contenido
         {
-            get { return _vistaActual; }
+            get { return _contenido; }
             set
             {
-                _vistaActual = value;
+                _contenido = value;
                 OnPropertyChanged();
             }
         }
@@ -25,12 +25,12 @@ namespace TickNager.ViewModels
         public DashboardViewModel()
         {
             // Para que al abrir la ventana ya se vea el Dashboard por defecto.
-            VistaActual = new Dashboard();
+            Contenido = new Dashboard();
         }
 
         public void mostrarDashboard()
         {
-            VistaActual = new Dashboard();
+            Contenido = new Dashboard();
         }
 
         /// <summary>
@@ -38,15 +38,20 @@ namespace TickNager.ViewModels
         /// </summary>
         public void mostrarBotones()
         {
-            VistaActual = new BotonesUsuario(this);
+            Contenido = new BotonesUsuario(this);
         }
 
         /// <summary>
-        /// Muestra el formulario para crear un nuevo usuario.
+        /// Muestra la vista de incidencias.
         /// </summary>
-        public void mostrarFormularioCrearUsuario()
+        public void mostrarVistaIncidencias(UserControl vista)
         {
-            VistaActual = new FormularioCrearUsuario();
+            Contenido = vista;
+        }
+
+        public void mostrarFormulario(UserControl vista)
+        {
+            Contenido = new FormularioCrearIncidencia();
         }
 
         /// <summary>
@@ -54,7 +59,7 @@ namespace TickNager.ViewModels
         /// </summary>
         public void mostrarUsuarioCreado()
         {
-            VistaActual = new UsuarioCreado();
+            Contenido = new UsuarioCreado();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

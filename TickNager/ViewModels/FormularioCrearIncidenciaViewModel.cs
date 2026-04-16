@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using TickNager.Models;
 using TickNager.Repositories;
+using TickNager.UserControls;
 
 namespace TickNager.ViewModels
 {
-    public class FormularioCrearIncidencia
+    public class FormularioCrearIncidenciaViewModel
     {
         private string _titulo;
         private string _descripcion;
@@ -44,12 +46,20 @@ namespace TickNager.ViewModels
             if (Titulo == null || Descripcion == null || Categoria == null || Prioridad == null)
             {
                 MessageBox.Show("Por favor, complete todos los campos para crear la incidencia.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            } else
+            }
+            else
             {
                 Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
                 IncidenciaRepository.RegistrarIncidencia(incidencia);
                 MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        public void mostrarFormulario()
+        {
+            FormularioCrearIncidencia obj = new FormularioCrearIncidencia();
+            DashboardViewModel obj2 = new DashboardViewModel();
+            obj2.Contenido = obj;
         }
     }
 }

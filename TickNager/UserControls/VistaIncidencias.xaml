@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="TickNager.UserControls.VistaIncidencias"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TickNager.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#0C0D21">
+        <Border Background="#7B68EE" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 40 350">
+            <Button Height="50" Width="150" Content="Nueva incidencia" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevaIncidencia_Click"/>
+        </Border>
+    </Grid>
+</UserControl>

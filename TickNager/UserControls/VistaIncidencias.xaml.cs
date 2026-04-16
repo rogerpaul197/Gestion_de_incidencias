@@ -15,24 +15,20 @@ using TickNager.ViewModels;
 namespace TickNager.UserControls
 {
     /// <summary>
-    /// Lógica de interacción para FormularioCrearIncidencia.xaml
+    /// Lógica de interacción para VistaIncidencias.xaml
     /// </summary>
-    public partial class FormularioCrearIncidencia : UserControl
+    public partial class VistaIncidencias : UserControl
     {
-        public FormularioCrearIncidencia()
+        public bool PresionoBoton;
+        public VistaIncidencias()
         {
             InitializeComponent();
+            PresionoBoton = false;
         }
 
-        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        private void btnNuevaIncidencia_Click(object sender, RoutedEventArgs e)
         {
-            FormularioCrearIncidenciaViewModel obj = (FormularioCrearIncidenciaViewModel)DataContext;
-            obj.mostrarFormulario();
-        }
-
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
-        {
-            
+            PresionoBoton = true;
         }
     }
 }

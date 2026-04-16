@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TickNager.UserControls;
 using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
@@ -23,44 +24,35 @@ namespace TickNager.Views.Windows
 
         private void btnIncidencias_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            IncidenciasWindow ventanaIncidencias = new IncidenciasWindow();
-            ventanaIncidencias.Show();*/
-            this.Close();
+            //método
+            VistaIncidencias obj = new VistaIncidencias();
+            FormularioCrearIncidencia obj2 = new FormularioCrearIncidencia();
+
+            DashboardViewModel obj3 = this.DataContext as DashboardViewModel;
+
+            obj3.mostrarVistaIncidencias(obj);
+            
+            obj3.mostrarFormulario(obj2);
         }
 
         private void btnGestionUsuarios_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            GestionUsuariosWindow ventanaGestionUsuarios = new GestionUsuariosWindow();
-            ventanaGestionUsuarios.Show();*/
-            DashboardViewModel obj = this.DataContext as DashboardViewModel;
-            if (obj != null)
-                obj.mostrarBotones();
+            //método
         }
 
         private void btnEquipos_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            EquiposWindow ventanaEquipos = new EquiposWindow();
-            ventanaEquipos.Show();*/
-            this.Close();
+            //método
         }
 
         private void btnCategorias_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            CategoriasWindow ventanaCategorias = new CategoriasWindow();
-            ventanaCategorias.Show();*/
-            this.Close();
+            //método
         }
 
         private void btnAjustes_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            AjustesWindow ventanaAjustes = new AjustesWindow();
-            ventanaAjustes.Show();*/
-            this.Close();
+            //método
         }
     }
 }
