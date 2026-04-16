@@ -2,30 +2,36 @@
 {
     public class Incidencia
     {
-        public string nombreIncidencia;
+        private string _tituloIncidencia;
+        private string _categoriaIncidencia;
+
+        /// <summary>
+        /// Alta , Media, Baja
+        /// </summary>
+        private string _prioridadIncidencia;
 
         /// True --> incidencia asignada
         /// False --> incidencia no asignada        
-        public bool estadoIncidencia = false;
+        private bool _estadoIncidencia = false;
 
         /// True --> incidencia acabada
         /// False --> incidencia no acabada 
         /// La decide el técnico al acabarlo o no
-        public bool incidenciaTerminada = false;
+        private bool _incidenciaTerminada = false;
 
         /// True --> incidencia en proceso
         /// False --> incidencia no está en proceso
         /// La decide el técnico cuándo empieza a resolver la incidencia
-        public bool incidenciaEnProceso = false;
+        private bool _incidenciaEnProceso = false;
 
-        public string tecnicoAsignado_equipoAsignado;
+        private string _tecnicoAsignado_equipoAsignado;
 
         //Usuario que reporta la incidencia
-        public string usuarioReporta;
+        private string _usuarioReporta;
 
         //Aquí el usuario describe las incidencias
-        public string descripcionIncidencia;
-        public DateTime fechaCreacion;
+        private string _descripcionIncidencia;
+        private DateTime _fechaCreacion;
 
         public Incidencia()
         {
@@ -35,33 +41,26 @@
         //Cuándo el usuario reporte la incidencia sólo asigna la descripción
         public Incidencia(string descripcionIncidencia)
         {
-            this.descripcionIncidencia = descripcionIncidencia;
+            _descripcionIncidencia = descripcionIncidencia;
         }
 
         //El administrador la usa al asignar a un técnico
-        public Incidencia(string nombreIncidencia, string tecnicoAsignado_equipoAsignado, string usuarioReporta)
+        public Incidencia(string tituloIncidencia, string tecnicoAsignado_equipoAsignado, string usuarioReporta)
         {
-            this.nombreIncidencia = nombreIncidencia;
-            estadoIncidencia = true; //Incidencia asignada al crearla, ya que al crear se debe asignar a un responsable
-            this.tecnicoAsignado_equipoAsignado = tecnicoAsignado_equipoAsignado;
-            this.usuarioReporta = usuarioReporta;
-            fechaCreacion = DateTime.Now;
-            descripcionIncidencia = null;
+            _tituloIncidencia = tituloIncidencia;
+            _estadoIncidencia = true; //Incidencia asignada al crearla, ya que al crear se debe asignar a un responsable
+            _tecnicoAsignado_equipoAsignado = tecnicoAsignado_equipoAsignado;
+            _usuarioReporta = usuarioReporta;
+            _fechaCreacion = DateTime.Now;
+            _descripcionIncidencia = null;
         }
 
-        public void setIncidenciaTreminada()
+        public Incidencia(string tituloIncidencia, string descripcionIncidenci, string categoriaIncidencia, string prioridadIncidencia)
         {
-            incidenciaTerminada = true;
-        }
-
-        public void setIncidenciaEnProceso()
-        {
-            incidenciaEnProceso = true;
-        }
-
-        public void setDescripcionIncidencias()
-        {
-
+            _tituloIncidencia = tituloIncidencia;
+            _descripcionIncidencia = descripcionIncidenci;
+            _categoriaIncidencia = categoriaIncidencia;
+            _prioridadIncidencia = prioridadIncidencia;
         }
     }
 }
