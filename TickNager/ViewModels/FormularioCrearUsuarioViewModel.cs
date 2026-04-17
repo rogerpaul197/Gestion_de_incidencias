@@ -20,7 +20,8 @@ namespace TickNager.ViewModels
         private string _correo;
         private string _contrasena;
         private string _confirmarContrasena;
-        private string _imagenPerfil;
+        private string _imagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
+        private DashboardViewModel _obj;
 
         public string Nombre
         {
@@ -124,11 +125,14 @@ namespace TickNager.ViewModels
             }
         }
 
-        private DashboardViewModel _dashboardViewModel;
-
         public FormularioCrearUsuarioViewModel()
         {
 
+        }
+
+        public FormularioCrearUsuarioViewModel(DashboardViewModel obj)
+        {
+            _obj = obj;
         }
 
         public void CrearUsuario()

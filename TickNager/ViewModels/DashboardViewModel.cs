@@ -24,7 +24,6 @@ namespace TickNager.ViewModels
 
         public DashboardViewModel()
         {
-            // Para que al abrir la ventana ya se vea el Dashboard por defecto.
             Contenido = new Dashboard();
         }
 
@@ -33,6 +32,44 @@ namespace TickNager.ViewModels
             Contenido = new Dashboard();
         }
 
+        //Gestión de incidencias
+        public void mostrarVistaIncidencias()
+        {
+            Contenido = new VistaIncidencias(this);
+        }
+
+        public void mostrarFormularioCrearIncidencia()
+        {
+            Contenido = new FormularioCrearIncidencia(this);
+        }
+
+        //Gestión de usuarios
+        public void mostrarVistaGestionUsuarios()
+        {
+            Contenido = new VistaGestionUsuarios(this);
+        }
+
+        public void mostrarFormularioCrearUsuario()
+        {
+            Contenido = new FormularioCrearUsuario(this);
+        }
+
+        public void mostrarVistaEquipos()
+        {
+            Contenido = new EquiposView();
+        }
+
+        public void mostrarVistaCategorias()
+        {
+            Contenido = new CategoriasView();
+        }
+
+        public void mostrarAjustes()
+        {
+            Contenido = new AjustesView();
+        }
+
+        /*
         /// <summary>
         /// Muestra los botones para le gestión de los usuarios.
         /// </summary>
@@ -51,7 +88,7 @@ namespace TickNager.ViewModels
 
         public void mostrarFormulario(UserControl vista)
         {
-            Contenido = new FormularioCrearIncidencia();
+            Contenido = vista;
         }
 
         /// <summary>
@@ -60,7 +97,7 @@ namespace TickNager.ViewModels
         public void mostrarUsuarioCreado()
         {
             Contenido = new UsuarioCreado();
-        }
+        }*/
 
         public event PropertyChangedEventHandler PropertyChanged;
 

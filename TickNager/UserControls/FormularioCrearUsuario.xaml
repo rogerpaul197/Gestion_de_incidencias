@@ -8,10 +8,6 @@
              mc:Ignorable="d"
              d:DesignHeight="430" d:DesignWidth="800">
 
-    <UserControl.DataContext>
-        <vm:FormularioCrearUsuarioViewModel/>
-    </UserControl.DataContext>
-
     <Grid Background="#0C0D21">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>

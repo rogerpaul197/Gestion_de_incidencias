@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using TickNager.Models;
 using TickNager.Repositories;
 using TickNager.UserControls;
@@ -14,7 +10,8 @@ namespace TickNager.ViewModels
         private string _titulo;
         private string _descripcion;
         private string _categoria;
-        private string _Prioridad;
+        private string _prioridad;
+        private DashboardViewModel _dashboardViewModel;
 
         public string Titulo
         {
@@ -36,30 +33,36 @@ namespace TickNager.ViewModels
 
         public string Prioridad
         {
-            get { return _Prioridad; }
-            set { _Prioridad = value; }
+            get { return _prioridad; }
+            set { _prioridad = value; }
+        }
+
+        public FormularioCrearIncidenciaViewModel()
+        {
+        }
+
+        public FormularioCrearIncidenciaViewModel(DashboardViewModel dashboardViewModel)
+        {
+            _dashboardViewModel = dashboardViewModel;
         }
 
         public void crearIncidencia()
         {
-            //si los campos están vacíos, no se puede crear la incidencia
-            if (Titulo == null || Descripcion == null || Categoria == null || Prioridad == null)
+            if (Titulo == null || Descripcion == null || Prioridad == null)
             {
                 MessageBox.Show("Por favor, complete todos los campos para crear la incidencia.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
+                return;
+            } else
             {
                 Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
                 IncidenciaRepository.RegistrarIncidencia(incidencia);
-                MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Incidencia registrada.");
             }
         }
 
-        public void mostrarFormulario()
+        public void volverAVistaIncidencias()
         {
-            FormularioCrearIncidencia obj = new FormularioCrearIncidencia();
-            DashboardViewModel obj2 = new DashboardViewModel();
-            obj2.Contenido = obj;
+            
         }
     }
 }

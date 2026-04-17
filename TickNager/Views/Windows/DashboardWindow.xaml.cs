@@ -1,58 +1,46 @@
 ﻿using System.Windows;
-using TickNager.UserControls;
 using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
 {
-    /// <summary>
-    /// Lógica de interacción para Principal.xaml
-    /// </summary>
     public partial class DashboardWindow : Window
     {
+        private DashboardViewModel _obj;
+
         public DashboardWindow()
         {
             InitializeComponent();
+            _obj = DataContext as DashboardViewModel;
         }
 
-        //Todos estas funciones son los botones del menú lateral
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            DashboardViewModel ventanaDashboard = this.DataContext as DashboardViewModel;
-            if (ventanaDashboard != null)
-                ventanaDashboard.mostrarDashboard();
+            _obj.mostrarDashboard();
         }
 
         private void btnIncidencias_Click(object sender, RoutedEventArgs e)
         {
-            //método
-            VistaIncidencias obj = new VistaIncidencias();
-            FormularioCrearIncidencia obj2 = new FormularioCrearIncidencia();
-
-            DashboardViewModel obj3 = this.DataContext as DashboardViewModel;
-
-            obj3.mostrarVistaIncidencias(obj);
-            
-            obj3.mostrarFormulario(obj2);
+            _obj.mostrarVistaIncidencias();
         }
 
         private void btnGestionUsuarios_Click(object sender, RoutedEventArgs e)
         {
-            //método
+            _obj.mostrarVistaGestionUsuarios();
         }
 
         private void btnEquipos_Click(object sender, RoutedEventArgs e)
         {
-            //método
+            _obj.mostrarVistaEquipos();
         }
 
         private void btnCategorias_Click(object sender, RoutedEventArgs e)
         {
-            //método
+            _obj.mostrarVistaCategorias();
         }
 
         private void btnAjustes_Click(object sender, RoutedEventArgs e)
         {
-            //método
+            _obj.mostrarAjustes();
         }
     }
 }

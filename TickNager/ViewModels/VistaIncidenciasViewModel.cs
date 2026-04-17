@@ -1,22 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using TickNager.UserControls;
 
 namespace TickNager.ViewModels
 {
     public class VistaIncidenciasViewModel
     {
-        public static bool presionoBoton(bool estadoBoton)
+        private DashboardViewModel _dashboardViewModel;
+
+        private UserControl _mostrarUsuario;
+        public UserControl MostrarUsuario
         {
-            if (estadoBoton == true)
+            get { return _mostrarUsuario; }
+            set
             {
-                return true;
-            } else
-            {
-                return false;
+                _mostrarUsuario = value;
             }
+        }
+
+        public VistaIncidenciasViewModel(DashboardViewModel dashboardViewModel)
+        {
+            _dashboardViewModel = dashboardViewModel;
+        }
+
+        public void mostrarUsuarioCreado()
+        {
+            MostrarUsuario = new UsuarioCreado();
         }
     }
 }
