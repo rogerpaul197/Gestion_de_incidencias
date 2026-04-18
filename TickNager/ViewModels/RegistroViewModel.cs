@@ -225,7 +225,7 @@ namespace TickNager.ViewModels
         /// </returns>
         public void registroUsuario(object parametro)
         {
-            AvisoCampoVacioWindow ventanaCampoVacio = new AvisoCampoVacioWindow();
+            //AvisoCampoVacioWindow ventanaCampoVacio = new AvisoCampoVacioWindow();
 
             //Permite almacenar datos (de cualquier tipo) del usuario en un array.
             object[] datosUsuario = { Nombre, Apellido, Rol, Numero, Genero, Correo, Contrasena, ConfirmacionContrasena };
@@ -234,7 +234,7 @@ namespace TickNager.ViewModels
             {
                 if (datosUsuario[i] == null || string.IsNullOrWhiteSpace(datosUsuario[i].ToString()))
                 {
-                    ventanaCampoVacio.ShowDialog();
+                    //ventanaCampoVacio.ShowDialog();
                     return;
                 }
             }

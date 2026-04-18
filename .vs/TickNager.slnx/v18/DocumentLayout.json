@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proye\\Gestion_de_incidencias\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\formulariocrearincidenciaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\formulariocrearincidenciaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\formulariocrearusuario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\formulariocrearusuario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\formulariocrearusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\formulariocrearusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\formulariocrearusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\formulariocrearusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\cerna\\source\\repos\\Gestion_de_incidencias\\Gestion_de_incidencias\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,88 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormularioCrearIncidenciaViewModel.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\FormularioCrearIncidenciaViewModel.cs",
-              "RelativeDocumentMoniker": "TickNager\\ViewModels\\FormularioCrearIncidenciaViewModel.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\FormularioCrearIncidenciaViewModel.cs",
-              "RelativeToolTip": "TickNager\\ViewModels\\FormularioCrearIncidenciaViewModel.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T13:11:23.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "TickNager\\ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "TickNager\\ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T13:10:10.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormularioCrearUsuarioViewModel.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\FormularioCrearUsuarioViewModel.cs",
-              "RelativeDocumentMoniker": "TickNager\\ViewModels\\FormularioCrearUsuarioViewModel.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\FormularioCrearUsuarioViewModel.cs",
-              "RelativeToolTip": "TickNager\\ViewModels\\FormularioCrearUsuarioViewModel.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T13:02:20.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormularioCrearUsuario.xaml.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearUsuario.xaml.cs",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\FormularioCrearUsuario.xaml.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearUsuario.xaml.cs",
-              "RelativeToolTip": "TickNager\\UserControls\\FormularioCrearUsuario.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowCYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T12:03:45.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormularioCrearUsuario.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearUsuario.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\FormularioCrearUsuario.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearUsuario.xaml",
-              "RelativeToolTip": "TickNager\\UserControls\\FormularioCrearUsuario.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-17T11:57:53.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Repositories\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "TickNager\\Repositories\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Repositories\\UsuarioRepository.cs",
-              "RelativeToolTip": "TickNager\\Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T13:01:11.141Z",
-              "EditorCaption": ""
             }
           ]
         }

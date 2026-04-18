@@ -140,11 +140,13 @@ namespace TickNager.ViewModels
             if (ConfirmarContrasena != Contrasena)
             {
                 MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            } else
+            }
+            else
             {
                 Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
                 UsuarioRepository.RegistrarUsuario(usuarioNuevo);
-                MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Usuario creado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                _obj.mostrarVistaGestionUsuarios();
             }
         }
 

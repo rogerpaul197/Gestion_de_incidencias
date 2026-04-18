@@ -6,7 +6,7 @@ namespace TickNager.UserControls
 {
     public partial class FormularioCrearIncidencia : UserControl
     {
-        private DashboardViewModel _dashboardViewModel;
+        private DashboardViewModel _obj;
 
         public FormularioCrearIncidencia()
         {
@@ -15,24 +15,17 @@ namespace TickNager.UserControls
 
         public FormularioCrearIncidencia(DashboardViewModel dashboardViewModel) : this()
         {
-            _dashboardViewModel = dashboardViewModel;
-            DataContext = new FormularioCrearIncidenciaViewModel(dashboardViewModel);
+            
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is FormularioCrearIncidenciaViewModel obj)
-            {
-                obj.crearIncidencia();
-            }
+            
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is FormularioCrearIncidenciaViewModel obj)
-            {
-                obj.volverAVistaIncidencias();
-            }
+            
         }
     }
 }

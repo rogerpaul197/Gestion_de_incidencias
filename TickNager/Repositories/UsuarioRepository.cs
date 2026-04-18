@@ -40,6 +40,39 @@ namespace TickNager.Repositories
             comando.ExecuteNonQuery();
         }
 
+        public static List<Usuario> ObtenerUsuarios()
+        {
+            List<Usuario> listaUsuarios = new List<Usuario>();
+
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT nombre, apellido, rol, genero, departamento, numero, correo, contrasena
+                            FROM usuarios";
+
+            using var reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Usuario usuario = new Usuario
+                {
+                    NombreUsuario = reader["nombre"].ToString(),
+                    ApellidoUsuario = reader["apellido"].ToString(),
+                    RolUsuario = reader["rol"].ToString(),
+                    GeneroUsuario = reader["genero"].ToString(),
+                    Departamento = reader["departamento"].ToString(),
+                    NumeroUsuario = reader["numero"].ToString(),
+                    CorreoUsuario = reader["correo"].ToString(),
+                    ContrasenaUsuario = reader["contrasena"].ToString()
+                };
+
+                listaUsuarios.Add(usuario);
+            }
+
+            return listaUsuarios;
+        }
+
         /// <summary>
         /// sirve para verificar si el correo ya existe en la base de datos, esto es para evitar que se registren dos usuarios con el mismo correo.
         /// </summary>

@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using TickNager.Commands;
 using TickNager.UserControls;
+using TickNager.Models;
 
 namespace TickNager.ViewModels
 {
@@ -54,6 +55,7 @@ namespace TickNager.ViewModels
             Contenido = new FormularioCrearUsuario(this);
         }
 
+        //
         public void mostrarVistaEquipos()
         {
             Contenido = new EquiposView();

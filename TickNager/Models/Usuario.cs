@@ -34,6 +34,14 @@
             }
         }
 
+        public string NombreCompleto
+        {
+            get
+            {
+                return NombreUsuario + " " + ApellidoUsuario;
+            }
+        }
+
         public string RolUsuario
         {
             get { return _rolUsuario; }
@@ -85,6 +93,14 @@
             set
             {
                 _contrasenaUsuario = value;
+            }
+        }
+
+        public string ImagenPerfil
+        {
+            get
+            {
+                return Helper.FuncionesHelper.ObtenerImagenPerfil(RolUsuario, GeneroUsuario);
             }
         }
 

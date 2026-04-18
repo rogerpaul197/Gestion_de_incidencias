@@ -5,9 +5,6 @@
     <Compile Update="UserControls\AjustesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\BotonesIncidencias.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UserControls\CategoriasView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

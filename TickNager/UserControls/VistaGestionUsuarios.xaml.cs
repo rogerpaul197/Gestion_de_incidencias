@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TickNager.Models;
+using TickNager.Repositories;
 using TickNager.ViewModels;
 
 namespace TickNager.UserControls
@@ -20,6 +22,7 @@ namespace TickNager.UserControls
     public partial class VistaGestionUsuarios : UserControl
     {
         private DashboardViewModel _obj;
+
         public VistaGestionUsuarios()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace TickNager.UserControls
         public VistaGestionUsuarios(DashboardViewModel obj) : this()
         {
             _obj = obj;
+            DataContext = new VistaGestionUsuariosViewModel();
         }
 
         private void btnNuevoUsuario_Click(object sender, RoutedEventArgs e)

@@ -20,8 +20,8 @@ namespace TickNager.UserControls
     /// </summary>
     public partial class FormularioCrearUsuario : UserControl
     {
-        private DashboardViewModel _obj;
-        FormularioCrearUsuarioViewModel _obj2;
+        private DashboardViewModel _dashboardObj;
+        private FormularioCrearUsuarioViewModel _obj;
 
         public FormularioCrearUsuario()
         {
@@ -30,13 +30,14 @@ namespace TickNager.UserControls
 
         public FormularioCrearUsuario(DashboardViewModel obj) : this()
         {
-            _obj = obj;
+            _dashboardObj = obj;
             DataContext = new FormularioCrearUsuarioViewModel(obj);
+            _obj = DataContext as FormularioCrearUsuarioViewModel;
         }
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
-            _obj2.CrearUsuario();
+            _obj.CrearUsuario();
         }
     }
 }
