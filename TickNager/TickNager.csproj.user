@@ -20,9 +20,6 @@
     <Compile Update="UserControls\FormularioCrearUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\GestionUsuariosView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

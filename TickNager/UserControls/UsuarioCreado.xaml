@@ -5,35 +5,59 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800" BorderBrush="Transparent" Background="Transparent">
-    <Border Background="#171A45" Width="500" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="10" Margin="0 0 0 20">
-    <Grid VerticalAlignment="Top">
+             d:DesignHeight="150" d:DesignWidth="830" BorderBrush="Transparent" Background="Transparent">
+    <Grid Margin="0 0 0 20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="170"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
-                <Image Source="{Binding ImagenPerfil}" Height="120" Width="120"/>
-            </Grid>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="0">
-                <TextBlock x:Name="tbNombreUsuario" Text="{Binding NombreCompleto}" Foreground="White" FontSize="24"/>
-            </Grid>
-            
-            <Grid Grid.Row="1">
-                <TextBlock Text="{Binding RolUsuario}" Foreground="White" FontSize="20"/>
-            </Grid>
 
-            <Grid Grid.Row="2">
-                <TextBlock Text="Ver perfil" Foreground="#7B68EE" FontSize="18" TextDecorations="Underline" Cursor="Hand"/>
-            </Grid>
+        <Grid Grid.Column="0">
+            <Border Background="#171A45" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10" Margin="0">
+                <Grid VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Image Source="{Binding ImagenPerfil}" Height="80" Width="80"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock x:Name="tbNombreUsuario" Text="{Binding NombreCompleto}" Foreground="White" FontSize="14"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <TextBlock Text="{Binding RolUsuario}" Foreground="White" FontSize="14"/>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <TextBlock Text="Ver perfil" Foreground="#7B68EE" FontSize="14" TextDecorations="Underline" Cursor="Hand"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Border Width="100" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#0D1E36" CornerRadius="10">
+                <Button Content="Editar" Width="100" Height="50" Background="Transparent" BorderThickness="0" Foreground="White"/>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Border Width="140" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Red" CornerRadius="10">
+                <Button Content="Eliminar usuario" Width="140" Height="50" Background="Transparent" BorderThickness="0" Foreground="White"/>
+            </Border>
         </Grid>
     </Grid>
-</Border>
 </UserControl>

@@ -31,7 +31,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <TextBlock Text="Buscador" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#171A45" Padding="8px 0 0 0"/>
+                <TextBlock Text="Buscador" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#151f2d" Padding="8px 0 0 0"/>
             </Grid>
 
             <Grid Grid.Column="1">

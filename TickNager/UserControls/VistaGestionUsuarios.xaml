@@ -9,7 +9,7 @@
     <Grid Background="#0C0D21">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -18,16 +18,38 @@
             </Border>
         </Grid>
 
-        <Grid Grid.Row="1">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding Usuarios}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <local:UsuarioCreado />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
-        </Grid>
+        <!--Contenido-->
+        <Border Grid.Row="1" Margin="20" Background="#040524" CornerRadius="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Cabecera-->
+                <Border Grid.Row="0" Background="#181A42" CornerRadius="10 10 0 0">
+
+                </Border>
+
+                <!--Lista-->
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <Border Background="#040524" Margin="20 0 20 20">
+                        <ItemsControl ItemsSource="{Binding Usuarios}" Margin="0 10 0 0">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <local:UsuarioCreado />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Border>
+                </ScrollViewer>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
