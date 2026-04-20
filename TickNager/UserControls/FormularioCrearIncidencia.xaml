@@ -6,58 +6,60 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              xmlns:vm="clr-namespace:TickNager.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="780" BorderBrush="Transparent" Background="Transparent">
 
-    <Grid Background="#0C0D21">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition Height="100"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        
-        <Grid Grid.Row="0">
-            <TextBlock Text="Nueva Incidencia" VerticalAlignment="Center" FontSize="20" Foreground="White" FontFamily="Dubai Light" Margin="20 0 0 0"/>
-        </Grid>
+    <Border Background="#181A42" Height="410" Margin="140 0 150 0" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1">
-            <TextBlock Text="Título" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="20 0 0 0"/>
-            <TextBox Text="{Binding Titulo}" Height="30" Margin="20 5 20 0" Padding="6,4"/>
-        </Grid>
+            <Grid Grid.Row="0">
+                <TextBlock Text="Nueva Incidencia" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Foreground="White" FontFamily="Dubai Light" Margin="50 0 0 0"/>
+            </Grid>
 
-        <Grid Grid.Row="2">
-            <TextBlock Text="Descripción" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="20 0 0 0"/>
-            <TextBox Text="{Binding Descripcion}" Height="50" Margin="20" Padding="6,4"/>
-        </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Text="Título" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="46 0 0 0"/>
+                <TextBox Text="{Binding Titulo}" Height="30" Width="400" Margin="0 20 0 0" Padding="6,4"/>
+            </Grid>
 
-        <!--Aquí aparecen las categorías según los que se vayan agregando-->
-        <Grid Grid.Row="3">
-            <TextBlock Text="Categoría" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="20 0 0 0"/>
-            <ComboBox SelectedValue="{Binding Categoria}" Height="30" Margin="20 0 20 0" SelectedValuePath="Content" SelectedIndex="0">
-                <ComboBoxItem Content="Selecciona la categoría" IsEnabled="False"/>
-                <ComboBoxItem/>
-            </ComboBox>
-        </Grid>
+            <Grid Grid.Row="2">
+                <TextBlock Text="Descripción" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="46 10 0 0"/>
+                <TextBox Text="{Binding Descripcion}" Height="50" Width="400" Margin="0 20 0 0" Padding="6,4"/>
+            </Grid>
 
-        <Grid Grid.Row="4">
-            <TextBlock Text="Prioridad" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="20 0 0 0"/>
-            <ComboBox SelectedValue="{Binding Prioridad}" Height="30" Margin="20 0 20 0" SelectedValuePath="Content" SelectedIndex="0">
-                <ComboBoxItem Content="Selecciona la prioridad" IsEnabled="False"/>
-                <ComboBoxItem Content="Baja"/>
-                <ComboBoxItem Content="Media"/>
-                <ComboBoxItem Content="Alta"/>
-            </ComboBox>
-        </Grid>
+            <!--Aquí aparecen las categorías según los que se vayan agregando-->
+            <Grid Grid.Row="3">
+                <TextBlock Text="Categoría" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="46 0 0 0"/>
+                <ComboBox SelectedValue="{Binding Categoria}" Height="25" Width="400" Margin="0 20 0 0" SelectedValuePath="Content" SelectedIndex="0">
+                    <ComboBoxItem Content="Selecciona la categoría" IsEnabled="False"/>
+                    <ComboBoxItem/>
+                </ComboBox>
+            </Grid>
 
-        <Grid Grid.Row="5">
-            <Border Background="#7B68EE" CornerRadius="10" Height="30" Width="100" HorizontalAlignment="Left" Margin="20 0 0 0">
-                <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Guardar" BorderThickness="0" Foreground="White" Click="btnGuardar_Click"/>
-            </Border>
-            <Border CornerRadius="10" Background="#7B68EE" Height="30" Width="100" HorizontalAlignment="Left" Margin="150 0 0 0">
-                <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Cancelar" BorderThickness="0" Foreground="White" Click="btnCancelar_Click"/>
-            </Border>
+            <Grid Grid.Row="4">
+                <TextBlock Text="Prioridad" FontSize="15" Foreground="White" FontFamily="Dubai Light" Margin="46 10 0 0"/>
+                <ComboBox SelectedValue="{Binding Prioridad}" Height="25" Width="400" Margin="0 35 0 0" SelectedValuePath="Content" SelectedIndex="0">
+                    <ComboBoxItem Content="Selecciona la prioridad" IsEnabled="False"/>
+                    <ComboBoxItem Content="Baja"/>
+                    <ComboBoxItem Content="Media"/>
+                    <ComboBoxItem Content="Alta"/>
+                </ComboBox>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Border Background="#7B68EE" CornerRadius="10" Height="30" Width="100" HorizontalAlignment="Left" Margin="320 0 0 0">
+                    <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Guardar" BorderThickness="0" Foreground="White" Click="btnGuardar_Click"/>
+                </Border>
+                <Border CornerRadius="10" Background="#7B68EE" Height="30" Width="100" HorizontalAlignment="Left" Margin="80 0 0 0">
+                    <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Cancelar" BorderThickness="0" Foreground="White" Click="btnCancelar_Click"/>
+                </Border>
+            </Grid>
         </Grid>
-    </Grid>
+    </Border>
 </UserControl>

@@ -38,8 +38,5 @@
     <Compile Update="Views\Windows\InformacionWindow2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Windows\LoginRegistroWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

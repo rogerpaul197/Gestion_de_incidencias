@@ -71,36 +71,6 @@ namespace TickNager.ViewModels
             Contenido = new AjustesView();
         }
 
-        /*
-        /// <summary>
-        /// Muestra los botones para le gestión de los usuarios.
-        /// </summary>
-        public void mostrarBotones()
-        {
-            Contenido = new BotonesUsuario(this);
-        }
-
-        /// <summary>
-        /// Muestra la vista de incidencias.
-        /// </summary>
-        public void mostrarVistaIncidencias(UserControl vista)
-        {
-            Contenido = vista;
-        }
-
-        public void mostrarFormulario(UserControl vista)
-        {
-            Contenido = vista;
-        }
-
-        /// <summary>
-        /// Muestra el usuario creado.
-        /// </summary>
-        public void mostrarUsuarioCreado()
-        {
-            Contenido = new UsuarioCreado();
-        }*/
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)

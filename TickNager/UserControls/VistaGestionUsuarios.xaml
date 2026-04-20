@@ -13,9 +13,20 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Border Background="#7B68EE" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 20 0">
-                <Button Height="50" Width="150" Content="Nuevo usuario" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevoUsuario_Click"/>
-            </Border>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <TextBlock Text="Gestión de usuarios:" Foreground="White" FontSize="25" VerticalAlignment="Center" Margin="15 0 0 0"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Border Background="#7B68EE" Height="40" Width="120" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 20 0">
+                    <Button Height="40" Width="120" Content="+ Nuevo usuario" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevoUsuario_Click"/>
+                </Border>
+            </Grid>
         </Grid>
 
         <!--Contenido-->
@@ -28,7 +39,19 @@
 
                 <!--Cabecera-->
                 <Border Grid.Row="0" Background="#181A42" CornerRadius="10 10 0 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <TextBlock Text="Usuarios:" Foreground="White" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                        </Grid>
 
+                        <Grid Grid.Column="1">
+                            <TextBlock Text="Acciones:" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
+                        </Grid>
+                    </Grid>
                 </Border>
 
                 <!--Lista-->
