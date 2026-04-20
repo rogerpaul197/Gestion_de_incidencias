@@ -17,6 +17,7 @@ namespace TickNager.Views.Windows
             LoginWindowViewModel login = (LoginWindowViewModel)DataContext;
             DashboardWindow ventana = new DashboardWindow();
             login.iniciarSesion(ventana);
+            this.Close();
         }
 
         private void btnAyuda_Click(object sender, RoutedEventArgs e)

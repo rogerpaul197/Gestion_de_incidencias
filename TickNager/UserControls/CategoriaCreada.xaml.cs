@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace TickNager.UserControls
 {
     /// <summary>
-    /// Lógica de interacción para EquiposView.xaml
+    /// Lógica de interacción para CategoriaCreada.xaml
     /// </summary>
-    public partial class EquiposView : UserControl
+    public partial class CategoriaCreada : UserControl
     {
-        public EquiposView()
+        public CategoriaCreada()
         {
             InitializeComponent();
         }

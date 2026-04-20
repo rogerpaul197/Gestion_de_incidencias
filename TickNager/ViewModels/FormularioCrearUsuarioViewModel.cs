@@ -23,6 +23,13 @@ namespace TickNager.ViewModels
         private string _imagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
         private DashboardViewModel _obj;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
+        }
+
         public string Nombre
         {
             get { return _nombre; }
@@ -155,11 +162,6 @@ namespace TickNager.ViewModels
             ImagenPerfil = FuncionesHelper.ObtenerImagenPerfil(Rol, Genero);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
-        }
+        
     }
 }

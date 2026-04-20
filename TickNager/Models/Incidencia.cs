@@ -3,7 +3,7 @@
     public class Incidencia
     {
         private string _tituloIncidencia;
-        private string _categoriaIncidencia;
+        private string? _categoriaIncidencia;
 
         /// <summary>
         /// Alta , Media, Baja
@@ -45,7 +45,7 @@
             set { _descripcionIncidencia = value; }
         }
 
-        public string Categoria
+        public string? Categoria
         {
             get { return _categoriaIncidencia; }
             set { _categoriaIncidencia = value; }
@@ -79,7 +79,7 @@
             _descripcionIncidencia = null;
         }
 
-        public Incidencia(string tituloIncidencia, string descripcionIncidenci, string categoriaIncidencia, string prioridadIncidencia)
+        public Incidencia(string tituloIncidencia, string descripcionIncidenci, string? categoriaIncidencia, string prioridadIncidencia)
         {
             _tituloIncidencia = tituloIncidencia;
             _descripcionIncidencia = descripcionIncidenci;

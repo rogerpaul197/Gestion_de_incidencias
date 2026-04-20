@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TickNager.UserControls.CategoriaCreada"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TickNager.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="400" BorderBrush="Transparent" Background="Transparent">
+    <Border Background="#171A45" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Image Source="{Binding imagenRepresentativaCategoria}"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <TextBlock Text="{Binding nombreCategoria}"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <TextBlock Text="{Binding cantidadIncidencias}"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

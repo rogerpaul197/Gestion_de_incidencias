@@ -20,11 +20,21 @@ CREATE TABLE IF NOT EXISTS incidencias (
 	id INTEGER PRIMARY KEY,
 	titulo TEXT NOT NULL,
 	descripcion TEXT NOT NULL,
-	estado BOOLEAN NOT NULL,
-	responsable TEXT NOT NULL,
-	usuario_reportero TEXT NOT NULL,
-	fecha_creacion TEXT NOT NULL,
-	fecha_cierre TEXT NULL
+	categoria TEXT,
+	prioridad TEXT NOT NULL,
+	estado BOOLEAN,
+	responsable TEXT,
+	usuario_reportero TEXT,
+	fecha_creacion TEXT,
+	fecha_cierre TEXT 
+);
+
+CREATE TABLE IF NOT EXISTS categorias (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    descripcion TEXT,
+    activo INTEGER NOT NULL DEFAULT 1,
+    cantidad_incidencias INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS slas (

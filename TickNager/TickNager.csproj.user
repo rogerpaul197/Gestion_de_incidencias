@@ -2,16 +2,13 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="UserControls\AjustesView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="UserControls\CategoriasView.xaml.cs">
+    <Compile Update="UserControls\CategoriaCreada.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\EquiposView.xaml.cs">
+    <Compile Update="UserControls\FormularioCrearCategoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\FormularioCrearIncidencia.xaml.cs">
@@ -21,6 +18,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaCategorias.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaGestionUsuarios.xaml.cs">

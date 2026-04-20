@@ -11,6 +11,7 @@ namespace TickNager.UserControls
         public FormularioCrearIncidencia()
         {
             InitializeComponent();
+            DataContext = new FormularioCrearIncidenciaViewModel();
         }
 
         public FormularioCrearIncidencia(DashboardViewModel dashboardViewModel) : this()
@@ -20,7 +21,8 @@ namespace TickNager.UserControls
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            
+            FormularioCrearIncidenciaViewModel obj = (FormularioCrearIncidenciaViewModel)DataContext;
+            obj.crearIncidencia();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)

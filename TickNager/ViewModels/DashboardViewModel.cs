@@ -55,20 +55,27 @@ namespace TickNager.ViewModels
             Contenido = new FormularioCrearUsuario(this);
         }
 
-        //
+        //Equipos
         public void mostrarVistaEquipos()
         {
-            Contenido = new EquiposView();
+            //Contenido = new EquiposView();
         }
 
+        //Categorías
         public void mostrarVistaCategorias()
         {
-            Contenido = new CategoriasView();
+            Contenido = new VistaCategorias(this);
         }
 
+        public void mostrarFormularioCrearCategoria()
+        {
+            Contenido = new FormularioCrearCategoria(this);
+        }
+
+        //Ajustes
         public void mostrarAjustes()
         {
-            Contenido = new AjustesView();
+            //Contenido = new AjustesView();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
