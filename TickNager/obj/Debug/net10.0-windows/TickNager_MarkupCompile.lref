@@ -1,9 +1,13 @@
-﻿
+﻿C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
 FC:\Proye\Gestion_de_incidencias\TickNager\App.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\CategoriaCreada.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\Dashboard.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearCategoria.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearIncidencia.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearUsuario.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\IncidenciaCreada.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\UsuarioCreado.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaCategorias.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaGestionUsuarios.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaIncidencias.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\DashboardWindow.xaml;;
@@ -12,7 +16,4 @@ FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\InformacionWindow.xaml;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\InformacionWindow2.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\CategoriaCreada.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearCategoria.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaCategorias.xaml;;
 

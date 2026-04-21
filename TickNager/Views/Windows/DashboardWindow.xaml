@@ -23,7 +23,7 @@
         </Grid.RowDefinitions>
 
         <!--Cabecera-->
-        <Grid Grid.Row="0" Background="#0C0D21" Margin="200,0,0,0">
+        <Grid Grid.Row="0" Background="White" Margin="200,0,0,0">
             <Grid.ColumnDefinitions>
                 <!--El buscador-->
                 <ColumnDefinition Width="330"/>
@@ -31,7 +31,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <TextBlock Text="Buscador" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Background="#151f2d" Padding="8px 0 0 0"/>
+                <Border CornerRadius="10">
+                    <TextBox Text="Buscador..." Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300"/>
+                </Border>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -48,8 +50,8 @@
                             BorderThickness="0"
                             Width="100">
                         <StackPanel Orientation="Horizontal">
-                            <iconPacks:PackIconMaterial Kind="Bell" Foreground="White" Padding="0,0,5,0" HorizontalAlignment="Left"/>
-                            <TextBlock Text="Notificaciones" FontSize="10" Foreground="White"/>
+                            <iconPacks:PackIconMaterial Kind="Bell" Foreground="Black" Padding="0,0,5,0" HorizontalAlignment="Left"/>
+                            <TextBlock Text="Notificaciones" FontSize="10"/>
                         </StackPanel>
                     </Button>
                 </Grid>
@@ -59,7 +61,7 @@
                 </Grid>
 
                 <Grid Grid.Column="2">
-                    <TextBlock Text="Administrador" Width="90" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="10"/>
+                    <TextBlock Text="Administrador" Width="90" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="10"/>
                 </Grid>
             </Grid>
         </Grid>
@@ -73,7 +75,7 @@
             </Grid.ColumnDefinitions>
 
             <!--Columna izquierda-->
-            <Grid Grid.Column="0" Background="#171A45" Margin="0,-30,0,0">
+            <Grid Grid.Column="0" Background="#151f2d" Margin="0,-30,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
                     <RowDefinition/>

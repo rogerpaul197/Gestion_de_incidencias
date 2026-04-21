@@ -53,10 +53,10 @@
             </Grid>
 
             <Grid Grid.Row="5">
-                <Border Background="#7B68EE" CornerRadius="10" Height="30" Width="100" HorizontalAlignment="Left" Margin="320 0 0 0">
+                <Border Background="#7B68EE" CornerRadius="10" Height="30" Width="100" HorizontalAlignment="Left" Margin="320 10 0 10">
                     <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Guardar" BorderThickness="0" Foreground="White" Click="btnGuardar_Click"/>
                 </Border>
-                <Border CornerRadius="10" Background="#7B68EE" Height="30" Width="100" HorizontalAlignment="Left" Margin="80 0 0 0">
+                <Border CornerRadius="10" Background="#7B68EE" Height="30" Width="100" HorizontalAlignment="Left" Margin="80 10 0 10">
                     <Button Background="Transparent" Height="30" Width="100" HorizontalAlignment="Left" Content="Cancelar" BorderThickness="0" Foreground="White" Click="btnCancelar_Click"/>
                 </Border>
             </Grid>

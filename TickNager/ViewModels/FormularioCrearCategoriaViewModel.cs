@@ -13,7 +13,7 @@ namespace TickNager.ViewModels
     {
         private string _titulo;
         private string _descripcion;
-        private string _imagenCategoria = "/Imagenes/Iconos/Empresa.png";
+        private string _imagenCategoria = "/Imagenes/Iconos/interrogacion_por_defecto.png";
         private DashboardViewModel _obj;
 
         public event PropertyChangedEventHandler PropertyChanged;

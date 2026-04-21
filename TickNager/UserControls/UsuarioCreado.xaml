@@ -4,21 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="830" BorderBrush="Transparent" Background="Transparent">
     <Grid Margin="0 0 0 20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="170"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
-            <Border Background="#171A45" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10" Margin="0">
+            <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10" Margin="0">
                 <Grid VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="160"/>
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
@@ -33,30 +34,40 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0">
-                            <TextBlock x:Name="tbNombreUsuario" Text="{Binding NombreCompleto}" Foreground="White" FontSize="14"/>
+                            <TextBlock Text="{Binding NombreCompleto}" FontWeight="Bold" FontSize="14"/>
                         </Grid>
 
                         <Grid Grid.Row="1">
-                            <TextBlock Text="{Binding RolUsuario}" Foreground="White" FontSize="14"/>
+                            <TextBlock Text="{Binding RolUsuario}" Foreground="Gray" FontSize="14"/>
                         </Grid>
 
                         <Grid Grid.Row="2">
-                            <TextBlock Text="Ver perfil" Foreground="#7B68EE" FontSize="14" TextDecorations="Underline" Cursor="Hand"/>
+                            <TextBlock Text="Ver perfil" Foreground="Blue" FontSize="14" TextDecorations="Underline" Cursor="Hand"/>
                         </Grid>
                     </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Border Width="140" Height="50" BorderBrush="Blue" BorderThickness="1" CornerRadius="10" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Background="Transparent" BorderThickness="0">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <iconPacks:PackIconMaterial Kind="Pencil" Foreground="Blue" VerticalAlignment="Center" Margin="0 0 8 0"/>
+                                    <TextBlock Text="Editar información" Foreground="Blue" FontWeight="Bold" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="3">
+                        <Border Width="140" Height="50" Background="Red" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Background="Transparent" BorderThickness="0">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <iconPacks:PackIconMaterial Kind="Delete" Foreground="White" VerticalAlignment="Center" Margin="0 0 8 0"/>
+                                    <TextBlock Text="Eliminar usuario" Foreground="White" FontWeight="Bold" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </Grid>
                 </Grid>
-            </Border>
-        </Grid>
-
-        <Grid Grid.Column="1">
-            <Border Width="100" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#0D1E36" CornerRadius="10">
-                <Button Content="Editar" Width="100" Height="50" Background="Transparent" BorderThickness="0" Foreground="White"/>
-            </Border>
-        </Grid>
-
-        <Grid Grid.Column="2">
-            <Border Width="140" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Red" CornerRadius="10">
-                <Button Content="Eliminar usuario" Width="140" Height="50" Background="Transparent" BorderThickness="0" Foreground="White"/>
             </Border>
         </Grid>
     </Grid>

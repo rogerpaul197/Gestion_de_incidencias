@@ -36,7 +36,8 @@ namespace TickNager.Repositories
             comando.Parameters.AddWithValue("@departamento", usuario.Departamento);
             comando.Parameters.AddWithValue("@numero", usuario.NumeroUsuario);
             comando.Parameters.AddWithValue("@correo", usuario.CorreoUsuario);
-            comando.Parameters.AddWithValue("@contrasena", usuario.ContrasenaUsuario);
+            string passwordHasheado = HashPasswordHelper.HashPassword(usuario.ContrasenaUsuario);
+            comando.Parameters.AddWithValue("@contrasena", passwordHasheado);
             comando.ExecuteNonQuery();
         }
 

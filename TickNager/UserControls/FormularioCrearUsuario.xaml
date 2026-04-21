@@ -7,127 +7,128 @@
              xmlns:vm="clr-namespace:TickNager.ViewModels"
              mc:Ignorable="d"
              d:DesignHeight="430" d:DesignWidth="800">
+    <Border Background="#181A42" CornerRadius="10" Margin="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-    <Grid Background="#0C0D21">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="280"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid Grid.Column="0">
-            <Image Source="{Binding ImagenPerfil}" Height="350" Width="250" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Grid>
-
-        <Grid Grid.Column="1" Margin="15,10,15,10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0" Margin="0,0,0,8">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0" Margin="0,0,8,0">
-                    <TextBlock Text="Nombre de usuario:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Nombre}" Height="26" Padding="6,4"/>
-                </StackPanel>
-
-                <StackPanel Grid.Column="1" Margin="8,0,0,0">
-                    <TextBlock Text="Apellido de usuario:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Apellido}" Height="26" Padding="6,4"/>
-                </StackPanel>
+            <Grid Grid.Column="0">
+                <Image Source="{Binding ImagenPerfil}" Height="350" Width="250" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
 
-            <Grid Grid.Row="1" Margin="0,0,0,8">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Margin="15,10,15,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <StackPanel Grid.Column="0" Margin="0,0,8,0">
-                    <TextBlock Text="Rol:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <ComboBox SelectedValue="{Binding Rol, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
-                        <ComboBoxItem Content="Selecciona tu rol:" IsEnabled="False"/>
-                        <ComboBoxItem Content="Administrador"/>
-                        <ComboBoxItem Content="Técnico"/>
-                        <ComboBoxItem Content="Usuario"/>
-                    </ComboBox>
-                </StackPanel>
+                <Grid Grid.Row="0" Margin="0,0,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="1" Margin="8,0,0,0">
-                    <TextBlock Text="Género:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <ComboBox SelectedValue="{Binding Genero, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
-                        <ComboBoxItem Content="Género:" IsEnabled="False"/>
-                        <ComboBoxItem Content="Hombre"/>
-                        <ComboBoxItem Content="Mujer"/>
-                    </ComboBox>
-                </StackPanel>
-            </Grid>
+                    <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                        <TextBlock Text="Nombre de usuario:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Nombre}" Height="26" Padding="6,4"/>
+                    </StackPanel>
 
-            <Grid Grid.Row="2" Margin="0,0,0,8">
-                <StackPanel>
-                    <TextBlock Text="Departamento:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Departamento}" Height="26" Padding="6,4"/>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="3" Margin="0,0,0,8">
-                <StackPanel>
-                    <TextBlock Text="Número:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Numero}" Height="26" Padding="6,4"/>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="4" Margin="0,0,0,8">
-                <StackPanel>
-                    <TextBlock Text="Correo electrónico:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Correo}" Height="26" Padding="6,4"/>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="5" Margin="0,0,0,8">
-                <StackPanel>
-                    <TextBlock Text="Contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding Contrasena}"  Height="26" Padding="6,4"/>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="6" Margin="0,0,0,8">
-                <StackPanel>
-                    <TextBlock Text="Confirmar contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
-                    <TextBox Text="{Binding ConfirmarContrasena}" Height="26" Padding="6,4"/>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="7">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid Grid.Column="1" Margin="0,0,8,0">
-                    <Border Background="#7B68EE" CornerRadius="5" Height="30" Width="75">
-                        <Button Background="Transparent" Content="Cancelar" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="11"/>
-                    </Border>
+                    <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                        <TextBlock Text="Apellido de usuario:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Apellido}" Height="26" Padding="6,4"/>
+                    </StackPanel>
                 </Grid>
 
-                <Grid Grid.Column="2">
-                    <Border Background="#7B68EE" CornerRadius="5" Height="30" Width="75">
-                        <Button Background="Transparent" Content="Crear" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="11" Click="btnCrear_Click"/>
-                    </Border>
+                <Grid Grid.Row="1" Margin="0,0,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                        <TextBlock Text="Rol:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <ComboBox SelectedValue="{Binding Rol, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
+                            <ComboBoxItem Content="Selecciona tu rol:" IsEnabled="False"/>
+                            <ComboBoxItem Content="Administrador"/>
+                            <ComboBoxItem Content="Técnico"/>
+                            <ComboBoxItem Content="Usuario"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                        <TextBlock Text="Género:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <ComboBox SelectedValue="{Binding Genero, UpdateSourceTrigger=PropertyChanged}" Height="26" SelectedValuePath="Content" SelectedIndex="0" Background="#1A1D3A">
+                            <ComboBoxItem Content="Género:" IsEnabled="False"/>
+                            <ComboBoxItem Content="Hombre"/>
+                            <ComboBoxItem Content="Mujer"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock Text="Departamento:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Departamento}" Height="26" Padding="6,4"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="3" Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock Text="Número:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Numero}" Height="26" Padding="6,4"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="4" Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock Text="Correo electrónico:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Correo}" Height="26" Padding="6,4"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="5" Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock Text="Contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding Contrasena}"  Height="26" Padding="6,4"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="6" Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock Text="Confirmar contraseña:" Foreground="White" Margin="0,0,0,4" FontSize="11"/>
+                        <TextBox Text="{Binding ConfirmarContrasena}" Height="26" Padding="6,4"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1" Margin="0,0,8,0">
+                        <Border Background="#7B68EE" CornerRadius="5" Height="30" Width="75">
+                            <Button Background="Transparent" Content="Cancelar" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="11"/>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Border Background="#7B68EE" CornerRadius="5" Height="30" Width="75">
+                            <Button Background="Transparent" Content="Crear" BorderThickness="0" Foreground="White" FontWeight="Bold" FontSize="11" Click="btnCrear_Click"/>
+                        </Border>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
-    </Grid>
+    </Border>
 </UserControl>

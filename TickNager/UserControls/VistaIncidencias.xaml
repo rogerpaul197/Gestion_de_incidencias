@@ -6,47 +6,257 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#0C0D21">
+    <Grid Background="#F5F7FB">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <Border Background="#7B68EE" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 20 0">
-                <Button Height="50" Width="150" Content="Reportar incidencia" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevaIncidencia_Click"/>
+        <!--Cabecera-->
+        <Grid Grid.Row="0" Margin="35 30 35 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                <TextBlock Text="Gestión de incidencias"
+                           FontSize="34"
+                           FontWeight="Bold"
+                           Foreground="#1D2B53"/>
+                <TextBlock Text="Administra las incidencias registradas en el sistema"
+                           Margin="0 8 0 0"
+                           FontSize="18"
+                           Foreground="#6B7280"/>
+            </StackPanel>
+
+            <Border Grid.Column="1"
+                    Width="190"
+                    Height="52"
+                    Background="#2F6BFF"
+                    CornerRadius="10"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+                <Button Content="+  Reportar incidencia"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Foreground="White"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="btnNuevaIncidencia_Click"/>
             </Border>
         </Grid>
 
         <!--Contenido-->
-        <Border Grid.Row="1" Margin="20" Background="#040524" CornerRadius="10">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="35 0 35 30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                <!--Cabecera-->
-                <Border Grid.Row="0" Background="#181A42" CornerRadius="10 10 0 0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <TextBlock Text="Mis incidencias:" Foreground="White" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                        </Grid>
+            <!--Zona de filtros-->
+            <Border Grid.Row="0"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="14"
+                    Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.2*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="1.1*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="1.1*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="1.1*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                        <Grid Grid.Column="1">
-                            <TextBlock Text="Acciones:" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
-                        </Grid>
+                    <!--Buscar-->
+                    <Grid Grid.Column="0">
+                        <TextBox Height="46"
+                                 VerticalContentAlignment="Center"
+                                 Padding="16 0 45 0"
+                                 FontSize="15"
+                                 Background="#F9FAFB"
+                                 BorderBrush="#D1D5DB"
+                                 BorderThickness="1"
+                                 Foreground="#374151"
+                                 Text=""/>
+                        <TextBlock Text="Buscar por título, descripción o categoría..."
+                                   Margin="16 0 45 0"
+                                   VerticalAlignment="Center"
+                                   Foreground="#9CA3AF"
+                                   FontSize="15"
+                                   IsHitTestVisible="False"/>
+                        <TextBlock Text="⌕"
+                                   FontSize="18"
+                                   Foreground="#6B7280"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 16 0"/>
                     </Grid>
-                </Border>
 
-                <!--Lista-->
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <Border Background="#040524" Margin="20 0 20 20">
-                        <ItemsControl ItemsSource="{Binding Incidencias}" Margin="0 10 0 0">
+                    <!--Prioridad-->
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                        <TextBlock Text="Prioridad"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+                        <ComboBox Height="46"
+                                  Background="#F9FAFB"
+                                  BorderBrush="#D1D5DB"
+                                  BorderThickness="1"
+                                  FontSize="14"
+                                  SelectedIndex="0">
+                            <ComboBoxItem Content="Todas"/>
+                            <ComboBoxItem Content="Alta"/>
+                            <ComboBoxItem Content="Media"/>
+                            <ComboBoxItem Content="Baja"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!--Estado-->
+                    <StackPanel Grid.Column="4" VerticalAlignment="Center">
+                        <TextBlock Text="Estado"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+                        <ComboBox Height="46"
+                                  Background="#F9FAFB"
+                                  BorderBrush="#D1D5DB"
+                                  BorderThickness="1"
+                                  FontSize="14"
+                                  SelectedIndex="0">
+                            <ComboBoxItem Content="Todos"/>
+                            <ComboBoxItem Content="Pendiente"/>
+                            <ComboBoxItem Content="En proceso"/>
+                            <ComboBoxItem Content="Resuelta"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!--Categoría-->
+                    <StackPanel Grid.Column="6" VerticalAlignment="Center">
+                        <TextBlock Text="Categoría"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+                        <ComboBox Height="46"
+                                  Background="#F9FAFB"
+                                  BorderBrush="#D1D5DB"
+                                  BorderThickness="1"
+                                  FontSize="14"
+                                  SelectedIndex="0">
+                            <ComboBoxItem Content="Todas"/>
+                            <ComboBoxItem Content="Software"/>
+                            <ComboBoxItem Content="Hardware"/>
+                            <ComboBoxItem Content="Red"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!--Limpiar filtros-->
+                    <Border Grid.Column="8"
+                            Width="150"
+                            Height="46"
+                            Background="White"
+                            BorderBrush="#D1D5DB"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            VerticalAlignment="Bottom">
+                        <Button Content="🧹  Limpiar filtros"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#374151"
+                                FontSize="14"
+                                FontWeight="SemiBold"
+                                Cursor="Hand"/>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!--Tabla-->
+            <Border Grid.Row="2"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="14">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="55"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Cabecera de tabla-->
+                    <Border Grid.Row="0"
+                            Background="#F9FAFB"
+                            CornerRadius="14 14 0 0"
+                            BorderBrush="#E5E7EB"
+                            BorderThickness="0 0 0 1">
+                        <Grid Margin="18 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2.4*"/>
+                                <ColumnDefinition Width="1.1*"/>
+                                <ColumnDefinition Width="1.1*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="Incidencia"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="1"
+                                       Text="Categoría"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="2"
+                                       Text="Prioridad"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="3"
+                                       Text="Estado"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="4"
+                                       Text="Fecha"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="5"
+                                       Text="Acciones"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
+                        </Grid>
+                    </Border>
+
+                    <!--Filas-->
+                    <ScrollViewer Grid.Row="1"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding Incidencias}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel/>
@@ -55,13 +265,78 @@
 
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <local:UsuarioCreado />
+                                    <local:IncidenciaCreada/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                    </Border>
-                </ScrollViewer>
-            </Grid>
-        </Border>
+                    </ScrollViewer>
+
+                    <!--Pie-->
+                    <Grid Grid.Row="2" Margin="18 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0"
+                                   Text="Mostrando 1 a 5 de 12 incidencias"
+                                   VerticalAlignment="Center"
+                                   FontSize="14"
+                                   Foreground="#6B7280"/>
+
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            <Border Width="34" Height="34" Margin="0 0 8 0"
+                                    Background="White"
+                                    BorderBrush="#D1D5DB"
+                                    BorderThickness="1"
+                                    CornerRadius="8">
+                                <TextBlock Text="‹"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="18"
+                                           Foreground="#6B7280"/>
+                            </Border>
+
+                            <Border Width="34" Height="34" Margin="0 0 8 0"
+                                    Background="#2F6BFF"
+                                    CornerRadius="8">
+                                <TextBlock Text="1"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="14"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"/>
+                            </Border>
+
+                            <Border Width="34" Height="34" Margin="0 0 8 0"
+                                    Background="White"
+                                    BorderBrush="#D1D5DB"
+                                    BorderThickness="1"
+                                    CornerRadius="8">
+                                <TextBlock Text="2"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="14"
+                                           Foreground="#374151"/>
+                            </Border>
+
+                            <Border Width="34" Height="34"
+                                    Background="White"
+                                    BorderBrush="#D1D5DB"
+                                    BorderThickness="1"
+                                    CornerRadius="8">
+                                <TextBlock Text="›"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="18"
+                                           Foreground="#6B7280"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </UserControl>
