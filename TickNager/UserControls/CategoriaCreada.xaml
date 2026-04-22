@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="400" BorderBrush="Transparent" Background="Transparent">
-    <Border Background="#171A45" CornerRadius="10">
+    <Border Background="#171A45" CornerRadius="10" Margin="10">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -15,16 +15,17 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Image Source="{Binding imagenRepresentativaCategoria}"/>
+                <Image Source="/Imagenes/Iconos/interrogacion_por_defecto.png"/>
             </Grid>
 
             <Grid Grid.Row="1">
-                <TextBlock Text="{Binding nombreCategoria}"/>
+                <TextBlock Text="{Binding Nombre}" Foreground="White" HorizontalAlignment="Center"/>
             </Grid>
 
             <Grid Grid.Row="2">
-                <TextBlock Text="{Binding cantidadIncidencias}"/>
+                <TextBlock Text="{Binding CantidadIncidencias}" Foreground="White" HorizontalAlignment="Center"/>
             </Grid>
+
         </Grid>
     </Border>
 </UserControl>

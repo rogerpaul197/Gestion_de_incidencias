@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\
 TickNager
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Proye\Gestion_de_incidencias\TickNager\App.xaml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\App.xaml
 171013606403
 2488818381
 461606228076
-256-157298352
+256-1540312834
 Resources\styles.xaml;UserControls\CategoriaCreada.xaml;UserControls\Dashboard.xaml;UserControls\FormularioCrearCategoria.xaml;UserControls\FormularioCrearIncidencia.xaml;UserControls\FormularioCrearUsuario.xaml;UserControls\IncidenciaCreada.xaml;UserControls\UsuarioCreado.xaml;UserControls\VistaCategorias.xaml;UserControls\VistaGestionUsuarios.xaml;UserControls\VistaIncidencias.xaml;Views\Windows\DashboardWindow.xaml;Views\Windows\EmpresaWindow.xaml;Views\Windows\InformacionWindow.xaml;Views\Windows\InformacionWindow2.xaml;Views\Windows\LoginWindow.xaml;Views\Windows\RegistroWindow.xaml;
 
 False

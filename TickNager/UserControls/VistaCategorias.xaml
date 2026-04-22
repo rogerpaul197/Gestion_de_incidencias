@@ -18,7 +18,6 @@
             </Border>
         </Grid>
 
-        <!--Contenido-->
         <Border Grid.Row="1" Margin="20" Background="#040524" CornerRadius="10">
             <Grid>
                 <Grid.RowDefinitions>
@@ -26,56 +25,38 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!--Cabecera-->
                 <Border Grid.Row="0" Background="#181A42" CornerRadius="10 10 0 0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <TextBlock Text="Categorías:" Foreground="White" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                        </Grid>
 
-                        <Grid Grid.Column="1">
-                            <TextBlock Text="Acciones:" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
-                        </Grid>
+                        <TextBlock Grid.Column="0" Text="Categorías:" Foreground="White" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
+
+                        <TextBlock Grid.Column="1" Text="Acciones:" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
                     </Grid>
                 </Border>
 
-                <!--Lista-->
                 <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                     <Border Background="#040524" Margin="20 0 20 20">
+
                         <ItemsControl ItemsSource="{Binding Categorias}" Margin="0 10 0 0">
+
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <StackPanel/>
+                                    <UniformGrid Columns="3"/>
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
 
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <Border Background="#181A42" Margin="0 0 0 10" Padding="15" CornerRadius="8">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition/>
-                                                <ColumnDefinition Width="150"/>
-                                            </Grid.ColumnDefinitions>
-
-                                            <StackPanel Grid.Column="0">
-                                                <TextBlock Text="{Binding Nombre}" Foreground="White" FontSize="16" FontWeight="Bold"/>
-                                                <TextBlock Text="{Binding Descripcion}" Foreground="White" FontSize="12" Margin="0 5 0 0"/>
-                                            </StackPanel>
-
-                                            <StackPanel Grid.Column="1" HorizontalAlignment="Right">
-                                                <TextBlock Text="Activa" Foreground="LightGreen" HorizontalAlignment="Right"/>
-                                                <TextBlock Text="{Binding CantidadIncidencias}" Foreground="White" HorizontalAlignment="Right"/>
-                                            </StackPanel>
-                                        </Grid>
-                                    </Border>
+                                    <local:CategoriaCreada/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
+
                         </ItemsControl>
+
                     </Border>
                 </ScrollViewer>
             </Grid>

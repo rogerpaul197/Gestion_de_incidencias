@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using TickNager.Helper;
 using TickNager.Models;
 
@@ -34,7 +35,7 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT nombre, descripcion, activo, cantidad_incidencias
-                                    FROM categorias";
+                            FROM categorias";
 
             using var reader = comando.ExecuteReader();
 
