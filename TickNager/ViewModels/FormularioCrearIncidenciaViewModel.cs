@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using TickNager.Models;
@@ -11,11 +12,16 @@ namespace TickNager.ViewModels
     {
         private string _titulo;
         private string _descripcion;
-        private string? _categoria;
+        private string _categoria;
         private string _prioridad;
+        public ObservableCollection<string> CategoriasComboBox { get; set; }
+        public ObservableCollection<string> PrioridadesComboBox { get; set; }
         private DashboardViewModel _obj;
 
+        public ObservableCollection<Categoria> Categorias { get; set; }
+
         public event PropertyChangedEventHandler? PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
@@ -24,8 +30,8 @@ namespace TickNager.ViewModels
         public string Titulo
         {
             get { return _titulo; }
-            set 
-            { 
+            set
+            {
                 _titulo = value;
                 OnPropertyChanged();
             }
@@ -34,28 +40,33 @@ namespace TickNager.ViewModels
         public string Descripcion
         {
             get { return _descripcion; }
-            set 
-            { 
+            set
+            {
                 _descripcion = value;
                 OnPropertyChanged();
             }
         }
 
-        public string? Categoria
+        public string Categoria
         {
             get { return _categoria; }
-            set 
-            { 
+            set
+            {
                 _categoria = value;
                 OnPropertyChanged();
             }
         }
 
+        public string CategoriaPlaceholder
+        {
+            get { return "Seleccione categoría"; }
+        }
+
         public string Prioridad
         {
             get { return _prioridad; }
-            set 
-            { 
+            set
+            {
                 _prioridad = value;
                 OnPropertyChanged();
             }
@@ -63,21 +74,61 @@ namespace TickNager.ViewModels
 
         public FormularioCrearIncidenciaViewModel()
         {
-             
+            Categorias = new ObservableCollection<Categoria>();
+            CategoriasComboBox = new ObservableCollection<string>();
+            PrioridadesComboBox = new ObservableCollection<string>();
+            CargarCategorias();
+            CargarPrioridades();
         }
 
         public FormularioCrearIncidenciaViewModel(DashboardViewModel dashboardViewModel)
         {
             _obj = dashboardViewModel;
+            Categorias = new ObservableCollection<Categoria>();
+            CategoriasComboBox = new ObservableCollection<string>();
+            PrioridadesComboBox = new ObservableCollection<string>();
+            CargarCategorias();
+            CargarPrioridades();
+        }
+
+        public void CargarCategorias()
+        {
+            Categorias.Clear();
+            CategoriasComboBox.Clear();
+
+            CategoriasComboBox.Add("Seleccione categoría");
+
+            var lista = CategoriaRepository.ObtenerCategorias();
+
+            foreach (var categoria in lista)
+            {
+                Categorias.Add(categoria);
+                CategoriasComboBox.Add(categoria.Nombre);
+            }
+
+            Categoria = "Seleccione categoría";
+        }
+
+        public void CargarPrioridades()
+        {
+            PrioridadesComboBox.Clear();
+
+            PrioridadesComboBox.Add("Seleccione prioridad");
+            PrioridadesComboBox.Add("Baja");
+            PrioridadesComboBox.Add("Media");
+            PrioridadesComboBox.Add("Alta");
+
+            Prioridad = "Seleccione prioridad";
         }
 
         public void crearIncidencia()
         {
-            if (Titulo == null || Descripcion == null || Prioridad == null)
+            if (string.IsNullOrWhiteSpace(Titulo) || string.IsNullOrWhiteSpace(Descripcion) || string.IsNullOrWhiteSpace(Prioridad) || string.IsNullOrWhiteSpace(Categoria) || Categoria == "Seleccione categoría" || Prioridad == "Seleccione prioridad")
             {
                 MessageBox.Show("Por favor, complete todos los campos para crear la incidencia.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
-            } else
+            }
+            else
             {
                 Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
                 IncidenciaRepository.RegistrarIncidencia(incidencia);
@@ -88,7 +139,7 @@ namespace TickNager.ViewModels
 
         public void volverAVistaIncidencias()
         {
-            
+            _obj.mostrarVistaIncidencias();
         }
     }
 }

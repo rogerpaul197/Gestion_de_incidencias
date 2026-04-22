@@ -118,5 +118,18 @@ namespace TickNager.Repositories
 
             return resultado > 0;
         }
+
+        public static int ObtenerTotalUsuarios()
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT COUNT(*) FROM usuarios";
+
+            long resultado = (long)comando.ExecuteScalar();
+
+            return (int)resultado;
+        }
     }
 }

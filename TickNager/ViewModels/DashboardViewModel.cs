@@ -1,4 +1,7 @@
-﻿using System.ComponentModel;
+﻿///<summary>
+/// Aquí se va a manejar todo sobre las vistas
+/// </summary>
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Input;

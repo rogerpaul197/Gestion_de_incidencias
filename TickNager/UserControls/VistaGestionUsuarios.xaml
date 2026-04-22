@@ -6,58 +6,56 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FAFAFA">
+    <Grid Background="#F5F7FB">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Margin="35 30 35 20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0">
-                <TextBlock Text="Gestión de usuarios:" FontWeight="Bold" FontSize="25" VerticalAlignment="Center" Margin="15 0 0 0"/>
-            </Grid>
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Gestión de usuarios" FontSize="34" FontWeight="Bold" Foreground="#1D2B53"/>
+                <TextBlock Text="Administra los usuarios registrados en el sistema" Margin="0 8 0 0" FontSize="18" Foreground="#6B7280"/>
+            </StackPanel>
 
-            <Grid Grid.Column="1">
-                <Border Background="Black" Height="40" Width="120" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 20 0">
-                    <Button Height="40" Width="120" Content="+ Nuevo usuario" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevoUsuario_Click"/>
-                </Border>
-            </Grid>
+            <Border Grid.Column="1" Width="190" Height="52" Background="#2F6BFF" CornerRadius="10">
+                <Button Content="+  Nuevo usuario" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" FontWeight="SemiBold" Click="btnNuevoUsuario_Click"/>
+            </Border>
         </Grid>
 
-        <!--Contenido-->
-        <Border Grid.Row="1" Margin="20" Background="White" CornerRadius="10" BorderBrush="Gray" BorderThickness="0.7">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="35 0 35 30">
+            <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-                <!--Cabecera-->
-                <Border Grid.Row="0" Background="White" CornerRadius="10 10 0 0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <TextBlock Text="Usuarios:" FontWeight="Bold" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                    <Border Grid.Row="0" Background="#F9FAFB" CornerRadius="14 14 0 0" BorderBrush="#E5E7EB" BorderThickness="0 0 0 1">
+                        <Grid Margin="18 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2.2*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="1.4*"/>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="Usuario" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="1" Text="Rol" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="2" Text="Correo" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="3" Text="Departamento" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="4" Text="Acciones" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
                         </Grid>
+                    </Border>
 
-                        <Grid Grid.Column="1">
-                            <TextBlock Text="Acciones:" FontWeight="Bold" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
-                        </Grid>
-                    </Grid>
-                </Border>
-
-                <!--Lista-->
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <Border Background="White" Margin="20 0 20 20">
-                        <ItemsControl ItemsSource="{Binding Usuarios}" Margin="0 10 0 0">
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding Usuarios}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel/>
@@ -66,13 +64,13 @@
 
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <local:UsuarioCreado />
+                                    <local:UsuarioCreado/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                    </Border>
-                </ScrollViewer>
-            </Grid>
-        </Border>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </UserControl>

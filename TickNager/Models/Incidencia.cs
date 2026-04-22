@@ -31,7 +31,7 @@
 
         //Aquí el usuario describe las incidencias
         private string _descripcionIncidencia;
-        private DateTime _fechaCreacion;
+        private DateTime _fechaRegistro = DateTime.Now;
 
         public string Titulo
         { 
@@ -57,6 +57,22 @@
             set { _prioridadIncidencia = value; }
         }
 
+        public string Estado
+        {
+            get
+            {
+                return "Pendiente";
+            }
+        }
+
+        public string FechaRegistro
+        {
+            get
+            {
+                return _fechaRegistro.ToString("dd/MM/yyyy");
+            }
+        }
+
         public Incidencia()
         {
 
@@ -75,7 +91,7 @@
             _estadoIncidencia = true; //Incidencia asignada al crearla, ya que al crear se debe asignar a un responsable
             _tecnicoAsignado_equipoAsignado = tecnicoAsignado_equipoAsignado;
             _usuarioReporta = usuarioReporta;
-            _fechaCreacion = DateTime.Now;
+            _fechaRegistro = DateTime.Now;
             _descripcionIncidencia = null;
         }
 
@@ -85,6 +101,11 @@
             _descripcionIncidencia = descripcionIncidenci;
             _categoriaIncidencia = categoriaIncidencia;
             _prioridadIncidencia = prioridadIncidencia;
+        }
+
+        public void AsignarFechaRegistro(DateTime fecha)
+        {
+            _fechaRegistro = fecha;
         }
     }
 }

@@ -32,6 +32,12 @@
     <Compile Update="UserControls\VistaIncidencias.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\VistaIncidenciasTecnico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaIncidenciasUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Windows\EmpresaWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

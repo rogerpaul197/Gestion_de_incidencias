@@ -34,8 +34,13 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT nombre, descripcion, activo, cantidad_incidencias
-                            FROM categorias";
+            comando.CommandText = @"SELECT c.nombre,
+                               c.descripcion,
+                               c.activo,
+                               COUNT(i.id) AS cantidad_incidencias
+                        FROM categorias c
+                        LEFT JOIN incidencias i ON i.categoria = c.nombre
+                        GROUP BY c.nombre, c.descripcion, c.activo";
 
             using var reader = comando.ExecuteReader();
 

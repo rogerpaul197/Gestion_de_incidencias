@@ -20,7 +20,6 @@
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <!--Incidencia-->
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
                 <TextBlock Text="{Binding Titulo}"
                            FontSize="15"
@@ -33,30 +32,59 @@
                            TextTrimming="CharacterEllipsis"/>
             </StackPanel>
 
-            <!--Categoría-->
             <TextBlock Grid.Column="1"
                        Text="{Binding Categoria}"
                        VerticalAlignment="Center"
                        FontSize="14"
                        Foreground="#374151"/>
 
-            <!--Prioridad-->
             <Border Grid.Column="2"
-                    Width="90"
-                    Height="30"
-                    Background="#FEF3C7"
-                    CornerRadius="15"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center">
+        Width="90"
+        Height="30"
+        CornerRadius="15"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Center">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#FEF3C7"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Prioridad}" Value="Baja">
+                                <Setter Property="Background" Value="#DCFCE7"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Prioridad}" Value="Media">
+                                <Setter Property="Background" Value="#FEF3C7"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Prioridad}" Value="Alta">
+                                <Setter Property="Background" Value="#FEE2E2"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+
                 <TextBlock Text="{Binding Prioridad}"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           FontSize="13"
-                           FontWeight="SemiBold"
-                           Foreground="#B45309"/>
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="13"
+               FontWeight="SemiBold">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="#B45309"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Prioridad}" Value="Baja">
+                                    <Setter Property="Foreground" Value="#15803D"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Prioridad}" Value="Media">
+                                    <Setter Property="Foreground" Value="#B45309"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Prioridad}" Value="Alta">
+                                    <Setter Property="Foreground" Value="#B91C1C"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
             </Border>
 
-            <!--Estado-->
             <Border Grid.Column="3"
                     Width="110"
                     Height="30"
@@ -79,29 +107,35 @@
                 </StackPanel>
             </Border>
 
-            <!--Fecha-->
             <TextBlock Grid.Column="4"
                        Text="{Binding FechaRegistro}"
                        VerticalAlignment="Center"
                        FontSize="14"
                        Foreground="#6B7280"/>
 
-            <!--Acciones-->
             <Grid Grid.Column="5">
                 <Border Width="42"
-                        Height="38"
-                        Background="White"
-                        BorderBrush="#D1D5DB"
-                        BorderThickness="1"
-                        CornerRadius="8"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
+            Height="38"
+            Background="White"
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            CornerRadius="8"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
                     <Button Content="⋮"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            FontSize="18"
-                            Foreground="#6B7280"
-                            Cursor="Hand"/>
+                Background="Transparent"
+                BorderThickness="0"
+                FontSize="18"
+                Foreground="#6B7280"
+                Cursor="Hand"
+                Click="btnAcciones_Click">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Ver detalle" Click="menuVerDetalle_Click"/>
+                                <MenuItem Header="Asignar responsable" Click="menuAsignarResponsable_Click"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
                 </Border>
             </Grid>
         </Grid>

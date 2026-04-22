@@ -1,30 +1,184 @@
-﻿using System.Windows.Controls;
-using TickNager.UserControls;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using TickNager.Models;
+using TickNager.Repositories;
 
 namespace TickNager.ViewModels
 {
-    public class VistaIncidenciasViewModel
+    public class VistaIncidenciasViewModel : INotifyPropertyChanged
     {
         private DashboardViewModel _dashboardViewModel;
+        private List<Incidencia> _todasLasIncidencias;
 
-        private UserControl _mostrarUsuario;
-        public UserControl MostrarUsuario
+        private string _textoBusqueda;
+        private string _prioridadSeleccionada;
+        private string _estadoSeleccionado;
+        private string _categoriaSeleccionada;
+
+        public ObservableCollection<Incidencia> Incidencias { get; set; }
+        public ObservableCollection<string> PrioridadesFiltro { get; set; }
+        public ObservableCollection<string> EstadosFiltro { get; set; }
+        public ObservableCollection<string> CategoriasFiltro { get; set; }
+
+        public string TextoBusqueda
         {
-            get { return _mostrarUsuario; }
+            get { return _textoBusqueda; }
             set
             {
-                _mostrarUsuario = value;
+                _textoBusqueda = value;
+                OnPropertyChanged();
+                AplicarFiltros();
             }
+        }
+
+        public string PrioridadSeleccionada
+        {
+            get { return _prioridadSeleccionada; }
+            set
+            {
+                _prioridadSeleccionada = value;
+                OnPropertyChanged();
+                AplicarFiltros();
+            }
+        }
+
+        public string EstadoSeleccionado
+        {
+            get { return _estadoSeleccionado; }
+            set
+            {
+                _estadoSeleccionado = value;
+                OnPropertyChanged();
+                AplicarFiltros();
+            }
+        }
+
+        public string CategoriaSeleccionada
+        {
+            get { return _categoriaSeleccionada; }
+            set
+            {
+                _categoriaSeleccionada = value;
+                OnPropertyChanged();
+                AplicarFiltros();
+            }
+        }
+
+        public VistaIncidenciasViewModel()
+        {
+            Incidencias = new ObservableCollection<Incidencia>();
+            PrioridadesFiltro = new ObservableCollection<string>();
+            EstadosFiltro = new ObservableCollection<string>();
+            CategoriasFiltro = new ObservableCollection<string>();
+            _todasLasIncidencias = new List<Incidencia>();
+
+            CargarFiltros();
+            CargarIncidencias();
         }
 
         public VistaIncidenciasViewModel(DashboardViewModel dashboardViewModel)
         {
             _dashboardViewModel = dashboardViewModel;
+            Incidencias = new ObservableCollection<Incidencia>();
+            PrioridadesFiltro = new ObservableCollection<string>();
+            EstadosFiltro = new ObservableCollection<string>();
+            CategoriasFiltro = new ObservableCollection<string>();
+            _todasLasIncidencias = new List<Incidencia>();
+
+            CargarFiltros();
+            CargarIncidencias();
         }
 
-        public void mostrarUsuarioCreado()
+        public void CargarFiltros()
         {
-            MostrarUsuario = new UsuarioCreado();
+            PrioridadesFiltro.Clear();
+            EstadosFiltro.Clear();
+            CategoriasFiltro.Clear();
+
+            PrioridadesFiltro.Add("Todas");
+            PrioridadesFiltro.Add("Baja");
+            PrioridadesFiltro.Add("Media");
+            PrioridadesFiltro.Add("Alta");
+
+            EstadosFiltro.Add("Todos");
+            EstadosFiltro.Add("Pendiente");
+            EstadosFiltro.Add("En proceso");
+            EstadosFiltro.Add("Resuelta");
+
+            CategoriasFiltro.Add("Todas");
+
+            var categorias = CategoriaRepository.ObtenerCategorias();
+
+            foreach (var categoria in categorias)
+            {
+                CategoriasFiltro.Add(categoria.Nombre);
+            }
+
+            PrioridadSeleccionada = "Todas";
+            EstadoSeleccionado = "Todos";
+            CategoriaSeleccionada = "Todas";
+            TextoBusqueda = "";
+        }
+
+        public void CargarIncidencias()
+        {
+            Incidencias.Clear();
+            _todasLasIncidencias.Clear();
+
+            var lista = IncidenciaRepository.ObtenerIncidencias();
+
+            foreach (var incidencia in lista)
+            {
+                _todasLasIncidencias.Add(incidencia);
+            }
+
+            AplicarFiltros();
+        }
+
+        public void AplicarFiltros()
+        {
+            Incidencias.Clear();
+
+            foreach (var incidencia in _todasLasIncidencias)
+            {
+                bool coincideTexto = string.IsNullOrWhiteSpace(TextoBusqueda)
+                    || incidencia.Titulo.ToLower().Contains(TextoBusqueda.ToLower())
+                    || incidencia.Descripcion.ToLower().Contains(TextoBusqueda.ToLower())
+                    || (incidencia.Categoria != null && incidencia.Categoria.ToLower().Contains(TextoBusqueda.ToLower()));
+
+                bool coincidePrioridad = PrioridadSeleccionada == "Todas"
+                    || incidencia.Prioridad == PrioridadSeleccionada;
+
+                bool coincideEstado = EstadoSeleccionado == "Todos"
+                    || incidencia.Estado == EstadoSeleccionado;
+
+                bool coincideCategoria = CategoriaSeleccionada == "Todas"
+                    || incidencia.Categoria == CategoriaSeleccionada;
+
+                if (coincideTexto && coincidePrioridad && coincideEstado && coincideCategoria)
+                {
+                    Incidencias.Add(incidencia);
+                }
+            }
+        }
+
+        public void LimpiarFiltros()
+        {
+            TextoBusqueda = "";
+            PrioridadSeleccionada = "Todas";
+            EstadoSeleccionado = "Todos";
+            CategoriaSeleccionada = "Todas";
+
+            AplicarFiltros();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

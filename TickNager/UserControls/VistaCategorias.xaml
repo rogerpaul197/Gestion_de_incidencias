@@ -6,60 +6,67 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#0C0D21">
+    <Grid Background="#F5F7FB">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <Border Background="#7B68EE" Height="50" Width="150" CornerRadius="10" HorizontalAlignment="Right" Margin="0 0 20 0">
-                <Button Height="50" Width="150" Content="+ Nueva categoría" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnNuevaCategoria_Click"/>
+        <Grid Grid.Row="0" Margin="35 30 35 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Gestión de categorías" FontSize="34" FontWeight="Bold" Foreground="#1D2B53"/>
+                <TextBlock Text="Administra las categorías registradas en el sistema" Margin="0 8 0 0" FontSize="18" Foreground="#6B7280"/>
+            </StackPanel>
+
+            <Border Grid.Column="1" Width="190" Height="52" Background="#2F6BFF" CornerRadius="10">
+                <Button Content="+  Nueva categoría" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" FontWeight="SemiBold" Click="btnNuevaCategoria_Click"/>
             </Border>
         </Grid>
 
-        <Border Grid.Row="1" Margin="20" Background="#040524" CornerRadius="10">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="35 0 35 30">
+            <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="#181A42" CornerRadius="10 10 0 0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
+                    <Border Grid.Row="0" Background="#F9FAFB" CornerRadius="14 14 0 0" BorderBrush="#E5E7EB" BorderThickness="0 0 0 1">
+                        <Grid Margin="18 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="Categorías:" Foreground="White" FontSize="15" VerticalAlignment="Center" Margin="15 0 0 0"/>
-
-                        <TextBlock Grid.Column="1" Text="Acciones:" Foreground="White" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="0 0 15 0"/>
-                    </Grid>
-                </Border>
-
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <Border Background="#040524" Margin="20 0 20 20">
-
-                        <ItemsControl ItemsSource="{Binding Categorias}" Margin="0 10 0 0">
-
-                            <ItemsControl.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <UniformGrid Columns="3"/>
-                                </ItemsPanelTemplate>
-                            </ItemsControl.ItemsPanel>
-
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <local:CategoriaCreada/>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-
-                        </ItemsControl>
-
+                            <TextBlock Grid.Column="0" Text="Categorías" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="1" Text="Acciones" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                        </Grid>
                     </Border>
-                </ScrollViewer>
-            </Grid>
-        </Border>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                        <Border Background="White" Margin="20 20 20 20">
+                            <ItemsControl ItemsSource="{Binding Categorias}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="3"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <local:CategoriaCreada/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Border>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </UserControl>

@@ -1,46 +1,46 @@
 CREATE TABLE IF NOT EXISTS usuarios (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	nombre TEXT NOT NULL,
 	apellido TEXT NOT NULL,
 	rol TEXT NOT NULL CHECK (rol IN ('Administrador', 'Técnico', 'Usuario')),
 	genero TEXT NOT NULL CHECK (genero IN ('Hombre', 'Mujer')),
 	departamento TEXT,
-	numero TEXT NULL,
+	numero TEXT,
 	correo TEXT NOT NULL UNIQUE,
 	contrasena TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS departamentos (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	nombre TEXT NOT NULL UNIQUE,
-	miembros TEXT NULL
+	miembros TEXT
 );
 
 CREATE TABLE IF NOT EXISTS incidencias (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	titulo TEXT NOT NULL,
 	descripcion TEXT NOT NULL,
 	categoria TEXT,
-	prioridad TEXT NOT NULL,
-	estado BOOLEAN,
+	prioridad TEXT NOT NULL CHECK (prioridad IN ('Baja', 'Media', 'Alta')),
+	estado INTEGER NOT NULL DEFAULT 0,
 	responsable TEXT,
 	usuario_reportero TEXT,
-	fecha_creacion TEXT,
-	fecha_cierre TEXT 
+	fecha_creacion TEXT NOT NULL DEFAULT (date('now')),
+	fecha_cierre TEXT
 );
 
 CREATE TABLE IF NOT EXISTS categorias (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nombre TEXT NOT NULL,
-    descripcion TEXT,
-    activo INTEGER NOT NULL DEFAULT 1,
-    cantidad_incidencias INTEGER NOT NULL DEFAULT 0
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre TEXT NOT NULL UNIQUE,
+	descripcion TEXT,
+	activo INTEGER NOT NULL DEFAULT 1,
+	cantidad_incidencias INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS slas (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	nombre TEXT NOT NULL,
-	tiempo_primera_respuesta_horas INT NOT NULL,
-	tiempo_resolucion_horas INT NOT NULL,
+	tiempo_primera_respuesta_horas INTEGER NOT NULL,
+	tiempo_resolucion_horas INTEGER NOT NULL,
 	descripcion TEXT NOT NULL
 );

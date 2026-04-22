@@ -10,19 +10,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TickNager.ViewModels;
 
 namespace TickNager.UserControls
 {
     /// <summary>
-    /// Lógica de interacción para Dashboard.xaml
+    /// Lógica de interacción para VistaIncidenciasUsuario.xaml
     /// </summary>
-    public partial class Dashboard : UserControl
+    public partial class VistaIncidenciasUsuario : UserControl
     {
-        public Dashboard()
+        public VistaIncidenciasUsuario()
         {
             InitializeComponent();
-            DataContext = new DashboardDatosViewModel();
         }
     }
 }

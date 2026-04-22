@@ -54,6 +54,21 @@ namespace TickNager.Models
             }
         }
 
+        public string TextoCantidadIncidencias
+        {
+            get
+            {
+                if (CantidadIncidencias == 1)
+                {
+                    return "1 incidencia";
+                }
+                else
+                {
+                    return CantidadIncidencias + " incidencias";
+                }
+            }
+        }
+
         public Categoria()
         {
 
