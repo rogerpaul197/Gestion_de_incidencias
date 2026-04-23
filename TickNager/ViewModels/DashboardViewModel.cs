@@ -8,6 +8,7 @@ using System.Windows.Input;
 using TickNager.Commands;
 using TickNager.UserControls;
 using TickNager.Models;
+using TickNager.Helper;
 
 namespace TickNager.ViewModels
 {
@@ -26,6 +27,32 @@ namespace TickNager.ViewModels
             }
         }
 
+        public string NombreUsuarioActual
+        {
+            get
+            {
+                if (SesionUsuario.UsuarioActual != null)
+                {
+                    return SesionUsuario.UsuarioActual.NombreUsuario;
+                }
+
+                return "";
+            }
+        }
+
+        public string ImagenUsuarioActual
+        {
+            get
+            {
+                if (SesionUsuario.UsuarioActual != null)
+                {
+                    return SesionUsuario.UsuarioActual.ImagenPerfil;
+                }
+
+                return "/Imagenes/Iconos/interrogacion_por_defecto.png";
+            }
+        }
+
         public DashboardViewModel()
         {
             Contenido = new Dashboard();
@@ -39,7 +66,24 @@ namespace TickNager.ViewModels
         //Gestión de incidencias
         public void mostrarVistaIncidencias()
         {
-            Contenido = new VistaIncidencias(this);
+            string rolUsuario = SesionUsuario.UsuarioActual?.RolUsuario;
+
+            if (rolUsuario == "Administrador")
+            {
+                Contenido = new VistaIncidencias(this);
+            }
+            else if (rolUsuario == "Técnico")
+            {
+                Contenido = new VistaIncidenciasTecnico();
+            }
+            else if (rolUsuario == "Usuario")
+            {
+                Contenido = new VistaIncidenciasUsuario();
+            }
+            else
+            {
+                Contenido = new VistaIncidencias(this);
+            }
         }
 
         public void mostrarFormularioCrearIncidencia()

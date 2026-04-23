@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Proye\\Gestion_de_incidencias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\incidenciacreada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\incidenciacreada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\incidenciacreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\incidenciacreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\vistaincidencias.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\vistaincidencias.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,38 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IncidenciaCreada.xaml.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml.cs",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\IncidenciaCreada.xaml.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml.cs*",
-              "RelativeToolTip": "TickNager\\UserControls\\IncidenciaCreada.xaml.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCQAAAAJAAAAAAAAAA==",
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "TickNager\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs*",
+              "RelativeToolTip": "TickNager\\ViewModels\\DashboardViewModel.cs*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwFYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T13:04:52.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IncidenciaCreada.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml*",
-              "RelativeToolTip": "TickNager\\UserControls\\IncidenciaCreada.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-22T13:03:41.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VistaIncidencias.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidencias.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\VistaIncidencias.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidencias.xaml*",
-              "RelativeToolTip": "TickNager\\UserControls\\VistaIncidencias.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-22T12:58:17.379Z",
+              "WhenOpened": "2026-04-23T13:20:17.991Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,3 @@
-C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\BBDD\TickNager.db
 C:\Users\cerna\source\repos\Gestion_de_incidencias\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\BBDD\TickNager.db
 C:\Users\cerna\source\repos\Gestion_de_incidencias\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\SQL\script.sql
 C:\Users\cerna\source\repos\Gestion_de_incidencias\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.exe
@@ -265,6 +264,7 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.genruntimeconfig.cache
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
+C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\BBDD\TickNager.db
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\SQL\script.sql
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.exe
 C:\Proye\Gestion_de_incidencias\TickNager\bin\Debug\net10.0-windows\TickNager.deps.json
@@ -356,6 +356,8 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaCategorias.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaGestionUsuarios.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidencias.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.g.cs
@@ -378,6 +380,8 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaCategorias.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaGestionUsuarios.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidencias.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.baml
@@ -396,7 +400,3 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\refint\TickN
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.genruntimeconfig.cache
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.baml

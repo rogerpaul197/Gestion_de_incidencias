@@ -5,8 +5,6 @@ namespace TickNager.Views.Windows
 {
     public partial class LoginWindow : Window
     {
-        string nombre;
-        string contrasena;
         public LoginWindow()
         {
             InitializeComponent();
@@ -15,9 +13,15 @@ namespace TickNager.Views.Windows
         private void btnIniciarSeision_Click(object sender, RoutedEventArgs e)
         {
             LoginWindowViewModel login = (LoginWindowViewModel)DataContext;
-            DashboardWindow ventana = new DashboardWindow();
-            login.iniciarSesion(ventana);
-            this.Close();
+
+            bool inicioCorrecto = login.iniciarSesion();
+
+            if (inicioCorrecto)
+            {
+                DashboardWindow ventana = new DashboardWindow();
+                ventana.Show();
+                this.Close();
+            }
         }
 
         private void btnAyuda_Click(object sender, RoutedEventArgs e)

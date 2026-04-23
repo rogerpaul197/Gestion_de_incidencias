@@ -46,7 +46,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Name="btnIncidencias" 
+                    <Button Name="btnIncidencias"
                             Background="Transparent"
                             BorderThickness="0"
                             HorizontalAlignment="Left"
@@ -69,7 +69,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Name="btnEquipos" 
+                    <Button Name="btnEquipos"
                             Background="Transparent"
                             BorderThickness="0"
                             HorizontalAlignment="Left"
@@ -81,7 +81,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Name="btnCategorias" 
+                    <Button Name="btnCategorias"
                             Background="Transparent"
                             BorderThickness="0"
                             HorizontalAlignment="Left"
@@ -93,7 +93,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Name="btnAjustes" 
+                    <Button Name="btnAjustes"
                             Background="Transparent"
                             BorderThickness="0"
                             HorizontalAlignment="Left"
@@ -112,7 +112,7 @@
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <!--Cabecera-->
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
                 <!--Estructura debajo de la cabecera-->
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -121,45 +121,82 @@
             <Grid Grid.Row="0" Background="White">
                 <Grid.ColumnDefinitions>
                     <!--El buscador-->
-                    <ColumnDefinition Width="330"/>
-                    <!--Notificaciones, logo/nombre de usuario-->
+                    <ColumnDefinition Width="360"/>
+                    <!--Espacio libre-->
                     <ColumnDefinition/>
+                    <!--Notificaciones-->
+                    <ColumnDefinition Width="60"/>
+                    <!--Usuario-->
+                    <ColumnDefinition Width="160"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0" VerticalAlignment="Center">
-                    <Border CornerRadius="10" HorizontalAlignment="Right" Width="330">
-                        <TextBox Text="Buscador..." Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300"/>
+                <Grid Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="38" Width="320">
+                        <Grid>
+                            <TextBox Background="Transparent"
+                                     BorderThickness="0"
+                                     Foreground="#374151"
+                                     FontSize="13"
+                                     VerticalContentAlignment="Center"
+                                     Padding="12,0,35,0"/>
+
+                            <TextBlock Text="Buscador..."
+                                       Foreground="Gray"
+                                       FontSize="13"
+                                       VerticalAlignment="Center"
+                                       Margin="12,0,35,0"
+                                       IsHitTestVisible="False"/>
+
+                            <iconPacks:PackIconMaterial Kind="Magnify"
+                                                        Width="16"
+                                                        Height="16"
+                                                        Foreground="#6B7280"
+                                                        HorizontalAlignment="Right"
+                                                        VerticalAlignment="Center"
+                                                        Margin="0,0,12,0"/>
+                        </Grid>
                     </Border>
                 </Grid>
 
-                <Grid Grid.Column="1" VerticalAlignment="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <!--Notificaciones-->
-                        <ColumnDefinition/>
-                        <!--ícono del usuario-->
-                        <ColumnDefinition Width="95"/>
-                        <!--Nombre del administrador-->
-                    </Grid.ColumnDefinitions>
-
-                    <Grid Grid.Column="0" VerticalAlignment="Center">
-                        <Button Background="Transparent" 
+                <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Border Width="38" Height="38" Background="Transparent" CornerRadius="8">
+                        <Button Background="Transparent"
                                 BorderThickness="0"
-                                Width="100">
-                            <StackPanel Orientation="Horizontal">
-                                <iconPacks:PackIconMaterial Kind="Bell" Foreground="Black" Padding="0,0,5,0" HorizontalAlignment="Left"/>
-                                <TextBlock Text="Notificaciones" FontSize="10"/>
-                            </StackPanel>
+                                Cursor="Hand"
+                                ToolTip="Notificaciones">
+                            <iconPacks:PackIconMaterial Kind="Bell"
+                                                        Width="18"
+                                                        Height="18"
+                                                        Foreground="Black"
+                                                        VerticalAlignment="Center"
+                                                        HorizontalAlignment="Center"/>
                         </Button>
-                    </Grid>
+                    </Border>
+                </Grid>
 
-                    <Grid Grid.Column="1" VerticalAlignment="Center">
-                        <Image Source="/Imagenes/Iconos/perfil_administrador.png" Width="20" Margin="0,0,-45,0"/>
-                    </Grid>
+                <Grid Grid.Column="3" VerticalAlignment="Center" Margin="0,0,20,0">
+                    <Button Background="Transparent"
+            BorderThickness="0"
+            Cursor="Hand"
+            Click="btnUsuario_Click">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Cerrar sesión" Click="menuCerrarSesion_Click"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
 
-                    <Grid Grid.Column="2" VerticalAlignment="Center">
-                        <TextBlock Text="Administrador" Width="90" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="10"/>
-                    </Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <Image Source="{Binding ImagenUsuarioActual}"
+                   Width="28"
+                   Height="28"
+                   Margin="0,0,8,0"/>
+
+                            <TextBlock Text="{Binding NombreUsuarioActual}"
+                       FontSize="12"
+                       Foreground="Black"
+                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </Grid>
 

@@ -131,5 +131,41 @@ namespace TickNager.Repositories
 
             return (int)resultado;
         }
+
+        public static Usuario ObtenerUsuarioPorCredenciales(string correo, string contrasena)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT nombre, apellido, rol, genero, departamento, numero, correo, contrasena
+                            FROM usuarios
+                            WHERE correo = @correo AND contrasena = @contrasena
+                            LIMIT 1";
+
+            comando.Parameters.AddWithValue("@correo", correo);
+            comando.Parameters.AddWithValue("@contrasena", contrasena);
+
+            using var reader = comando.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Usuario usuario = new Usuario
+                {
+                    NombreUsuario = reader["nombre"].ToString(),
+                    ApellidoUsuario = reader["apellido"].ToString(),
+                    RolUsuario = reader["rol"].ToString(),
+                    GeneroUsuario = reader["genero"].ToString(),
+                    Departamento = reader["departamento"].ToString(),
+                    NumeroUsuario = reader["numero"].ToString(),
+                    CorreoUsuario = reader["correo"].ToString(),
+                    ContrasenaUsuario = reader["contrasena"].ToString()
+                };
+
+                return usuario;
+            }
+
+            return null;
+        }
     }
 }

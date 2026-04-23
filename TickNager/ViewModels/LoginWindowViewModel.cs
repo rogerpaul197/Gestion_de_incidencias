@@ -20,16 +20,19 @@ namespace TickNager.ViewModels
         /// <summary>
         /// Permite iniciar sesión si los datos introducidos son correctos, de lo contrario muestra un mensaje de error.
         /// </summary>
-        public void iniciarSesion(Window window)
+        public bool iniciarSesion()
         {
-            bool existeUsuario = UsuarioRepository.VerificarUsuario(Correo, Contrasena);
+            Usuario usuario = UsuarioRepository.ObtenerUsuarioPorCredenciales(Correo, Contrasena);
 
-            if (!existeUsuario)
+            if (usuario == null)
             {
                 MessageBox.Show("Correo o contraseña incorrectos. Por favor, inténtelo de nuevo.", "Error de inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Error);
-            } else
+                return false;
+            }
+            else
             {
-                window.Show();
+                SesionUsuario.UsuarioActual = usuario;
+                return true;
             }
         }
     }
