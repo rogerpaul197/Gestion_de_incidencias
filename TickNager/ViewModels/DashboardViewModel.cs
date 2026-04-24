@@ -78,7 +78,7 @@ namespace TickNager.ViewModels
             }
             else if (rolUsuario == "Usuario")
             {
-                Contenido = new VistaIncidenciasUsuario();
+                Contenido = new VistaIncidenciasUsuario(this);
             }
             else
             {

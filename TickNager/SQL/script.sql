@@ -21,9 +21,11 @@ CREATE TABLE IF NOT EXISTS incidencias (
 	titulo TEXT NOT NULL,
 	descripcion TEXT NOT NULL,
 	categoria TEXT,
+	id_categoria INTEGER,
 	prioridad TEXT NOT NULL CHECK (prioridad IN ('Baja', 'Media', 'Alta')),
-	estado INTEGER NOT NULL DEFAULT 0,
+	estado TEXT NOT NULL DEFAULT 'Pendiente',
 	responsable TEXT,
+	id_usuario INTEGER,
 	usuario_reportero TEXT,
 	fecha_creacion TEXT NOT NULL DEFAULT (date('now')),
 	fecha_cierre TEXT

@@ -20,6 +20,9 @@
     <Compile Update="UserControls\IncidenciaCreada.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\IncidenciaTecnicoCreada.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaIncidenciasUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\AsignarTecnicoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Windows\EmpresaWindow.xaml.cs">

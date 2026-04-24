@@ -2,6 +2,7 @@
 {
     public class Usuario
     {
+        private int _id;
         private string _nombreUsuario;
         private string _apellidoUsuario;
         private string _rolUsuario;
@@ -15,6 +16,12 @@
         private string? _numeroUsuario;
         private string _correoUsuario;
         private string _contrasenaUsuario;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         public string NombreUsuario
         {

@@ -2,8 +2,44 @@
 {
     public class Incidencia
     {
+        private int _id;
+        private int _idUsuario;
+        private int _idTecnico;
+        private int _idCategoria;
+        private string _estado = "Pendiente";
         private string _tituloIncidencia;
         private string? _categoriaIncidencia;
+        private string _usuarioReportero;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public int IdUsuario
+        {
+            get { return _idUsuario; }
+            set { _idUsuario = value; }
+        }
+
+        public int IdTecnico
+        {
+            get { return _idTecnico; }
+            set { _idTecnico = value; }
+        }
+
+        public int IdCategoria
+        {
+            get { return _idCategoria; }
+            set { _idCategoria = value; }
+        }
+
+        public string UsuarioReportero
+        {
+            get { return _usuarioReportero; }
+            set { _usuarioReportero = value; }
+        }
 
         /// <summary>
         /// Alta , Media, Baja
@@ -59,10 +95,8 @@
 
         public string Estado
         {
-            get
-            {
-                return "Pendiente";
-            }
+            get { return _estado; }
+            set { _estado = value; }
         }
 
         public string FechaRegistro

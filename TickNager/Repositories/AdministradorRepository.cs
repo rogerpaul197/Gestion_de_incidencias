@@ -1,10 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TickNager.Helper;
 
 namespace TickNager.Repositories
 {
-    class AdministradorRepository
+    public class AdministradorRepository
     {
+        public static void AsignarTecnico(int idIncidencia, int idTecnico)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"UPDATE incidencias
+                                    SET id_tecnico = @id_tecnico,
+                                        estado = 'En proceso'
+                                    WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@id_tecnico", idTecnico);
+            comando.Parameters.AddWithValue("@id", idIncidencia);
+
+            comando.ExecuteNonQuery();
+        }
     }
 }

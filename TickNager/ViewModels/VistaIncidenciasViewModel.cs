@@ -4,12 +4,13 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using TickNager.Models;
 using TickNager.Repositories;
+using TickNager.Helper;
 
 namespace TickNager.ViewModels
 {
     public class VistaIncidenciasViewModel : INotifyPropertyChanged
     {
-        private DashboardViewModel _dashboardViewModel;
+        private DashboardViewModel _obj;
         private List<Incidencia> _todasLasIncidencias;
 
         private string _textoBusqueda;
@@ -21,6 +22,7 @@ namespace TickNager.ViewModels
         public ObservableCollection<string> PrioridadesFiltro { get; set; }
         public ObservableCollection<string> EstadosFiltro { get; set; }
         public ObservableCollection<string> CategoriasFiltro { get; set; }
+        public ObservableCollection<Usuario> Tecnicos { get; set; }
 
         public string TextoBusqueda
         {
@@ -76,11 +78,14 @@ namespace TickNager.ViewModels
 
             CargarFiltros();
             CargarIncidencias();
+
+            Tecnicos = new ObservableCollection<Usuario>();
+            CargarTecnicos();
         }
 
         public VistaIncidenciasViewModel(DashboardViewModel dashboardViewModel)
         {
-            _dashboardViewModel = dashboardViewModel;
+            _obj = dashboardViewModel;
             Incidencias = new ObservableCollection<Incidencia>();
             PrioridadesFiltro = new ObservableCollection<string>();
             EstadosFiltro = new ObservableCollection<string>();
@@ -89,6 +94,9 @@ namespace TickNager.ViewModels
 
             CargarFiltros();
             CargarIncidencias();
+
+            Tecnicos = new ObservableCollection<Usuario>();
+            CargarTecnicos();
         }
 
         public void CargarFiltros()
@@ -127,7 +135,11 @@ namespace TickNager.ViewModels
             Incidencias.Clear();
             _todasLasIncidencias.Clear();
 
-            var lista = IncidenciaRepository.ObtenerIncidencias();
+            var usuarioActual = SesionUsuario.UsuarioActual;
+
+            var lista = usuarioActual.RolUsuario == "Administrador"
+                ? IncidenciaRepository.ObtenerIncidencias()
+                : IncidenciaRepository.ObtenerIncidenciasPorUsuario(usuarioActual.Id);
 
             foreach (var incidencia in lista)
             {
@@ -172,6 +184,18 @@ namespace TickNager.ViewModels
             CategoriaSeleccionada = "Todas";
 
             AplicarFiltros();
+        }
+
+        public void CargarTecnicos()
+        {
+            Tecnicos.Clear();
+
+            var lista = TecnicoRepository.ObtenerTecnicos();
+
+            foreach (var tecnico in lista)
+            {
+                Tecnicos.Add(tecnico);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

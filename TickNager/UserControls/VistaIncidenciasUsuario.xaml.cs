@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TickNager.ViewModels;
 
 namespace TickNager.UserControls
 {
@@ -18,9 +19,22 @@ namespace TickNager.UserControls
     /// </summary>
     public partial class VistaIncidenciasUsuario : UserControl
     {
+        private DashboardViewModel _dashboardViewModel;
+
         public VistaIncidenciasUsuario()
         {
             InitializeComponent();
+        }
+
+        public VistaIncidenciasUsuario(DashboardViewModel dashboardViewModel) : this()
+        {
+            _dashboardViewModel = dashboardViewModel;
+            DataContext = new VistaIncidenciasViewModel(dashboardViewModel);
+        }
+
+        private void btnReportarIncidencia_Click(object sender, RoutedEventArgs e)
+        {
+            _dashboardViewModel.mostrarFormularioCrearIncidencia();
         }
     }
 }

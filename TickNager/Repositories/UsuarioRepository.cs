@@ -138,10 +138,10 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT nombre, apellido, rol, genero, departamento, numero, correo, contrasena
-                            FROM usuarios
-                            WHERE correo = @correo AND contrasena = @contrasena
-                            LIMIT 1";
+            comando.CommandText = @"SELECT id, nombre, apellido, rol, genero, departamento, numero, correo, contrasena
+                    FROM usuarios
+                    WHERE correo = @correo AND contrasena = @contrasena
+                    LIMIT 1";
 
             comando.Parameters.AddWithValue("@correo", correo);
             comando.Parameters.AddWithValue("@contrasena", contrasena);
@@ -152,6 +152,7 @@ namespace TickNager.Repositories
             {
                 Usuario usuario = new Usuario
                 {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     NombreUsuario = reader["nombre"].ToString(),
                     ApellidoUsuario = reader["apellido"].ToString(),
                     RolUsuario = reader["rol"].ToString(),

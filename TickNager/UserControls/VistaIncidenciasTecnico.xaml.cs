@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TickNager.ViewModels;
 
 namespace TickNager.UserControls
 {
@@ -21,6 +22,7 @@ namespace TickNager.UserControls
         public VistaIncidenciasTecnico()
         {
             InitializeComponent();
+            DataContext = new VistaIncidenciasViewModel();
         }
     }
 }

@@ -125,7 +125,7 @@ namespace TickNager.ViewModels
         public void CargarGraficoEstados()
         {
             int pendientes = IncidenciaRepository.ObtenerIncidenciasPendientesGrafico();
-            int enProceso = IncidenciaRepository.ObtenerIncidenciasPorEstado(1);
+            int enProceso = IncidenciaRepository.ObtenerIncidenciasPorEstado("En proceso");
 
             SeriesEstados = new SeriesCollection
     {

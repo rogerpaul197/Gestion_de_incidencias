@@ -19,15 +19,19 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"INSERT INTO incidencias 
-                        (titulo, descripcion, categoria, prioridad, fecha_creacion)
-                        VALUES 
-                        (@titulo, @descripcion, @categoria, @prioridad, @fecha_creacion)";
+            (titulo, descripcion, categoria, id_categoria, prioridad, estado, id_usuario, usuario_reportero, fecha_creacion)
+            VALUES 
+            (@titulo, @descripcion, @categoria, @id_categoria, @prioridad, @estado, @id_usuario, @usuario_reportero, @fecha_creacion)";
 
             comando.Parameters.AddWithValue("@titulo", incidencia.Titulo);
             comando.Parameters.AddWithValue("@descripcion", incidencia.Descripcion);
             comando.Parameters.AddWithValue("@categoria", incidencia.Categoria);
             comando.Parameters.AddWithValue("@prioridad", incidencia.Prioridad);
             comando.Parameters.AddWithValue("@fecha_creacion", DateTime.Now.ToString("yyyy-MM-dd"));
+            comando.Parameters.AddWithValue("@id_categoria", incidencia.IdCategoria);
+            comando.Parameters.AddWithValue("@estado", incidencia.Estado);
+            comando.Parameters.AddWithValue("@id_usuario", incidencia.IdUsuario);
+            comando.Parameters.AddWithValue("@usuario_reportero", incidencia.UsuarioReportero);
             comando.ExecuteNonQuery();
         }
 
@@ -39,8 +43,8 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT titulo, descripcion, categoria, prioridad, fecha_creacion
-                            FROM incidencias";
+            comando.CommandText = @"SELECT id, titulo, descripcion, categoria, id_categoria, prioridad, estado, id_usuario, usuario_reportero, id_tecnico, fecha_creacion
+                                    FROM incidencias";
 
             using var reader = comando.ExecuteReader();
 
@@ -48,10 +52,16 @@ namespace TickNager.Repositories
             {
                 Incidencia incidencia = new Incidencia
                 {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Titulo = reader["titulo"].ToString(),
                     Descripcion = reader["descripcion"].ToString(),
                     Categoria = reader["categoria"].ToString(),
-                    Prioridad = reader["prioridad"].ToString()
+                    IdCategoria = reader["id_categoria"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_categoria")),
+                    Prioridad = reader["prioridad"].ToString(),
+                    Estado = reader["estado"].ToString(),
+                    IdUsuario = reader["id_usuario"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_usuario")),
+                    UsuarioReportero = reader["usuario_reportero"].ToString(),
+                    IdTecnico = reader["id_tecnico"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_tecnico"))
                 };
 
                 if (reader["fecha_creacion"] != DBNull.Value)
@@ -85,8 +95,8 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT COUNT(*) 
-                            FROM incidencias
-                            WHERE estado IS NULL OR estado = 0";
+                FROM incidencias
+                WHERE estado = 'Pendiente'";
 
             long resultado = (long)comando.ExecuteScalar();
 
@@ -100,8 +110,8 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT COUNT(*) 
-                            FROM incidencias
-                            WHERE estado = 1";
+                FROM incidencias
+                WHERE estado = 'En proceso'";
 
             long resultado = (long)comando.ExecuteScalar();
 
@@ -125,15 +135,15 @@ namespace TickNager.Repositories
             return (int)resultado;
         }
 
-        public static int ObtenerIncidenciasPorEstado(int estado)
+        public static int ObtenerIncidenciasPorEstado(string estado)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT COUNT(*) 
-                            FROM incidencias 
-                            WHERE estado = @estado";
+                    FROM incidencias 
+                    WHERE estado = @estado";
 
             comando.Parameters.AddWithValue("@estado", estado);
 
@@ -149,8 +159,8 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT COUNT(*) 
-                            FROM incidencias 
-                            WHERE estado IS NULL OR estado = 0";
+                FROM incidencias 
+                WHERE estado = 'Pendiente'";
 
             long resultado = (long)comando.ExecuteScalar();
 
@@ -182,6 +192,49 @@ namespace TickNager.Repositories
             }
 
             return datos;
+        }
+
+        public static List<Incidencia> ObtenerIncidenciasPorUsuario(int idUsuario)
+        {
+            List<Incidencia> listaIncidencias = new List<Incidencia>();
+
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT id, titulo, descripcion, categoria, id_categoria, prioridad, estado, id_usuario, usuario_reportero, id_tecnico, fecha_creacion
+                                    FROM incidencias
+                                    WHERE id_usuario = @id_usuario";
+
+            comando.Parameters.AddWithValue("@id_usuario", idUsuario);
+
+            using var reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Incidencia incidencia = new Incidencia
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Titulo = reader["titulo"].ToString(),
+                    Descripcion = reader["descripcion"].ToString(),
+                    Categoria = reader["categoria"].ToString(),
+                    IdCategoria = reader["id_categoria"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_categoria")),
+                    Prioridad = reader["prioridad"].ToString(),
+                    Estado = reader["estado"].ToString(),
+                    IdUsuario = reader["id_usuario"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_usuario")),
+                    UsuarioReportero = reader["usuario_reportero"].ToString(),
+                    IdTecnico = reader["id_tecnico"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_tecnico"))
+                };
+
+                if (reader["fecha_creacion"] != DBNull.Value)
+                {
+                    incidencia.AsignarFechaRegistro(DateTime.Parse(reader["fecha_creacion"].ToString()));
+                }
+
+                listaIncidencias.Add(incidencia);
+            }
+
+            return listaIncidencias;
         }
     }
 }

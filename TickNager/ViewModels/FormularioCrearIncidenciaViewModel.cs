@@ -131,6 +131,11 @@ namespace TickNager.ViewModels
             else
             {
                 Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
+
+                incidencia.Estado = "Pendiente";
+                incidencia.IdUsuario = TickNager.Helper.SesionUsuario.UsuarioActual.Id;
+                incidencia.UsuarioReportero = TickNager.Helper.SesionUsuario.UsuarioActual.NombreCompleto;
+
                 IncidenciaRepository.RegistrarIncidencia(incidencia);
                 MessageBox.Show("Incidencia registrada.");
                 _obj.mostrarVistaIncidencias();

@@ -1,13 +1,12 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using TickNager.Models;
-using TickNager.Views.Windows;
 
 namespace TickNager.UserControls
 {
-    public partial class IncidenciaCreada : UserControl
+    public partial class IncidenciaTecnicoCreada : UserControl
     {
-        public IncidenciaCreada()
+        public IncidenciaTecnicoCreada()
         {
             InitializeComponent();
         }
@@ -47,15 +46,14 @@ namespace TickNager.UserControls
             }
         }
 
-        private void menuAsignarResponsable_Click(object sender, RoutedEventArgs e)
+        private void menuMarcarEnProceso_Click(object sender, RoutedEventArgs e)
         {
-            Incidencia incidencia = ObtenerIncidenciaMenuItem(sender);
+            MessageBox.Show("Aquí luego cambiaremos la incidencia a En proceso.");
+        }
 
-            if (incidencia != null)
-            {
-                AsignarTecnicoWindow ventana = new AsignarTecnicoWindow(incidencia.Id);
-                ventana.ShowDialog();
-            }
+        private void menuMarcarResuelta_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Aquí luego cambiaremos la incidencia a Resuelta.");
         }
     }
 }
