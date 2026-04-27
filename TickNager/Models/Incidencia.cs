@@ -1,6 +1,9 @@
-﻿namespace TickNager.Models
+﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+namespace TickNager.Models
 {
-    public class Incidencia
+    public class Incidencia : INotifyPropertyChanged
     {
         private int _id;
         private int _idUsuario;
@@ -96,7 +99,11 @@
         public string Estado
         {
             get { return _estado; }
-            set { _estado = value; }
+            set
+            {
+                _estado = value;
+                OnPropertyChanged();
+            }
         }
 
         public string FechaRegistro
@@ -140,6 +147,13 @@
         public void AsignarFechaRegistro(DateTime fecha)
         {
             _fechaRegistro = fecha;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

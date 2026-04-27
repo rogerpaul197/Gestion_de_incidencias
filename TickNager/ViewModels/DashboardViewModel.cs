@@ -9,6 +9,7 @@ using TickNager.Commands;
 using TickNager.UserControls;
 using TickNager.Models;
 using TickNager.Helper;
+using TickNager.Views.Windows;
 
 namespace TickNager.ViewModels
 {
@@ -56,6 +57,14 @@ namespace TickNager.ViewModels
         public DashboardViewModel()
         {
             Contenido = new Dashboard();
+        }
+
+        public void CerrarSesion()
+        {
+            SesionUsuario.CerrarSesion();
+
+            LoginWindow login = new LoginWindow();
+            login.Show();
         }
 
         public void mostrarDashboard()

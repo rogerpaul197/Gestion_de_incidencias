@@ -12,7 +12,7 @@ namespace TickNager.Repositories
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"UPDATE incidencias
                                     SET id_tecnico = @id_tecnico,
-                                        estado = 'En proceso'
+                                        estado = 'Asignada'
                                     WHERE id = @id";
 
             comando.Parameters.AddWithValue("@id_tecnico", idTecnico);

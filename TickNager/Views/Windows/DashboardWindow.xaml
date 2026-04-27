@@ -10,10 +10,6 @@
         mc:Ignorable="d"
         Title="Dashboard" Height="550" Width="1000">
 
-    <Window.DataContext>
-        <vm:DashboardViewModel/>
-    </Window.DataContext>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -175,16 +171,10 @@
                 </Grid>
 
                 <Grid Grid.Column="3" VerticalAlignment="Center" Margin="0,0,20,0">
-                    <Button Background="Transparent"
-            BorderThickness="0"
-            Cursor="Hand"
-            Click="btnUsuario_Click">
-                        <Button.ContextMenu>
-                            <ContextMenu>
-                                <MenuItem Header="Cerrar sesión" Click="menuCerrarSesion_Click"/>
-                            </ContextMenu>
-                        </Button.ContextMenu>
-
+                    <ToggleButton x:Name="btnUsuario"
+                  Background="Transparent"
+                  BorderThickness="0"
+                  Cursor="Hand">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                             <Image Source="{Binding ImagenUsuarioActual}"
                    Width="28"
@@ -196,7 +186,27 @@
                        Foreground="Black"
                        VerticalAlignment="Center"/>
                         </StackPanel>
-                    </Button>
+                    </ToggleButton>
+
+                    <Popup IsOpen="{Binding IsChecked, ElementName=btnUsuario}"
+           PlacementTarget="{Binding ElementName=btnUsuario}"
+           Placement="Bottom"
+           StaysOpen="False">
+                        <Border Background="White"
+                BorderBrush="#D1D5DB"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="4">
+                            <StackPanel Width="140">
+                                <Button Content="Cerrar sesión"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Left"
+                        Padding="10 7"
+                        Click="menuCerrarSesion_Click"/>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
                 </Grid>
             </Grid>
 

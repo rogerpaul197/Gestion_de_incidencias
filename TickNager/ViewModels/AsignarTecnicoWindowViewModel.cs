@@ -1,18 +1,28 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Controls;
 using TickNager.Models;
 using TickNager.Repositories;
 
 namespace TickNager.ViewModels
 {
-    public class AsignarTecnicoWindowViewModel
+    public class AsignarTecnicoWindowViewModel : INotifyPropertyChanged
     {
         private int _idIncidencia;
+        private Usuario _tecnicoSeleccionado;
 
         public ObservableCollection<Usuario> Tecnicos { get; set; }
 
-        public Usuario TecnicoSeleccionado { get; set; }
+        public Usuario TecnicoSeleccionado
+        {
+            get { return _tecnicoSeleccionado; }
+            set
+            {
+                _tecnicoSeleccionado = value;
+                OnPropertyChanged();
+            }
+        }
 
         public AsignarTecnicoWindowViewModel(int idIncidencia)
         {
@@ -34,16 +44,6 @@ namespace TickNager.ViewModels
             }
         }
 
-        public void SeleccionarTecnico(object sender)
-        {
-            RadioButton radio = sender as RadioButton;
-
-            if (radio != null)
-            {
-                TecnicoSeleccionado = radio.DataContext as Usuario;
-            }
-        }
-
         public bool AsignarTecnico()
         {
             if (TecnicoSeleccionado == null)
@@ -57,6 +57,13 @@ namespace TickNager.ViewModels
             MessageBox.Show("Técnico asignado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 
             return true;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

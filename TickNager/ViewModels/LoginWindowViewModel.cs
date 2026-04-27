@@ -1,39 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
+using TickNager.Views.Windows;
 
 namespace TickNager.ViewModels
 {
     public class LoginWindowViewModel
     {
-        //Datos ingrados por el usuario.
         public string Correo { get; set; }
         public string Contrasena { get; set; }
-        public LoginWindowViewModel() 
+        public bool InicioCorrecto { get; set; }
+
+        public LoginWindowViewModel()
         {
         }
 
-        /// <summary>
-        /// Permite iniciar sesión si los datos introducidos son correctos, de lo contrario muestra un mensaje de error.
-        /// </summary>
-        public bool iniciarSesion()
+        public void IniciarSesion()
         {
-            Usuario usuario = UsuarioRepository.ObtenerUsuarioPorCredenciales(Correo, Contrasena);
+            string contrasenaHasheada = HashPasswordHelper.HashPassword(Contrasena);
+
+            Usuario usuario = UsuarioRepository.ObtenerUsuarioPorCredenciales(Correo, contrasenaHasheada);
 
             if (usuario == null)
             {
+                InicioCorrecto = false;
                 MessageBox.Show("Correo o contraseña incorrectos. Por favor, inténtelo de nuevo.", "Error de inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Error);
-                return false;
+                return;
             }
-            else
-            {
-                SesionUsuario.UsuarioActual = usuario;
-                return true;
-            }
+
+            SesionUsuario.UsuarioActual = usuario;
+            InicioCorrecto = true;
+
+            DashboardWindow ventana = new DashboardWindow();
+            ventana.Show();
+        }
+
+        public void MostrarAyuda()
+        {
+            InformacionWindow ventanaInformacion = new InformacionWindow();
+            ventanaInformacion.Show();
         }
     }
 }

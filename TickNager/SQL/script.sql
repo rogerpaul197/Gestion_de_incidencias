@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS incidencias (
 	responsable TEXT,
 	id_usuario INTEGER,
 	usuario_reportero TEXT,
+	id_tecnico INTEGER,
 	fecha_creacion TEXT NOT NULL DEFAULT (date('now')),
 	fecha_cierre TEXT
 );

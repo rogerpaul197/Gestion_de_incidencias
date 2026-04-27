@@ -404,3 +404,11 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\refint\TickN
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.pdb
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\TickNager.genruntimeconfig.cache
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\ref\TickNager.dll
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\IncidenciaTecnicoCreada.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AsignarTecnicoWindow.g.cs
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\IncidenciaTecnicoCreada.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.baml
+C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AsignarTecnicoWindow.baml

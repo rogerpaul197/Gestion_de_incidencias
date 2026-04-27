@@ -236,5 +236,64 @@ namespace TickNager.Repositories
 
             return listaIncidencias;
         }
+
+        public static List<Incidencia> ObtenerIncidenciasPorTecnico(int idTecnico)
+        {
+            List<Incidencia> listaIncidencias = new List<Incidencia>();
+
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT id, titulo, descripcion, categoria, id_categoria, prioridad, estado, id_usuario, usuario_reportero, id_tecnico, fecha_creacion
+                            FROM incidencias
+                            WHERE id_tecnico = @id_tecnico";
+
+            comando.Parameters.AddWithValue("@id_tecnico", idTecnico);
+
+            using var reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Incidencia incidencia = new Incidencia
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Titulo = reader["titulo"].ToString(),
+                    Descripcion = reader["descripcion"].ToString(),
+                    Categoria = reader["categoria"].ToString(),
+                    IdCategoria = reader["id_categoria"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_categoria")),
+                    Prioridad = reader["prioridad"].ToString(),
+                    Estado = reader["estado"].ToString(),
+                    IdUsuario = reader["id_usuario"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_usuario")),
+                    UsuarioReportero = reader["usuario_reportero"].ToString(),
+                    IdTecnico = reader["id_tecnico"] == DBNull.Value ? 0 : reader.GetInt32(reader.GetOrdinal("id_tecnico"))
+                };
+
+                if (reader["fecha_creacion"] != DBNull.Value)
+                {
+                    incidencia.AsignarFechaRegistro(DateTime.Parse(reader["fecha_creacion"].ToString()));
+                }
+
+                listaIncidencias.Add(incidencia);
+            }
+
+            return listaIncidencias;
+        }
+
+        public static void ActualizarEstadoIncidencia(int idIncidencia, string estado)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"UPDATE incidencias
+                            SET estado = @estado
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@estado", estado);
+            comando.Parameters.AddWithValue("@id", idIncidencia);
+
+            comando.ExecuteNonQuery();
+        }
     }
 }

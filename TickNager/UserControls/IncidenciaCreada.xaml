@@ -25,6 +25,7 @@
                            FontSize="15"
                            FontWeight="SemiBold"
                            Foreground="#1F2937"/>
+
                 <TextBlock Text="{Binding Descripcion}"
                            Margin="0 4 0 0"
                            FontSize="13"
@@ -39,11 +40,11 @@
                        Foreground="#374151"/>
 
             <Border Grid.Column="2"
-        Width="90"
-        Height="30"
-        CornerRadius="15"
-        HorizontalAlignment="Left"
-        VerticalAlignment="Center">
+                    Width="90"
+                    Height="30"
+                    CornerRadius="15"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Setter Property="Background" Value="#FEF3C7"/>
@@ -62,10 +63,10 @@
                 </Border.Style>
 
                 <TextBlock Text="{Binding Prioridad}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="13"
-               FontWeight="SemiBold">
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="13"
+                           FontWeight="SemiBold">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock">
                             <Setter Property="Foreground" Value="#B45309"/>
@@ -86,24 +87,82 @@
             </Border>
 
             <Border Grid.Column="3"
-                    Width="110"
-                    Height="30"
-                    Background="#DCFCE7"
-                    CornerRadius="15"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center">
+        Width="110"
+        Height="30"
+        CornerRadius="15"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Center">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#FEF3C7"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
+                                <Setter Property="Background" Value="#FEF3C7"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Estado}" Value="Asignada">
+                                <Setter Property="Background" Value="#DBEAFE"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Estado}" Value="En proceso">
+                                <Setter Property="Background" Value="#FFEDD5"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
+                                <Setter Property="Background" Value="#DCFCE7"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+
                 <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
                     <Ellipse Width="8"
-                             Height="8"
-                             Fill="#16A34A"
-                             Margin="0 0 6 0"/>
+                 Height="8"
+                 Margin="0 0 6 0">
+                        <Ellipse.Style>
+                            <Style TargetType="Ellipse">
+                                <Setter Property="Fill" Value="#D97706"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
+                                        <Setter Property="Fill" Value="#D97706"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Asignada">
+                                        <Setter Property="Fill" Value="#2563EB"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="En proceso">
+                                        <Setter Property="Fill" Value="#EA580C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
+                                        <Setter Property="Fill" Value="#16A34A"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Ellipse.Style>
+                    </Ellipse>
+
                     <TextBlock Text="{Binding Estado}"
-                               VerticalAlignment="Center"
-                               FontSize="13"
-                               FontWeight="SemiBold"
-                               Foreground="#15803D"/>
+                   FontSize="13"
+                   FontWeight="SemiBold"
+                   VerticalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Foreground" Value="#B45309"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
+                                        <Setter Property="Foreground" Value="#B45309"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Asignada">
+                                        <Setter Property="Foreground" Value="#2563EB"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="En proceso">
+                                        <Setter Property="Foreground" Value="#EA580C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
+                                        <Setter Property="Foreground" Value="#15803D"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
                 </StackPanel>
             </Border>
 
@@ -115,28 +174,49 @@
 
             <Grid Grid.Column="5">
                 <Border Width="42"
-            Height="38"
-            Background="White"
-            BorderBrush="#D1D5DB"
-            BorderThickness="1"
-            CornerRadius="8"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-                    <Button Content="⋮"
-                Background="Transparent"
-                BorderThickness="0"
-                FontSize="18"
-                Foreground="#6B7280"
-                Cursor="Hand"
-                Click="btnAcciones_Click">
-                        <Button.ContextMenu>
-                            <ContextMenu>
-                                <MenuItem Header="Ver detalle" Click="menuVerDetalle_Click"/>
-                                <MenuItem Header="Asignar técnico" Click="menuAsignarResponsable_Click"/>
-                            </ContextMenu>
-                        </Button.ContextMenu>
-                    </Button>
+                        Height="38"
+                        Background="White"
+                        BorderBrush="#D1D5DB"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                    <ToggleButton x:Name="btnAcciones"
+                                  Content="⋮"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  FontSize="18"
+                                  Foreground="#6B7280"
+                                  Cursor="Hand"/>
                 </Border>
+
+                <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"
+                       PlacementTarget="{Binding ElementName=btnAcciones}"
+                       Placement="Bottom"
+                       StaysOpen="False">
+                    <Border Background="White"
+                            BorderBrush="#D1D5DB"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="4">
+                        <StackPanel Width="150">
+                            <Button Content="Ver detalle"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="menuVerDetalle_Click"/>
+
+                            <Button Content="Asignar técnico"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="menuAsignarResponsable_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Popup>
             </Grid>
         </Grid>
     </Border>

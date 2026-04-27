@@ -137,9 +137,20 @@ namespace TickNager.ViewModels
 
             var usuarioActual = SesionUsuario.UsuarioActual;
 
-            var lista = usuarioActual.RolUsuario == "Administrador"
-                ? IncidenciaRepository.ObtenerIncidencias()
-                : IncidenciaRepository.ObtenerIncidenciasPorUsuario(usuarioActual.Id);
+            List<Incidencia> lista;
+
+            if (usuarioActual.RolUsuario == "Administrador")
+            {
+                lista = IncidenciaRepository.ObtenerIncidencias();
+            }
+            else if (usuarioActual.RolUsuario == "Técnico")
+            {
+                lista = IncidenciaRepository.ObtenerIncidenciasPorTecnico(usuarioActual.Id);
+            }
+            else
+            {
+                lista = IncidenciaRepository.ObtenerIncidenciasPorUsuario(usuarioActual.Id);
+            }
 
             foreach (var incidencia in lista)
             {

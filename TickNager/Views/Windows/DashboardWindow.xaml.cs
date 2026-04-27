@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
-using TickNager.Helper;
 using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
@@ -12,6 +10,7 @@ namespace TickNager.Views.Windows
         public DashboardWindow()
         {
             InitializeComponent();
+            DataContext = new DashboardViewModel();
             _obj = DataContext as DashboardViewModel;
         }
 
@@ -45,24 +44,9 @@ namespace TickNager.Views.Windows
             _obj.mostrarAjustes();
         }
 
-        private void btnUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            Button boton = sender as Button;
-
-            if (boton.ContextMenu != null)
-            {
-                boton.ContextMenu.PlacementTarget = boton;
-                boton.ContextMenu.IsOpen = true;
-            }
-        }
-
         private void menuCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-            SesionUsuario.CerrarSesion();
-
-            LoginWindow login = new LoginWindow();
-            login.Show();
-
+            _obj.CerrarSesion();
             this.Close();
         }
     }
