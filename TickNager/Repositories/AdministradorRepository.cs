@@ -20,5 +20,35 @@ namespace TickNager.Repositories
 
             comando.ExecuteNonQuery();
         }
+
+        public static void CambiarRolUsuario(int idUsuario, string nuevoRol)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"UPDATE usuarios
+                            SET rol = @rol
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@rol", nuevoRol);
+            comando.Parameters.AddWithValue("@id", idUsuario);
+
+            comando.ExecuteNonQuery();
+        }
+
+        public static void EliminarUsuario(int idUsuario)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"DELETE FROM usuarios
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@id", idUsuario);
+
+            comando.ExecuteNonQuery();
+        }
     }
 }

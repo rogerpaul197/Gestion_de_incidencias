@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="TickNager.UserControls.VistaAjustes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TickNager.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="800">
+    <Grid Background="#F5F7FB">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="35 30 35 20">
+            <StackPanel>
+                <TextBlock Text="Ajustes" FontSize="34" FontWeight="Bold" Foreground="#1D2B53"/>
+                <TextBlock Text="Configuración básica de la cuenta y la aplicación" Margin="0 8 0 0" FontSize="18" Foreground="#6B7280"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="35 0 35 30">
+            <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14">
+                <Grid Margin="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="12" Padding="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Mi perfil" FontSize="20" FontWeight="SemiBold" Foreground="#1F2937"/>
+                                <TextBlock Text="{Binding NombreCompleto}" Margin="0 12 0 0" FontSize="15" Foreground="#374151"/>
+                                <TextBlock Text="{Binding Correo}" Margin="0 5 0 0" FontSize="15" Foreground="#374151"/>
+                                <TextBlock Text="{Binding Rol}" Margin="0 5 0 0" FontSize="15" Foreground="#374151"/>
+                                <TextBlock Text="{Binding Departamento}" Margin="0 5 0 0" FontSize="15" Foreground="#374151"/>
+                            </StackPanel>
+
+                            <Border Grid.Column="1"
+                                    Background="#E5E7EB"
+                                    Height="38"
+                                    Width="120"
+                                    CornerRadius="10"
+                                    VerticalAlignment="Top">
+                                <Button Content="Editar perfil"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Foreground="#374151"
+                                        FontWeight="SemiBold"
+                                        Click="btnEditarPerfil_Click"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="2" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="12" Padding="20">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Cambiar contraseña" FontSize="20" FontWeight="SemiBold" Foreground="#1F2937"/>
+
+                            <Grid Grid.Row="1" Margin="0 18 0 0">
+                                <TextBlock Text="Nueva contraseña" FontSize="14" Foreground="#374151"/>
+                                <Border Background="White" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="42" Margin="0 25 0 0">
+                                    <TextBox Text="{Binding NuevaContrasena}" Background="Transparent" BorderThickness="0" Padding="12 9 12 0"/>
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Margin="0 18 0 0">
+                                <TextBlock Text="Confirmar contraseña" FontSize="14" Foreground="#374151"/>
+                                <Border Background="White" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="42" Margin="0 25 0 0">
+                                    <TextBox Text="{Binding ConfirmarContrasena}" Background="Transparent" BorderThickness="0" Padding="12 9 12 0"/>
+                                </Border>
+                            </Grid>
+
+                            <Border Grid.Row="3" Background="#2F6BFF" Height="42" Width="170" CornerRadius="10" HorizontalAlignment="Right" Margin="0 22 0 0">
+                                <Button Content="Guardar contraseña" Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="SemiBold" Click="btnGuardarContrasena_Click"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="4" Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="12" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Acerca de TickNager" FontSize="20" FontWeight="SemiBold" Foreground="#1F2937"/>
+                            <TextBlock Text="TickNager 1.0" Margin="0 12 0 0" FontSize="15" Foreground="#374151"/>
+                            <TextBlock Text="Aplicación de escritorio para la gestión de incidencias empresariales." Margin="0 5 0 0" FontSize="15" Foreground="#6B7280"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

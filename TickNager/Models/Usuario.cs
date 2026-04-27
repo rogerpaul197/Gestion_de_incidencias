@@ -1,6 +1,9 @@
-﻿namespace TickNager.Models
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace TickNager.Models
 {
-    public class Usuario
+    public class Usuario : INotifyPropertyChanged
     {
         private int _id;
         private string _nombreUsuario;
@@ -55,6 +58,8 @@
             set
             {
                 _rolUsuario = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(ImagenPerfil));
             }
         }
 
@@ -64,6 +69,8 @@
             set
             {
                 _generoUsuario = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(ImagenPerfil));
             }
         }
 
@@ -145,36 +152,11 @@
             _contrasenaUsuario = contrasenaUsuario;
         }
 
-        /// <summary>
-        /// Reporta una incidencia
-        /// </summary>
-        /// <returns>Devuelve una incidencia con descripción</returns>
-        /*
-        public Incidencia reportarIncidencia()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
-            bool salirBucle = false;
-            string descripcionIncidencia;
-
-            do
-            {
-                Console.WriteLine("Reporta la incidencia: ");
-                descripcionIncidencia = Console.ReadLine();
-
-                if (descripcionIncidencia == null)
-                {
-                    AvisoCampoVacioWindow ventanaAviso = new AvisoCampoVacioWindow();
-                    ventanaAviso.Show();
-                    return null;
-                }
-                else
-                {
-                    salirBucle = true; //si la descripcion la rellenar el usuario, sale del bucle
-                }
-            }
-            while (!salirBucle);
-
-            Incidencia incidencia = new Incidencia(descripcionIncidencia);
-            return incidencia;
-        }*/
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
+        }
     }
 }

@@ -15,6 +15,8 @@ namespace TickNager.ViewModels
 {
     public class DashboardViewModel : INotifyPropertyChanged
     {
+        public static DashboardViewModel obj { get; set; }
+
         //Aquí se van a guardar las los UserControls que serán las vistas en la parte derecha (dependiendo de la función, cada función muestra una vista diferente).
         private UserControl _contenido;
 
@@ -54,8 +56,44 @@ namespace TickNager.ViewModels
             }
         }
 
+        public bool EsAdmin
+        {
+            get
+            {
+                return SesionUsuario.UsuarioActual != null &&
+                       SesionUsuario.UsuarioActual.RolUsuario == "Administrador";
+            }
+        }
+
+        public bool EsTecnico
+        {
+            get
+            {
+                return SesionUsuario.UsuarioActual != null &&
+                       SesionUsuario.UsuarioActual.RolUsuario == "Técnico";
+            }
+        }
+
+        public bool EsUsuario
+        {
+            get
+            {
+                return SesionUsuario.UsuarioActual != null &&
+                       SesionUsuario.UsuarioActual.RolUsuario == "Usuario";
+            }
+        }
+
+        public bool VerDashboard
+        {
+            get
+            {
+                return EsAdmin || EsTecnico;
+            }
+        }
+
         public DashboardViewModel()
         {
+            obj = this;
             Contenido = new Dashboard();
         }
 
@@ -103,11 +141,17 @@ namespace TickNager.ViewModels
         //Gestión de usuarios
         public void mostrarVistaGestionUsuarios()
         {
+            if (!EsAdmin)
+                return;
+
             Contenido = new VistaGestionUsuarios(this);
         }
 
         public void mostrarFormularioCrearUsuario()
         {
+            if (!EsAdmin)
+                return;
+
             Contenido = new FormularioCrearUsuario(this);
         }
 
@@ -131,7 +175,7 @@ namespace TickNager.ViewModels
         //Ajustes
         public void mostrarAjustes()
         {
-            //Contenido = new AjustesView();
+            Contenido = new VistaAjustes();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -139,6 +183,16 @@ namespace TickNager.ViewModels
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
+        }
+
+        public void mostrarFormularioCambiarRolUsuario(Usuario usuario)
+        {
+            Contenido = new FormularioCambiarRolUsuario(this, usuario);
+        }
+
+        public void mostrarVistaPerfilUsuario(Usuario usuario)
+        {
+            Contenido = new VistaPerfilUsuario(this, usuario);
         }
     }
 }

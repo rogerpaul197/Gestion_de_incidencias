@@ -8,6 +8,9 @@
     <Compile Update="UserControls\Dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\FormularioCambiarRolUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\FormularioCrearCategoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -26,6 +29,9 @@
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\VistaAjustes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\VistaCategorias.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -39,6 +45,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaIncidenciasUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaPerfilUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Windows\AsignarTecnicoWindow.xaml.cs">

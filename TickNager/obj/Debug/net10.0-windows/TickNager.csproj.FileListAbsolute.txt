@@ -412,3 +412,9 @@ C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-w
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasTecnico.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaIncidenciasUsuario.baml
 C:\Users\cerna\source\repos\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AsignarTecnicoWindow.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\FormularioCambiarRolUsuario.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\FormularioCambiarRolUsuario.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaPerfilUsuario.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaPerfilUsuario.baml
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaAjustes.g.cs
+C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaAjustes.baml

@@ -49,7 +49,7 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT nombre, apellido, rol, genero, departamento, numero, correo, contrasena
+            comando.CommandText = @"SELECT id, nombre, apellido, rol, genero, departamento, numero, correo, contrasena
                             FROM usuarios";
 
             using var reader = comando.ExecuteReader();
@@ -58,6 +58,7 @@ namespace TickNager.Repositories
             {
                 Usuario usuario = new Usuario
                 {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
                     NombreUsuario = reader["nombre"].ToString(),
                     ApellidoUsuario = reader["apellido"].ToString(),
                     RolUsuario = reader["rol"].ToString(),
@@ -167,6 +168,22 @@ namespace TickNager.Repositories
             }
 
             return null;
+        }
+
+        public static void CambiarContrasena(int idUsuario, string contrasenaNueva)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"UPDATE usuarios
+                            SET contrasena = @contrasena
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@contrasena", contrasenaNueva);
+            comando.Parameters.AddWithValue("@id", idUsuario);
+
+            comando.ExecuteNonQuery();
         }
     }
 }

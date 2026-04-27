@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="830" BorderBrush="Transparent" Background="Transparent">
+             d:DesignHeight="100" d:DesignWidth="830" BorderBrush="Transparent" Background="Transparent">
     <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="0 0 0 1" Padding="18 14">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -20,9 +20,8 @@
             <StackPanel Grid.Column="0" Orientation="Horizontal">
                 <Image Source="{Binding ImagenPerfil}" Width="48" Height="48" Margin="0 0 12 0"/>
 
-                <StackPanel>
+                <StackPanel VerticalAlignment="Center">
                     <TextBlock Text="{Binding NombreCompleto}" FontSize="15" FontWeight="SemiBold" Foreground="#1F2937"/>
-                    <TextBlock Text="Ver perfil" Margin="0 4 0 0" FontSize="13" Foreground="#2563EB" TextDecorations="Underline"/>
                 </StackPanel>
             </StackPanel>
 
@@ -31,9 +30,58 @@
             <TextBlock Grid.Column="3" Text="{Binding Departamento}" VerticalAlignment="Center" FontSize="14" Foreground="#6B7280"/>
 
             <Grid Grid.Column="4">
-                <Border Width="42" Height="38" Background="White" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="8">
-                    <Button Content="⋮" Background="Transparent" BorderThickness="0" FontSize="18" Foreground="#6B7280"/>
+                <Border Width="42"
+            Height="38"
+            Background="White"
+            BorderBrush="#D1D5DB"
+            BorderThickness="1"
+            CornerRadius="8"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                    <ToggleButton x:Name="btnAcciones"
+                      Content="⋮"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      FontSize="18"
+                      Foreground="#6B7280"
+                      Cursor="Hand"/>
                 </Border>
+
+                <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"
+           PlacementTarget="{Binding ElementName=btnAcciones}"
+           Placement="Bottom"
+           StaysOpen="False">
+                    <Border Background="White"
+                BorderBrush="#D1D5DB"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="4">
+                        <StackPanel Width="170">
+                            <Button Content="Ver perfil"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Left"
+                        Padding="10 7"
+                        Click="menuVerPerfil_Click"/>
+
+                            <Button Content="Cambiar rol"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Left"
+                        Padding="10 7"
+                        Click="menuCambiarRol_Click"/>
+
+                            <Button Content="Eliminar usuario"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        HorizontalContentAlignment="Left"
+                        Padding="10 7"
+                        Foreground="#B91C1C"
+                        Click="menuEliminarUsuario_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Popup>
             </Grid>
         </Grid>
     </Border>
