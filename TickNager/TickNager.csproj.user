@@ -35,6 +35,9 @@
     <Compile Update="UserControls\VistaCategorias.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\VistaEditarPerfil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\VistaGestionUsuarios.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

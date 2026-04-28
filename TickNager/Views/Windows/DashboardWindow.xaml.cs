@@ -49,5 +49,10 @@ namespace TickNager.Views.Windows
             _obj.CerrarSesion();
             this.Close();
         }
+
+        private void btnMarcarNotificacionesLeidas_Click(object sender, RoutedEventArgs e)
+        {
+            _obj.MarcarNotificacionesComoLeidas();
+        }
     }
 }

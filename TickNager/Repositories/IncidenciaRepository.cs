@@ -33,6 +33,13 @@ namespace TickNager.Repositories
             comando.Parameters.AddWithValue("@id_usuario", incidencia.IdUsuario);
             comando.Parameters.AddWithValue("@usuario_reportero", incidencia.UsuarioReportero);
             comando.ExecuteNonQuery();
+
+            var administradores = UsuarioRepository.ObtenerAdministradores();
+
+            foreach (var admin in administradores)
+            {
+                NotificacionRepository.CrearNotificacion(admin.Id, "Nueva incidencia reportada: " + incidencia.Titulo);
+            }
         }
 
         public static List<Incidencia> ObtenerIncidencias()
@@ -294,6 +301,68 @@ namespace TickNager.Repositories
             comando.Parameters.AddWithValue("@id", idIncidencia);
 
             comando.ExecuteNonQuery();
+
+            if (estado == "Resuelta")
+            {
+                int idUsuario = ObtenerIdUsuarioPorIncidencia(idIncidencia);
+
+                if (idUsuario != 0)
+                {
+                    NotificacionRepository.CrearNotificacion(idUsuario, "Tu incidencia ha sido marcada como resuelta.");
+                }
+            }
+        }
+
+        public static int ObtenerIncidenciasAsignadas()
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT COUNT(*) 
+                            FROM incidencias
+                            WHERE estado = 'Asignada'";
+
+            long resultado = (long)comando.ExecuteScalar();
+
+            return (int)resultado;
+        }
+
+        public static int ObtenerIncidenciasResueltas()
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT COUNT(*) 
+                            FROM incidencias
+                            WHERE estado = 'Resuelta'";
+
+            long resultado = (long)comando.ExecuteScalar();
+
+            return (int)resultado;
+        }
+
+        public static int ObtenerIdUsuarioPorIncidencia(int idIncidencia)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT id_usuario
+                            FROM incidencias
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@id", idIncidencia);
+
+            object resultado = comando.ExecuteScalar();
+
+            if (resultado == null || resultado == DBNull.Value)
+            {
+                return 0;
+            }
+
+            return Convert.ToInt32(resultado);
         }
     }
 }

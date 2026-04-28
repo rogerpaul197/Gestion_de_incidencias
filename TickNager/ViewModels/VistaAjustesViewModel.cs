@@ -1,13 +1,36 @@
 ﻿using System.Windows;
 using TickNager.Helper;
 using TickNager.Repositories;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace TickNager.ViewModels
 {
-    public class VistaAjustesViewModel
+    public class VistaAjustesViewModel : INotifyPropertyChanged
     {
-        public string NuevaContrasena { get; set; }
-        public string ConfirmarContrasena { get; set; }
+        private DashboardViewModel _obj;
+        private string _nuevaContrasena;
+        private string _confirmarContrasena;
+
+        public string NuevaContrasena
+        {
+            get { return _nuevaContrasena; }
+            set
+            {
+                _nuevaContrasena = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ConfirmarContrasena
+        {
+            get { return _confirmarContrasena; }
+            set
+            {
+                _confirmarContrasena = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string NombreCompleto
         {
@@ -29,9 +52,14 @@ namespace TickNager.ViewModels
             get { return SesionUsuario.UsuarioActual.Departamento; }
         }
 
+        public VistaAjustesViewModel(DashboardViewModel dashboardViewModel)
+        {
+            _obj = dashboardViewModel;
+        }
+
         public void EditarPerfil()
         {
-            MessageBox.Show("La edición del perfil la haremos después.");
+            _obj.mostrarVistaEditarPerfil();
         }
 
         public void CambiarContrasena()
@@ -56,6 +84,13 @@ namespace TickNager.ViewModels
 
             NuevaContrasena = "";
             ConfirmarContrasena = "";
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

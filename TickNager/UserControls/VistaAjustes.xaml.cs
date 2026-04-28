@@ -11,7 +11,11 @@ namespace TickNager.UserControls
         public VistaAjustes()
         {
             InitializeComponent();
-            DataContext = new VistaAjustesViewModel();
+        }
+
+        public VistaAjustes(DashboardViewModel dashboardViewModel) : this()
+        {
+            DataContext = new VistaAjustesViewModel(dashboardViewModel);
             _obj = DataContext as VistaAjustesViewModel;
         }
 

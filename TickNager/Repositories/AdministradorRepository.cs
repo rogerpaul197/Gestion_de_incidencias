@@ -11,14 +11,16 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"UPDATE incidencias
-                                    SET id_tecnico = @id_tecnico,
-                                        estado = 'Asignada'
-                                    WHERE id = @id";
+                            SET id_tecnico = @id_tecnico,
+                                estado = 'Asignada'
+                            WHERE id = @id";
 
             comando.Parameters.AddWithValue("@id_tecnico", idTecnico);
             comando.Parameters.AddWithValue("@id", idIncidencia);
 
             comando.ExecuteNonQuery();
+
+            NotificacionRepository.CrearNotificacion(idTecnico, "Te han asignado una nueva incidencia.");
         }
 
         public static void CambiarRolUsuario(int idUsuario, string nuevoRol)

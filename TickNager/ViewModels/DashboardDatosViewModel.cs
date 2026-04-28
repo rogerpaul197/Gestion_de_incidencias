@@ -16,6 +16,8 @@ namespace TickNager.ViewModels
         private int _incidenciasPendientes;
         private int _incidenciasEnProceso;
         private int _totalUsuarios;
+        private int _incidenciasAsignadas;
+        private int _incidenciasResueltas;
         public SeriesCollection SeriesPrioridades { get; set; }
         public SeriesCollection SeriesEstados { get; set; }
         public SeriesCollection SeriesTendencia { get; set; }
@@ -62,6 +64,26 @@ namespace TickNager.ViewModels
             }
         }
 
+        public int IncidenciasAsignadas
+        {
+            get { return _incidenciasAsignadas; }
+            set
+            {
+                _incidenciasAsignadas = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int IncidenciasResueltas
+        {
+            get { return _incidenciasResueltas; }
+            set
+            {
+                _incidenciasResueltas = value;
+                OnPropertyChanged();
+            }
+        }
+
         public DashboardDatosViewModel()
         {
             CargarDatos();
@@ -74,7 +96,9 @@ namespace TickNager.ViewModels
         {
             TotalIncidencias = IncidenciaRepository.ObtenerTotalIncidencias();
             IncidenciasPendientes = IncidenciaRepository.ObtenerIncidenciasPendientes();
+            IncidenciasAsignadas = IncidenciaRepository.ObtenerIncidenciasAsignadas();
             IncidenciasEnProceso = IncidenciaRepository.ObtenerIncidenciasEnProceso();
+            IncidenciasResueltas = IncidenciaRepository.ObtenerIncidenciasResueltas();
             TotalUsuarios = UsuarioRepository.ObtenerTotalUsuarios();
         }
 
@@ -124,8 +148,10 @@ namespace TickNager.ViewModels
 
         public void CargarGraficoEstados()
         {
-            int pendientes = IncidenciaRepository.ObtenerIncidenciasPendientesGrafico();
+            int pendientes = IncidenciaRepository.ObtenerIncidenciasPorEstado("Pendiente");
+            int asignadas = IncidenciaRepository.ObtenerIncidenciasPorEstado("Asignada");
             int enProceso = IncidenciaRepository.ObtenerIncidenciasPorEstado("En proceso");
+            int resueltas = IncidenciaRepository.ObtenerIncidenciasPorEstado("Resuelta");
 
             SeriesEstados = new SeriesCollection
     {
@@ -137,8 +163,20 @@ namespace TickNager.ViewModels
         },
         new PieSeries
         {
+            Title = "Asignada",
+            Values = new ChartValues<int> { asignadas },
+            DataLabels = true
+        },
+        new PieSeries
+        {
             Title = "En proceso",
             Values = new ChartValues<int> { enProceso },
+            DataLabels = true
+        },
+        new PieSeries
+        {
+            Title = "Resuelta",
+            Values = new ChartValues<int> { resueltas },
             DataLabels = true
         }
     };

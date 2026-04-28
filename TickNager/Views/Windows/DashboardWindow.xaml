@@ -9,7 +9,6 @@
         xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
         Title="Dashboard" Height="550" Width="1000">
-
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </Window.Resources>
@@ -124,7 +123,7 @@
         <!--Columna derecha-->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="56"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -137,21 +136,152 @@
                     <ColumnDefinition Width="160"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- (TODO TU HEADER IGUAL, NO CAMBIADO) -->
+                <!--Buscador-->
+                <Grid Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="38" Width="320">
+                        <Grid>
+                            <TextBox Background="Transparent"
+                                     BorderThickness="0"
+                                     Foreground="#374151"
+                                     FontSize="13"
+                                     VerticalContentAlignment="Center"
+                                     Padding="12,0,35,0"/>
 
-                <Grid Grid.Column="3" VerticalAlignment="Center" Margin="0,0,20,0">
+                            <TextBlock Text="Buscador..."
+                                       Foreground="Gray"
+                                       FontSize="13"
+                                       VerticalAlignment="Center"
+                                       Margin="12,0,35,0"
+                                       IsHitTestVisible="False"/>
+
+                            <iconPacks:PackIconMaterial Kind="Magnify"
+                                                        Width="16"
+                                                        Height="16"
+                                                        Foreground="#6B7280"
+                                                        HorizontalAlignment="Right"
+                                                        VerticalAlignment="Center"
+                                                        Margin="0,0,12,0"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <!--Notificaciones-->
+                <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Border Width="38" Height="38" Background="Transparent" CornerRadius="8">
+                        <ToggleButton x:Name="btnNotificaciones"
+                                      Background="Transparent"
+                                      BorderThickness="0"
+                                      Cursor="Hand"
+                                      ToolTip="Notificaciones">
+
+                            <Grid>
+                                <iconPacks:PackIconMaterial Kind="Bell"
+                                                            Width="18"
+                                                            Height="18"
+                                                            Foreground="Black"
+                                                            VerticalAlignment="Center"
+                                                            HorizontalAlignment="Center"/>
+
+                                <Ellipse Width="8"
+                                         Height="8"
+                                         Fill="Red"
+                                         HorizontalAlignment="Right"
+                                         VerticalAlignment="Top"
+                                         Margin="0 2 2 0"
+                                         Visibility="{Binding HayNotificaciones, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            </Grid>
+                        </ToggleButton>
+                    </Border>
+
+                    <Popup IsOpen="{Binding IsChecked, ElementName=btnNotificaciones}"
+                           PlacementTarget="{Binding ElementName=btnNotificaciones}"
+                           Placement="Bottom"
+                           StaysOpen="False">
+
+                        <Border Background="White"
+                                BorderBrush="#D1D5DB"
+                                BorderThickness="1"
+                                CornerRadius="8"
+                                Padding="10">
+
+                            <StackPanel Width="240">
+                                <TextBlock Text="Notificaciones"
+                                           FontWeight="SemiBold"
+                                           Foreground="#1F2937"
+                                           Margin="0 0 0 8"/>
+
+                                <ScrollViewer MaxHeight="180"
+                                              VerticalScrollBarVisibility="Auto">
+                                    <ItemsControl ItemsSource="{Binding Notificaciones}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border BorderBrush="#E5E7EB"
+                                                        BorderThickness="0 0 0 1"
+                                                        Padding="0 7">
+                                                    <StackPanel>
+                                                        <TextBlock Text="{Binding Mensaje}"
+                                                                   TextWrapping="Wrap"
+                                                                   FontSize="13"
+                                                                   Foreground="#374151"/>
+
+                                                        <TextBlock Text="{Binding Fecha}"
+                                                                   Margin="0 3 0 0"
+                                                                   FontSize="11"
+                                                                   Foreground="#6B7280"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </ScrollViewer>
+
+                                <Border Background="#E5E7EB"
+                                        Height="35"
+                                        CornerRadius="8"
+                                        Margin="0 10 0 0">
+                                    <Button Content="Marcar todo como leído"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Foreground="#374151"
+                                            FontSize="12"
+                                            Click="btnMarcarNotificacionesLeidas_Click"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+                </Grid>
+
+                <!--Usuario-->
+                <Grid Grid.Column="3"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Right"
+                      Margin="0,0,25,0">
+
                     <ToggleButton x:Name="btnUsuario"
                                   Background="Transparent"
                                   BorderThickness="0"
-                                  Cursor="Hand">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding ImagenUsuarioActual}" Width="28" Height="28"/>
-                            <TextBlock Text="{Binding NombreUsuarioActual}" Margin="8,0,0,0"/>
+                                  Cursor="Hand"
+                                  Padding="6">
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+
+                            <Image Source="{Binding ImagenUsuarioActual}"
+                                   Width="32"
+                                   Height="32"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,8,0"/>
+
+                            <TextBlock Text="{Binding NombreUsuarioActual}"
+                                       FontSize="13"
+                                       Foreground="Black"
+                                       VerticalAlignment="Center"/>
                         </StackPanel>
                     </ToggleButton>
 
                     <Popup IsOpen="{Binding IsChecked, ElementName=btnUsuario}"
-                           Placement="Bottom">
+                           PlacementTarget="{Binding ElementName=btnUsuario}"
+                           Placement="Bottom"
+                           StaysOpen="False">
                         <Border Background="White" Padding="5">
                             <Button Content="Cerrar sesión" Click="menuCerrarSesion_Click"/>
                         </Border>
@@ -160,7 +290,7 @@
             </Grid>
 
             <!--Contenido-->
-            <Grid Grid.Row="1" Background="#0C0D21">
+            <Grid Grid.Row="1" Background="#F5F7FB">
                 <ScrollViewer>
                     <ContentControl Content="{Binding Contenido}"/>
                 </ScrollViewer>

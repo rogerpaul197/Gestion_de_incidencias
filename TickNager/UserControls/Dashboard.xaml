@@ -33,39 +33,57 @@
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="10"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="10"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="10"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="0" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+                <Border Grid.Column="0" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
                     <StackPanel>
-                        <TextBlock Text="Incidencias totales" FontSize="14" Foreground="#6B7280"/>
-                        <TextBlock Text="{Binding TotalIncidencias}" FontSize="32" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                        <TextBlock Text="Incidencias totales" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding TotalIncidencias}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
                     </StackPanel>
                 </Border>
 
-                <Border Grid.Column="2" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+                <Border Grid.Column="2" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
                     <StackPanel>
-                        <TextBlock Text="Pendientes" FontSize="14" Foreground="#6B7280"/>
-                        <TextBlock Text="{Binding IncidenciasPendientes}" FontSize="32" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                        <TextBlock Text="Pendientes" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding IncidenciasPendientes}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
                     </StackPanel>
                 </Border>
 
-                <Border Grid.Column="4" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+                <Border Grid.Column="4" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
                     <StackPanel>
-                        <TextBlock Text="En proceso" FontSize="14" Foreground="#6B7280"/>
-                        <TextBlock Text="{Binding IncidenciasEnProceso}" FontSize="32" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                        <TextBlock Text="Asignadas" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding IncidenciasAsignadas}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
                     </StackPanel>
                 </Border>
 
-                <Border Grid.Column="6" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+                <Border Grid.Column="6" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
                     <StackPanel>
-                        <TextBlock Text="Usuarios" FontSize="14" Foreground="#6B7280"/>
-                        <TextBlock Text="{Binding TotalUsuarios}" FontSize="32" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                        <TextBlock Text="En proceso" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding IncidenciasEnProceso}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="8" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
+                    <StackPanel>
+                        <TextBlock Text="Resueltas" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding IncidenciasResueltas}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="10" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="16">
+                    <StackPanel>
+                        <TextBlock Text="Usuarios" FontSize="13" Foreground="#6B7280"/>
+                        <TextBlock Text="{Binding TotalUsuarios}" FontSize="30" FontWeight="Bold" Foreground="#1F2937" Margin="0 10 0 0"/>
                     </StackPanel>
                 </Border>
             </Grid>

@@ -185,5 +185,61 @@ namespace TickNager.Repositories
 
             comando.ExecuteNonQuery();
         }
+
+        public static void ActualizarUsuario(Usuario usuario)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"UPDATE usuarios 
+                            SET nombre = @nombre,
+                                apellido = @apellido,
+                                correo = @correo,
+                                departamento = @departamento
+                            WHERE id = @id";
+
+            comando.Parameters.AddWithValue("@nombre", usuario.NombreUsuario);
+            comando.Parameters.AddWithValue("@apellido", usuario.ApellidoUsuario);
+            comando.Parameters.AddWithValue("@correo", usuario.CorreoUsuario);
+            comando.Parameters.AddWithValue("@departamento", usuario.Departamento);
+            comando.Parameters.AddWithValue("@id", usuario.Id);
+
+            comando.ExecuteNonQuery();
+        }
+
+        public static List<Usuario> ObtenerAdministradores()
+        {
+            List<Usuario> administradores = new List<Usuario>();
+
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT id, nombre, apellido, rol, genero, departamento, numero, correo, contrasena
+                            FROM usuarios
+                            WHERE rol = 'Administrador'";
+
+            using var reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Usuario usuario = new Usuario();
+
+                usuario.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                usuario.NombreUsuario = reader["nombre"].ToString();
+                usuario.ApellidoUsuario = reader["apellido"].ToString();
+                usuario.RolUsuario = reader["rol"].ToString();
+                usuario.GeneroUsuario = reader["genero"].ToString();
+                usuario.Departamento = reader["departamento"].ToString();
+                usuario.NumeroUsuario = reader["numero"].ToString();
+                usuario.CorreoUsuario = reader["correo"].ToString();
+                usuario.ContrasenaUsuario = reader["contrasena"].ToString();
+
+                administradores.Add(usuario);
+            }
+
+            return administradores;
+        }
     }
 }

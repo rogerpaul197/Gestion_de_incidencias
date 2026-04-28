@@ -76,7 +76,7 @@ y la otra para el ícono del usuario e inicio de sesión-->
             
             <Grid Grid.Row="6">
                 <Border Background="#1CFF35" Height="40" Width="100" CornerRadius="10" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White">
-                    <Button Height="40" Width="100" Content="Ayuda" Background="Transparent" BorderThickness="0" Foreground="White" Click="btnAyuda_Click"/>
+                    <Button Height="40" Width="100" Content="Ayuda" Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="Bold" Click="btnAyuda_Click"/>
                 </Border>
             </Grid>
 

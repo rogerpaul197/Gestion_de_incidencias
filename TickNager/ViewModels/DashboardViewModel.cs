@@ -6,16 +6,21 @@ using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Input;
 using TickNager.Commands;
-using TickNager.UserControls;
-using TickNager.Models;
 using TickNager.Helper;
+using TickNager.Models;
+using TickNager.Repositories;
+using TickNager.UserControls;
 using TickNager.Views.Windows;
+using System.Collections.ObjectModel;
+
 
 namespace TickNager.ViewModels
 {
     public class DashboardViewModel : INotifyPropertyChanged
     {
         public static DashboardViewModel obj { get; set; }
+
+        private ObservableCollection<Notificacion> _notificaciones;
 
         //Aquí se van a guardar las los UserControls que serán las vistas en la parte derecha (dependiendo de la función, cada función muestra una vista diferente).
         private UserControl _contenido;
@@ -91,10 +96,50 @@ namespace TickNager.ViewModels
             }
         }
 
+        public ObservableCollection<Notificacion> Notificaciones
+        {
+            get { return _notificaciones; }
+            set
+            {
+                _notificaciones = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool HayNotificaciones
+        {
+            get
+            {
+                int idUsuario = SesionUsuario.UsuarioActual.Id;
+                return NotificacionRepository.ContarNoLeidas(idUsuario) > 0;
+            }
+        }
+
+        public string NotificacionPendientes
+        {
+            get
+            {
+                int pendientes = IncidenciaRepository.ObtenerIncidenciasPendientes();
+                return "Pendientes: " + pendientes;
+            }
+        }
+
+        public string NotificacionAsignadas
+        {
+            get
+            {
+                int asignadas = IncidenciaRepository.ObtenerIncidenciasAsignadas();
+                return "Asignadas: " + asignadas;
+            }
+        }
+
         public DashboardViewModel()
         {
             obj = this;
+
             Contenido = new Dashboard();
+
+            CargarNotificaciones();
         }
 
         public void CerrarSesion()
@@ -175,7 +220,12 @@ namespace TickNager.ViewModels
         //Ajustes
         public void mostrarAjustes()
         {
-            Contenido = new VistaAjustes();
+            Contenido = new VistaAjustes(this);
+        }
+
+        public void mostrarVistaEditarPerfil()
+        {
+            Contenido = new VistaEditarPerfil(this);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -193,6 +243,26 @@ namespace TickNager.ViewModels
         public void mostrarVistaPerfilUsuario(Usuario usuario)
         {
             Contenido = new VistaPerfilUsuario(this, usuario);
+        }
+
+        public void CargarNotificaciones()
+        {
+            int idUsuario = SesionUsuario.UsuarioActual.Id;
+
+            var lista = NotificacionRepository.ObtenerNotificacionesUsuario(idUsuario);
+
+            Notificaciones = new ObservableCollection<Notificacion>(lista);
+
+            OnPropertyChanged(nameof(HayNotificaciones));
+        }
+
+        public void MarcarNotificacionesComoLeidas()
+        {
+            int idUsuario = SesionUsuario.UsuarioActual.Id;
+
+            NotificacionRepository.MarcarTodasComoLeidas(idUsuario);
+
+            OnPropertyChanged(nameof(HayNotificaciones));
         }
     }
 }
