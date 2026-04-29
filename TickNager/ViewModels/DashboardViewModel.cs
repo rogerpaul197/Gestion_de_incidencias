@@ -92,7 +92,7 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return EsAdmin || EsTecnico;
+                return true;
             }
         }
 

@@ -16,8 +16,8 @@
                 <ColumnDefinition Width="1.1*"/>
                 <ColumnDefinition Width="1.1*"/>
                 <ColumnDefinition Width="1.2*"/>
-                <ColumnDefinition Width="1.2*"/>
-                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.7*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" VerticalAlignment="Center">

@@ -39,10 +39,10 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="0" Text="Incidencia" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-                            <TextBlock Grid.Column="1" Text="Categoría" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-                            <TextBlock Grid.Column="2" Text="Prioridad" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-                            <TextBlock Grid.Column="3" Text="Estado" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-                            <TextBlock Grid.Column="4" Text="Fecha" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
+                            <TextBlock Grid.Column="1" Text="Categoría" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151" Margin="19 0 0 0"/>
+                            <TextBlock Grid.Column="2" Text="Prioridad" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151" Margin="40 0 0 0"/>
+                            <TextBlock Grid.Column="3" Text="Estado" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151" Margin="70 0 0 0"/>
+                            <TextBlock Grid.Column="4" Text="Fecha" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151" Margin="60 0 0 0"/>
                             <TextBlock Grid.Column="5" Text="Acciones" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
                         </Grid>
                     </Border>

@@ -8,9 +8,34 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:vm="clr-namespace:TickNager.ViewModels"
         mc:Ignorable="d"
-        Title="Dashboard" Height="550" Width="1000">
+        Title="Dashboard" Height="600" Width="1200" MinWidth="1100" MinHeight="600">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,10,0,10"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.35"/>
+                    <Setter Property="Cursor" Value="Arrow"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -35,25 +60,18 @@
             <Grid Grid.Row="1">
                 <StackPanel Margin="15,10,0,0">
 
-                    <!-- Dashboard (Admin + Técnico) -->
-                    <Button Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
-                            Click="btnDashboard_Click"
-                            Visibility="{Binding VerDashboard, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <!-- Dashboard -->
+                    <Button Style="{StaticResource MenuButtonStyle}"
+                            Click="btnDashboard_Click">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="ViewDashboard" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Dashboard" Foreground="White"/>
                         </StackPanel>
                     </Button>
 
-                    <!-- Incidencias (TODOS) -->
+                    <!-- Incidencias -->
                     <Button Name="btnIncidencias"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
+                            Style="{StaticResource MenuButtonStyle}"
                             Click="btnIncidencias_Click">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="AlertCircle" Foreground="White" Margin="0,0,20,0"/>
@@ -61,55 +79,41 @@
                         </StackPanel>
                     </Button>
 
-                    <!-- Gestión usuarios (SOLO ADMIN) -->
-                    <Button Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
+                    <!-- Gestión usuarios -->
+                    <Button Style="{StaticResource MenuButtonStyle}"
                             Click="btnGestionUsuarios_Click"
-                            Visibility="{Binding EsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            IsEnabled="{Binding EsAdmin}">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="AccountGroup" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Gestión de usuarios" Foreground="White"/>
                         </StackPanel>
                     </Button>
 
-                    <!-- Equipos -->
+                    <!-- Grupos de trabajo -->
                     <Button Name="btnEquipos"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
-                            Click="btnEquipos_Click"
-                            Visibility="{Binding EsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="btnEquipos_Click">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="BriefcaseAccount" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Grupos de trabajo" Foreground="White"/>
                         </StackPanel>
                     </Button>
 
-                    <!-- Categorías (SOLO ADMIN) -->
+                    <!-- Categorías -->
                     <Button Name="btnCategorias"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
+                            Style="{StaticResource MenuButtonStyle}"
                             Click="btnCategorias_Click"
-                            Visibility="{Binding EsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            IsEnabled="{Binding EsAdmin}">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="Tag" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Categorías" Foreground="White"/>
                         </StackPanel>
                     </Button>
 
-                    <!-- Ajustes (SOLO ADMIN) -->
+                    <!-- Ajustes -->
                     <Button Name="btnAjustes"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            HorizontalAlignment="Left"
-                            Margin="0,10,0,10"
-                            Click="btnAjustes_Click"
-                            Visibility="{Binding EsAdmin, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            Style="{StaticResource MenuButtonStyle}"
+                            Click="btnAjustes_Click">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="Cog" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Ajustes" Foreground="White"/>
@@ -132,7 +136,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="360"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="160"/>
                 </Grid.ColumnDefinitions>
 
@@ -167,29 +171,38 @@
 
                 <!--Notificaciones-->
                 <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Border Width="38" Height="38" Background="Transparent" CornerRadius="8">
+                    <Border Height="38" Background="Transparent" CornerRadius="8">
                         <ToggleButton x:Name="btnNotificaciones"
                                       Background="Transparent"
                                       BorderThickness="0"
                                       Cursor="Hand"
-                                      ToolTip="Notificaciones">
+                                      ToolTip="Notificaciones"
+                                      Padding="8 0">
 
-                            <Grid>
-                                <iconPacks:PackIconMaterial Kind="Bell"
-                                                            Width="18"
-                                                            Height="18"
-                                                            Foreground="Black"
-                                                            VerticalAlignment="Center"
-                                                            HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Grid>
+                                    <iconPacks:PackIconMaterial Kind="Bell"
+                                                                Width="18"
+                                                                Height="18"
+                                                                Foreground="Black"
+                                                                VerticalAlignment="Center"
+                                                                HorizontalAlignment="Center"/>
 
-                                <Ellipse Width="8"
-                                         Height="8"
-                                         Fill="Red"
-                                         HorizontalAlignment="Right"
-                                         VerticalAlignment="Top"
-                                         Margin="0 2 2 0"
-                                         Visibility="{Binding HayNotificaciones, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                            </Grid>
+                                    <Ellipse Width="8"
+                                             Height="8"
+                                             Fill="Red"
+                                             HorizontalAlignment="Right"
+                                             VerticalAlignment="Top"
+                                             Margin="0 2 0 0"
+                                             Visibility="{Binding HayNotificaciones, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                </Grid>
+
+                                <TextBlock Text="Notificaciones"
+                                           Margin="8 0 0 0"
+                                           FontSize="13"
+                                           Foreground="Black"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
                         </ToggleButton>
                     </Border>
 

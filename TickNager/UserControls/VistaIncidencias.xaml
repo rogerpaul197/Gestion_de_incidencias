@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#F5F7FB">
@@ -13,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <!--Cabecera-->
-        <Grid Grid.Row="0" Margin="35 30 35 20">
+        <Grid Grid.Row="0" Margin="25 30 25 20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition/>
@@ -24,7 +25,8 @@
                            FontSize="34"
                            FontWeight="Bold"
                            Foreground="#1D2B53"/>
-                <TextBlock Text="Gestiona, revisa y asigna responsables a las incidencias"
+
+                <TextBlock Text="Gestiona, revisa y asigna responsables a las incidencias."
                            Margin="0 8 0 0"
                            FontSize="18"
                            Foreground="#6B7280"/>
@@ -32,14 +34,20 @@
         </Grid>
 
         <!--Contenido-->
-        <Grid Grid.Row="1" Margin="35 0 35 30">
+        <Grid Grid.Row="1" Margin="25 0 25 30">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+            <Border Grid.Row="0"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    CornerRadius="14"
+                    Padding="20">
+
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.2*"/>
@@ -53,90 +61,163 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0">
-                        <TextBox Height="46"
-                     VerticalContentAlignment="Center"
-                     Padding="16 0 45 0"
-                     FontSize="15"
-                     Background="#F9FAFB"
-                     BorderBrush="#D1D5DB"
-                     BorderThickness="1"
-                     Foreground="#374151"
-                     Text="{Binding TextoBusqueda, UpdateSourceTrigger=PropertyChanged}"/>
+                    <!--Buscador-->
+                    <StackPanel Grid.Column="0" VerticalAlignment="Bottom">
+                        <Border Background="#F9FAFB"
+                                BorderBrush="#D1D5DB"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Height="46">
 
-                        <TextBlock Text="Buscar por título"
-                       Margin="16 0 45 0"
-                       VerticalAlignment="Center"
-                       Foreground="#9CA3AF"
-                       FontSize="15"
-                       IsHitTestVisible="False">
-                            <TextBlock.Style>
-                                <Style TargetType="TextBlock">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding TextoBusqueda}" Value="">
-                                            <Setter Property="Visibility" Value="Visible"/>
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Binding TextoBusqueda}" Value="{x:Null}">
-                                            <Setter Property="Visibility" Value="Visible"/>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBlock.Style>
-                        </TextBlock>
+                            <Grid>
+                                <TextBox VerticalContentAlignment="Center"
+                                         Padding="16 0 45 0"
+                                         FontSize="15"
+                                         Background="Transparent"
+                                         BorderThickness="0"
+                                         Foreground="#374151"
+                                         Text="{Binding TextoBusqueda, UpdateSourceTrigger=PropertyChanged}"/>
 
-                        <TextBlock Text="⌕"
-                       FontSize="18"
-                       Foreground="#6B7280"
-                       HorizontalAlignment="Right"
-                       VerticalAlignment="Center"
-                       Margin="0 0 16 0"/>
-                    </Grid>
+                                <TextBlock Text="Buscar por título"
+                                           Margin="16 0 45 0"
+                                           VerticalAlignment="Center"
+                                           Foreground="#9CA3AF"
+                                           FontSize="15"
+                                           IsHitTestVisible="False">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding TextoBusqueda}" Value="">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding TextoBusqueda}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
 
-                    <StackPanel Grid.Column="2" VerticalAlignment="Center">
-                        <TextBlock Text="Prioridad" Margin="0 0 0 7" FontSize="14" Foreground="#374151"/>
-                        <ComboBox ItemsSource="{Binding PrioridadesFiltro}"
-                      SelectedItem="{Binding PrioridadSeleccionada}"
-                      Height="46"
-                      Background="#F9FAFB"
-                      BorderBrush="#D1D5DB"
-                      BorderThickness="1"
-                      FontSize="14"/>
+                                <iconPacks:PackIconMaterial Kind="Magnify"
+                                                            Width="18"
+                                                            Height="18"
+                                                            Foreground="#6B7280"
+                                                            HorizontalAlignment="Right"
+                                                            VerticalAlignment="Center"
+                                                            Margin="0 0 16 0"/>
+                            </Grid>
+                        </Border>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="4" VerticalAlignment="Center">
-                        <TextBlock Text="Estado" Margin="0 0 0 7" FontSize="14" Foreground="#374151"/>
-                        <ComboBox ItemsSource="{Binding EstadosFiltro}"
-                      SelectedItem="{Binding EstadoSeleccionado}"
-                      Height="46"
-                      Background="#F9FAFB"
-                      BorderBrush="#D1D5DB"
-                      BorderThickness="1"
-                      FontSize="14"/>
+                    <!--Prioridad-->
+                    <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+                        <TextBlock Text="Prioridad"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+
+                        <Border Background="#F9FAFB"
+                                BorderBrush="#D1D5DB"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Height="46">
+
+                            <ComboBox ItemsSource="{Binding PrioridadesFiltro}"
+                                      SelectedItem="{Binding PrioridadSeleccionada}"
+                                      Background="Transparent"
+                                      BorderThickness="0"
+                                      FontSize="14"
+                                      Padding="8 0 8 0"
+                                      VerticalContentAlignment="Center"
+                                      Height="44"
+                                      Margin="1"/>
+                        </Border>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="6" VerticalAlignment="Center">
-                        <TextBlock Text="Categoría" Margin="0 0 0 7" FontSize="14" Foreground="#374151"/>
-                        <ComboBox ItemsSource="{Binding CategoriasFiltro}"
-              SelectedItem="{Binding CategoriaSeleccionada}"
-              Height="46"
-              Background="#F9FAFB"
-              BorderBrush="#D1D5DB"
-              BorderThickness="1"
-              FontSize="14"
-              ScrollViewer.VerticalScrollBarVisibility="Auto"
-              MaxDropDownHeight="120"/>
+                    <!--Estado-->
+                    <StackPanel Grid.Column="4" VerticalAlignment="Bottom">
+                        <TextBlock Text="Estado"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+
+                        <Border Background="#F9FAFB"
+                                BorderBrush="#D1D5DB"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Height="46">
+
+                            <ComboBox ItemsSource="{Binding EstadosFiltro}"
+                                      SelectedItem="{Binding EstadoSeleccionado}"
+                                      Background="Transparent"
+                                      BorderThickness="0"
+                                      FontSize="14"
+                                      Padding="8 0 8 0"
+                                      VerticalContentAlignment="Center"
+                                      Height="44"
+                                      Margin="1"/>
+                        </Border>
                     </StackPanel>
 
-                    <Border Grid.Column="8" Width="150" Height="46" Background="White" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" VerticalAlignment="Bottom">
-                        <Button Content="🧹  Limpiar filtros"
-                    Background="Transparent"
-                    BorderThickness="0"
-                    Foreground="#374151"
-                    FontSize="14"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Click="btnLimpiarFiltros_Click"/>
+                    <!--Categoría-->
+                    <StackPanel Grid.Column="6" VerticalAlignment="Bottom">
+                        <TextBlock Text="Categoría"
+                                   Margin="0 0 0 7"
+                                   FontSize="14"
+                                   Foreground="#374151"/>
+
+                        <Border Background="#F9FAFB"
+                                BorderBrush="#D1D5DB"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Height="46">
+
+                            <ComboBox ItemsSource="{Binding CategoriasFiltro}"
+                                      SelectedItem="{Binding CategoriaSeleccionada}"
+                                      Background="Transparent"
+                                      BorderThickness="0"
+                                      FontSize="14"
+                                      Padding="8 0 8 0"
+                                      VerticalContentAlignment="Center"
+                                      Height="44"
+                                      Margin="1"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                      MaxDropDownHeight="120"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!--Limpiar filtros-->
+                    <Border Grid.Column="8"
+                            Width="150"
+                            Height="46"
+                            Background="White"
+                            BorderBrush="#D1D5DB"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            VerticalAlignment="Bottom">
+
+                        <Button Background="Transparent"
+                                BorderThickness="0"
+                                Foreground="#374151"
+                                FontSize="14"
+                                FontWeight="SemiBold"
+                                Cursor="Hand"
+                                Click="btnLimpiarFiltros_Click">
+
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center">
+                                <iconPacks:PackIconMaterial Kind="Broom"
+                                                            Width="16"
+                                                            Height="16"
+                                                            Foreground="#374151"
+                                                            Margin="0 0 8 0"/>
+
+                                <TextBlock Text="Limpiar filtros"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
                     </Border>
                 </Grid>
             </Border>
@@ -181,20 +262,47 @@
                                        VerticalAlignment="Center"
                                        FontSize="14"
                                        FontWeight="SemiBold"
+                                       Foreground="#374151"
+                                       Margin="20 0 0 0"/>
+
+                            <TextBlock Grid.Column="2"
+                                       Text="Prioridad"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"
+                                       Margin="47 0 0 0"/>
+
+                            <TextBlock Grid.Column="3"
+                                       Text="Estado"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"
+                                       Margin="75 0 0 0"/>
+
+                            <TextBlock Grid.Column="4"
+                                       Text="Fecha"
+                                       VerticalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"
+                                       Margin="68 0 0 0"/>
+
+                            <TextBlock Grid.Column="5"
+                                       Text="Acciones"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
                                        Foreground="#374151"/>
-
-                            <TextBlock Grid.Column="2" Text="Prioridad" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-
-                            <TextBlock Grid.Column="3" Text="Estado" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-
-                            <TextBlock Grid.Column="4" Text="Fecha" VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
-
-                            <TextBlock Grid.Column="5" Text="Acciones" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="SemiBold" Foreground="#374151"/>
                         </Grid>
                     </Border>
 
                     <!--Filas-->
-                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ScrollViewer Grid.Row="1"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
                         <ItemsControl ItemsSource="{Binding Incidencias}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
