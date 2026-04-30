@@ -39,9 +39,9 @@ namespace TickNager.ViewModels
         {
             get
             {
-                if (SesionUsuario.UsuarioActual != null)
+                if (SesionUsuarioHelper.UsuarioActual != null)
                 {
-                    return SesionUsuario.UsuarioActual.NombreUsuario;
+                    return SesionUsuarioHelper.UsuarioActual.NombreUsuario;
                 }
 
                 return "";
@@ -52,9 +52,9 @@ namespace TickNager.ViewModels
         {
             get
             {
-                if (SesionUsuario.UsuarioActual != null)
+                if (SesionUsuarioHelper.UsuarioActual != null)
                 {
-                    return SesionUsuario.UsuarioActual.ImagenPerfil;
+                    return SesionUsuarioHelper.UsuarioActual.ImagenPerfil;
                 }
 
                 return "/Imagenes/Iconos/interrogacion_por_defecto.png";
@@ -65,8 +65,8 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuario.UsuarioActual != null &&
-                       SesionUsuario.UsuarioActual.RolUsuario == "Administrador";
+                return SesionUsuarioHelper.UsuarioActual != null &&
+                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Administrador";
             }
         }
 
@@ -74,8 +74,8 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuario.UsuarioActual != null &&
-                       SesionUsuario.UsuarioActual.RolUsuario == "Técnico";
+                return SesionUsuarioHelper.UsuarioActual != null &&
+                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Técnico";
             }
         }
 
@@ -83,8 +83,8 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuario.UsuarioActual != null &&
-                       SesionUsuario.UsuarioActual.RolUsuario == "Usuario";
+                return SesionUsuarioHelper.UsuarioActual != null &&
+                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Usuario";
             }
         }
 
@@ -110,7 +110,7 @@ namespace TickNager.ViewModels
         {
             get
             {
-                int idUsuario = SesionUsuario.UsuarioActual.Id;
+                int idUsuario = SesionUsuarioHelper.UsuarioActual.Id;
                 return NotificacionRepository.ContarNoLeidas(idUsuario) > 0;
             }
         }
@@ -144,7 +144,7 @@ namespace TickNager.ViewModels
 
         public void CerrarSesion()
         {
-            SesionUsuario.CerrarSesion();
+            SesionUsuarioHelper.CerrarSesion();
 
             LoginWindow login = new LoginWindow();
             login.Show();
@@ -158,7 +158,7 @@ namespace TickNager.ViewModels
         //Gestión de incidencias
         public void mostrarVistaIncidencias()
         {
-            string rolUsuario = SesionUsuario.UsuarioActual?.RolUsuario;
+            string rolUsuario = SesionUsuarioHelper.UsuarioActual?.RolUsuario;
 
             if (rolUsuario == "Administrador")
             {
@@ -198,12 +198,6 @@ namespace TickNager.ViewModels
                 return;
 
             Contenido = new FormularioCrearUsuario(this);
-        }
-
-        //Equipos
-        public void mostrarVistaEquipos()
-        {
-            //Contenido = new EquiposView();
         }
 
         //Categorías
@@ -247,7 +241,7 @@ namespace TickNager.ViewModels
 
         public void CargarNotificaciones()
         {
-            int idUsuario = SesionUsuario.UsuarioActual.Id;
+            int idUsuario = SesionUsuarioHelper.UsuarioActual.Id;
 
             var lista = NotificacionRepository.ObtenerNotificacionesUsuario(idUsuario);
 
@@ -258,7 +252,7 @@ namespace TickNager.ViewModels
 
         public void MarcarNotificacionesComoLeidas()
         {
-            int idUsuario = SesionUsuario.UsuarioActual.Id;
+            int idUsuario = SesionUsuarioHelper.UsuarioActual.Id;
 
             NotificacionRepository.MarcarTodasComoLeidas(idUsuario);
 

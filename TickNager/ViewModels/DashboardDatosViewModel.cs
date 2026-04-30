@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Text;
-using TickNager.Repositories;
+﻿/// <summary>
+/// Esta clase se encarga de cargar los datos y gráficos que se muestran en el Dashboard.
+/// </summary>
+
 using LiveCharts;
 using LiveCharts.Wpf;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows.Media;
+using TickNager.Repositories;
 
 namespace TickNager.ViewModels
 {
@@ -18,6 +19,7 @@ namespace TickNager.ViewModels
         private int _totalUsuarios;
         private int _incidenciasAsignadas;
         private int _incidenciasResueltas;
+
         public SeriesCollection SeriesPrioridades { get; set; }
         public SeriesCollection SeriesEstados { get; set; }
         public SeriesCollection SeriesTendencia { get; set; }
@@ -84,6 +86,9 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Constructor que carga los datos principales y los gráficos.
+        /// </summary>
         public DashboardDatosViewModel()
         {
             CargarDatos();
@@ -92,6 +97,9 @@ namespace TickNager.ViewModels
             CargarGraficoTendencia();
         }
 
+        /// <summary>
+        /// Esta función carga los datos numéricos del dashboard.
+        /// </summary>
         public void CargarDatos()
         {
             TotalIncidencias = IncidenciaRepository.ObtenerTotalIncidencias();
@@ -104,41 +112,56 @@ namespace TickNager.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Esta función avisa a la vista cuando cambia una propiedad.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad que cambió.</param>
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
 
+        /// <summary>
+        /// Esta función carga el gráfico de incidencias por prioridad.
+        /// </summary>
         public void CargarGraficoPrioridades()
         {
             int baja = IncidenciaRepository.ObtenerIncidenciasPorPrioridad("Baja");
             int media = IncidenciaRepository.ObtenerIncidenciasPorPrioridad("Media");
             int alta = IncidenciaRepository.ObtenerIncidenciasPorPrioridad("Alta");
 
-            SeriesPrioridades = new SeriesCollection
-    {
-        new ColumnSeries
-        {
-            Title = "Baja",
-            Values = new ChartValues<int> { baja, 0, 0 },
-            Fill = new SolidColorBrush(Color.FromRgb(34, 197, 94)),
-            MaxColumnWidth = 45
-        },
-        new ColumnSeries
-        {
-            Title = "Media",
-            Values = new ChartValues<int> { 0, media, 0 },
-            Fill = new SolidColorBrush(Color.FromRgb(245, 158, 11)),
-            MaxColumnWidth = 45
-        },
-        new ColumnSeries
-        {
-            Title = "Alta",
-            Values = new ChartValues<int> { 0, 0, alta },
-            Fill = new SolidColorBrush(Color.FromRgb(239, 68, 68)),
-            MaxColumnWidth = 45
-        }
-    };
+            SeriesPrioridades = new SeriesCollection();
+
+            ColumnSeries serieBaja = new ColumnSeries();
+            serieBaja.Title = "Baja";
+            serieBaja.Values = new ChartValues<int>();
+            serieBaja.Values.Add(baja);
+            serieBaja.Values.Add(0);
+            serieBaja.Values.Add(0);
+            serieBaja.Fill = new SolidColorBrush(Color.FromRgb(34, 197, 94));
+            serieBaja.MaxColumnWidth = 45;
+
+            ColumnSeries serieMedia = new ColumnSeries();
+            serieMedia.Title = "Media";
+            serieMedia.Values = new ChartValues<int>();
+            serieMedia.Values.Add(0);
+            serieMedia.Values.Add(media);
+            serieMedia.Values.Add(0);
+            serieMedia.Fill = new SolidColorBrush(Color.FromRgb(245, 158, 11));
+            serieMedia.MaxColumnWidth = 45;
+
+            ColumnSeries serieAlta = new ColumnSeries();
+            serieAlta.Title = "Alta";
+            serieAlta.Values = new ChartValues<int>();
+            serieAlta.Values.Add(0);
+            serieAlta.Values.Add(0);
+            serieAlta.Values.Add(alta);
+            serieAlta.Fill = new SolidColorBrush(Color.FromRgb(239, 68, 68));
+            serieAlta.MaxColumnWidth = 45;
+
+            SeriesPrioridades.Add(serieBaja);
+            SeriesPrioridades.Add(serieMedia);
+            SeriesPrioridades.Add(serieAlta);
 
             LabelsPrioridad = new string[] { "Baja", "Media", "Alta" };
 
@@ -146,6 +169,9 @@ namespace TickNager.ViewModels
             OnPropertyChanged(nameof(LabelsPrioridad));
         }
 
+        /// <summary>
+        /// Esta función carga el gráfico de incidencias por estado.
+        /// </summary>
         public void CargarGraficoEstados()
         {
             int pendientes = IncidenciaRepository.ObtenerIncidenciasPorEstado("Pendiente");
@@ -153,37 +179,43 @@ namespace TickNager.ViewModels
             int enProceso = IncidenciaRepository.ObtenerIncidenciasPorEstado("En proceso");
             int resueltas = IncidenciaRepository.ObtenerIncidenciasPorEstado("Resuelta");
 
-            SeriesEstados = new SeriesCollection
-    {
-        new PieSeries
-        {
-            Title = "Pendiente",
-            Values = new ChartValues<int> { pendientes },
-            DataLabels = true
-        },
-        new PieSeries
-        {
-            Title = "Asignada",
-            Values = new ChartValues<int> { asignadas },
-            DataLabels = true
-        },
-        new PieSeries
-        {
-            Title = "En proceso",
-            Values = new ChartValues<int> { enProceso },
-            DataLabels = true
-        },
-        new PieSeries
-        {
-            Title = "Resuelta",
-            Values = new ChartValues<int> { resueltas },
-            DataLabels = true
-        }
-    };
+            SeriesEstados = new SeriesCollection();
+
+            PieSeries seriePendiente = new PieSeries();
+            seriePendiente.Title = "Pendiente";
+            seriePendiente.Values = new ChartValues<int>();
+            seriePendiente.Values.Add(pendientes);
+            seriePendiente.DataLabels = true;
+
+            PieSeries serieAsignada = new PieSeries();
+            serieAsignada.Title = "Asignada";
+            serieAsignada.Values = new ChartValues<int>();
+            serieAsignada.Values.Add(asignadas);
+            serieAsignada.DataLabels = true;
+
+            PieSeries serieEnProceso = new PieSeries();
+            serieEnProceso.Title = "En proceso";
+            serieEnProceso.Values = new ChartValues<int>();
+            serieEnProceso.Values.Add(enProceso);
+            serieEnProceso.DataLabels = true;
+
+            PieSeries serieResuelta = new PieSeries();
+            serieResuelta.Title = "Resuelta";
+            serieResuelta.Values = new ChartValues<int>();
+            serieResuelta.Values.Add(resueltas);
+            serieResuelta.DataLabels = true;
+
+            SeriesEstados.Add(seriePendiente);
+            SeriesEstados.Add(serieAsignada);
+            SeriesEstados.Add(serieEnProceso);
+            SeriesEstados.Add(serieResuelta);
 
             OnPropertyChanged(nameof(SeriesEstados));
         }
 
+        /// <summary>
+        /// Esta función carga el gráfico de tendencia de incidencias por fecha.
+        /// </summary>
         public void CargarGraficoTendencia()
         {
             var datos = IncidenciaRepository.ObtenerIncidenciasPorFecha();
@@ -197,15 +229,14 @@ namespace TickNager.ViewModels
                 cantidades.Add(item.Value);
             }
 
-            SeriesTendencia = new SeriesCollection
-    {
-        new LineSeries
-        {
-            Title = "Incidencias",
-            Values = cantidades,
-            PointGeometrySize = 10
-        }
-    };
+            SeriesTendencia = new SeriesCollection();
+
+            LineSeries serieTendencia = new LineSeries();
+            serieTendencia.Title = "Incidencias";
+            serieTendencia.Values = cantidades;
+            serieTendencia.PointGeometrySize = 10;
+
+            SeriesTendencia.Add(serieTendencia);
 
             LabelsTendencia = fechas.ToArray();
 

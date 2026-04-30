@@ -23,7 +23,7 @@ namespace TickNager.UserControls
 
         private void btnSeleccionarImagen_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("La selección de imagen la dejamos para después.");
+            MessageBox.Show("La selección de imagen se pa después.");
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)

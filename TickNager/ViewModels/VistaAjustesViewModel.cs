@@ -34,22 +34,22 @@ namespace TickNager.ViewModels
 
         public string NombreCompleto
         {
-            get { return SesionUsuario.UsuarioActual.NombreCompleto; }
+            get { return SesionUsuarioHelper.UsuarioActual.NombreCompleto; }
         }
 
         public string Correo
         {
-            get { return SesionUsuario.UsuarioActual.CorreoUsuario; }
+            get { return SesionUsuarioHelper.UsuarioActual.CorreoUsuario; }
         }
 
         public string Rol
         {
-            get { return SesionUsuario.UsuarioActual.RolUsuario; }
+            get { return SesionUsuarioHelper.UsuarioActual.RolUsuario; }
         }
 
         public string Departamento
         {
-            get { return SesionUsuario.UsuarioActual.Departamento; }
+            get { return SesionUsuarioHelper.UsuarioActual.Departamento; }
         }
 
         public VistaAjustesViewModel(DashboardViewModel dashboardViewModel)
@@ -78,7 +78,7 @@ namespace TickNager.ViewModels
 
             string contrasenaHash = HashPasswordHelper.HashPassword(NuevaContrasena);
 
-            UsuarioRepository.CambiarContrasena(SesionUsuario.UsuarioActual.Id, contrasenaHash);
+            UsuarioRepository.CambiarContrasena(SesionUsuarioHelper.UsuarioActual.Id, contrasenaHash);
 
             MessageBox.Show("Contraseña actualizada correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 

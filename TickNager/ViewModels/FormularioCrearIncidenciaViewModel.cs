@@ -1,10 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿/// <summary>
+/// Esta clase se encarga de la lógica para crear una nueva incidencia.
+/// </summary>
+
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
-using TickNager.UserControls;
 
 namespace TickNager.ViewModels
 {
@@ -14,18 +18,11 @@ namespace TickNager.ViewModels
         private string _descripcion;
         private string _categoria;
         private string _prioridad;
-        public ObservableCollection<string> CategoriasComboBox { get; set; }
-        public ObservableCollection<string> PrioridadesComboBox { get; set; }
         private DashboardViewModel _obj;
 
+        public ObservableCollection<string> CategoriasComboBox { get; set; }
+        public ObservableCollection<string> PrioridadesComboBox { get; set; }
         public ObservableCollection<Categoria> Categorias { get; set; }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
-        }
 
         public string Titulo
         {
@@ -72,25 +69,31 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Constructor vacío de FormularioCrearIncidenciaViewModel.
+        /// </summary>
         public FormularioCrearIncidenciaViewModel()
         {
             Categorias = new ObservableCollection<Categoria>();
             CategoriasComboBox = new ObservableCollection<string>();
             PrioridadesComboBox = new ObservableCollection<string>();
+
             CargarCategorias();
             CargarPrioridades();
         }
 
-        public FormularioCrearIncidenciaViewModel(DashboardViewModel dashboardViewModel)
+        /// <summary>
+        /// Constructor que recibe el ViewModel principal para poder cambiar de vista.
+        /// </summary>
+        /// <param name="dashboardViewModel">ViewModel principal del dashboard.</param>
+        public FormularioCrearIncidenciaViewModel(DashboardViewModel dashboardViewModel) : this()
         {
             _obj = dashboardViewModel;
-            Categorias = new ObservableCollection<Categoria>();
-            CategoriasComboBox = new ObservableCollection<string>();
-            PrioridadesComboBox = new ObservableCollection<string>();
-            CargarCategorias();
-            CargarPrioridades();
         }
 
+        /// <summary>
+        /// Esta función carga las categorías disponibles para el ComboBox.
+        /// </summary>
         public void CargarCategorias()
         {
             Categorias.Clear();
@@ -100,15 +103,18 @@ namespace TickNager.ViewModels
 
             var lista = CategoriaRepository.ObtenerCategorias();
 
-            foreach (var categoria in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                Categorias.Add(categoria);
-                CategoriasComboBox.Add(categoria.Nombre);
+                Categorias.Add(lista[i]);
+                CategoriasComboBox.Add(lista[i].Nombre);
             }
 
             Categoria = "Seleccione categoría";
         }
 
+        /// <summary>
+        /// Esta función carga las prioridades disponibles para el ComboBox.
+        /// </summary>
         public void CargarPrioridades()
         {
             PrioridadesComboBox.Clear();
@@ -121,30 +127,50 @@ namespace TickNager.ViewModels
             Prioridad = "Seleccione prioridad";
         }
 
+        /// <summary>
+        /// Esta función crea una incidencia nueva y la guarda en la base de datos.
+        /// </summary>
         public void crearIncidencia()
         {
-            if (string.IsNullOrWhiteSpace(Titulo) || string.IsNullOrWhiteSpace(Descripcion) || string.IsNullOrWhiteSpace(Prioridad) || string.IsNullOrWhiteSpace(Categoria) || Categoria == "Seleccione categoría" || Prioridad == "Seleccione prioridad")
+            if (Titulo == null || Titulo == "" || Descripcion == null || Descripcion == "" || Prioridad == null || Prioridad == "" || Categoria == null || Categoria == "" || Categoria == "Seleccione categoría" || Prioridad == "Seleccione prioridad")
             {
                 MessageBox.Show("Por favor, complete todos los campos para crear la incidencia.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            else
-            {
-                Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
 
-                incidencia.Estado = "Pendiente";
-                incidencia.IdUsuario = TickNager.Helper.SesionUsuario.UsuarioActual.Id;
-                incidencia.UsuarioReportero = TickNager.Helper.SesionUsuario.UsuarioActual.NombreCompleto;
+            Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
 
-                IncidenciaRepository.RegistrarIncidencia(incidencia);
-                MessageBox.Show("Incidencia registrada.");
-                _obj.mostrarVistaIncidencias();
-            }
+            incidencia.Estado = "Pendiente";
+            incidencia.IdUsuario = SesionUsuarioHelper.UsuarioActual.Id;
+            incidencia.UsuarioReportero = SesionUsuarioHelper.UsuarioActual.NombreCompleto;
+
+            IncidenciaRepository.RegistrarIncidencia(incidencia);
+
+            MessageBox.Show("Incidencia registrada.");
+
+            _obj.mostrarVistaIncidencias();
         }
 
+        /// <summary>
+        /// Esta función vuelve a la vista de incidencias.
+        /// </summary>
         public void volverAVistaIncidencias()
         {
             _obj.mostrarVistaIncidencias();
+        }
+
+        /// <summary>
+        /// Evento que avisa a la vista cuando cambia una propiedad del ViewModel.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Esta función notifica a la vista que una propiedad cambió.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad que cambió.</param>
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

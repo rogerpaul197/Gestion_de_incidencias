@@ -18,7 +18,7 @@ namespace TickNager.ViewModels
         {
             _dashboardViewModel = dashboardViewModel;
 
-            var usuario = SesionUsuario.UsuarioActual;
+            var usuario = SesionUsuarioHelper.UsuarioActual;
 
             Nombre = usuario.NombreUsuario;
             Apellido = usuario.ApellidoUsuario;
@@ -28,7 +28,7 @@ namespace TickNager.ViewModels
 
         public void Guardar()
         {
-            Usuario usuario = SesionUsuario.UsuarioActual;
+            Usuario usuario = SesionUsuarioHelper.UsuarioActual;
 
             usuario.NombreUsuario = Nombre;
             usuario.ApellidoUsuario = Apellido;

@@ -1,4 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿/// <summary>
+/// Esta clase se encarga de la lógica para asignar un técnico a una incidencia.
+/// </summary>
+
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -24,6 +28,10 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Constructor que recibe la incidencia a la que se le asignará un técnico.
+        /// </summary>
+        /// <param name="idIncidencia">Id de la incidencia seleccionada.</param>
         public AsignarTecnicoWindowViewModel(int idIncidencia)
         {
             _idIncidencia = idIncidencia;
@@ -32,18 +40,25 @@ namespace TickNager.ViewModels
             CargarTecnicos();
         }
 
+        /// <summary>
+        /// Esta función carga todos los técnicos disponibles.
+        /// </summary>
         public void CargarTecnicos()
         {
             Tecnicos.Clear();
 
             var lista = TecnicoRepository.ObtenerTecnicos();
 
-            foreach (var tecnico in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                Tecnicos.Add(tecnico);
+                Tecnicos.Add(lista[i]);
             }
         }
 
+        /// <summary>
+        /// Esta función asigna el técnico seleccionado a la incidencia.
+        /// </summary>
+        /// <returns>Devuelve true si se asignó correctamente, si no devuelve false.</returns>
         public bool AsignarTecnico()
         {
             if (TecnicoSeleccionado == null)
@@ -61,6 +76,10 @@ namespace TickNager.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Esta función avisa a la vista cuando cambia una propiedad.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad que cambió.</param>
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));

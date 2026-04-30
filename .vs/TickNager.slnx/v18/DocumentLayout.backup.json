@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Proye\\Gestion_de_incidencias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\formulariocrearincidencia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\formulariocrearincidencia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\vistaincidenciastecnico.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\vistaincidenciastecnico.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\incidenciatecnicocreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\incidenciatecnicocreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\views\\windows\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\views\\windows\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\vistaincidencias.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\vistaincidencias.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\usercontrols\\incidenciacreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\usercontrols\\incidenciacreada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|c:\\proye\\gestion_de_incidencias\\ticknager\\helper\\sesionusuariohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{242EF213-F17E-5C17-F953-7337AB9206CA}|TickNager\\TickNager.csproj|solutionrelative:ticknager\\helper\\sesionusuariohelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,86 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormularioCrearIncidencia.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearIncidencia.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\FormularioCrearIncidencia.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\FormularioCrearIncidencia.xaml*",
-              "RelativeToolTip": "TickNager\\UserControls\\FormularioCrearIncidencia.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T13:14:17.702Z",
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "TickNager\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs*",
+              "RelativeToolTip": "TickNager\\ViewModels\\DashboardViewModel.cs*",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAzwAgBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T08:12:53.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VistaIncidenciasTecnico.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidenciasTecnico.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\VistaIncidenciasTecnico.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidenciasTecnico.xaml*",
-              "RelativeToolTip": "TickNager\\UserControls\\VistaIncidenciasTecnico.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T12:21:10.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IncidenciaTecnicoCreada.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaTecnicoCreada.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\IncidenciaTecnicoCreada.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaTecnicoCreada.xaml*",
-              "RelativeToolTip": "TickNager\\UserControls\\IncidenciaTecnicoCreada.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T12:20:26.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "TickNager\\ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "TickNager\\ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwGAAAAAJAAAAAAAAAA==",
+              "Title": "SesionUsuarioHelper.cs",
+              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Helper\\SesionUsuarioHelper.cs",
+              "RelativeDocumentMoniker": "TickNager\\Helper\\SesionUsuarioHelper.cs",
+              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Helper\\SesionUsuarioHelper.cs",
+              "RelativeToolTip": "TickNager\\Helper\\SesionUsuarioHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T12:02:21.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IncidenciaCreada.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "RelativeToolTip": "TickNager\\UserControls\\IncidenciaCreada.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T11:21:29.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VistaIncidencias.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidencias.xaml",
-              "RelativeDocumentMoniker": "TickNager\\UserControls\\VistaIncidencias.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\UserControls\\VistaIncidencias.xaml",
-              "RelativeToolTip": "TickNager\\UserControls\\VistaIncidencias.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T10:58:55.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DashboardWindow.xaml",
-              "DocumentMoniker": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "RelativeDocumentMoniker": "TickNager\\Views\\Windows\\DashboardWindow.xaml",
-              "ToolTip": "C:\\Proye\\Gestion_de_incidencias\\TickNager\\Views\\Windows\\DashboardWindow.xaml*",
-              "RelativeToolTip": "TickNager\\Views\\Windows\\DashboardWindow.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-29T09:54:33.67Z",
+              "WhenOpened": "2026-04-30T08:11:12.466Z",
               "EditorCaption": ""
             }
           ]

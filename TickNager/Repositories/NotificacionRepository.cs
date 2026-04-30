@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/// <summary>
+/// Esta clase contiene las operaciones relacionadas con las notificaciones en la base de datos.
+/// </summary>
+
 using TickNager.Helper;
 using TickNager.Models;
 
@@ -6,6 +9,11 @@ namespace TickNager.Repositories
 {
     public class NotificacionRepository
     {
+        /// <summary>
+        /// Esta función crea una nueva notificación para un usuario.
+        /// </summary>
+        /// <param name="idUsuarioDestino">Id del usuario que recibirá la notificación.</param>
+        /// <param name="mensaje">Mensaje que tendrá la notificación.</param>
         public static void CrearNotificacion(int idUsuarioDestino, string mensaje)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();
@@ -23,6 +31,11 @@ namespace TickNager.Repositories
             comando.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Esta función obtiene las notificaciones de un usuario.
+        /// </summary>
+        /// <param name="idUsuario">Id del usuario del que se quieren obtener las notificaciones.</param>
+        /// <returns>Devuelve una lista con las notificaciones del usuario.</returns>
         public static List<Notificacion> ObtenerNotificacionesUsuario(int idUsuario)
         {
             List<Notificacion> lista = new List<Notificacion>();
@@ -56,6 +69,11 @@ namespace TickNager.Repositories
             return lista;
         }
 
+        /// <summary>
+        /// Esta función cuenta las notificaciones no leídas de un usuario.
+        /// </summary>
+        /// <param name="idUsuario">Id del usuario del que se contarán las notificaciones no leídas.</param>
+        /// <returns>Devuelve la cantidad de notificaciones no leídas.</returns>
         public static int ContarNoLeidas(int idUsuario)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();
@@ -74,6 +92,10 @@ namespace TickNager.Repositories
             return (int)resultado;
         }
 
+        /// <summary>
+        /// Esta función marca todas las notificaciones de un usuario como leídas.
+        /// </summary>
+        /// <param name="idUsuario">Id del usuario al que se le marcarán las notificaciones como leídas.</param>
         public static void MarcarTodasComoLeidas(int idUsuario)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();

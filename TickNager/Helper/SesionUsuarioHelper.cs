@@ -5,7 +5,7 @@ using TickNager.Models;
 
 namespace TickNager.Helper
 {
-    public  class SesionUsuario
+    public  class SesionUsuarioHelper
     {
         public static Usuario UsuarioActual { get; set; }
 

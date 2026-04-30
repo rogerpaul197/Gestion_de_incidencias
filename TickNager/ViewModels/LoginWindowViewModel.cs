@@ -20,7 +20,7 @@ namespace TickNager.ViewModels
         {
             string contrasenaHasheada = HashPasswordHelper.HashPassword(Contrasena);
 
-            Usuario usuario = UsuarioRepository.ObtenerUsuarioPorCredenciales(Correo, contrasenaHasheada);
+            Usuario usuario = UsuarioRepository.ObtenerUsuarioCredenciales(Correo, contrasenaHasheada);
 
             if (usuario == null)
             {
@@ -29,7 +29,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            SesionUsuario.UsuarioActual = usuario;
+            SesionUsuarioHelper.UsuarioActual = usuario;
             InicioCorrecto = true;
 
             DashboardWindow ventana = new DashboardWindow();

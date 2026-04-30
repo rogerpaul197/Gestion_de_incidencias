@@ -44,7 +44,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            if (usuario.Id == SesionUsuario.UsuarioActual.Id)
+            if (usuario.Id == SesionUsuarioHelper.UsuarioActual.Id)
             {
                 MessageBox.Show("No puedes eliminar tu propio usuario.",
                                 "Aviso",

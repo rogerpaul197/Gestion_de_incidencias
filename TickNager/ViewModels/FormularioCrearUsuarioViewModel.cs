@@ -1,11 +1,13 @@
-﻿using System.ComponentModel;
+﻿/// <summary>
+/// Esta clase se encarga de la lógica para crear un nuevo usuario.
+/// </summary>
+
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
-using TickNager.UserControls;
-using TickNager.ViewModels;
 
 namespace TickNager.ViewModels
 {
@@ -22,13 +24,6 @@ namespace TickNager.ViewModels
         private string _confirmarContrasena;
         private string _imagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
         private DashboardViewModel _obj;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
-        }
 
         public string Nombre
         {
@@ -132,36 +127,68 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Constructor vacío.
+        /// </summary>
         public FormularioCrearUsuarioViewModel()
         {
-
         }
 
-        public FormularioCrearUsuarioViewModel(DashboardViewModel obj)
+        /// <summary>
+        /// Constructor que recibe el ViewModel principal.
+        /// </summary>
+        /// <param name="obj">ViewModel del dashboard.</param>
+        public FormularioCrearUsuarioViewModel(DashboardViewModel obj) : this()
         {
             _obj = obj;
         }
 
+        /// <summary>
+        /// Esta función crea un usuario nuevo y lo guarda en la base de datos.
+        /// </summary>
         public void CrearUsuario()
         {
+            if (Nombre == null || Nombre == "" || Apellido == null || Apellido == "" || Rol == null || Rol == "" || Genero == null || Genero == "" || Correo == null || Correo == "" || Contrasena == null || Contrasena == "" || ConfirmarContrasena == null || ConfirmarContrasena == "")
+            {
+                MessageBox.Show("Completa todos los campos obligatorios", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (ConfirmarContrasena != Contrasena)
             {
                 MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            else
-            {
-                Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
-                UsuarioRepository.RegistrarUsuario(usuarioNuevo);
-                MessageBox.Show("Usuario creado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                _obj.mostrarVistaGestionUsuarios();
-            }
+
+            Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
+
+            UsuarioRepository.RegistrarUsuario(usuarioNuevo);
+
+            MessageBox.Show("Usuario creado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            _obj.mostrarVistaGestionUsuarios();
         }
 
+        /// <summary>
+        /// Esta función actualiza la imagen del perfil según el rol y género.
+        /// </summary>
         private void ActualizarImagen()
         {
             ImagenPerfil = FuncionesHelper.ObtenerImagenPerfil(Rol, Genero);
         }
 
-        
+        /// <summary>
+        /// Evento que avisa a la vista cuando cambia una propiedad.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Notifica a la vista que una propiedad cambió.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad.</param>
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
+        }
     }
 }

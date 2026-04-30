@@ -135,7 +135,7 @@ namespace TickNager.ViewModels
             Incidencias.Clear();
             _todasLasIncidencias.Clear();
 
-            var usuarioActual = SesionUsuario.UsuarioActual;
+            var usuarioActual = SesionUsuarioHelper.UsuarioActual;
 
             List<Incidencia> lista;
 

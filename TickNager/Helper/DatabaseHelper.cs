@@ -1,11 +1,9 @@
 ﻿///<summary>
 ///Esta clase se coloca en esta carpeta ya que es repetitiva, y sirve para realizar la conexión a la base de datos.
 ///</summary>
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+
 using Microsoft.Data.Sqlite;
+using System.IO;
 
 namespace TickNager.Helper
 {
