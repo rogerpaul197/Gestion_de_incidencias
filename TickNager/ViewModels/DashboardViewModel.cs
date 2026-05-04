@@ -65,8 +65,7 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuarioHelper.UsuarioActual != null &&
-                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Administrador";
+                return SesionUsuarioHelper.UsuarioActual != null && SesionUsuarioHelper.UsuarioActual.RolUsuario == "Administrador";
             }
         }
 
@@ -74,8 +73,7 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuarioHelper.UsuarioActual != null &&
-                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Técnico";
+                return SesionUsuarioHelper.UsuarioActual != null && SesionUsuarioHelper.UsuarioActual.RolUsuario == "Técnico";
             }
         }
 
@@ -83,8 +81,7 @@ namespace TickNager.ViewModels
         {
             get
             {
-                return SesionUsuarioHelper.UsuarioActual != null &&
-                       SesionUsuarioHelper.UsuarioActual.RolUsuario == "Usuario";
+                return SesionUsuarioHelper.UsuarioActual != null && SesionUsuarioHelper.UsuarioActual.RolUsuario == "Usuario";
             }
         }
 
@@ -222,13 +219,6 @@ namespace TickNager.ViewModels
             Contenido = new VistaEditarPerfil(this);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
-        }
-
         public void mostrarFormularioCambiarRolUsuario(Usuario usuario)
         {
             Contenido = new FormularioCambiarRolUsuario(this, usuario);
@@ -257,6 +247,13 @@ namespace TickNager.ViewModels
             NotificacionRepository.MarcarTodasComoLeidas(idUsuario);
 
             OnPropertyChanged(nameof(HayNotificaciones));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
         }
     }
 }

@@ -1,4 +1,8 @@
-﻿using TickNager.Models;
+﻿/// <summary>
+/// Esta clase se encarga de mostrar la información del perfil de un usuario.
+/// </summary>
+
+using TickNager.Models;
 
 namespace TickNager.ViewModels
 {
@@ -32,12 +36,20 @@ namespace TickNager.ViewModels
             get { return _usuario.ImagenPerfil; }
         }
 
+        /// <summary>
+        /// Constructor que recibe el ViewModel principal y el usuario seleccionado.
+        /// </summary>
+        /// <param name="dashboardViewModel">ViewModel principal del dashboard.</param>
+        /// <param name="usuario">Usuario del que se mostrará el perfil.</param>
         public VistaPerfilUsuarioViewModel(DashboardViewModel dashboardViewModel, Usuario usuario)
         {
             _dashboardViewModel = dashboardViewModel;
             _usuario = usuario;
         }
 
+        /// <summary>
+        /// Esta función vuelve a la vista de gestión de usuarios.
+        /// </summary>
         public void Volver()
         {
             _dashboardViewModel.mostrarVistaGestionUsuarios();

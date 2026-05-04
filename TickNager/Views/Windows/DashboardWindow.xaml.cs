@@ -31,7 +31,7 @@ namespace TickNager.Views.Windows
 
         private void btnEquipos_Click(object sender, RoutedEventArgs e)
         {
-            _obj.mostrarVistaEquipos();
+            //_obj.mostrarVistaEquipos();
         }
 
         private void btnCategorias_Click(object sender, RoutedEventArgs e)

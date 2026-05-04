@@ -46,17 +46,11 @@ namespace TickNager.ViewModels
 
             if (usuario.Id == SesionUsuarioHelper.UsuarioActual.Id)
             {
-                MessageBox.Show("No puedes eliminar tu propio usuario.",
-                                "Aviso",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Warning);
+                MessageBox.Show("No puedes eliminar tu propio usuario.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            MessageBoxResult confirmacion = MessageBox.Show("¿Seguro que quieres eliminar este usuario?",
-                                                            "Confirmar eliminación",
-                                                            MessageBoxButton.YesNo,
-                                                            MessageBoxImage.Warning);
+            MessageBoxResult confirmacion = MessageBox.Show("¿Seguro que quieres eliminar este usuario?", "Confirmar eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             if (confirmacion == MessageBoxResult.Yes)
             {

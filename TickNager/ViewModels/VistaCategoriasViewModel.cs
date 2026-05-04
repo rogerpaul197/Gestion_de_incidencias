@@ -33,9 +33,9 @@ namespace TickNager.ViewModels
 
             var lista = CategoriaRepository.ObtenerCategorias();
 
-            foreach (var categoria in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                Categorias.Add(categoria);
+                Categorias.Add(lista[i]);
             }
         }
     }

@@ -1,8 +1,12 @@
-﻿using System.Windows;
-using TickNager.Helper;
-using TickNager.Repositories;
+﻿/// <summary>
+/// Esta clase se encarga de la lógica de la vista de ajustes.
+/// </summary>
+
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
+using TickNager.Helper;
+using TickNager.Repositories;
 
 namespace TickNager.ViewModels
 {
@@ -52,19 +56,29 @@ namespace TickNager.ViewModels
             get { return SesionUsuarioHelper.UsuarioActual.Departamento; }
         }
 
+        /// <summary>
+        /// Constructor que recibe el ViewModel principal.
+        /// </summary>
+        /// <param name="dashboardViewModel">ViewModel principal del dashboard.</param>
         public VistaAjustesViewModel(DashboardViewModel dashboardViewModel)
         {
             _obj = dashboardViewModel;
         }
 
+        /// <summary>
+        /// Esta función muestra la vista para editar el perfil.
+        /// </summary>
         public void EditarPerfil()
         {
             _obj.mostrarVistaEditarPerfil();
         }
 
+        /// <summary>
+        /// Esta función cambia la contraseña del usuario actual.
+        /// </summary>
         public void CambiarContrasena()
         {
-            if (string.IsNullOrWhiteSpace(NuevaContrasena) || string.IsNullOrWhiteSpace(ConfirmarContrasena))
+            if (NuevaContrasena == null || NuevaContrasena == "" || ConfirmarContrasena == null || ConfirmarContrasena == "")
             {
                 MessageBox.Show("Completa los campos de contraseña.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -86,8 +100,15 @@ namespace TickNager.ViewModels
             ConfirmarContrasena = "";
         }
 
+        /// <summary>
+        /// Evento que avisa a la vista cuando cambia una propiedad.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Esta función notifica a la vista que una propiedad cambió.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad que cambió.</param>
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));

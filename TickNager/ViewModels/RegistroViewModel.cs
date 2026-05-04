@@ -25,7 +25,7 @@ namespace TickNager.ViewModels
 
         public string Nombre
         {
-            get => _nombre;
+            get { return _nombre; }
             set
             {
                 _nombre = value;
@@ -35,7 +35,7 @@ namespace TickNager.ViewModels
 
         public string Apellido
         {
-            get => _apellido;
+            get { return _apellido;  }
             set
             {
                 _apellido = value;
@@ -45,7 +45,7 @@ namespace TickNager.ViewModels
 
         public string Rol
         {
-            get => _rol;
+            get {return _rol; }
             set
             {
                 _rol = value;
@@ -56,7 +56,7 @@ namespace TickNager.ViewModels
 
         public string Numero
         {
-            get => _numero;
+            get { return _numero; }
             set
             {
                 _numero = value;
@@ -66,7 +66,7 @@ namespace TickNager.ViewModels
 
         public string Genero
         {
-            get => _genero;
+            get { return _genero; }
             set
             {
                 _genero = value;
@@ -77,7 +77,7 @@ namespace TickNager.ViewModels
 
         public string Correo
         {
-            get => _correo;
+            get { return _correo; }
             set
             {
                 _correo = value;
@@ -87,7 +87,7 @@ namespace TickNager.ViewModels
 
         public string Contrasena
         {
-            get => _contrasena;
+            get { return _contrasena; }
             set
             {
                 _contrasena = value;
@@ -97,7 +97,7 @@ namespace TickNager.ViewModels
 
         public string ConfirmacionContrasena
         {
-            get => _confirmacionContrasena;
+            get { return _confirmacionContrasena; }
             set
             {
                 _confirmacionContrasena = value;
@@ -107,7 +107,7 @@ namespace TickNager.ViewModels
 
         public string TextoRol
         {
-            get => _textoRol;
+            get { return _textoRol; }
             set
             {
                 _textoRol = value;
@@ -117,7 +117,7 @@ namespace TickNager.ViewModels
 
         public string ImagenPerfil
         {
-            get => _imagenPerfil;
+            get { return _imagenPerfil; }
             set
             {
                 _imagenPerfil = value;

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Windows;
+﻿using System.Windows;
 using TickNager.Models;
 using TickNager.Views.Windows;
 
@@ -16,11 +15,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            MessageBox.Show("Título: " + incidencia.Titulo +
-                            "\n\nDescripción: " + incidencia.Descripcion +
-                            "\n\nCategoría: " + incidencia.Categoria +
-                            "\n\nPrioridad: " + incidencia.Prioridad,
-                            "Detalle de incidencia");
+            MessageBox.Show("Título: " + incidencia.Titulo + "\n\nDescripción: " + incidencia.Descripcion + "\n\nCategoría: " + incidencia.Categoria + "\n\nPrioridad: " + incidencia.Prioridad + "Detalle de incidencia");
         }
 
         public void AsignarTecnico(object obj)
@@ -39,27 +34,6 @@ namespace TickNager.ViewModels
             {
                 incidencia.Estado = "Asignada";
             }
-        }
-
-        private void ActualizarVistaIncidencias()
-        {
-            DashboardWindow ventanaDashboard = Application.Current.Windows
-                .OfType<DashboardWindow>()
-                .FirstOrDefault();
-
-            if (ventanaDashboard == null)
-            {
-                return;
-            }
-
-            DashboardViewModel dashboardViewModel = ventanaDashboard.DataContext as DashboardViewModel;
-
-            if (dashboardViewModel == null)
-            {
-                return;
-            }
-
-            dashboardViewModel.mostrarVistaIncidencias();
         }
     }
 }

@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿/// <summary>
+/// Esta clase se encarga de cargar, filtrar y mostrar las incidencias según el usuario actual.
+/// </summary>
+
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
-using TickNager.Helper;
 
 namespace TickNager.ViewModels
 {
@@ -68,37 +71,35 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Constructor vacío que inicializa las colecciones y carga los datos.
+        /// </summary>
         public VistaIncidenciasViewModel()
         {
             Incidencias = new ObservableCollection<Incidencia>();
             PrioridadesFiltro = new ObservableCollection<string>();
             EstadosFiltro = new ObservableCollection<string>();
             CategoriasFiltro = new ObservableCollection<string>();
+            Tecnicos = new ObservableCollection<Usuario>();
             _todasLasIncidencias = new List<Incidencia>();
 
             CargarFiltros();
             CargarIncidencias();
-
-            Tecnicos = new ObservableCollection<Usuario>();
             CargarTecnicos();
         }
 
-        public VistaIncidenciasViewModel(DashboardViewModel dashboardViewModel)
+        /// <summary>
+        /// Constructor que recibe el ViewModel principal.
+        /// </summary>
+        /// <param name="dashboardViewModel">ViewModel principal del dashboard.</param>
+        public VistaIncidenciasViewModel(DashboardViewModel dashboardViewModel) : this()
         {
             _obj = dashboardViewModel;
-            Incidencias = new ObservableCollection<Incidencia>();
-            PrioridadesFiltro = new ObservableCollection<string>();
-            EstadosFiltro = new ObservableCollection<string>();
-            CategoriasFiltro = new ObservableCollection<string>();
-            _todasLasIncidencias = new List<Incidencia>();
-
-            CargarFiltros();
-            CargarIncidencias();
-
-            Tecnicos = new ObservableCollection<Usuario>();
-            CargarTecnicos();
         }
 
+        /// <summary>
+        /// Esta función carga los filtros de prioridad, estado y categoría.
+        /// </summary>
         public void CargarFiltros()
         {
             PrioridadesFiltro.Clear();
@@ -119,9 +120,9 @@ namespace TickNager.ViewModels
 
             var categorias = CategoriaRepository.ObtenerCategorias();
 
-            foreach (var categoria in categorias)
+            for (int i = 0; i < categorias.Count; i++)
             {
-                CategoriasFiltro.Add(categoria.Nombre);
+                CategoriasFiltro.Add(categorias[i].Nombre);
             }
 
             PrioridadSeleccionada = "Todas";
@@ -130,6 +131,9 @@ namespace TickNager.ViewModels
             TextoBusqueda = "";
         }
 
+        /// <summary>
+        /// Esta función carga las incidencias según el rol del usuario actual.
+        /// </summary>
         public void CargarIncidencias()
         {
             Incidencias.Clear();
@@ -152,33 +156,29 @@ namespace TickNager.ViewModels
                 lista = IncidenciaRepository.ObtenerIncidenciasPorUsuario(usuarioActual.Id);
             }
 
-            foreach (var incidencia in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                _todasLasIncidencias.Add(incidencia);
+                _todasLasIncidencias.Add(lista[i]);
             }
 
             AplicarFiltros();
         }
 
+        /// <summary>
+        /// Esta función aplica los filtros seleccionados a la lista de incidencias.
+        /// </summary>
         public void AplicarFiltros()
         {
             Incidencias.Clear();
 
-            foreach (var incidencia in _todasLasIncidencias)
+            for (int i = 0; i < _todasLasIncidencias.Count; i++)
             {
-                bool coincideTexto = string.IsNullOrWhiteSpace(TextoBusqueda)
-                    || incidencia.Titulo.ToLower().Contains(TextoBusqueda.ToLower())
-                    || incidencia.Descripcion.ToLower().Contains(TextoBusqueda.ToLower())
-                    || (incidencia.Categoria != null && incidencia.Categoria.ToLower().Contains(TextoBusqueda.ToLower()));
+                Incidencia incidencia = _todasLasIncidencias[i];
 
-                bool coincidePrioridad = PrioridadSeleccionada == "Todas"
-                    || incidencia.Prioridad == PrioridadSeleccionada;
-
-                bool coincideEstado = EstadoSeleccionado == "Todos"
-                    || incidencia.Estado == EstadoSeleccionado;
-
-                bool coincideCategoria = CategoriaSeleccionada == "Todas"
-                    || incidencia.Categoria == CategoriaSeleccionada;
+                bool coincideTexto = TextoBusqueda == null || TextoBusqueda == "" || incidencia.Titulo.ToLower().Contains(TextoBusqueda.ToLower()) || incidencia.Descripcion.ToLower().Contains(TextoBusqueda.ToLower()) || (incidencia.Categoria != null && incidencia.Categoria.ToLower().Contains(TextoBusqueda.ToLower()));
+                bool coincidePrioridad = PrioridadSeleccionada == "Todas" || incidencia.Prioridad == PrioridadSeleccionada;
+                bool coincideEstado = EstadoSeleccionado == "Todos" || incidencia.Estado == EstadoSeleccionado;
+                bool coincideCategoria = CategoriaSeleccionada == "Todas" || incidencia.Categoria == CategoriaSeleccionada;
 
                 if (coincideTexto && coincidePrioridad && coincideEstado && coincideCategoria)
                 {
@@ -187,6 +187,9 @@ namespace TickNager.ViewModels
             }
         }
 
+        /// <summary>
+        /// Esta función limpia todos los filtros.
+        /// </summary>
         public void LimpiarFiltros()
         {
             TextoBusqueda = "";
@@ -197,20 +200,30 @@ namespace TickNager.ViewModels
             AplicarFiltros();
         }
 
+        /// <summary>
+        /// Esta función carga los técnicos disponibles.
+        /// </summary>
         public void CargarTecnicos()
         {
             Tecnicos.Clear();
 
             var lista = TecnicoRepository.ObtenerTecnicos();
 
-            foreach (var tecnico in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                Tecnicos.Add(tecnico);
+                Tecnicos.Add(lista[i]);
             }
         }
 
+        /// <summary>
+        /// Evento que avisa a la vista cuando cambia una propiedad.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Esta función notifica a la vista que una propiedad cambió.
+        /// </summary>
+        /// <param name="nombrePropiedad">Nombre de la propiedad que cambió.</param>
         protected void OnPropertyChanged([CallerMemberName] string nombrePropiedad = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nombrePropiedad));
