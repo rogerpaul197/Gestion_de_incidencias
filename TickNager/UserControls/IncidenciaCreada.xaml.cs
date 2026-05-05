@@ -23,5 +23,15 @@ namespace TickNager.UserControls
         {
             _obj.AsignarTecnico(DataContext);
         }
+
+        private void btnValidar_Click(object sender, RoutedEventArgs e)
+        {
+            _obj.ValidarIncidencia(DataContext);
+        }
+
+        private void btnReabrir_Click(object sender, RoutedEventArgs e)
+        {
+            _obj.ReabrirIncidencia(DataContext);
+        }
     }
 }

@@ -118,6 +118,8 @@ namespace TickNager.Models
             }
         }
 
+        public bool Seleccionado { get; set; }
+
         public Usuario()
         {
 

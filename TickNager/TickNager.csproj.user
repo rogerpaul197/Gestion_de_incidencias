@@ -14,10 +14,16 @@
     <Compile Update="UserControls\FormularioCrearCategoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\FormularioCrearGrupoTrabajo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\FormularioCrearIncidencia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\FormularioCrearUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\GrupoTrabajoCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\IncidenciaCreada.xaml.cs">
@@ -39,6 +45,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaGestionUsuarios.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaGruposTrabajo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaIncidencias.xaml.cs">

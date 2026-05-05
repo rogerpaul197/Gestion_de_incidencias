@@ -40,14 +40,6 @@ CREATE TABLE IF NOT EXISTS categorias (
 	cantidad_incidencias INTEGER NOT NULL DEFAULT 0
 );
 
-CREATE TABLE IF NOT EXISTS slas (
-	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	nombre TEXT NOT NULL,
-	tiempo_primera_respuesta_horas INTEGER NOT NULL,
-	tiempo_resolucion_horas INTEGER NOT NULL,
-	descripcion TEXT NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS notificaciones (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_usuario_destino INTEGER NOT NULL,

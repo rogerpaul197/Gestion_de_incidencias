@@ -208,12 +208,43 @@
                                     Padding="10 7"
                                     Click="menuVerDetalle_Click"/>
 
-                            <Button Content="Asignar técnico"
-                                    Background="Transparent"
-                                    BorderThickness="0"
-                                    HorizontalContentAlignment="Left"
-                                    Padding="10 7"
-                                    Click="menuAsignarResponsable_Click"/>
+                            <Button Content="Asignar técnico" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left" Padding="10 7" Click="menuAsignarResponsable_Click"/>
+
+                            <Button Content="Validar incidencia"
+        Background="Transparent"
+        BorderThickness="0"
+        HorizontalContentAlignment="Left"
+        Padding="10 7"
+        Click="btnValidar_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Estado}" Value="Pendiente de validación">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+
+                            <Button Content="Reabrir incidencia"
+        Background="Transparent"
+        BorderThickness="0"
+        HorizontalContentAlignment="Left"
+        Padding="10 7"
+        Click="btnReabrir_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Estado}" Value="Pendiente de validación">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
                         </StackPanel>
                     </Border>
                 </Popup>

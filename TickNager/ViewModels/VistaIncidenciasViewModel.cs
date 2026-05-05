@@ -113,7 +113,9 @@ namespace TickNager.ViewModels
 
             EstadosFiltro.Add("Todos");
             EstadosFiltro.Add("Pendiente");
+            EstadosFiltro.Add("Asignada");
             EstadosFiltro.Add("En proceso");
+            EstadosFiltro.Add("Pendiente de validación");
             EstadosFiltro.Add("Resuelta");
 
             CategoriasFiltro.Add("Todas");

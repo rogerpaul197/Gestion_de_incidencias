@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="TickNager.UserControls.GrupoTrabajoCreado"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TickNager.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="800">
+    <Border Background="White"
+            BorderBrush="#E5E7EB"
+            BorderThickness="0 0 0 1"
+            Padding="18 14">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center">
+
+                <Border Width="44"
+                        Height="44"
+                        Background="#EEF2FF"
+                        CornerRadius="22"
+                        Margin="0 0 14 0">
+
+                    <TextBlock Text="👥"
+                               FontSize="20"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Border>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="{Binding NombreDepartamento}"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="#1F2937"/>
+
+                    <TextBlock Text="Grupo de trabajo"
+                               Margin="0 4 0 0"
+                               FontSize="13"
+                               Foreground="#6B7280"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Border Grid.Column="1"
+                    Background="#DCFCE7"
+                    Width="115"
+                    Height="30"
+                    CornerRadius="15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                <TextBlock Text="{Binding TextoMiembros}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#15803D"/>
+            </Border>
+
+            <Grid Grid.Column="2">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                    <Button Content="Renombrar"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#2563EB"
+                            Padding="8 5"
+                            Click="btnRenombrar_Click"/>
+
+                    <Button Content="Eliminar"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#B91C1C"
+                            Padding="8 5"
+                            Click="btnEliminar_Click"/>
+                </StackPanel>
+
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding PuedeGestionar}" Value="True">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

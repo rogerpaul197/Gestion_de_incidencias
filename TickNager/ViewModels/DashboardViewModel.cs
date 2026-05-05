@@ -197,6 +197,18 @@ namespace TickNager.ViewModels
             Contenido = new FormularioCrearUsuario(this);
         }
 
+
+        //Grupos de trabajo
+        public void mostrarVistaGrupoTrabajo()
+        {
+            Contenido = new VistaGruposTrabajo(this);
+        }
+
+        public void mostrarFormularioCrearGrupoTrabajo()
+        {
+            Contenido = new FormularioCrearGrupoTrabajo(this);
+        }
+
         //Categorías
         public void mostrarVistaCategorias()
         {

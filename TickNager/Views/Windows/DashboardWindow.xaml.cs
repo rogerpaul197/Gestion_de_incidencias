@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TickNager.UserControls;
 using TickNager.ViewModels;
 
 namespace TickNager.Views.Windows
@@ -29,9 +30,9 @@ namespace TickNager.Views.Windows
             _obj.mostrarVistaGestionUsuarios();
         }
 
-        private void btnEquipos_Click(object sender, RoutedEventArgs e)
+        private void btnGruposTrabajo_Click(object sender, RoutedEventArgs e)
         {
-            //_obj.mostrarVistaEquipos();
+            _obj.mostrarVistaGrupoTrabajo();
         }
 
         private void btnCategorias_Click(object sender, RoutedEventArgs e)

@@ -48,11 +48,11 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            IncidenciaRepository.ActualizarEstadoIncidencia(incidencia.Id, "Resuelta");
+            IncidenciaRepository.ActualizarEstadoIncidencia(incidencia.Id, "Pendiente de validación");
 
-            incidencia.Estado = "Resuelta";
+            incidencia.Estado = "Pendiente de validación";
 
-            MessageBox.Show("Incidencia marcada como Resuelta.");
+            MessageBox.Show("Incidencia enviada para validación del administrador.");
         }
     }
 }

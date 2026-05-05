@@ -92,7 +92,7 @@
                     <!-- Grupos de trabajo -->
                     <Button Name="btnEquipos"
                             Style="{StaticResource MenuButtonStyle}"
-                            Click="btnEquipos_Click">
+                            Click="btnGruposTrabajo_Click">
                         <StackPanel Orientation="Horizontal">
                             <iconPacks:PackIconMaterial Kind="BriefcaseAccount" Foreground="White" Margin="0,0,20,0"/>
                             <TextBlock Text="Grupos de trabajo" Foreground="White"/>
