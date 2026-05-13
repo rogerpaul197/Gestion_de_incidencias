@@ -1,8 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
-    <!--Todos los colores que se usarán en la app, para usarlos, dirijase a App.xaml-->
-    <SolidColorBrush x:Key="bgFondo" Color="#151f2d"/>
-    <SolidColorBrush x:Key="bgFondo2" Color="#171A45"/>
-    <SolidColorBrush x:Key="bgFondo3" Color="#0C0D21"/>
+    <!-- Fuente principal -->
+    <FontFamily x:Key="FuentePrincipal">Calibri</FontFamily>
+
+    <!-- Colores principales de la aplicación -->
+    <SolidColorBrush x:Key="ColorFondo" Color="#F5F7FB"/>
+    <SolidColorBrush x:Key="ColorPrincipal" Color="#2F6BFF"/>
+    <SolidColorBrush x:Key="ColorAzulOscuro" Color="#151F2D"/>
+    <SolidColorBrush x:Key="ColorTitulo" Color="#1D2B53"/>
+    <SolidColorBrush x:Key="ColorTexto" Color="#1F2937"/>
+    <SolidColorBrush x:Key="ColorTextoSecundario" Color="#6B7280"/>
+    <SolidColorBrush x:Key="ColorBorde" Color="#E5E7EB"/>
+    <SolidColorBrush x:Key="ColorBlanco" Color="White"/>
+
+    <SolidColorBrush x:Key="ColorBotonAzulOscuro" Color="#0D1E36"/>
+
+    <!-- Colores de estados -->
+    <SolidColorBrush x:Key="ColorPendiente" Color="#FEF3C7"/>
+    <SolidColorBrush x:Key="ColorAsignada" Color="#DBEAFE"/>
+    <SolidColorBrush x:Key="ColorProceso" Color="#FFEDD5"/>
+    <SolidColorBrush x:Key="ColorResuelta" Color="#DCFCE7"/>
+    <SolidColorBrush x:Key="ColorAlta" Color="#FEE2E2"/>
 </ResourceDictionary>

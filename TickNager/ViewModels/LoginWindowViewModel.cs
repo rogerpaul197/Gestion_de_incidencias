@@ -25,7 +25,8 @@ namespace TickNager.ViewModels
             if (usuario == null)
             {
                 InicioCorrecto = false;
-                MessageBox.Show("Correo o contraseña incorrectos. Por favor, inténtelo de nuevo.", "Error de inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Correo o contraseña incorrectos. Por favor, inténtelo de nuevo.", 
+                "Error de inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

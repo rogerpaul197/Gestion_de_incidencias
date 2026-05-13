@@ -45,7 +45,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Columna izquierda-->
-        <Grid Grid.Column="0" Background="#151f2d">
+        <Grid Grid.Column="0" Background="{StaticResource ColorAzulOscuro}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition/>

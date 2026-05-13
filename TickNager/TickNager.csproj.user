@@ -65,9 +65,6 @@
     <Compile Update="Views\Windows\AsignarTecnicoWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Windows\EmpresaWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\Windows\InformacionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

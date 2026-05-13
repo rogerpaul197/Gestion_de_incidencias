@@ -10,7 +10,7 @@
     <Window.DataContext>
         <vm:InformacionWindow2ViewModel/>
     </Window.DataContext>
-    <Grid Background="#151f2d">
+    <Grid Background="{StaticResource ColorAzulOscuro}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="140"/>
@@ -31,7 +31,7 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock Text="{Binding Informacion}" FontSize="15" FontFamily="Consolas" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" Foreground="White" Margin="15 0 15 0"/>
+            <TextBlock Text="{Binding Informacion}" FontSize="15" FontFamily="{StaticResource FuentePrincipal}" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" Foreground="White" Margin="15 0 15 0"/>
         </Grid>
 
         <Grid Grid.Row="2">

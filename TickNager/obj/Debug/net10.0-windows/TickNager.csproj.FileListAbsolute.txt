@@ -523,7 +523,6 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaPerfilUsuario.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AsignarTecnicoWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.g.cs
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow2.g.cs
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginWindow.g.cs
@@ -555,7 +554,6 @@ C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\UserControls\VistaPerfilUsuario.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\AsignarTecnicoWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\DashboardWindow.baml
-C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\EmpresaWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\InformacionWindow2.baml
 C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\Views\Windows\LoginWindow.baml

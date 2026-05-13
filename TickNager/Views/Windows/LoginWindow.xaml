@@ -12,7 +12,7 @@
         <vm:LoginWindowViewModel/>
     </Window.DataContext>
     
-        <Grid Background="#151f2d">
+        <Grid Background="{StaticResource ColorAzulOscuro}">
         <!--Aquí se establece 2 filas, 1 para el título
 y la otra para el ícono del usuario e inicio de sesión-->
         <Grid.RowDefinitions>

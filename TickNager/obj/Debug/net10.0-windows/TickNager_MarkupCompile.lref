@@ -1,9 +1,10 @@
-﻿
+﻿C:\Proye\Gestion_de_incidencias\TickNager\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
 FC:\Proye\Gestion_de_incidencias\TickNager\App.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\CategoriaCreada.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\Dashboard.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCambiarRolUsuario.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearCategoria.xaml;;
+FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearGrupoTrabajo.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearIncidencia.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearUsuario.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\GrupoTrabajoCreado.xaml;;
@@ -21,10 +22,8 @@ FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaIncidenciasUsuario.
 FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\VistaPerfilUsuario.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\AsignarTecnicoWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\DashboardWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\EmpresaWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\InformacionWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\InformacionWindow2.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\LoginWindow.xaml;;
 FC:\Proye\Gestion_de_incidencias\TickNager\Views\Windows\RegistroWindow.xaml;;
-FC:\Proye\Gestion_de_incidencias\TickNager\UserControls\FormularioCrearGrupoTrabajo.xaml;;
 

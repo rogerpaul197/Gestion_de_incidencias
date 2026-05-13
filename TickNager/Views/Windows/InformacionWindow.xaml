@@ -12,7 +12,7 @@
         <vm:InformacionWindowViewModel/>
     </Window.DataContext>
 
-    <Grid Background="#151f2d">
+    <Grid Background="{StaticResource ColorAzulOscuro}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="135"/>
@@ -24,12 +24,12 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock Text="{Binding Informacion}" FontSize="15" FontFamily="Dubai Light" TextWrapping="Wrap" TextAlignment="Center" Margin="0 20 0 0" Foreground="White"/>
+            <TextBlock Text="{Binding Informacion}" FontSize="15" FontFamily="{StaticResource FuentePrincipal}" TextWrapping="Wrap" TextAlignment="Center" Margin="0 20 0 0" Foreground="White"/>
         </Grid>
 
         <Grid Grid.Row="2">
-            <Border Background="#0D1E36" Height="40" Width="100" CornerRadius="10" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White">
-                <Button Height="40" Width="100" Content="Siguiente" Background="Transparent" BorderThickness="0" Foreground="White" HorizontalAlignment="Center" Click="btnSiguiente_Click"/>
+            <Border Background="{StaticResource ColorBotonAzulOscuro}" Height="40" Width="100" CornerRadius="10" HorizontalAlignment="Center" BorderThickness="1" BorderBrush="White">
+                <Button Height="40" Width="100" FontFamily="{StaticResource FuentePrincipal}" Content="Siguiente" Background="Transparent" BorderThickness="0" Foreground="White" HorizontalAlignment="Center" Click="btnSiguiente_Click"/>
             </Border>
         </Grid>
     </Grid>
