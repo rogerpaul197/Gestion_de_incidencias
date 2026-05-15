@@ -1,57 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-
-namespace TickNager.Models
+﻿namespace TickNager.Models
 {
     public class Categoria
     {
+        private int _id;
         private string _nombre;
         private string _descripcion;
         private bool _activo;
         private int _cantidadIncidencias;
 
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
         public string Nombre
         {
             get { return _nombre; }
-            set
-            {
-                _nombre = value;
-            }
+            set { _nombre = value; }
         }
 
         public string Descripcion
         {
             get { return _descripcion; }
-            set
-            {
-                _descripcion = value;
-            }
+            set { _descripcion = value; }
         }
 
         public bool Activo
         {
             get { return _activo; }
-            set
-            {
-                _activo = value;
-            }
+            set { _activo = value; }
         }
 
         public int CantidadIncidencias
         {
-            get { return _cantidadIncidencias;  }
-            set
-            {
-                if (CantidadIncidencias >= 0)
-                {
-                    _cantidadIncidencias = value;
-                } else
-                {
-                    MessageBox.Show("Las incidencias no pueden ser menor que 0", "Error:", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
+            get { return _cantidadIncidencias; }
+            set { _cantidadIncidencias = value; }
         }
 
         public string TextoCantidadIncidencias

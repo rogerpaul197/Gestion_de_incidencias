@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TickNager.Helper;
 using TickNager.Models;
 
@@ -30,10 +31,10 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT d.id, d.nombre, COUNT(u.id) AS cantidad
-                                    FROM departamentos d
-                                    LEFT JOIN usuarios u ON u.departamento = d.nombre
-                                    GROUP BY d.id, d.nombre";
+            comando.CommandText = @"SELECT departamentos.id_departamento, departamentos.nombre, COUNT(usuarios.id_usuario) AS cantidad
+                                    FROM departamentos
+                                    LEFT JOIN usuarios ON usuarios.id_departamento = departamentos.id_departamento
+                                    GROUP BY departamentos.id_departamento, departamentos.nombre";
 
             using var reader = comando.ExecuteReader();
 
@@ -41,7 +42,7 @@ namespace TickNager.Repositories
             {
                 GrupoTrabajo grupo = new GrupoTrabajo();
 
-                grupo.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                grupo.Id = reader.GetInt32(reader.GetOrdinal("id_departamento"));
                 grupo.NombreDepartamento = reader["nombre"].ToString();
                 grupo.CantidadMiembros = reader.GetInt32(reader.GetOrdinal("cantidad"));
 
@@ -59,22 +60,12 @@ namespace TickNager.Repositories
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"UPDATE departamentos
                                     SET nombre = @nombreNuevo
-                                    WHERE id = @id";
+                                    WHERE id_departamento = @id_departamento";
 
             comando.Parameters.AddWithValue("@nombreNuevo", nombreNuevo);
-            comando.Parameters.AddWithValue("@id", idGrupo);
+            comando.Parameters.AddWithValue("@id_departamento", idGrupo);
 
             comando.ExecuteNonQuery();
-
-            using var comandoUsuarios = conexion.CreateCommand();
-            comandoUsuarios.CommandText = @"UPDATE usuarios
-                                            SET departamento = @nombreNuevo
-                                            WHERE departamento = @nombreAnterior";
-
-            comandoUsuarios.Parameters.AddWithValue("@nombreNuevo", nombreNuevo);
-            comandoUsuarios.Parameters.AddWithValue("@nombreAnterior", nombreAnterior);
-
-            comandoUsuarios.ExecuteNonQuery();
         }
 
         public static void EliminarGrupo(int idGrupo, string nombreGrupo)
@@ -84,18 +75,17 @@ namespace TickNager.Repositories
 
             using var comandoUsuarios = conexion.CreateCommand();
             comandoUsuarios.CommandText = @"UPDATE usuarios
-                                            SET departamento = ''
-                                            WHERE departamento = @nombreGrupo";
+                                            SET id_departamento = 0
+                                            WHERE id_departamento = @id_departamento";
 
-            comandoUsuarios.Parameters.AddWithValue("@nombreGrupo", nombreGrupo);
+            comandoUsuarios.Parameters.AddWithValue("@id_departamento", idGrupo);
             comandoUsuarios.ExecuteNonQuery();
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"DELETE FROM departamentos
-                                    WHERE id = @id";
+                                    WHERE id_departamento = @id_departamento";
 
-            comando.Parameters.AddWithValue("@id", idGrupo);
-
+            comando.Parameters.AddWithValue("@id_departamento", idGrupo);
             comando.ExecuteNonQuery();
         }
 
@@ -104,13 +94,29 @@ namespace TickNager.Repositories
             using var conexion = DatabaseHelper.getConexionBaseDatos();
             conexion.Open();
 
+            using var comandoDepartamento = conexion.CreateCommand();
+            comandoDepartamento.CommandText = @"SELECT id_departamento
+                                        FROM departamentos
+                                        WHERE nombre = @nombre";
+
+            comandoDepartamento.Parameters.AddWithValue("@nombre", nombreGrupo);
+
+            object resultado = comandoDepartamento.ExecuteScalar();
+
+            int idDepartamento = 0;
+
+            if (resultado != null && resultado != DBNull.Value)
+            {
+                idDepartamento = Convert.ToInt32(resultado);
+            }
+
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"UPDATE usuarios
-                            SET departamento = @departamento
-                            WHERE id = @id";
+                            SET id_departamento = @id_departamento
+                            WHERE id_usuario = @id_usuario";
 
-            comando.Parameters.AddWithValue("@departamento", nombreGrupo);
-            comando.Parameters.AddWithValue("@id", idUsuario);
+            comando.Parameters.AddWithValue("@id_departamento", idDepartamento);
+            comando.Parameters.AddWithValue("@id_usuario", idUsuario);
 
             comando.ExecuteNonQuery();
         }

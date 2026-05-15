@@ -15,7 +15,7 @@
     <Grid Background="{StaticResource ColorAzulOscuro}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="135"/>
+            <RowDefinition Height="115"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 

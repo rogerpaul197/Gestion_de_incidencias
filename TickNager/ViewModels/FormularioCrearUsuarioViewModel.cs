@@ -2,6 +2,7 @@
 /// Esta clase se encarga de la lógica para crear un nuevo usuario.
 /// </summary>
 
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -24,6 +25,8 @@ namespace TickNager.ViewModels
         private string _confirmarContrasena;
         private string _imagenPerfil = "/Imagenes/Iconos/perfil_usuario.png";
         private DashboardViewModel _obj;
+
+        public ObservableCollection<string> DepartamentosComboBox { get; set; }
 
         public string Nombre
         {
@@ -127,11 +130,10 @@ namespace TickNager.ViewModels
             }
         }
 
-        /// <summary>
-        /// Constructor vacío.
-        /// </summary>
         public FormularioCrearUsuarioViewModel()
         {
+            DepartamentosComboBox = new ObservableCollection<string>();
+            CargarDepartamentos();
         }
 
         /// <summary>
@@ -148,7 +150,7 @@ namespace TickNager.ViewModels
         /// </summary>
         public void CrearUsuario()
         {
-            if (Nombre == null || Nombre == "" || Apellido == null || Apellido == "" || Rol == null || Rol == "" || Genero == null || Genero == "" || Correo == null || Correo == "" || Contrasena == null || Contrasena == "" || ConfirmarContrasena == null || ConfirmarContrasena == "")
+            if (Nombre == null || Nombre == "" || Apellido == null || Apellido == "" || Rol == null || Rol == "" || Genero == null || Genero == "" || Departamento == null || Departamento == "" || Departamento == "Seleccione departamento" || Correo == null || Correo == "" || Contrasena == null || Contrasena == "" || ConfirmarContrasena == null || ConfirmarContrasena == "")
             {
                 MessageBox.Show("Completa todos los campos obligatorios", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -162,10 +164,41 @@ namespace TickNager.ViewModels
 
             Usuario usuarioNuevo = new Usuario(Nombre, Apellido, Rol, Genero, Departamento, Numero, Correo, Contrasena);
 
+            if (Rol == "Administrador")
+            {
+                usuarioNuevo.IdRol = 1;
+            }
+            else if (Rol == "Técnico")
+            {
+                usuarioNuevo.IdRol = 2;
+            }
+            else
+            {
+                usuarioNuevo.IdRol = 3;
+            }
+
+            int idDepartamento = UsuarioRepository.ObtenerIdDepartamento(Departamento);
+
+            if (idDepartamento == 0)
+            {
+                MessageBox.Show("El departamento indicado no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            usuarioNuevo.IdDepartamento = idDepartamento;
+
             UsuarioRepository.RegistrarUsuario(usuarioNuevo);
 
-            MessageBox.Show("Usuario creado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Usuario creado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.None);
 
+            _obj.mostrarVistaGestionUsuarios();
+        }
+
+        /// <summary>
+        /// Esta función cancela la creación del usuario y vuelve a la gestión de usuarios.
+        /// </summary>
+        public void Cancelar()
+        {
             _obj.mostrarVistaGestionUsuarios();
         }
 
@@ -175,6 +208,22 @@ namespace TickNager.ViewModels
         private void ActualizarImagen()
         {
             ImagenPerfil = FuncionesHelper.ObtenerImagenPerfil(Rol, Genero);
+        }
+
+        public void CargarDepartamentos()
+        {
+            DepartamentosComboBox.Clear();
+
+            DepartamentosComboBox.Add("Seleccione departamento");
+
+            var lista = GrupoTrabajoRepository.ObtenerGrupos();
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                DepartamentosComboBox.Add(lista[i].NombreDepartamento);
+            }
+
+            Departamento = "Seleccione departamento";
         }
 
         /// <summary>

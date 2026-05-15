@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="800">
     <Border Background="White"
@@ -28,10 +29,12 @@
                         CornerRadius="22"
                         Margin="0 0 14 0">
 
-                    <TextBlock Text="👥"
-                               FontSize="20"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"/>
+                    <iconPacks:PackIconMaterial Kind="AccountGroup"
+                                                Width="22"
+                                                Height="22"
+                                                Foreground="Black"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"/>
                 </Border>
 
                 <StackPanel VerticalAlignment="Center">
@@ -64,24 +67,55 @@
             </Border>
 
             <Grid Grid.Column="2">
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
+                <Border Width="42"
+                        Height="38"
+                        Background="White"
+                        BorderBrush="#D1D5DB"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
 
-                    <Button Content="Renombrar"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Foreground="#2563EB"
-                            Padding="8 5"
-                            Click="btnRenombrar_Click"/>
+                    <ToggleButton x:Name="btnAcciones"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  Cursor="Hand">
+                        <iconPacks:PackIconMaterial Kind="DotsVertical"
+                                                    Width="20"
+                                                    Height="20"
+                                                    Foreground="#6B7280"/>
+                    </ToggleButton>
+                </Border>
 
-                    <Button Content="Eliminar"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Foreground="#B91C1C"
-                            Padding="8 5"
-                            Click="btnEliminar_Click"/>
-                </StackPanel>
+                <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"
+                       PlacementTarget="{Binding ElementName=btnAcciones}"
+                       Placement="Bottom"
+                       StaysOpen="False">
+
+                    <Border Background="White"
+                            BorderBrush="#D1D5DB"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="4">
+
+                        <StackPanel Width="150">
+                            <Button Content="Renombrar"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="btnRenombrar_Click"/>
+
+                            <Button Content="Eliminar"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Foreground="#B91C1C"
+                                    Click="btnEliminar_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Popup>
 
                 <Grid.Style>
                     <Style TargetType="Grid">

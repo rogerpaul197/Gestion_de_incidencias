@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Input;
-using TickNager.Commands;
 using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
@@ -21,6 +20,7 @@ namespace TickNager.ViewModels
         public static DashboardViewModel obj { get; set; }
 
         private ObservableCollection<Notificacion> _notificaciones;
+        private string _textoBusqueda;
 
         //Aquí se van a guardar las los UserControls que serán las vistas en la parte derecha (dependiendo de la función, cada función muestra una vista diferente).
         private UserControl _contenido;
@@ -103,6 +103,16 @@ namespace TickNager.ViewModels
             }
         }
 
+        public string TextoBusqueda
+        {
+            get { return _textoBusqueda; }
+            set
+            {
+                _textoBusqueda = value;
+                OnPropertyChanged();
+            }
+        }
+
         public bool HayNotificaciones
         {
             get
@@ -178,6 +188,22 @@ namespace TickNager.ViewModels
         public void mostrarFormularioCrearIncidencia()
         {
             Contenido = new FormularioCrearIncidencia(this);
+        }
+
+        public void mostrarVistaDetalleIncidencia(Incidencia incidencia)
+        {
+            Contenido = new VistaDetalleIncidencia(this, incidencia);
+        }
+
+        public void mostrarVistaEditarIncidencia(Incidencia incidencia)
+        {
+            Contenido = new VistaEditarIncidencia(this, incidencia);
+        }
+
+        //chat de incidencias
+        public void mostrarVistaChatIncidencias()
+        {
+            Contenido = new VistaChatIncidencias(this);
         }
 
         //Gestión de usuarios

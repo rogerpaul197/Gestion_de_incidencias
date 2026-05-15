@@ -13,15 +13,22 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Margin="35 30 35 20">
+        <Grid Grid.Row="0" Margin="35 30 35 15">
             <StackPanel>
-                <TextBlock Text="Nueva categoría" FontSize="34" FontWeight="Bold" Foreground="#1D2B53"/>
-                <TextBlock Text="Completa la información para registrar una nueva categoría" Margin="0 8 0 0" FontSize="18" Foreground="#6B7280"/>
+                <TextBlock Text="Nueva categoría" 
+                           FontSize="20" FontWeight="Bold" 
+                           Foreground="#1D2B53"/>
+                <TextBlock Text="Completa la información para registrar una nueva categoría" 
+                           Margin="0 8 0 0" FontSize="15" 
+                           Foreground="#6B7280"/>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1" Margin="35 0 35 30">
-            <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14">
+            <Border Background="White" 
+                    BorderBrush="#E5E7EB" 
+                    BorderThickness="1" 
+                    CornerRadius="14">
                 <Grid Margin="30">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -37,53 +44,129 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0" Margin="0 0 0 22">
-                            <TextBlock Text="Título" FontSize="14" Foreground="#374151" Margin="0 0 0 8"/>
-                            <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="45" Margin="0 28 0 0">
-                                <TextBox Text="{Binding Titulo}" Background="Transparent" BorderThickness="0" Padding="12 10 12 0" FontSize="14"/>
+                            <TextBlock Text="Título" 
+                                       FontSize="14" 
+                                       Foreground="#374151" 
+                                       Margin="0 0 0 8"/>
+                            <Border Background="#F9FAFB" 
+                                    BorderBrush="#D1D5DB" 
+                                    BorderThickness="1" 
+                                    CornerRadius="10" 
+                                    Height="45" 
+                                    Margin="0 28 0 0">
+                                <TextBox Text="{Binding Titulo}" 
+                                         Background="Transparent" 
+                                         BorderThickness="0" 
+                                         Padding="12 10 12 0" 
+                                         FontSize="14"/>
                             </Border>
                         </Grid>
 
                         <Grid Grid.Row="1" Margin="0 0 0 30">
-                            <TextBlock Text="Descripción" FontSize="14" Foreground="#374151" Margin="0 0 0 8"/>
-                            <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="120" Margin="0 28 0 0">
-                                <TextBox Text="{Binding Descripcion}" Background="Transparent" BorderThickness="0" Padding="12 10 12 0" FontSize="14" TextWrapping="Wrap" AcceptsReturn="True"/>
+                            <TextBlock Text="Descripción" 
+                                       FontSize="14" 
+                                       Foreground="#374151" 
+                                       Margin="0 0 0 8"/>
+                            <Border Background="#F9FAFB" 
+                                    BorderBrush="#D1D5DB" 
+                                    BorderThickness="1" 
+                                    CornerRadius="10" 
+                                    Height="120" 
+                                    Margin="0 28 0 0">
+                                <TextBox Text="{Binding Descripcion}" 
+                                         Background="Transparent" 
+                                         BorderThickness="0" 
+                                         Padding="12 10 12 0" 
+                                         FontSize="14" 
+                                         TextWrapping="Wrap" 
+                                         AcceptsReturn="True"/>
                             </Border>
                         </Grid>
 
                         <Grid Grid.Row="2">
-                            <Border Background="#E5E7EB" Height="45" Width="140" CornerRadius="10" HorizontalAlignment="Left">
-                                <Button Content="Cancelar" Background="Transparent" BorderThickness="0" Foreground="#374151" FontSize="14" FontWeight="SemiBold" Click="btnCancelar_Click"/>
+                            <Border Background="#E5E7EB" 
+                                    Height="45" Width="140" 
+                                    CornerRadius="10" 
+                                    HorizontalAlignment="Left">
+                                <Button Content="Cancelar" 
+                                        Background="Transparent" 
+                                        BorderThickness="0" 
+                                        Foreground="#374151" 
+                                        FontSize="14" 
+                                        FontWeight="SemiBold" 
+                                        Click="btnCancelar_Click"/>
                             </Border>
 
-                            <Border Background="#2F6BFF" Height="45" Width="140" CornerRadius="10" HorizontalAlignment="Right">
-                                <Button Content="Guardar" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" FontWeight="SemiBold" Click="btnGuardar_Click"/>
+                            <Border Background="#2F6BFF" 
+                                    Height="45" Width="140" 
+                                    CornerRadius="10" 
+                                    HorizontalAlignment="Right">
+                                <Button Content="Guardar" 
+                                        Background="Transparent" 
+                                        BorderThickness="0" 
+                                        Foreground="White" 
+                                        FontSize="14" 
+                                        FontWeight="SemiBold" 
+                                        Click="btnGuardar_Click"/>
                             </Border>
                         </Grid>
                     </Grid>
 
                     <!--Vista previa imagen-->
-                    <Grid Grid.Column="1">
-                        <Border Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Padding="20">
+                    <Grid Grid.Column="1"
+                          Height="320"
+                          VerticalAlignment="Top">
+
+                        <Border Background="#F9FAFB"
+                                BorderBrush="#E5E7EB"
+                                BorderThickness="1"
+                                CornerRadius="14"
+                                Padding="20">
+
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="190"/>
+                                    <RowDefinition Height="45"/>
                                 </Grid.RowDefinitions>
 
                                 <StackPanel Grid.Row="0">
-                                    <TextBlock Text="Imagen representativa" FontSize="14" Foreground="#374151"/>
-                                    <TextBlock Text="Vista previa de la categoría" Margin="0 6 0 0" FontSize="13" Foreground="#6B7280"/>
+                                    <TextBlock Text="Imagen representativa"
+                                               FontSize="14"
+                                               Foreground="#374151"/>
+
+                                    <TextBlock Text="Vista previa de la categoría"
+                                               Margin="0 6 0 0"
+                                               FontSize="13"
+                                               Foreground="#6B7280"/>
                                 </StackPanel>
 
-                                <Border Grid.Row="1" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="14" Margin="0 20 0 20">
-                                    <Grid>
-                                        <Image Source="{Binding ImagenCategoria}" Stretch="Uniform" Margin="20"/>
-                                    </Grid>
+                                <Border Grid.Row="1"
+                                        Height="170"
+                                        Background="White"
+                                        BorderBrush="#E5E7EB"
+                                        BorderThickness="1"
+                                        CornerRadius="14"
+                                        Margin="0 16 0 14">
+
+                                    <Image Source="{Binding ImagenCategoria}"
+                                           Stretch="Uniform"
+                                           Margin="18"/>
                                 </Border>
 
-                                <Border Grid.Row="2" Background="#EEF2FF" Height="45" CornerRadius="10">
-                                    <Button Content="Seleccionar imagen" Background="Transparent" BorderThickness="0" Foreground="#4338CA" FontSize="14" FontWeight="SemiBold" Click="btnSeleccionarImagen_Click"/>
+                                <Border Grid.Row="2"
+                                        Background="#EEF2FF"
+                                        Height="40"
+                                        Margin="0 0 0 0"
+                                        CornerRadius="10">
+
+                                    <Button Content="Seleccionar imagen"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Foreground="#4338CA"
+                                            FontSize="13"
+                                            FontWeight="SemiBold"
+                                            Click="btnSeleccionarImagen_Click"/>
                                 </Border>
                             </Grid>
                         </Border>

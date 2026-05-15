@@ -54,7 +54,7 @@ namespace TickNager.ViewModels
 
             if (confirmacion == MessageBoxResult.Yes)
             {
-                AdministradorRepository.EliminarUsuario(usuario.Id);
+                UsuarioRepository.EliminarUsuario(usuario.Id);
                 usuarioEliminado = true;
 
                 MessageBox.Show("Usuario eliminado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);

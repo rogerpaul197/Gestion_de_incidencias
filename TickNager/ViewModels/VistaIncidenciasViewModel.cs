@@ -177,10 +177,10 @@ namespace TickNager.ViewModels
             {
                 Incidencia incidencia = _todasLasIncidencias[i];
 
-                bool coincideTexto = TextoBusqueda == null || TextoBusqueda == "" || incidencia.Titulo.ToLower().Contains(TextoBusqueda.ToLower()) || incidencia.Descripcion.ToLower().Contains(TextoBusqueda.ToLower()) || (incidencia.Categoria != null && incidencia.Categoria.ToLower().Contains(TextoBusqueda.ToLower()));
+                bool coincideTexto = TextoBusqueda == null || TextoBusqueda == "" || incidencia.Titulo.ToLower().Contains(TextoBusqueda.ToLower()) || incidencia.Descripcion.ToLower().Contains(TextoBusqueda.ToLower()) || (incidencia.CategoriaIncidencia != null && incidencia.CategoriaIncidencia.ToLower().Contains(TextoBusqueda.ToLower()));
                 bool coincidePrioridad = PrioridadSeleccionada == "Todas" || incidencia.Prioridad == PrioridadSeleccionada;
                 bool coincideEstado = EstadoSeleccionado == "Todos" || incidencia.Estado == EstadoSeleccionado;
-                bool coincideCategoria = CategoriaSeleccionada == "Todas" || incidencia.Categoria == CategoriaSeleccionada;
+                bool coincideCategoria = CategoriaSeleccionada == "Todas" || incidencia.CategoriaIncidencia == CategoriaSeleccionada;
 
                 if (coincideTexto && coincidePrioridad && coincideEstado && coincideCategoria)
                 {
@@ -209,7 +209,7 @@ namespace TickNager.ViewModels
         {
             Tecnicos.Clear();
 
-            var lista = TecnicoRepository.ObtenerTecnicos();
+            var lista = UsuarioRepository.ObtenerTecnicos();
 
             for (int i = 0; i < lista.Count; i++)
             {

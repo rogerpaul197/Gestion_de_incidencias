@@ -8,17 +8,17 @@ namespace TickNager.Models
         private int _id;
         private string _nombreUsuario;
         private string _apellidoUsuario;
-        private string _rolUsuario;
 
         ///Se utilizan para poder asignar una imagen masculino o femenino
-        ///No hace falta guardar estas variables aquí, porque la imagen se 
-        ///controla desde la ventana de registro según el rol y el género elegidos.
         private string _generoUsuario;
 
-        private string _departamento;
         private string? _numeroUsuario;
         private string _correoUsuario;
+        private string _departamento;
+        private string _rolUsuario;
         private string _contrasenaUsuario;
+        private int _idRol;
+        private int _idDepartamento;
 
         public int Id
         {
@@ -32,6 +32,8 @@ namespace TickNager.Models
             set
             {
                 _nombreUsuario = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(NombreCompleto));
             }
         }
 
@@ -41,6 +43,8 @@ namespace TickNager.Models
             set
             {
                 _apellidoUsuario = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(NombreCompleto));
             }
         }
 
@@ -52,17 +56,6 @@ namespace TickNager.Models
             }
         }
 
-        public string RolUsuario
-        {
-            get { return _rolUsuario; }
-            set
-            {
-                _rolUsuario = value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(ImagenPerfil));
-            }
-        }
-
         public string GeneroUsuario
         {
             get { return _generoUsuario; }
@@ -71,15 +64,6 @@ namespace TickNager.Models
                 _generoUsuario = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(ImagenPerfil));
-            }
-        }
-
-        public string Departamento
-        {
-            get { return _departamento; }
-            set
-            {
-                _departamento = value;
             }
         }
 
@@ -101,6 +85,15 @@ namespace TickNager.Models
             }
         }
 
+        public string Departamento
+        {
+            get { return _departamento; }
+            set
+            {
+                _departamento = value;
+            }
+        }
+
         public string ContrasenaUsuario
         {
             get { return _contrasenaUsuario; }
@@ -108,6 +101,29 @@ namespace TickNager.Models
             {
                 _contrasenaUsuario = value;
             }
+        }
+
+        public string RolUsuario
+        {
+            get { return _rolUsuario; }
+            set
+            {
+                _rolUsuario = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(ImagenPerfil));
+            }
+        }
+
+        public int IdRol
+        {
+            get { return _idRol; }
+            set { _idRol = value; }
+        }
+
+        public int IdDepartamento
+        {
+            get { return _idDepartamento; }
+            set { _idDepartamento = value; }
         }
 
         public string ImagenPerfil

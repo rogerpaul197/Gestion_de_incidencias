@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TickNager.UserControls"
              xmlns:vm="clr-namespace:TickNager.ViewModels"
              mc:Ignorable="d"
-             d:DesignHeight="840" d:DesignWidth="800">
+             d:DesignHeight="890" d:DesignWidth="800">
     <Grid Background="#F5F7FB">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -160,8 +160,45 @@
 
                         <Grid Grid.Row="2" Margin="0 0 0 18">
                             <TextBlock Text="Departamento" FontSize="14" Foreground="#374151" Margin="0 0 0 8"/>
+
                             <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="45" Margin="0 28 0 0">
-                                <TextBox Text="{Binding Departamento}" Background="Transparent" BorderThickness="0" Padding="12 10 12 0"/>
+                                <ComboBox ItemsSource="{Binding DepartamentosComboBox}"
+                                          SelectedItem="{Binding Departamento}"
+                                          Background="Transparent"
+                                          BorderThickness="0"
+                                          FontSize="14"
+                                          Padding="8 0 8 0"
+                                          Height="43"
+                                          Margin="1"
+                                          VerticalContentAlignment="Center"
+                                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                          MaxDropDownHeight="120">
+
+                                    <ComboBox.Style>
+                                        <Style TargetType="ComboBox">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Departamento}" Value="Seleccione departamento">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ComboBox.Style>
+
+                                    <ComboBox.ItemContainerStyle>
+                                        <Style TargetType="ComboBoxItem">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="Padding" Value="8 5"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="Content" Value="Seleccione departamento">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ComboBox.ItemContainerStyle>
+                                </ComboBox>
                             </Border>
                         </Grid>
 
@@ -182,20 +219,20 @@
                         <Grid Grid.Row="5" Margin="0 0 0 18">
                             <TextBlock Text="Contraseña" FontSize="14" Foreground="#374151" Margin="0 0 0 8"/>
                             <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="45" Margin="0 28 0 0">
-                                <TextBox Text="{Binding Contrasena}" Background="Transparent" BorderThickness="0" Padding="12 10 12 0"/>
+                                <PasswordBox x:Name="txtContrasena" PasswordChanged="txtContrasena_PasswordChanged" Background="Transparent" BorderThickness="0" Padding="12 10 12 0"/>
                             </Border>
                         </Grid>
 
                         <Grid Grid.Row="6" Margin="0 0 0 30">
                             <TextBlock Text="Confirmar contraseña" FontSize="14" Foreground="#374151" Margin="0 0 0 8"/>
                             <Border Background="#F9FAFB" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="10" Height="45" Margin="0 28 0 0">
-                                <TextBox Text="{Binding ConfirmarContrasena}" Background="Transparent" BorderThickness="0" Padding="12 10 12 0"/>
+                                <PasswordBox x:Name="txtConfirmarContrasena" PasswordChanged="txtConfirmarContrasena_PasswordChanged" Background="Transparent" BorderThickness="0" Padding="12 10 12 0"/>
                             </Border>
                         </Grid>
 
                         <Grid Grid.Row="7">
                             <Border Background="#E5E7EB" Height="45" Width="140" CornerRadius="10" HorizontalAlignment="Left">
-                                <Button Content="Cancelar" Background="Transparent" BorderThickness="0" Foreground="#374151"/>
+                                <Button Content="Cancelar" Background="Transparent" BorderThickness="0" Foreground="#374151" Click="btnCancelar_Click"/>
                             </Border>
 
                             <Border Background="#2F6BFF" Height="45" Width="140" CornerRadius="10" HorizontalAlignment="Right">

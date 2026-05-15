@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="BBDD\TickNager.db" />
     <None Remove="Imagenes\Iconos\interrogacion_por_defecto.png" />
     <None Remove="Imagenes\Iconos\perfil.png" />
     <None Remove="Imagenes\Iconos\perfil_administrador.png" />
@@ -23,9 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="BBDD\TickNager.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="SQL\script.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -59,6 +55,10 @@
     <Page Update="UserControls\IncidenciaCreada.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BBDD\" />
   </ItemGroup>
 
 </Project>

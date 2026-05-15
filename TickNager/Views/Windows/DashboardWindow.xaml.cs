@@ -25,6 +25,11 @@ namespace TickNager.Views.Windows
             _obj.mostrarVistaIncidencias();
         }
 
+        private void btnChatIncidencias_Click(object sender, RoutedEventArgs e)
+        {
+            _obj.mostrarVistaChatIncidencias();
+        }
+
         private void btnGestionUsuarios_Click(object sender, RoutedEventArgs e)
         {
             _obj.mostrarVistaGestionUsuarios();

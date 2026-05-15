@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="800">
     <Border Background="White" BorderBrush="#E5E7EB" BorderThickness="0 0 0 1" Padding="18 14">
@@ -22,7 +23,7 @@
                 <TextBlock Text="{Binding Descripcion}" Margin="0 4 0 0" FontSize="13" Foreground="#6B7280" TextTrimming="CharacterEllipsis"/>
             </StackPanel>
 
-            <TextBlock Grid.Column="1" Text="{Binding Categoria}" VerticalAlignment="Center" FontSize="14" Foreground="#374151"/>
+            <TextBlock Grid.Column="1" Text="{Binding CategoriaIncidencia}" VerticalAlignment="Center" FontSize="14" Foreground="#374151"/>
 
             <Border Grid.Column="2" Width="90" Height="30" CornerRadius="15" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <Border.Style>
@@ -63,11 +64,12 @@
             </Border>
 
             <Border Grid.Column="3"
-        Width="110"
-        Height="30"
-        CornerRadius="15"
-        HorizontalAlignment="Left"
-        VerticalAlignment="Center">
+                    Height="30"
+                    MinWidth="110"
+                    Padding="14 0"
+                    CornerRadius="15"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Setter Property="Background" Value="#FEF3C7"/>
@@ -142,17 +144,19 @@
                 </StackPanel>
             </Border>
 
-            <TextBlock Grid.Column="4" Text="{Binding FechaRegistro}" VerticalAlignment="Center" FontSize="14" Foreground="#6B7280"/>
+            <TextBlock Grid.Column="4" Text="{Binding FechaCreacion}" VerticalAlignment="Center" FontSize="14" Foreground="#6B7280"/>
 
             <Grid Grid.Column="5">
                 <Border Width="42" Height="38" Background="White" BorderBrush="#D1D5DB" BorderThickness="1" CornerRadius="8" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <ToggleButton x:Name="btnAcciones"
-                                  Content="⋮"
-                                  Background="Transparent"
-                                  BorderThickness="0"
-                                  FontSize="18"
-                                  Foreground="#6B7280"
-                                  Cursor="Hand"/>
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Cursor="Hand">
+                        <iconPacks:PackIconMaterial Kind="DotsVertical"
+                                                    Width="20"
+                                                    Height="20"
+                                                    Foreground="#6B7280"/>
+                    </ToggleButton>
                 </Border>
 
                 <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"

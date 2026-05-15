@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TickNager.UserControls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="800">
     <Border Background="White"
@@ -34,7 +35,7 @@
             </StackPanel>
 
             <TextBlock Grid.Column="1"
-                       Text="{Binding Categoria}"
+                       Text="{Binding CategoriaIncidencia}"
                        VerticalAlignment="Center"
                        FontSize="14"
                        Foreground="#374151"/>
@@ -87,11 +88,12 @@
             </Border>
 
             <Border Grid.Column="3"
-        Width="110"
-        Height="30"
-        CornerRadius="15"
-        HorizontalAlignment="Left"
-        VerticalAlignment="Center">
+                    Height="30"
+                    MinWidth="110"
+                    Padding="14 0"
+                    CornerRadius="15"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Setter Property="Background" Value="#FEF3C7"/>
@@ -113,11 +115,11 @@
                 </Border.Style>
 
                 <StackPanel Orientation="Horizontal"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
                     <Ellipse Width="8"
-                 Height="8"
-                 Margin="0 0 6 0">
+                            Height="8"
+                            Margin="0 0 6 0">
                         <Ellipse.Style>
                             <Style TargetType="Ellipse">
                                 <Setter Property="Fill" Value="#D97706"/>
@@ -167,7 +169,7 @@
             </Border>
 
             <TextBlock Grid.Column="4"
-                       Text="{Binding FechaRegistro}"
+                       Text="{Binding FechaCreacion}"
                        VerticalAlignment="Center"
                        FontSize="14"
                        Foreground="#6B7280"/>
@@ -181,14 +183,16 @@
                         CornerRadius="8"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-
                     <ToggleButton x:Name="btnAcciones"
-                                  Content="⋮"
                                   Background="Transparent"
                                   BorderThickness="0"
-                                  FontSize="18"
-                                  Foreground="#6B7280"
-                                  Cursor="Hand"/>
+                                  Cursor="Hand">
+
+                        <iconPacks:PackIconMaterial Kind="DotsVertical"
+                                                    Width="20"
+                                                    Height="20"
+                                                    Foreground="#6B7280"/>
+                    </ToggleButton>
                 </Border>
 
                 <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"
@@ -211,11 +215,11 @@
                             <Button Content="Asignar técnico" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left" Padding="10 7" Click="menuAsignarResponsable_Click"/>
 
                             <Button Content="Validar incidencia"
-        Background="Transparent"
-        BorderThickness="0"
-        HorizontalContentAlignment="Left"
-        Padding="10 7"
-        Click="btnValidar_Click">
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="btnValidar_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Visibility" Value="Collapsed"/>

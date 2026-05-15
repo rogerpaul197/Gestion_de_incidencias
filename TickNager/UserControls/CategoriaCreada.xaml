@@ -15,8 +15,17 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <Border Width="120" Height="120" Background="White" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="60" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Image Source="pack://application:,,,/Imagenes/Iconos/interrogacion_por_defecto.png" Width="78" Height="78"/>
+                <Border Width="140"
+        Height="140"
+        BorderThickness="1"
+        CornerRadius="70"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+
+                    <Image Source="/Imagenes/Iconos/interrogacion_por_defecto.png"
+           Width="132"
+           Height="132"
+           Stretch="Uniform"/>
                 </Border>
             </Grid>
 

@@ -32,6 +32,9 @@
     <Compile Update="UserControls\IncidenciaTecnicoCreada.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\IncidenciaUsuarioCreada.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\UsuarioCreado.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -41,7 +44,16 @@
     <Compile Update="UserControls\VistaCategorias.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\VistaChatIncidencias.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaDetalleIncidencia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\VistaEditarPerfil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\VistaEditarIncidencia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\VistaGestionUsuarios.xaml.cs">

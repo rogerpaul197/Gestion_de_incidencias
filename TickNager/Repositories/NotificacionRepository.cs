@@ -14,19 +14,21 @@ namespace TickNager.Repositories
         /// </summary>
         /// <param name="idUsuarioDestino">Id del usuario que recibirá la notificación.</param>
         /// <param name="mensaje">Mensaje que tendrá la notificación.</param>
-        public static void CrearNotificacion(int idUsuarioDestino, string mensaje)
+        public static void CrearNotificacion(int idUsuario, string mensaje)
         {
             using var conexion = DatabaseHelper.getConexionBaseDatos();
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"INSERT INTO notificaciones
-                                    (id_usuario_destino, mensaje, leida)
+                                    (mensaje, leido, fecha, id_usuario)
                                     VALUES
-                                    (@id_usuario_destino, @mensaje, 0)";
+                                    (@mensaje,@leido, @fecha, @id_usuario)";
 
-            comando.Parameters.AddWithValue("@id_usuario_destino", idUsuarioDestino);
             comando.Parameters.AddWithValue("@mensaje", mensaje);
+            comando.Parameters.AddWithValue("@leido", 0);
+            comando.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            comando.Parameters.AddWithValue("@id_usuario", idUsuario);
 
             comando.ExecuteNonQuery();
         }
@@ -38,15 +40,15 @@ namespace TickNager.Repositories
         /// <returns>Devuelve una lista con las notificaciones del usuario.</returns>
         public static List<Notificacion> ObtenerNotificacionesUsuario(int idUsuario)
         {
-            List<Notificacion> lista = new List<Notificacion>();
+            List<Notificacion> listaNotificaciones = new List<Notificacion>();
 
             using var conexion = DatabaseHelper.getConexionBaseDatos();
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT id, id_usuario_destino, mensaje, leida, fecha
+            comando.CommandText = @"SELECT id_notificacion, mensaje, leido, fecha, id_usuario
                                     FROM notificaciones
-                                    WHERE id_usuario_destino = @id_usuario
+                                    WHERE id_usuario = @id_usuario
                                     ORDER BY fecha DESC";
 
             comando.Parameters.AddWithValue("@id_usuario", idUsuario);
@@ -57,16 +59,16 @@ namespace TickNager.Repositories
             {
                 Notificacion notificacion = new Notificacion();
 
-                notificacion.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                notificacion.IdUsuarioDestino = reader.GetInt32(reader.GetOrdinal("id_usuario_destino"));
+                notificacion.Id = reader.GetInt32(reader.GetOrdinal("id_notificacion"));
+                notificacion.IdUsuario = reader.GetInt32(reader.GetOrdinal("id_usuario"));
                 notificacion.Mensaje = reader["mensaje"].ToString();
-                notificacion.Leida = reader.GetInt32(reader.GetOrdinal("leida")) == 1;
+                notificacion.Leido = reader.GetInt32(reader.GetOrdinal("leido")) == 1;
                 notificacion.Fecha = reader["fecha"].ToString();
 
-                lista.Add(notificacion);
+                listaNotificaciones.Add(notificacion);
             }
 
-            return lista;
+            return listaNotificaciones;
         }
 
         /// <summary>
@@ -82,8 +84,8 @@ namespace TickNager.Repositories
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"SELECT COUNT(*)
                                     FROM notificaciones
-                                    WHERE id_usuario_destino = @id_usuario
-                                    AND leida = 0";
+                                    WHERE id_usuario = @id_usuario
+                                    AND leido = 0";
 
             comando.Parameters.AddWithValue("@id_usuario", idUsuario);
 
@@ -103,8 +105,8 @@ namespace TickNager.Repositories
 
             using var comando = conexion.CreateCommand();
             comando.CommandText = @"UPDATE notificaciones
-                                    SET leida = 1
-                                    WHERE id_usuario_destino = @id_usuario";
+                                    SET leido = 1
+                                    WHERE id_usuario = @id_usuario";
 
             comando.Parameters.AddWithValue("@id_usuario", idUsuario);
 

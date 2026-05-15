@@ -10,7 +10,8 @@ namespace TickNager.Views.Windows
         public LoginWindow()
         {
             InitializeComponent();
-            _obj = DataContext as LoginWindowViewModel;
+            _obj = new LoginWindowViewModel();
+            DataContext = _obj;
         }
 
         private void btnIniciarSeision_Click(object sender, RoutedEventArgs e)
@@ -22,6 +23,11 @@ namespace TickNager.Views.Windows
         private void btnAyuda_Click(object sender, RoutedEventArgs e)
         {
             _obj.MostrarAyuda();
+        }
+
+        private void txtContrasena_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _obj.Contrasena = txtContrasena.Password;
         }
 
         private void CerrarLoginSiInicioCorrecto()

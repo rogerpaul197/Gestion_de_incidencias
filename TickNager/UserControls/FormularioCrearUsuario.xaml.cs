@@ -28,5 +28,20 @@ namespace TickNager.UserControls
         {
             _obj.CrearUsuario();
         }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            _obj.Cancelar();
+        }
+
+        private void txtContrasena_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _obj.Contrasena = txtContrasena.Password;
+        }
+
+        private void txtConfirmarContrasena_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _obj.ConfirmarContrasena = txtConfirmarContrasena.Password;
+        }
     }
 }

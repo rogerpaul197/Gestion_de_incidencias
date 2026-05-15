@@ -31,46 +31,47 @@
 
             <Grid Grid.Column="4">
                 <Border Width="42"
-            Height="38"
-            Background="White"
-            BorderBrush="#D1D5DB"
-            BorderThickness="1"
-            CornerRadius="8"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-
+                        Height="38"
+                        Background="White"
+                        BorderBrush="#D1D5DB"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
                     <ToggleButton x:Name="btnAcciones"
-                      Content="⋮"
-                      Background="Transparent"
-                      BorderThickness="0"
-                      FontSize="18"
-                      Foreground="#6B7280"
-                      Cursor="Hand"/>
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  Cursor="Hand">
+                        <iconPacks:PackIconMaterial Kind="DotsVertical"
+                                                    Width="20"
+                                                    Height="20"
+                                                    Foreground="#6B7280"/>
+                    </ToggleButton>
                 </Border>
 
                 <Popup IsOpen="{Binding IsChecked, ElementName=btnAcciones}"
-           PlacementTarget="{Binding ElementName=btnAcciones}"
-           Placement="Bottom"
-           StaysOpen="False">
+                       PlacementTarget="{Binding ElementName=btnAcciones}"
+                       Placement="Bottom"
+                       StaysOpen="False">
                     <Border Background="White"
-                BorderBrush="#D1D5DB"
-                BorderThickness="1"
-                CornerRadius="8"
-                Padding="4">
+                            BorderBrush="#D1D5DB"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="4">
                         <StackPanel Width="170">
                             <Button Content="Ver perfil"
-                        Background="Transparent"
-                        BorderThickness="0"
-                        HorizontalContentAlignment="Left"
-                        Padding="10 7"
-                        Click="menuVerPerfil_Click"/>
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="menuVerPerfil_Click"/>
 
                             <Button Content="Cambiar rol"
-                        Background="Transparent"
-                        BorderThickness="0"
-                        HorizontalContentAlignment="Left"
-                        Padding="10 7"
-                        Click="menuCambiarRol_Click"/>
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    HorizontalContentAlignment="Left"
+                                    Padding="10 7"
+                                    Click="menuCambiarRol_Click"/>
 
                             <Button Content="Eliminar usuario"
                         Background="Transparent"

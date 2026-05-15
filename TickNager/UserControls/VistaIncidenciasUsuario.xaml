@@ -73,6 +73,7 @@
                                 <ColumnDefinition Width="1.1*"/>
                                 <ColumnDefinition Width="1.2*"/>
                                 <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="0.9*"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="0"
@@ -109,6 +110,14 @@
                                        FontSize="14"
                                        FontWeight="SemiBold"
                                        Foreground="#374151"/>
+
+                            <TextBlock Grid.Column="5"
+                                       Text="Acciones"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Foreground="#374151"/>
                         </Grid>
                     </Border>
 
@@ -125,181 +134,7 @@
 
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <Border Background="White"
-                                            BorderBrush="#E5E7EB"
-                                            BorderThickness="0 0 0 1"
-                                            Padding="18 14">
-
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="2.5*"/>
-                                                <ColumnDefinition Width="1.2*"/>
-                                                <ColumnDefinition Width="1.1*"/>
-                                                <ColumnDefinition Width="1.2*"/>
-                                                <ColumnDefinition Width="1.2*"/>
-                                            </Grid.ColumnDefinitions>
-
-                                            <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                                                <TextBlock Text="{Binding Titulo}"
-                                                           FontSize="15"
-                                                           FontWeight="SemiBold"
-                                                           Foreground="#1F2937"/>
-
-                                                <TextBlock Text="{Binding Descripcion}"
-                                                           Margin="0 4 0 0"
-                                                           FontSize="13"
-                                                           Foreground="#6B7280"
-                                                           TextTrimming="CharacterEllipsis"/>
-                                            </StackPanel>
-
-                                            <TextBlock Grid.Column="1"
-                                                       Text="{Binding Categoria}"
-                                                       VerticalAlignment="Center"
-                                                       FontSize="14"
-                                                       Foreground="#374151"/>
-
-                                            <Border Grid.Column="2"
-                                                    Width="90"
-                                                    Height="30"
-                                                    CornerRadius="15"
-                                                    HorizontalAlignment="Left"
-                                                    VerticalAlignment="Center">
-
-                                                <Border.Style>
-                                                    <Style TargetType="Border">
-                                                        <Setter Property="Background" Value="#FEF3C7"/>
-
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding Prioridad}" Value="Baja">
-                                                                <Setter Property="Background" Value="#DCFCE7"/>
-                                                            </DataTrigger>
-
-                                                            <DataTrigger Binding="{Binding Prioridad}" Value="Media">
-                                                                <Setter Property="Background" Value="#FEF3C7"/>
-                                                            </DataTrigger>
-
-                                                            <DataTrigger Binding="{Binding Prioridad}" Value="Alta">
-                                                                <Setter Property="Background" Value="#FEE2E2"/>
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </Border.Style>
-
-                                                <TextBlock Text="{Binding Prioridad}"
-                                                           HorizontalAlignment="Center"
-                                                           VerticalAlignment="Center"
-                                                           FontSize="13"
-                                                           FontWeight="SemiBold">
-
-                                                    <TextBlock.Style>
-                                                        <Style TargetType="TextBlock">
-                                                            <Setter Property="Foreground" Value="#B45309"/>
-
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding Prioridad}" Value="Baja">
-                                                                    <Setter Property="Foreground" Value="#15803D"/>
-                                                                </DataTrigger>
-
-                                                                <DataTrigger Binding="{Binding Prioridad}" Value="Media">
-                                                                    <Setter Property="Foreground" Value="#B45309"/>
-                                                                </DataTrigger>
-
-                                                                <DataTrigger Binding="{Binding Prioridad}" Value="Alta">
-                                                                    <Setter Property="Foreground" Value="#B91C1C"/>
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </TextBlock.Style>
-                                                </TextBlock>
-                                            </Border>
-
-                                            <Border Grid.Column="3"
-        Width="110"
-        Height="30"
-        CornerRadius="15"
-        HorizontalAlignment="Left"
-        VerticalAlignment="Center">
-                                                <Border.Style>
-                                                    <Style TargetType="Border">
-                                                        <Setter Property="Background" Value="#FEF3C7"/>
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
-                                                                <Setter Property="Background" Value="#FEF3C7"/>
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding Estado}" Value="Asignada">
-                                                                <Setter Property="Background" Value="#DBEAFE"/>
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding Estado}" Value="En proceso">
-                                                                <Setter Property="Background" Value="#FFEDD5"/>
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
-                                                                <Setter Property="Background" Value="#DCFCE7"/>
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </Border.Style>
-
-                                                <StackPanel Orientation="Horizontal"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-                                                    <Ellipse Width="8"
-                 Height="8"
-                 Margin="0 0 6 0">
-                                                        <Ellipse.Style>
-                                                            <Style TargetType="Ellipse">
-                                                                <Setter Property="Fill" Value="#D97706"/>
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
-                                                                        <Setter Property="Fill" Value="#D97706"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Asignada">
-                                                                        <Setter Property="Fill" Value="#2563EB"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="En proceso">
-                                                                        <Setter Property="Fill" Value="#EA580C"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
-                                                                        <Setter Property="Fill" Value="#16A34A"/>
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </Ellipse.Style>
-                                                    </Ellipse>
-
-                                                    <TextBlock Text="{Binding Estado}"
-                   FontSize="13"
-                   FontWeight="SemiBold"
-                   VerticalAlignment="Center">
-                                                        <TextBlock.Style>
-                                                            <Style TargetType="TextBlock">
-                                                                <Setter Property="Foreground" Value="#B45309"/>
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Pendiente">
-                                                                        <Setter Property="Foreground" Value="#B45309"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Asignada">
-                                                                        <Setter Property="Foreground" Value="#2563EB"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="En proceso">
-                                                                        <Setter Property="Foreground" Value="#EA580C"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding Estado}" Value="Resuelta">
-                                                                        <Setter Property="Foreground" Value="#15803D"/>
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </TextBlock.Style>
-                                                    </TextBlock>
-                                                </StackPanel>
-                                            </Border>
-
-                                            <TextBlock Grid.Column="4"
-                                                       Text="{Binding FechaRegistro}"
-                                                       VerticalAlignment="Center"
-                                                       FontSize="14"
-                                                       Foreground="#6B7280"/>
-                                        </Grid>
-                                    </Border>
+                                    <local:IncidenciaUsuarioCreada/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

@@ -16,7 +16,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            MessageBox.Show("Título: " + incidencia.Titulo + "\n\nDescripción: " + incidencia.Descripcion + "\n\nCategoría: " + incidencia.Categoria + "\n\nPrioridad: " + incidencia.Prioridad + "Detalle de incidencia");
+            DashboardViewModel.obj.mostrarVistaDetalleIncidencia(incidencia);
         }
 
         public void AsignarTecnico(object obj)
@@ -76,7 +76,7 @@ namespace TickNager.ViewModels
 
             IncidenciaRepository.ActualizarEstadoIncidencia(incidencia.Id, "En proceso");
 
-            incidencia.Estado = "En proceso";
+            incidencia.Estado = "Pendiente";
 
             MessageBox.Show("La incidencia se ha devuelto al técnico.");
         }

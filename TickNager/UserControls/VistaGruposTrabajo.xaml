@@ -37,6 +37,16 @@
                     Background="#2F6BFF"
                     CornerRadius="10"
                     VerticalAlignment="Center">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding EsAdmin}" Value="True">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
 
                 <Button Content="+  Nuevo grupo"
                         Background="Transparent"

@@ -47,7 +47,7 @@ namespace TickNager.ViewModels
         {
             Tecnicos.Clear();
 
-            var lista = TecnicoRepository.ObtenerTecnicos();
+            var lista = UsuarioRepository.ObtenerTecnicos();
 
             for (int i = 0; i < lista.Count; i++)
             {
@@ -67,7 +67,7 @@ namespace TickNager.ViewModels
                 return false;
             }
 
-            AdministradorRepository.AsignarTecnico(_idIncidencia, TecnicoSeleccionado.Id);
+            UsuarioRepository.AsignarTecnico(_idIncidencia, TecnicoSeleccionado.Id);
 
             MessageBox.Show("Técnico asignado correctamente", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 

@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
-using TickNager.Commands;
 using TickNager.Helper;
 using TickNager.Models;
 using TickNager.Repositories;
@@ -129,7 +128,7 @@ namespace TickNager.ViewModels
 
         public RegistroViewModel()
         {
-            RegistroUsuario = new RelayCommand(registroUsuario, puedeRegistrarUsuario);
+            //RegistroUsuario = new RelayCommand(registroUsuario, puedeRegistrarUsuario);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

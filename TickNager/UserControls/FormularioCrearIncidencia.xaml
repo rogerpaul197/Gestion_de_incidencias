@@ -10,20 +10,21 @@
     <Grid Background="#F5F7FB">
         <Grid.RowDefinitions>
             <RowDefinition Height="85"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <TextBlock Text="Nueva incidencia"
-                       FontSize="30"
-                       FontWeight="Bold"
-                       Foreground="#1D2B53"
-                       Margin="35 24 0 0"/>
+        <Grid Grid.Row="0" Margin="37 20 35 8">
+            <StackPanel>
+                <TextBlock Text="Nueva incidencia"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="#1D2B53"/>
 
-            <TextBlock Text="Completa la información para registrar una nueva incidencia"
-                       FontSize="16"
-                       Foreground="#6B7280"
-                       Margin="35 60 0 0"/>
+                <TextBlock Text="Completa la información para registrar una nueva incidencia"
+                           FontSize="13"
+                           Foreground="#6B7280"
+                           Margin="0 4 0 0"/>
+            </StackPanel>
         </Grid>
 
         <Grid Grid.Row="1" Margin="35 0 35 20">
@@ -32,79 +33,81 @@
                     BorderThickness="1"
                     CornerRadius="14">
 
-                <Grid Margin="28 22 28 22">
+                <Grid Margin="24 18 24 18">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="76"/>
+                        <RowDefinition Height="108"/>
+                        <RowDefinition Height="76"/>
+                        <RowDefinition Height="76"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0" Margin="0 0 0 14">
+                    <Grid Grid.Row="0">
                         <TextBlock Text="Título"
-                                   FontSize="14"
+                                   FontSize="13"
                                    Foreground="#374151"/>
 
                         <Border Background="#F9FAFB"
                                 BorderBrush="#D1D5DB"
                                 BorderThickness="1"
                                 CornerRadius="10"
-                                Height="42"
-                                Margin="0 24 0 0">
+                                Height="38"
+                                Margin="0 22 0 0">
 
                             <TextBox Text="{Binding Titulo}"
                                      Background="Transparent"
                                      BorderThickness="0"
-                                     FontSize="14"
-                                     Padding="12 8 12 0"/>
+                                     FontSize="13"
+                                     Padding="12 7 12 0"/>
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="1" Margin="0 0 0 14">
+                    <Grid Grid.Row="1">
                         <TextBlock Text="Descripción"
-                                   FontSize="14"
+                                   FontSize="13"
                                    Foreground="#374151"/>
 
                         <Border Background="#F9FAFB"
                                 BorderBrush="#D1D5DB"
                                 BorderThickness="1"
                                 CornerRadius="10"
-                                Height="78"
-                                Margin="0 24 0 0">
+                                Height="68"
+                                Margin="0 22 0 0">
 
                             <TextBox Text="{Binding Descripcion}"
                                      Background="Transparent"
                                      BorderThickness="0"
-                                     FontSize="14"
-                                     Padding="12 8 12 0"
+                                     FontSize="13"
+                                     Padding="12 7 12 0"
                                      TextWrapping="Wrap"
                                      AcceptsReturn="True"/>
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="2" Margin="0 0 0 14">
+                    <Grid Grid.Row="2">
                         <TextBlock Text="Categoría"
-                                   FontSize="14"
+                                   FontSize="13"
                                    Foreground="#374151"/>
 
                         <Border Background="#F9FAFB"
                                 BorderBrush="#D1D5DB"
                                 BorderThickness="1"
                                 CornerRadius="10"
-                                Height="42"
-                                Margin="0 24 0 0">
+                                Height="38"
+                                Margin="0 22 0 0">
 
                             <ComboBox ItemsSource="{Binding CategoriasComboBox}"
                                       SelectedItem="{Binding Categoria}"
                                       Background="Transparent"
                                       BorderThickness="0"
-                                      FontSize="14"
+                                      FontSize="13"
                                       Padding="8 0 8 0"
-                                      Height="40"
+                                      Height="36"
                                       Margin="1"
+                                      VerticalContentAlignment="Center"
                                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                                       MaxDropDownHeight="120">
+                                
                                 <ComboBox.Style>
                                     <Style TargetType="ComboBox">
                                         <Setter Property="Foreground" Value="Black"/>
@@ -119,6 +122,8 @@
                                 <ComboBox.ItemContainerStyle>
                                     <Style TargetType="ComboBoxItem">
                                         <Setter Property="Foreground" Value="Black"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="8 5"/>
                                         <Style.Triggers>
                                             <Trigger Property="Content" Value="Seleccione categoría">
                                                 <Setter Property="IsEnabled" Value="False"/>
@@ -131,26 +136,27 @@
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="3" Margin="0 0 0 20">
+                    <Grid Grid.Row="3">
                         <TextBlock Text="Prioridad"
-                                   FontSize="14"
+                                   FontSize="13"
                                    Foreground="#374151"/>
 
                         <Border Background="#F9FAFB"
                                 BorderBrush="#D1D5DB"
                                 BorderThickness="1"
                                 CornerRadius="10"
-                                Height="42"
-                                Margin="0 24 0 0">
+                                Height="38"
+                                Margin="0 22 0 0">
 
                             <ComboBox ItemsSource="{Binding PrioridadesComboBox}"
                                       SelectedItem="{Binding Prioridad}"
                                       Background="Transparent"
                                       BorderThickness="0"
-                                      FontSize="14"
+                                      FontSize="13"
                                       Padding="8 0 8 0"
-                                      Height="40"
+                                      Height="36"
                                       Margin="1"
+                                      VerticalContentAlignment="Center"
                                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                                       MaxDropDownHeight="120">
                                 <ComboBox.Style>
@@ -167,6 +173,8 @@
                                 <ComboBox.ItemContainerStyle>
                                     <Style TargetType="ComboBoxItem">
                                         <Setter Property="Foreground" Value="Black"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                        <Setter Property="Padding" Value="8 5"/>
                                         <Style.Triggers>
                                             <Trigger Property="Content" Value="Seleccione prioridad">
                                                 <Setter Property="IsEnabled" Value="False"/>
@@ -179,10 +187,10 @@
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="4">
+                    <Grid Grid.Row="4" Margin="0 8 0 0">
                         <Border Background="#E5E7EB"
-                                Height="42"
-                                Width="140"
+                                Height="38"
+                                Width="130"
                                 CornerRadius="10"
                                 HorizontalAlignment="Left">
 
@@ -190,14 +198,14 @@
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Foreground="#374151"
-                                    FontSize="14"
+                                    FontSize="13"
                                     FontWeight="SemiBold"
                                     Click="btnCancelar_Click"/>
                         </Border>
 
                         <Border Background="#2F6BFF"
-                                Height="42"
-                                Width="140"
+                                Height="38"
+                                Width="130"
                                 CornerRadius="10"
                                 HorizontalAlignment="Right">
 
@@ -205,7 +213,7 @@
                                     Background="Transparent"
                                     BorderThickness="0"
                                     Foreground="White"
-                                    FontSize="14"
+                                    FontSize="13"
                                     FontWeight="SemiBold"
                                     Click="btnGuardar_Click"/>
                         </Border>

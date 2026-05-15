@@ -15,12 +15,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            MessageBox.Show("Título: " + incidencia.Titulo +
-                            "\n\nDescripción: " + incidencia.Descripcion +
-                            "\n\nCategoría: " + incidencia.Categoria +
-                            "\n\nPrioridad: " + incidencia.Prioridad +
-                            "\n\nEstado: " + incidencia.Estado,
-                            "Detalle de incidencia");
+            DashboardViewModel.obj.mostrarVistaDetalleIncidencia(incidencia);
         }
 
         public void MarcarEnProceso(object obj)

@@ -140,8 +140,18 @@ namespace TickNager.ViewModels
 
             Incidencia incidencia = new Incidencia(Titulo, Descripcion, Categoria, Prioridad);
 
+            int idCategoria = CategoriaRepository.ObtenerIdCategoria(Categoria);
+
+            if (idCategoria == 0)
+            {
+                MessageBox.Show("La categoría seleccionada no existe.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            incidencia.IdCategoria = idCategoria;
+
             incidencia.Estado = "Pendiente";
-            incidencia.IdUsuario = SesionUsuarioHelper.UsuarioActual.Id;
+            incidencia.IdReportero = SesionUsuarioHelper.UsuarioActual.Id;
             incidencia.UsuarioReportero = SesionUsuarioHelper.UsuarioActual.NombreCompleto;
 
             IncidenciaRepository.RegistrarIncidencia(incidencia);

@@ -45,7 +45,7 @@ namespace TickNager.ViewModels
                 return;
             }
 
-            AdministradorRepository.CambiarRolUsuario(_usuario.Id, RolSeleccionado);
+            UsuarioRepository.CambiarRolUsuario(_usuario.Id, RolSeleccionado);
 
             _usuario.RolUsuario = RolSeleccionado;
 

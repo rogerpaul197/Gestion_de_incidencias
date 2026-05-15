@@ -44,11 +44,11 @@ namespace TickNager.Repositories
             conexion.Open();
 
             using var comando = conexion.CreateCommand();
-            comando.CommandText = @"SELECT c.nombre, c.descripcion, c.activo,
-                                    COUNT(i.id) AS cantidad_incidencias
-                                    FROM categorias c
-                                    LEFT JOIN incidencias i ON i.categoria = c.nombre
-                                    GROUP BY c.nombre, c.descripcion, c.activo";
+            comando.CommandText = @"SELECT categorias.id_categoria, categorias.nombre, categorias.descripcion, categorias.activo,
+                                    COUNT(incidencias.id_incidencia) AS cantidad_incidencias
+                                    FROM categorias
+                                    LEFT JOIN incidencias ON incidencias.id_categoria = categorias.id_categoria
+                                    GROUP BY categorias.id_categoria, categorias.nombre, categorias.descripcion, categorias.activo";
 
             using var reader = comando.ExecuteReader();
 
@@ -56,6 +56,7 @@ namespace TickNager.Repositories
             {
                 Categoria categoria = new Categoria();
 
+                categoria.Id = reader.GetInt32(reader.GetOrdinal("id_categoria"));
                 categoria.Nombre = reader["nombre"].ToString();
                 categoria.Descripcion = reader["descripcion"].ToString();
                 categoria.Activo = reader.GetInt32(reader.GetOrdinal("activo")) == 1;
@@ -65,6 +66,28 @@ namespace TickNager.Repositories
             }
 
             return listaCategorias;
+        }
+
+        public static int ObtenerIdCategoria(string nombreCategoria)
+        {
+            using var conexion = DatabaseHelper.getConexionBaseDatos();
+            conexion.Open();
+
+            using var comando = conexion.CreateCommand();
+            comando.CommandText = @"SELECT id_categoria
+                            FROM categorias
+                            WHERE nombre = @nombre";
+
+            comando.Parameters.AddWithValue("@nombre", nombreCategoria);
+
+            object resultado = comando.ExecuteScalar();
+
+            if (resultado == null || resultado == DBNull.Value)
+            {
+                return 0;
+            }
+
+            return Convert.ToInt32(resultado);
         }
     }
 }
